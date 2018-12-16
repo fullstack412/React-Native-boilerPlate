@@ -21,4 +21,4 @@ const Styles = {
 	}
 }
 
-export default CardSection;
+export { CardSection };

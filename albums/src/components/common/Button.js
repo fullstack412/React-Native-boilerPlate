@@ -34,4 +34,4 @@ const Styles = {
 	}
 }
 
-export default Button;
+export { Button };
