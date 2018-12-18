@@ -1,4 +1,4 @@
-// for expo developer
+// For Expo developers
 import React from 'react';
 import { AppRegistry, View } from 'react-native';
 import { Header } from './src/components/common';
