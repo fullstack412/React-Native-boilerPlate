@@ -1,4 +1,7 @@
 {
   "name": "albums",
-  "displayName": "albums"
+  "displayName": "albums",
+  "expo": {
+    
+  }
 }
