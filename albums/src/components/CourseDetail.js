@@ -42,7 +42,7 @@ const CourseDetail = ({ info }) => {
 	
 			<CardSection>
 				<Button>
-					Go To Page	
+					Go To Pageeeeee	
 				</Button>
 			</CardSection>	
 		</Card>
