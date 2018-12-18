@@ -8,13 +8,11 @@ React Native mobile app that supplements RBK instructional materials
 2. git clone
 3. cd albums
 5. npm i
-
 6. Develop and debug code
-
-7. expo start (check your phone and your computer are on the same wifi
-
-or 
-
+7. In terminalexpo start (check your phone and your computer are on the same wifi  
+  
+or   
+  
 7.1 Start Android Studio
 7.2 Open Android Virtual Device Manager
 7.3 Run Virtual Device
