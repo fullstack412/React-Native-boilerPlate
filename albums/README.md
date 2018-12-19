@@ -9,7 +9,7 @@ https://waffle.io/RBK5HIRProject/boilerPlate
 
 #### Expo developer
 1. Fork from this repo
-2. Terminal: git clone
+2. Terminal: git clone or git pull
 3. Terminal: cd boilerPlate/albums
 5. Terminal: npm i
 6. Develop or debug code
@@ -22,7 +22,7 @@ https://waffle.io/RBK5HIRProject/boilerPlate
 #### Android Studio developer
 
 1. Fork from this repo
-2. Terminal: git clone
+2. Terminal: git clone or git pull
 3. Terminal: cd boilerPlate/albums
 5. Terminal: npm i
 6. Develop or debug code

@@ -1,4 +1,4 @@
-import firebase from '@firebase/app';
+import firebase from 'firebase';
 import React, { Component } from 'react';
 import { View } from 'react-native';
 import { Header } from '../common/Header';
