@@ -6,12 +6,12 @@ import CourseList from './src/components/CourseList';
 // import LoginScreen from './src/components/Login/LoginScreen';
 
 export default class App extends React.Component {
-	render() {
-		return (
-			<View style = {{flex : 1}}>
-				<Header headerText = {'Backbone Sprint'}/>
-				<CourseList />
-			</View>
-		);
-	};
+  render() {
+    return (
+      <View style = {{flex : 1}}>
+        <Header headerText = {'Backbone Sprint'}/>
+        <CourseList />
+      </View>
+    );
+  };
 }
