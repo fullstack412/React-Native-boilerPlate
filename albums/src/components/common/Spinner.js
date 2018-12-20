@@ -19,6 +19,6 @@ const Styles = {
   }
 }
 
-export default Spinner;
+export { Spinner };
 
 
