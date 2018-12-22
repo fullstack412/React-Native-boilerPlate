@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text } from 'react-native';
+import { Text, StyleSheet } from 'react-native';
 import firebase from 'firebase';
 import { Button, Card, CardSection, Input, Spinner } from '../common';
 
@@ -83,12 +83,12 @@ class LoginForm extends Component {
   }
 }
 
-const Styles = {
+const Styles = StyleSheet.create({
   errorText : {
     fontSize: 20,
     alignSelf: 'center',
     color: 'red'
   }
-};
+});
 
 export default LoginForm;

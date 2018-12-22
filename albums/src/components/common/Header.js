@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, TouchableOpacity, Linking } from 'react-native';
+import { Text, TouchableOpacity, Linking, StyleSheet } from 'react-native';
 
 const Header = (props) => {
   const { textStyle, viewStyle} = styles;
@@ -10,7 +10,7 @@ const Header = (props) => {
   );
 };
 
-const styles = {
+const styles = StyleSheet.create({
   textStyle: {
     fontSize: 18
   },
@@ -26,6 +26,6 @@ const styles = {
     elevation: 2,
     position: 'relative'
   }
-};
+});
 
 export { Header };

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View, Image } from 'react-native';
+import { Text, View, Image, StyleSheet } from 'react-native';
 import { Card } from './common';
 import { CardSection } from './common';
 import { Button } from './common';
@@ -49,7 +49,7 @@ const CourseDetail = ({ info }) => {
   );
 }
 
-const Styles = {
+const Styles = StyleSheet.create({
   headerConetentStyle: {
     flexDirection: 'column',
     justifyContent: 'space-around'
@@ -63,10 +63,10 @@ const Styles = {
   },
   thumbnailContainerStyle: {
     justifyContent: 'center',
-    alignItem: 'center',
+    alignItems: 'center',
     marginLeft: 10,
     marginRight: 10
   }
-}
+});
 
 export default CourseDetail;

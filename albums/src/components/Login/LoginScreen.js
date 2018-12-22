@@ -1,6 +1,6 @@
 import firebase from 'firebase';
 import React, { Component } from 'react';
-import { View } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import { Header, Button, Spinner, CardSection } from '../common';
 import LoginForm from './LoginForm';
 
@@ -61,11 +61,11 @@ class LoginScreen extends Component {
 
 }
 
-const Styles = {
+const Styles = StyleSheet.create({
   spinnerCenter: {
     alignSelf: 'center',
     justifyContent: 'center'
   }  
-}
+});
 
 export default LoginScreen;
