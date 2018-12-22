@@ -3,9 +3,9 @@
 React Native mobile app that supplements RBK instructional materials
 
 ## Workflow Tracker
-[Team Waffle] (https://waffle.io/RBK5HIRProject/boilerPlate)
+[Team Waffle](https://waffle.io/RBK5HIRProject/boilerPlate)
   
-[Sprint Assignment] (https://docs.google.com/spreadsheets/d/1p2Ys5zHqH098s0ICJlErpEAISo15yS-p2fYpZ76Doco/edit?usp=sharing)
+[Sprint Assignment](https://docs.google.com/spreadsheets/d/1p2Ys5zHqH098s0ICJlErpEAISo15yS-p2fYpZ76Doco/edit?usp=sharing)
 
 
 ## Contribute
