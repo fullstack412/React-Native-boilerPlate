@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { Button } from '../../../common';
-import { Card } from '../../../common';
-import { CardSection } from '../../../common';
+import { Button, Card, CardSection } from '../../../common';
 import Home from '../CourseList';
 
 class Main extends Component {

@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import { Text, View, Image, StyleSheet, TouchableOpacity, Button } from 'react-native';
 import { Card, CardSection, Header } from '../../common';
-// import { CardSection } from '../../common';
-// import { Header } from '../../common';
-// import { Button } from '../../common';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { createStackNavigator } from 'react-navigation';
 import Prep1 from './PreWeek1/Main';

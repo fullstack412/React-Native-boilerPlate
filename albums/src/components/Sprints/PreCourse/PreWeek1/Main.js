@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Button, Card, CardSection, Header } from '../../../common';
-// import { Card } from '../../../common';
-// import { CardSection } from '../../../common';
-// import { Header } from '../../../common';
+
 import Home from '../CourseList';
 
 class Main extends Component {
