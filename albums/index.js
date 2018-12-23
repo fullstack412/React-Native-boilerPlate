@@ -1,73 +1,84 @@
 // For Android Studio Developers only
 import React from 'react';
-import {AppRegistry, View, StyleSheet, Text, SafeAreaView, ScrollView, Dimensions } from 'react-native';
+import {AppRegistry, View, StyleSheet, Text, SafeAreaView, ScrollView, Dimensions, Image } from 'react-native';
 import { Header } from './src/components/common';
 // sidebar
-import {createDrawerNavigator, DrawerItems} from 'react-navigation';
+import {createDrawerNavigator, DrawerItems, createStackNavigator} from 'react-navigation';
 import LoginScreen from './src/components/Login/LoginScreen';
-import CourseList from './src/components/Sprints/FullStack/CourseList';
-import Prep1 from './src/components/Sprints/PreCourse/PreWeek1/Main';
-import Prep2 from './src/components/Sprints/PreCourse/PreWeek2/Main';
-import Prep3 from './src/components/Sprints/PreCourse/PreWeek3/Main';
-import Prep4 from './src/components/Sprints/PreCourse/PreWeek4/Main';
-import DataStructure from './src/components/Sprints/JSSprints/DataStructure/Main';
+import FSList from './src/components/Sprints/FullStack/CourseList';
+import JSList from './src/components/Sprints/JSSprints/CourseList';
+import OSList from './src/components/Sprints/OtherSprints/CourseList';
+import PCList from './src/components/Sprints/PreCourse/CourseList';
 
-const AppDrawerNavigator = createDrawerNavigator({
-  Full_Stack: CourseList,
-  Prep_Course: Prep1,
-  JS_Sprints: Prep2,
-  Other_Sprints: Prep3,
-  FAQ: Prep4,
-  Contact: DataStructure,
-  Log_In: LoginScreen
-})
+import PCWeek1 from './src/components/Sprints/PreCourse/PreWeek1/Main';
+import PCWeek2 from './src/components/Sprints/PreCourse/PreWeek2/Main';
+import PCWeek3 from './src/components/Sprints/PreCourse/PreWeek3/Main';
+import PCWeek4 from './src/components/Sprints/PreCourse/PreWeek4/Main';
+import JSDataStructure from './src/components/Sprints/JSSprints/DataStructure/Main';
+import FAQ from './src/components/Features/FAQ';
+import Contact from './src/components/Features/Contact';
 
 
 export default class App extends React.Component {
   render() {
     return (
-      // Course List
-      // <View style = {{flex : 1}}>
-      // 	<Header/>
-      // 	<CourseList />
-      // </View>
-
-      // Login Screen
-      // <View style = {{flex : 1}}>
-      //     <LoginScreen />
-      // </View>
-
-      // Individual Sprint
-      // <View style = {{ flex : 1 }}>
-      //   <Main />
-      // </View>
-
-      // Side Menu
       <AppDrawerNavigator />     
     )
   }
 }
 
-// const App = () => (
-  // Course List
-  // <View style = {{flex : 1}}>
-  // 	<Header headerText = {'Backbone Sprint'}/>
-  // 	<CourseList />
-  // </View>
+const CustomDrawerComponent = (props) => {
+  const { drawerStyle, picStyle } = Styles;
+  return (  
+    <SafeAreaView style = {{ flex: 1}}>
+      <View style = { drawerStyle }>
+        <Image source = {require('./src/assets/profile1.png')} style = { picStyle } />
+      </View>
+      <ScrollView>
+        <DrawerItems {...props} />
+      </ScrollView>
+    </SafeAreaView>
+  )
+}
+const AppStackNavigator = createStackNavigator({
+  // FSList: FSList,
+  // JSList: JSList,
+  // OSList: OSList,
+  PCList: PCList,
+  PCWeek1: PCWeek1
+  // PCWeek2: PCWeek2,
+  // PCWeek3: PCWeek3,
+  // PCWeek4: PCWeek4,
+  // JSDataStructure: JSDataStructure
+})
 
-  // Login Screen
-  // <View style = {{flex : 1}}>
-  //     <LoginScreen />
-  // </View>
+const AppDrawerNavigator = createDrawerNavigator({
+  Full_Stack: FSList,
+  Prep_Course: PCList,
+  JS_Sprints: JSList,
+  Other_Sprints: OSList,
+  FAQ: FAQ,
+  Contact: Contact,
+  Log_In: LoginScreen
+}, {
+  contentComponent: CustomDrawerComponent
+})
 
-  // Individual Sprint
-  // <View style = {{ flex : 1 }}>
-  //   <Main />
-  // </View>
+const Styles = StyleSheet.create({
+  drawerStyle: {
+    height: 150, 
+    backgroundColor: 'pink', 
+    alignItems: 'center', 
+    justifyContent: 'center'
+  },
+  picStyle: {
+    height: 120, 
+    width: 120, 
+    borderRadius: 60
+  }
+})
 
-  // Side Menu
-  // <Router />
-//   <AppDrawerNavigator />
-// )
+
+
 
 AppRegistry.registerComponent('albums', () => App);

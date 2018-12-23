@@ -2,29 +2,29 @@ import React, { Component } from 'react';
 import { ScrollView, StyleSheet } from 'react-native';
 // import axios from 'axios';
 import CourseDetail from './CourseDetail';
+import { Header } from '../../common';
 
 class CourseList extends Component {
   state = { courses: [{
-    topic: 'Backbone js', 
-    introduction: 'Backbone is the first of many MVC (model-view-controller) frameworks you will be introduced to.', 
-    image: require('../../../assets/backbone.png'),
+    topic: 'Data structure', 
+    introduction: 'You will learn about stack, queue, linked list, tree, etc.', 
+    image: require('../../../assets/tree.jpg'),
     body: {
-      intro: 'models: The persistent application data\nviews: The rendered data visible \
-      to the user\ncollections: Groupings of models using underscore functionsn\n' 
+      intro: '' 
     }
   }, {
-    topic: 'React js',
-    introduction: 'React is a useful in making React Native apps',
-    image: require('../../../assets/react.png'),
+    topic: 'Algorithm',
+    introduction: 'Buld a queen possibly counting algorithm on a chess board',
+    image: require('../../../assets/tree.jpg'),
     body: {
-      intro: 'React offers virtual DOMS that saves run time from unnecessary refreshing of the entire page on change.'
+      intro: ''
     }
   }, {
-    topic: 'Angular',
-    introduction: 'Angular is a front-end framework that offers clear structure among components',
-    image: require('../../../assets/angular.jpg'),
+    topic: 'Underscore',
+    introduction: 'Review high order functions',
+    image: require('../../../assets/javascript.png'),
     body: {
-      intro: 'Angular framework offers its service in both Typescript and Javascript.'
+      intro: ''
     }
   }]};
 
@@ -45,6 +45,7 @@ class CourseList extends Component {
   render() {
     return (
       <ScrollView>
+        <Header />
         {this.mapOutCourses()} 
       </ScrollView>
     );
