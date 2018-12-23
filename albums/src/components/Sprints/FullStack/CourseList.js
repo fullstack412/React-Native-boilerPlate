@@ -7,7 +7,7 @@ class CourseList extends Component {
   state = { courses: [{
     topic: 'Backbone js', 
     introduction: 'Backbone is the first of many MVC (model-view-controller) frameworks you will be introduced to.', 
-    image: require('../assets/backbone.png'),
+    image: require('../../../assets/backbone.png'),
     body: {
       intro: 'models: The persistent application data\nviews: The rendered data visible \
       to the user\ncollections: Groupings of models using underscore functionsn\n' 
@@ -15,14 +15,14 @@ class CourseList extends Component {
   }, {
     topic: 'React js',
     introduction: 'React is a useful in making React Native apps',
-    image: require('../assets/react.png'),
+    image: require('../../../assets/react.png'),
     body: {
       intro: 'React offers virtual DOMS that saves run time from unnecessary refreshing of the entire page on change.'
     }
   }, {
     topic: 'Angular',
     introduction: 'Angular is a front-end framework that offers clear structure among components',
-    image: require('../assets/angular.jpg'),
+    image: require('../../../assets/angular.jpg'),
     body: {
       intro: 'Angular framework offers its service in both Typescript and Javascript.'
     }

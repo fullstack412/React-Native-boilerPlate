@@ -44,6 +44,8 @@ yarn-error.log
 *.mobileprovision
 
 
+noDelete.js
+
 
 # BUCK
 buck-out/
