@@ -1,5 +1,5 @@
 import React from 'react';
-import { View } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 
 // reusable stand alone component purely for CSS styling
 const Card = (props) => {
@@ -11,7 +11,7 @@ const Card = (props) => {
 };
 
 // keep borderRadius same as shadowRadius
-const Styles = {
+const Styles = StyleSheet.create({
   containerStyle: {
     borderWidth: 1,
     borderRadius: 2,
@@ -26,6 +26,6 @@ const Styles = {
     marginRight: 5,
     marginTop: 10
   }
-}
+});
 
 export { Card };

@@ -2,7 +2,7 @@
 import React from 'react';
 import { AppRegistry, View } from 'react-native';
 import { Header } from './src/components/common';
-import CourseList from './src/components/CourseList';
+import CourseList from './src/components/Sprints/FullStack/CourseList';
 // import LoginScreen from './src/components/Login/LoginScreen';
 
 export default class App extends React.Component {
