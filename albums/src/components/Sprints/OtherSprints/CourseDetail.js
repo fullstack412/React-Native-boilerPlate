@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { Text, View, Image, StyleSheet, TouchableOpacity } from 'react-native';
-import { Card } from '../../common';
-import { CardSection } from '../../common';
-import { Button } from '../../common';
+import { Button, Card, CardSection } from '../../common';
+
 import Icon from 'react-native-vector-icons/Ionicons';
 
 const CourseDetail = ({ info }) => {
@@ -10,7 +9,6 @@ const CourseDetail = ({ info }) => {
   const { topic, introduction, image } = info;
   const { thumbnailStyle, headerConetentStyle, thumbnailContainerStyle, headerTextStyle } = Styles;
   return (
-    
     <Card>
       <CardSection>
         <View style = {thumbnailContainerStyle}>

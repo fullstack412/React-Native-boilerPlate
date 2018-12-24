@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { Button } from '../../../common';
-import { Card } from '../../../common';
-import { CardSection } from '../../../common';
+import { Button, Card, CardSection } from '../../../common';
+import Home from '../CourseList';
 
 class Main extends Component {
 
@@ -40,6 +39,12 @@ class Main extends Component {
         <Text>
           Ending:{"\n"}{end}{"\n"}
         </Text>
+      </CardSection>
+
+      <CardSection>
+        <Button>
+          Home
+        </Button>
       </CardSection>
     </Card>
     );

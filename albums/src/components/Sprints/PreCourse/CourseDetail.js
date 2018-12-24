@@ -1,16 +1,22 @@
 import React, { Component } from 'react';
-import { Text, View, Image, StyleSheet, TouchableOpacity } from 'react-native';
-import { Card } from '../../common';
-import { CardSection } from '../../common';
-import { Button } from '../../common';
+import { Text, View, Image, StyleSheet, TouchableOpacity, Button } from 'react-native';
+import { Card, CardSection, Header } from '../../common';
 import Icon from 'react-native-vector-icons/Ionicons';
+import { createStackNavigator } from 'react-navigation';
+import Prep1 from './PreWeek1/Main';
+import Prep2 from './PreWeek2/Main';
+import Prep3 from './PreWeek3/Main';
+import Prep4 from './PreWeek4/Main';
 
-const CourseDetail = ({ info }) => {
-  // destructuring
-  const { topic, introduction, image } = info;
-  const { thumbnailStyle, headerConetentStyle, thumbnailContainerStyle, headerTextStyle } = Styles;
-  return (
+
+const CourseDetail = (props) => {
+  console.log('props CourseDetail', props)
+  const { topic, introduction, image } = props.info;
     
+  const { thumbnailStyle, headerConetentStyle, thumbnailContainerStyle, headerTextStyle } = Styles;
+  
+
+  return (
     <Card>
       <CardSection>
         <View style = {thumbnailContainerStyle}>
@@ -33,8 +39,7 @@ const CourseDetail = ({ info }) => {
       </CardSection>
 
       <CardSection>
-        <Button>
-          Go To Page
+        <Button title = 'Go Page' onPress = {()=>{console.log(this.props.navigation)}}>
         </Button>
       </CardSection>	
       <CardSection>
@@ -45,6 +50,7 @@ const CourseDetail = ({ info }) => {
     </Card>
   );
 }
+
 
 const Styles = StyleSheet.create({
   headerConetentStyle: {
