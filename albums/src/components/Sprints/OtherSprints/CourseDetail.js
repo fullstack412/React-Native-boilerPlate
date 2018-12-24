@@ -9,7 +9,6 @@ const CourseDetail = ({ info }) => {
   const { topic, introduction, image } = info;
   const { thumbnailStyle, headerConetentStyle, thumbnailContainerStyle, headerTextStyle } = Styles;
   return (
-    
     <Card>
       <CardSection>
         <View style = {thumbnailContainerStyle}>

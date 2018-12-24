@@ -9,48 +9,46 @@ import Prep3 from './PreWeek3/Main';
 import Prep4 from './PreWeek4/Main';
 
 
-class CourseDetail extends Component {
-
-  render() {
-
-    const { topic, introduction, image } = this.props.info;
+const CourseDetail = (props) => {
+  console.log('props CourseDetail', props)
+  const { topic, introduction, image } = props.info;
     
-    const { thumbnailStyle, headerConetentStyle, thumbnailContainerStyle, headerTextStyle } = Styles;
-    return (
-      <Card>
-        <CardSection>
-          <View style = {thumbnailContainerStyle}>
-              <Image 
-                style = {thumbnailStyle} 
-                source = {image}
-              />
-          </View>
-          <View style = {headerConetentStyle}>
-            <Text style = {headerTextStyle}>
-              {topic}{"\n"}
-            </Text>
-          </View>				
-        </CardSection>
+  const { thumbnailStyle, headerConetentStyle, thumbnailContainerStyle, headerTextStyle } = Styles;
+  
 
-        <CardSection>
-          <Text>
-            Introduction:{"\n"}{introduction}{"\n"}
+  return (
+    <Card>
+      <CardSection>
+        <View style = {thumbnailContainerStyle}>
+            <Image 
+              style = {thumbnailStyle} 
+              source = {image}
+            />
+        </View>
+        <View style = {headerConetentStyle}>
+          <Text style = {headerTextStyle}>
+            {topic}{"\n"}
           </Text>
-        </CardSection>
+        </View>				
+      </CardSection>
 
-        <CardSection>
-          <Button title = 'Go To' onPress = {()=>this.props.navigation.push('PCWeek1')}>
-            
-          </Button>
-        </CardSection>	
-        <CardSection>
-          <TouchableOpacity>
-            <Icon size = {30} name= "ios-trash" color = "red"/>
-          </TouchableOpacity>
-        </CardSection>	
-      </Card>
-    );
-  }
+      <CardSection>
+        <Text>
+          Introduction:{"\n"}{introduction}{"\n"}
+        </Text>
+      </CardSection>
+
+      <CardSection>
+        <Button title = 'Go Page' onPress = {()=>{console.log(this.props.navigation)}}>
+        </Button>
+      </CardSection>	
+      <CardSection>
+        <TouchableOpacity>
+          <Icon size = {30} name= "ios-trash" color = "red"/>
+        </TouchableOpacity>
+      </CardSection>	
+    </Card>
+  );
 }
 
 
