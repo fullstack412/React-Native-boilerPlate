@@ -22,10 +22,12 @@ import Contact from './src/components/Features/Contact';
 //TODO:Delete later
 // import Navigate from '../albums/src/components/Menu/App';
 
-class App extends React.Component {
+export default class App extends React.Component {
   render() {
     return (
-      <AppDrawerNavigator />     
+      // <Navigate />
+      // <AppDrawerNavigator />
+      <AppStackNavigator />     
     )
   }
 }
@@ -45,21 +47,17 @@ const CustomDrawerComponent = (props) => {
 }
 
 // export default createStackNavigator({
-// // const AppStackNavigator = createStackNavigator({
-//   // FSList: FSList,
-//   // JSList: JSList,
-//   // OSList: OSList,
-//   PCList: {
-//     screen: PCList
-//   },
-//   PCWeek1: {
-//     screen: PCWeek1
-//   }
-//   // PCWeek2: PCWeek2,
-//   // PCWeek3: PCWeek3,
-//   // PCWeek4: PCWeek4,
-//   // JSDataStructure: JSDataStructure
-// })
+const AppStackNavigator = createStackNavigator({
+  PCWeek1: PCWeek1,
+  FSList: FSList,
+  JSList: JSList,
+  OSList: OSList,
+  PCList: PCList,
+  PCWeek2: PCWeek2,
+  PCWeek3: PCWeek3,
+  PCWeek4: PCWeek4,
+  JSDataStructure: JSDataStructure
+})
 
 const AppDrawerNavigator = createDrawerNavigator({
   Prep_Course: PCList,

@@ -1,19 +1,23 @@
 import React, {Component} from 'react';
-import {ScrollView, Text, View, StyleSheet, Button} from 'react-native';
+import {ScrollView, Text, View, StyleSheet } from 'react-native';
+import { Button, CardSection, Card } from '../common'
 
 class HomeScreen extends React.Component {
   render() {
 
-    console.log('Home: ', this.props)
-
     return (
-      <View>
-        <Text>Take it home</Text>
-        <Button 
-          title = "Logging in the first step"
-          onPress = {()=> this.props.navigation.navigate('Home')}  
-        />
-      </View>
+      <Card>
+        <CardSection>
+          <Button onPress = {()=> this.props.navigation.navigate('Login')}>
+            Login
+          </Button>
+        </CardSection>
+        <CardSection>
+          <Button onPress = {()=> this.props.navigation.navigate('New')}>
+            New
+          </Button>        
+        </CardSection>
+      </Card>
     );
   }
 }

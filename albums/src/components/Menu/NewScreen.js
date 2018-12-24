@@ -7,14 +7,14 @@ class LoginScreen extends React.Component {
     console.log('Login: ', this.props)
     return (
       <View>
-        <Text>Loging In</Text>
+        <Text>New Screen</Text>
         <Button 
-          title = "Lets go home"
-          onPress = {()=> this.props.navigation.navigate('Home')}  
+          title = "Login"
+          onPress = {()=> this.props.navigation.navigate('Login')}  
         />
         <Button 
-          title = "New Screen"
-          onPress = {()=> this.props.navigation.navigate('New')}  
+          title = "Home"
+          onPress = {()=> this.props.navigation.navigate('Home')}  
         />
       </View>
     );

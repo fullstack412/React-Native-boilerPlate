@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { Text, View, Image, StyleSheet, TouchableOpacity, Button } from 'react-native';
-import { Card, CardSection, Header } from '../../common';
+import { Text, View, Image, StyleSheet, TouchableOpacity } from 'react-native';
+import { Card, CardSection, Header, Button } from '../../common';
 import Icon from 'react-native-vector-icons/Ionicons';
-import { createStackNavigator } from 'react-navigation';
 import Prep1 from './PreWeek1/Main';
 import Prep2 from './PreWeek2/Main';
 import Prep3 from './PreWeek3/Main';
@@ -39,7 +38,8 @@ const CourseDetail = (props) => {
       </CardSection>
 
       <CardSection>
-        <Button title = 'Go Page' onPress = {()=>{console.log(this.props.navigation)}}>
+        <Button onPress = {()=> this.props.navigation.navigate('PCWeek1')}>
+          Go To Week 1
         </Button>
       </CardSection>	
       <CardSection>
@@ -50,7 +50,6 @@ const CourseDetail = (props) => {
     </Card>
   );
 }
-
 
 const Styles = StyleSheet.create({
   headerConetentStyle: {
