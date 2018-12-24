@@ -1,22 +1,24 @@
 import firebase from 'firebase';
 import React, { Component } from 'react';
-import { View } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import { Header, Button, Spinner, CardSection } from '../common';
 import LoginForm from './LoginForm';
+import api from '../../../noDelete'
 
 class LoginScreen extends Component {
   // null: not sure if logged in, false: not logged in, true: logged in
   state = { loggedIn: null };
   const = { spinnerCenter } = Styles;
+  const = { apiKey, authDomain, databaseURL, projectId, storageBucket, messagingSenderId} = api
 
   componentWillMount() {
     firebase.initializeApp({
-      apiKey: 'AIzaSyAvwxCGoh-wVNxvOO5-mHOmyv8S9Efjhk0',
-      authDomain: 'remotereview-9a7f7.firebaseapp.com',
-      databaseURL: 'https://remotereview-9a7f7.firebaseio.com',
-      projectId: 'remotereview-9a7f7',
-      storageBucket: 'remotereview-9a7f7.appspot.com',
-      messagingSenderId: '141980297000'
+      apiKey: apiKey,
+      authDomain: authDomain,
+      databaseURL: databaseURL,
+      projectId: projectId,
+      storageBucket: storageBucket,
+      messagingSenderId: messagingSenderId
     });
 
     // track whether user is logged in
@@ -61,11 +63,11 @@ class LoginScreen extends Component {
 
 }
 
-const Styles = {
+const Styles = StyleSheet.create({
   spinnerCenter: {
     alignSelf: 'center',
     justifyContent: 'center'
   }  
-}
+});
 
 export default LoginScreen;
