@@ -38,7 +38,7 @@ import JSDataStructure from './src/components/Sprints/JSSprints/DataStructure/Ma
 import FAQ from './src/components/Features/FAQ';
 import Contact from './src/components/Features/Contact';
 
-class App extends React.Component {
+export default class App extends React.Component {
   render() {
     return (
       <AppDrawerNavigator />     
