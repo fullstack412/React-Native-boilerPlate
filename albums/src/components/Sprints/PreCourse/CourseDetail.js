@@ -9,9 +9,9 @@ import Prep4 from './PreWeek4/Main';
 
 
 const CourseDetail = (props) => {
-  console.log('props CourseDetail', props)
-  const { topic, introduction, image } = props.info;
-    
+  // console.log('props CourseDetail', props)
+  const { topic, introduction, image, button } = props.info;
+  const { gotoButton } = props
   const { thumbnailStyle, headerConetentStyle, thumbnailContainerStyle, headerTextStyle } = Styles;
   
 
@@ -38,8 +38,8 @@ const CourseDetail = (props) => {
       </CardSection>
 
       <CardSection>
-        <Button onPress = {()=> this.props.navigation.navigate('PCWeek1')}>
-          Go To Week 1
+        <Button onPress = {()=> gotoButton(button)}>
+          Go To Page
         </Button>
       </CardSection>	
       <CardSection>

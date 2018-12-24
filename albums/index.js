@@ -48,11 +48,11 @@ const CustomDrawerComponent = (props) => {
 
 // export default createStackNavigator({
 const AppStackNavigator = createStackNavigator({
-  PCWeek1: PCWeek1,
+  PCList: PCList,
   FSList: FSList,
   JSList: JSList,
   OSList: OSList,
-  PCList: PCList,
+  PCWeek1: PCWeek1,
   PCWeek2: PCWeek2,
   PCWeek3: PCWeek3,
   PCWeek4: PCWeek4,
