@@ -42,11 +42,11 @@ const CourseDetail = (props) => {
           Go To Page
         </Button>
       </CardSection>	
-      <CardSection>
+      {/* <CardSection>
         <TouchableOpacity>
           <Icon size = {30} name= "ios-trash" color = "red"/>
         </TouchableOpacity>
-      </CardSection>	
+      </CardSection>	 */}
     </Card>
   );
 }
