@@ -26,8 +26,8 @@ export default class App extends React.Component {
   render() {
     return (
       // <Navigate />
-      // <AppDrawerNavigator />
-      <AppStackNavigator />     
+      <AppDrawerNavigator />
+      // <AppStackNavigator />     
     )
   }
 }
