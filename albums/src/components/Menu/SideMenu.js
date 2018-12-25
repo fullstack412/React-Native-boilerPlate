@@ -23,7 +23,7 @@ class SideMenu extends Component {
               Prep Course Section
             </Text> */}
             <View style={sectionHeadingStyle}>
-              <Text style={navSectionStyle} onPress={this.navigateToScreen('Prep_Course')}>
+              <Text style={navSectionStyle} onPress={this.navigateToScreen('Prep_Course_Sprints')}>
                 Prep Course Menu
               </Text>                
               <Text style={navItemStyle} onPress={this.navigateToScreen('Prep_Week_1')}>
@@ -50,6 +50,32 @@ class SideMenu extends Component {
               </Text>
               <Text style={navItemStyle} onPress={this.navigateToScreen('JSDataStructure')}>
                 Data Structure
+              </Text>
+            </View>
+          </View>
+          <View>
+            {/* <Text style={sectionHeadingStyle}>
+              Data Structure
+            </Text> */}
+            <View style={sectionHeadingStyle}>
+              <Text style={navSectionStyle} onPress={this.navigateToScreen('Full_Stack_Sprints')}>
+                Full Stack Sprints Menu
+              </Text>
+              <Text style={navItemStyle} onPress={this.navigateToScreen('JSDataStructure')}>
+                Place Holder
+              </Text>
+            </View>
+          </View>
+          <View>
+            {/* <Text style={sectionHeadingStyle}>
+              Data Structure
+            </Text> */}
+            <View style={sectionHeadingStyle}>
+              <Text style={navSectionStyle} onPress={this.navigateToScreen('Other_Sprints')}>
+                Other Sprints Menu
+              </Text>
+              <Text style={navItemStyle} onPress={this.navigateToScreen('JSDataStructure')}>
+                Place Holder
               </Text>
             </View>
           </View>

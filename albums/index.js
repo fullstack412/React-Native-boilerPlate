@@ -60,12 +60,12 @@ const AppStackNavigator = createStackNavigator({
 })
 
 const AppDrawerNavigator = createDrawerNavigator({
-  Prep_Course: PCList,
+  Prep_Course_Sprints: PCList,
   Prep_Week_1: PCWeek1,
   Prep_Week_2: PCWeek2,
   Prep_Week_3: PCWeek3,
   Prep_Week_4: PCWeek4,
-  Full_Stack: FSList,
+  Full_Stack_Sprints: FSList,
   JS_Sprints: JSList,
   JSDataStructure: JSDataStructure,
   Other_Sprints: OSList,

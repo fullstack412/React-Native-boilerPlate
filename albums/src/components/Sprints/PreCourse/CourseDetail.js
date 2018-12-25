@@ -11,7 +11,7 @@ import Prep4 from './PreWeek4/Main';
 const CourseDetail = (props) => {
   // console.log('props CourseDetail', props)
   const { topic, introduction, image, button } = props.info;
-  const { gotoButton } = props
+  const { gotoButton } = props;
   const { thumbnailStyle, headerConetentStyle, thumbnailContainerStyle, headerTextStyle } = Styles;
   
 
