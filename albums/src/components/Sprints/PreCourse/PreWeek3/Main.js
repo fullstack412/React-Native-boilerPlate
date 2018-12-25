@@ -42,7 +42,17 @@ class Main extends Component {
       </CardSection>
 
       <CardSection>
-        <Button>
+        <Button onPress = {()=>this.props.navigation.navigate('PCWeek2')}>
+          Previous
+        </Button>
+      </CardSection>
+      <CardSection>
+        <Button onPress = {()=>this.props.navigation.navigate('PCWeek4')}>
+          Next
+        </Button>
+      </CardSection>
+      <CardSection>
+        <Button onPress = {()=>this.props.navigation.navigate('PCList')}>
           Home
         </Button>
       </CardSection>

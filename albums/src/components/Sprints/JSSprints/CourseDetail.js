@@ -7,6 +7,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 const CourseDetail = ({ info }) => {
   // destructuring
   const { topic, introduction, image } = info;
+  const { gotoButton } = props;
   const { thumbnailStyle, headerConetentStyle, thumbnailContainerStyle, headerTextStyle } = Styles;
   return (
     
@@ -32,7 +33,7 @@ const CourseDetail = ({ info }) => {
       </CardSection>
 
       <CardSection>
-        <Button>
+        <Button onPress = {()=> gotoButton(button)}>
           Go To Page
         </Button>
       </CardSection>	

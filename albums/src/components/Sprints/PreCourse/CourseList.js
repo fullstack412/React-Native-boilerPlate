@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { ScrollView, StyleSheet } from 'react-native';
 // import axios from 'axios';
-import { Header } from '../../common';
+import { Header, Button } from '../../common';
 import CourseDetail from './CourseDetail';
 import Prep1 from './PreWeek1/Main';
 import Prep2 from './PreWeek2/Main';
@@ -13,6 +13,7 @@ class CourseList extends Component {
     topic: 'Prep Week 1', 
     introduction: 'Function, booleans, comparisons, logical operators, repetition, variables, while loop, array, for', 
     image: require('../../../assets/loop.png'),
+    button: 'PCWeek1',
     body: {
       intro: '' 
     }
@@ -20,6 +21,7 @@ class CourseList extends Component {
     topic: 'Prep Week 2',
     introduction: 'Objects, Data Modeling, Higher Order Function, each function, map function, filter function',
     image: require('../../../assets/html.png'),
+    button: 'PCWeek2',
     body: {
       intro: ''
     }
@@ -27,13 +29,15 @@ class CourseList extends Component {
     topic: 'Prep Week 3',
     introduction: 'Reduce, Abstraction, Closure, Data Modeling, OOP, HTML, CSS, jQuery',
     image: require('../../../assets/git.png'),
-    body: {
+    button: 'PCWeek3',
+    body: { 
       intro: ''
     }
   }, {
     topic: 'Prep Week 4',
     introduction: 'Web Development, Git, Twitler, Testing, Revision, Project',
     image: require('../../../assets/javascript.png'),
+    button: 'PCWeek4',
     body: {
       intro: ''
     }
@@ -49,8 +53,12 @@ class CourseList extends Component {
 
   mapOutCourses() {
     return this.state.courses.map(element => (
-      <CourseDetail key = {element.topic} info = {element} />
+      <CourseDetail key = {element.topic} info = {element} gotoButton = {this.gotoButton.bind(this)}/>
     ))
+  }
+
+  gotoButton(btn) {
+    this.props.navigation.navigate(btn);
   }
 
 
@@ -58,7 +66,10 @@ class CourseList extends Component {
     return (
       <ScrollView>
         <Header/>
-        {this.mapOutCourses()} 
+        {this.mapOutCourses()}
+        {/* <Button onPress = {()=>this.props.navigation.navigate('PCWeek1')}>
+          Go To Page
+        </Button>  */}
       </ScrollView>
     );
   }

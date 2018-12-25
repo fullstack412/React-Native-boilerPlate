@@ -16,38 +16,43 @@ class Main extends Component {
 
     return (
       <Card>
-      <CardSection>
-        <View style = {headerConetentStyle}>
-          <Text style = {headerTextStyle}>
-            {topic}{"\n"}
+        <CardSection>
+          <View style = {headerConetentStyle}>
+            <Text style = {headerTextStyle}>
+              {topic}{"\n"}
+            </Text>
+          </View>				
+        </CardSection>
+
+        <CardSection>
+          <Text>
+          How should I study for RBK?{"\n"}{introduction}{"\n"}
           </Text>
-        </View>				
-      </CardSection>
+        </CardSection>
 
-      <CardSection>
-        <Text>
-        How should I study for RBK?{"\n"}{introduction}{"\n"}
-        </Text>
-      </CardSection>
+        <CardSection>
+          <Text>
+            Who is Fatema:{"\n"}{body}{"\n"}
+          </Text>
+        </CardSection>
 
-      <CardSection>
-        <Text>
-          Who is Fatema:{"\n"}{body}{"\n"}
-        </Text>
-      </CardSection>
+        <CardSection>
+          <Text>
+            Where is RBK:{"\n"}{end}{"\n"}
+          </Text>
+        </CardSection>
 
-      <CardSection>
-        <Text>
-          Where is RBK:{"\n"}{end}{"\n"}
-        </Text>
-      </CardSection>
-
-      <CardSection>
-        <Button>
-          Home
-        </Button>
-      </CardSection>
-    </Card>
+        <CardSection>
+          <Button onPress = {()=>this.props.navigation.navigate('PCWeek3')}>
+            Previous
+          </Button>
+        </CardSection>
+        <CardSection>
+          <Button onPress = {()=>this.props.navigation.navigate('PCList')}>
+            Home
+          </Button>
+        </CardSection>
+      </Card>
     );
   }
 }

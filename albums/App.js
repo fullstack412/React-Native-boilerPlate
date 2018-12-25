@@ -60,7 +60,6 @@ const CustomDrawerComponent = (props) => {
   )
 }
 
-// Don't worry
 // export default createStackNavigator({
 // // const AppStackNavigator = createStackNavigator({
 //   // FSList: FSList,

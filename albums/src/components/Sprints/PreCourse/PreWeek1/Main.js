@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Button, Card, CardSection, Header } from '../../../common';
-import { createStackNavigator } from 'react-navigation';
 
 import Home from '../CourseList';
 
@@ -43,7 +42,12 @@ class Main extends Component {
           Ending:{"\n"}{end}{"\n"}
         </Text>
       </CardSection>
-
+      
+      <CardSection>
+        <Button onPress = {()=>this.props.navigation.navigate('PCWeek2')}>
+          Next
+        </Button>
+      </CardSection>
       <CardSection>
         <Button onPress = {()=>this.props.navigation.navigate('PCList')}>
           Home
