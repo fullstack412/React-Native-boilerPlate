@@ -19,9 +19,6 @@ class SideMenu extends Component {
         </View>
         <ScrollView>
           <View>
-            {/* <Text style={sectionHeadingStyle}>
-              Prep Course Section
-            </Text> */}
             <View style={sectionHeadingStyle}>
               <Text style={navSectionStyle} onPress={this.navigateToScreen('Prep_Course_Sprints')}>
                 Prep Course Menu
@@ -41,9 +38,6 @@ class SideMenu extends Component {
             </View>
           </View>
           <View>
-            {/* <Text style={sectionHeadingStyle}>
-              Data Structure
-            </Text> */}
             <View style={sectionHeadingStyle}>
               <Text style={navSectionStyle} onPress={this.navigateToScreen('JS_Sprints')}>
                 Javascript Sprints Menu
@@ -54,9 +48,6 @@ class SideMenu extends Component {
             </View>
           </View>
           <View>
-            {/* <Text style={sectionHeadingStyle}>
-              Data Structure
-            </Text> */}
             <View style={sectionHeadingStyle}>
               <Text style={navSectionStyle} onPress={this.navigateToScreen('Full_Stack_Sprints')}>
                 Full Stack Sprints Menu
@@ -67,9 +58,6 @@ class SideMenu extends Component {
             </View>
           </View>
           <View>
-            {/* <Text style={sectionHeadingStyle}>
-              Data Structure
-            </Text> */}
             <View style={sectionHeadingStyle}>
               <Text style={navSectionStyle} onPress={this.navigateToScreen('Other_Sprints')}>
                 Other Sprints Menu
@@ -80,9 +68,20 @@ class SideMenu extends Component {
             </View>
           </View>
           <View>
-            {/* <Text style={sectionHeadingStyle}>
-              Data Structure
-            </Text> */}
+            <View style={sectionHeadingStyle}>
+              <Text style={navSectionStyle} onPress={this.navigateToScreen('FAQ')}>
+                FAQ
+              </Text>
+            </View>
+          </View>
+          <View>
+            <View style={sectionHeadingStyle}>
+              <Text style={navSectionStyle} onPress={this.navigateToScreen('Contact')}>
+                Contact
+              </Text>
+            </View>
+          </View>
+          <View>
             <View style={sectionHeadingStyle}>
               <Text style={navSectionStyle} onPress={this.navigateToScreen('Log_In')}>
                 Log In

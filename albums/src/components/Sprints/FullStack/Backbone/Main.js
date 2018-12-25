@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { Button } from '../../../common';
-import { Card } from '../../../common';
-import { CardSection } from '../../../common';
+import { Button, Card, CardSection } from '../../../common';
 
 class Main extends Component {
 
@@ -10,8 +8,8 @@ class Main extends Component {
   render() {
   
     const { thumbnailStyle, headerConetentStyle, thumbnailContainerStyle, headerTextStyle } = Styles;
-    const topic = 'Data Structure'
-    const introduction = 'This gives us a drawer navigator with a list of navigation items.';
+    const topic = 'Backbone'
+    const introduction = 'Backbone is a popular Front-end Framework.';
     const body = 'For limited customisation we can use DrawerItems component provided by react-navigation in contentComponent. In case we want to update the styles of the drawer, make it scrollable or add a header/footer we can still achieve it by using the DrawerItems. It will handle the navigation on its own. Below is an example of how to achieve it.';
     const end = 'This guide covers the various navigation components available in React Native. If you are just getting started with navigation, you will probably want to use React Navigation. React Navigation provides an easy to use navigation solution, with the ability to present common stack navigation and tabbed navigation patterns on both iOS and Android.'
     

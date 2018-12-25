@@ -1,3 +1,5 @@
+// TODO: Test new buttons After Login
+
 import firebase from 'firebase';
 import React, { Component } from 'react';
 import { View, StyleSheet } from 'react-native';
@@ -42,6 +44,21 @@ class LoginScreen extends Component {
     } else if (this.state.loggedIn === true) {
       return (
         <CardSection>
+          <Button onPress = {()=>this.props.navigation.navigate('CodeCompiler')}>
+            Code Compiler
+          </Button>
+          <Button onPress = {()=>this.props.navigation.navigate('Calendar')}>
+            Calendar
+          </Button>
+          <Button onPress = {()=>this.props.navigation.navigate('Surveys')}>
+            Surveys
+          </Button>
+          <Button onPress = {()=>this.props.navigation.navigate('TownHall')}>
+            TownHall
+          </Button>
+          <Button onPress = {()=>this.props.navigation.navigate('Handbook')}>
+            Student Handbook
+          </Button>
           <Button onPress = {() => firebase.auth().signOut()}>
             Logging Out
           </Button>

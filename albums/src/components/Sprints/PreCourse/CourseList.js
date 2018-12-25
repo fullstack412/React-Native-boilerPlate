@@ -3,10 +3,6 @@ import { ScrollView, StyleSheet } from 'react-native';
 // import axios from 'axios';
 import { Header, Button } from '../../common';
 import CourseDetail from './CourseDetail';
-import Prep1 from './PreWeek1/Main';
-import Prep2 from './PreWeek2/Main';
-import Prep3 from './PreWeek3/Main';
-import Prep4 from './PreWeek4/Main';
 
 class CourseList extends Component {
   state = { courses: [{

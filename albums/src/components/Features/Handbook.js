@@ -3,15 +3,16 @@ import { StyleSheet, Text, View } from 'react-native';
 import { Button, Card, CardSection } from '../common';
 
 
-class FAQ extends Component {
+class Handbook extends Component {
 
   
   render() {
+  
     const { thumbnailStyle, headerConetentStyle, thumbnailContainerStyle, headerTextStyle } = Styles;
-    const topic = 'Frequently Ask Questions'
-    const introduction = 'Use your computer to study';
-    const body = 'It\'s a comprehensive programming training bootcamp.';
-    const end = 'Google it'
+    const topic = 'RBK Student Handbook'
+    const introduction = 'Don\'t be late';
+    const body = 'No Copy';
+    const end = 'Be respectful'
     
     return (
       <Card>
@@ -25,19 +26,19 @@ class FAQ extends Component {
 
       <CardSection>
         <Text>
-        How should I study for RBK?{"\n"}{introduction}{"\n"}
+          Rule 1: {"\n"}{introduction}{"\n"}
         </Text>
       </CardSection>
 
       <CardSection>
         <Text>
-          What is RBK?{"\n"}{body}{"\n"}
+          Rule 2: {"\n"}{body}{"\n"}
         </Text>
       </CardSection>
 
       <CardSection>
         <Text>
-          Where is RBK?{"\n"}{end}{"\n"}
+          Rule 3: {"\n"}{end}{"\n"}
         </Text>
       </CardSection>
     </Card>
@@ -64,4 +65,4 @@ const Styles = StyleSheet.create({
     marginRight: 20
   }
 });
-export default FAQ;
+export default Handbook;

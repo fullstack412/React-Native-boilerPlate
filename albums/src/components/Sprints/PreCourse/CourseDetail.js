@@ -2,14 +2,10 @@ import React, { Component } from 'react';
 import { Text, View, Image, StyleSheet, TouchableOpacity } from 'react-native';
 import { Card, CardSection, Header, Button } from '../../common';
 import Icon from 'react-native-vector-icons/Ionicons';
-import Prep1 from './PreWeek1/Main';
-import Prep2 from './PreWeek2/Main';
-import Prep3 from './PreWeek3/Main';
-import Prep4 from './PreWeek4/Main';
+
 
 
 const CourseDetail = (props) => {
-  // console.log('props CourseDetail', props)
   const { topic, introduction, image, button } = props.info;
   const { gotoButton } = props;
   const { thumbnailStyle, headerConetentStyle, thumbnailContainerStyle, headerTextStyle } = Styles;

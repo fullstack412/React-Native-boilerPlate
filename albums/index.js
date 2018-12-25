@@ -2,20 +2,32 @@
 import React from 'react';
 import {AppRegistry, View, StyleSheet, Text, SafeAreaView, ScrollView, Dimensions, Image } from 'react-native';
 import { Header } from './src/components/common';
-// sidebar
-import SideMenu from './src/components/Menu/SideMenu'
 import {createDrawerNavigator, DrawerItems, createStackNavigator} from 'react-navigation';
-import LoginScreen from './src/components/Login/LoginScreen';
-import FSList from './src/components/Sprints/FullStack/CourseList';
-import JSList from './src/components/Sprints/JSSprints/CourseList';
-import OSList from './src/components/Sprints/OtherSprints/CourseList';
-import PCList from './src/components/Sprints/PreCourse/CourseList';
 
+import SideMenu from './src/components/Menu/SideMenu'
+import LoginScreen from './src/components/Login/LoginScreen';
+
+import FSList from './src/components/Sprints/FullStack/CourseList';
+import Recastly from './src/components/Sprints/FullStack/React/Main';
+import Angular from './src/components/Sprints/FullStack/Angular/Main';
+import Backbone from './src/components/Sprints/FullStack/Backbone/Main';
+
+import JSList from './src/components/Sprints/JSSprints/CourseList';
+import JSDataStructure from './src/components/Sprints/JSSprints/DataStructure/Main';
+
+import OSList from './src/components/Sprints/OtherSprints/CourseList';
+
+import PCList from './src/components/Sprints/PreCourse/CourseList';
 import PCWeek1 from './src/components/Sprints/PreCourse/PreWeek1/Main';
 import PCWeek2 from './src/components/Sprints/PreCourse/PreWeek2/Main';
 import PCWeek3 from './src/components/Sprints/PreCourse/PreWeek3/Main';
 import PCWeek4 from './src/components/Sprints/PreCourse/PreWeek4/Main';
-import JSDataStructure from './src/components/Sprints/JSSprints/DataStructure/Main';
+
+import CodeCompiler from './src/components/Features/CodeCompiler/Main';
+import Calendar from './src/components/Features/GoogleCalendar/Main';
+import Surveys from './src/components/Features/Surveys/Main';
+import TownHall from './src/components/Features/TownHall/Main';
+import Handbook from './src/components/Features/Handbook';
 import FAQ from './src/components/Features/FAQ';
 import Contact from './src/components/Features/Contact';
 
@@ -49,15 +61,23 @@ const CustomDrawerComponent = (props) => {
 // export default createStackNavigator({
 const AppStackNavigator = createStackNavigator({
   PCList: PCList,
-  FSList: FSList,
-  JSList: JSList,
-  OSList: OSList,
   PCWeek1: PCWeek1,
   PCWeek2: PCWeek2,
   PCWeek3: PCWeek3,
   PCWeek4: PCWeek4,
-  JSDataStructure: JSDataStructure
-})
+  FSList: FSList,
+  Recastly: Recastly,
+  Angular: Angular,
+  Backbone: Backbone,
+  JSList: JSList,
+  JSDataStructure: JSDataStructure,
+  OSList: OSList,
+  CodeCompiler: CodeCompiler,
+  Calendar: Calendar,
+  Surveys: Surveys,
+  TownHall: TownHall,
+  Handbook: Handbook
+});
 
 const AppDrawerNavigator = createDrawerNavigator({
   AppStackNavigator: AppStackNavigator,
@@ -75,7 +95,7 @@ const AppDrawerNavigator = createDrawerNavigator({
   Log_In: LoginScreen
 }, {
   contentComponent: SideMenu
-})
+});
 
 const Styles = StyleSheet.create({
   drawerStyle: {
