@@ -25,9 +25,9 @@ import Contact from './src/components/Features/Contact';
 export default class App extends React.Component {
   render() {
     return (
+        <AppDrawerNavigator />
+        // <AppStackNavigator />     
       // <Navigate />
-      <AppDrawerNavigator />
-      // <AppStackNavigator />     
     )
   }
 }
@@ -60,6 +60,7 @@ const AppStackNavigator = createStackNavigator({
 })
 
 const AppDrawerNavigator = createDrawerNavigator({
+  AppStackNavigator: AppStackNavigator,
   Prep_Course_Sprints: PCList,
   Prep_Week_1: PCWeek1,
   Prep_Week_2: PCWeek2,
