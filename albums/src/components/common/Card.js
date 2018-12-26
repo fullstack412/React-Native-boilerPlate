@@ -1,12 +1,12 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { ScrollView, StyleSheet } from 'react-native';
 
 // reusable stand alone component purely for CSS styling
 const Card = (props) => {
   return (
-    <View style = {Styles.containerStyle}>
+    <ScrollView style = {Styles.containerStyle}>
       {props.children}
-    </View>
+    </ScrollView>
   );
 };
 

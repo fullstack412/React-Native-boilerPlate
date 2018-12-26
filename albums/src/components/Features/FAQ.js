@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { Button } from '../common';
-import { Card } from '../common';
-import { CardSection } from '../common';
+import { Button, Card, CardSection } from '../common';
+
 
 class FAQ extends Component {
 
@@ -11,7 +10,7 @@ class FAQ extends Component {
     const { thumbnailStyle, headerConetentStyle, thumbnailContainerStyle, headerTextStyle } = Styles;
     const topic = 'Frequently Ask Questions'
     const introduction = 'Use your computer to study';
-    const body = 'The smartest';
+    const body = 'It\'s a comprehensive programming training bootcamp.';
     const end = 'Google it'
     
     return (
@@ -32,13 +31,13 @@ class FAQ extends Component {
 
       <CardSection>
         <Text>
-          Who is Fatema:{"\n"}{body}{"\n"}
+          What is RBK?{"\n"}{body}{"\n"}
         </Text>
       </CardSection>
 
       <CardSection>
         <Text>
-          Where is RBK:{"\n"}{end}{"\n"}
+          Where is RBK?{"\n"}{end}{"\n"}
         </Text>
       </CardSection>
     </Card>

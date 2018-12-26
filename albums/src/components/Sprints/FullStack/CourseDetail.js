@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import { Text, View, Image, StyleSheet, TouchableOpacity } from 'react-native';
-import { Button, Card, CardSection } from '../../common';
+import { Button, Card, CardSection, Header } from '../../common';
 import Icon from 'react-native-vector-icons/Ionicons';
 
-const CourseDetail = ({ info }) => {
+const CourseDetail = (props) => {
   // destructuring
-  const { topic, introduction, image } = info;
+  const { topic, introduction, image, button } = props.info;
+  const { gotoButton } = props;
   const { thumbnailStyle, headerConetentStyle, thumbnailContainerStyle, headerTextStyle } = Styles;
   return (
     
@@ -31,15 +32,15 @@ const CourseDetail = ({ info }) => {
       </CardSection>
 
       <CardSection>
-        <Button>
+        <Button onPress = {()=> gotoButton(button)}>
           Go To Page
         </Button>
       </CardSection>	
-      <CardSection>
+      {/* <CardSection>
         <TouchableOpacity>
           <Icon size = {30} name= "ios-trash" color = "red"/>
         </TouchableOpacity>
-      </CardSection>	
+      </CardSection>	 */}
     </Card>
   );
 }

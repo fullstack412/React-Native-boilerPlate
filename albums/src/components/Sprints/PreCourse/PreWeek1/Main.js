@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Button, Card, CardSection, Header } from '../../../common';
-import { createStackNavigator } from 'react-navigation';
 
 import Home from '../CourseList';
 
@@ -18,38 +17,43 @@ class Main extends Component {
     console.log('main: ', this.props.navigation)
     return (
       <Card>
-      <CardSection>
-        <View style = {headerConetentStyle}>
-          <Text style = {headerTextStyle}>
-            {topic}{"\n"}
+        <CardSection>
+          <View style = {headerConetentStyle}>
+            <Text style = {headerTextStyle}>
+              {topic}{"\n"}
+            </Text>
+          </View>				
+        </CardSection>
+
+        <CardSection>
+          <Text>
+            Introduction:{"\n"}{introduction}{"\n"}
           </Text>
-        </View>				
-      </CardSection>
+        </CardSection>
 
-      <CardSection>
-        <Text>
-          Introduction:{"\n"}{introduction}{"\n"}
-        </Text>
-      </CardSection>
+        <CardSection>
+          <Text>
+            Body:{"\n"}{body}{"\n"}
+          </Text>
+        </CardSection>
 
-      <CardSection>
-        <Text>
-          Body:{"\n"}{body}{"\n"}
-        </Text>
-      </CardSection>
-
-      <CardSection>
-        <Text>
-          Ending:{"\n"}{end}{"\n"}
-        </Text>
-      </CardSection>
-
-      <CardSection>
-        <Button onPress = {()=>this.props.navigation.navigate('PCList')}>
-          Home
-        </Button>
-      </CardSection>
-    </Card>
+        <CardSection>
+          <Text>
+            Ending:{"\n"}{end}{"\n"}
+          </Text>
+        </CardSection>
+        
+        <CardSection>
+          <Button onPress = {()=>this.props.navigation.navigate('PCWeek2')}>
+            Next
+          </Button>
+        </CardSection>
+        <CardSection>
+          <Button onPress = {()=>this.props.navigation.navigate('PCList')}>
+            Home
+          </Button>
+        </CardSection>
+      </Card>
     );
   }
 }

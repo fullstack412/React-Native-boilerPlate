@@ -14,7 +14,7 @@ React Native mobile app that supplements RBK instructional materials
 1. Fork from this repo
 2. Terminal: git clone or git pull
 3. Terminal: cd boilerPlate/albums
-5. Terminal: npm i
+5. Terminal: npm i (if ERROR, update node/npm)
 6. Develop or debug code
 7. Make sure phone and computer are on the same wifi 
 8. Terminal: expo start  
@@ -27,7 +27,7 @@ React Native mobile app that supplements RBK instructional materials
 1. Fork from this repo
 2. Terminal: git clone or git pull
 3. Terminal: cd boilerPlate/albums
-5. Terminal: npm i
+5. Terminal: npm i (if ERROR, update node/npm)
 6. Develop or debug code
 7. Open Android Studio -> Android Virtual Device Manager -> Run Virtual Device
 7. Terminal: react-native run-android
