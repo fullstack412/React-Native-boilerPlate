@@ -13,20 +13,20 @@ class Main extends Component {
     
     return (
       <Card>
-      <CardSection>
-        <View style = {headerConetentStyle}>
-          <Text style = {headerTextStyle}>
-            {topic}{"\n"}
-          </Text>
-        </View>				
-      </CardSection>
+        <CardSection>
+          <View style = {headerConetentStyle}>
+            <Text style = {headerTextStyle}>
+              {topic}{"\n"}
+            </Text>
+          </View>				
+        </CardSection>
 
-      <CardSection>
-        <Text>
-          Input:{"\n"}{introduction}{"\n"}
-        </Text>
-      </CardSection>
-    </Card>
+        <CardSection>
+          <Text>
+            Input:{"\n"}{introduction}{"\n"}
+          </Text>
+        </CardSection>
+      </Card>
     );
   }
 }

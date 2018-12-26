@@ -15,32 +15,32 @@ class Main extends Component {
     
     return (
       <Card>
-      <CardSection>
-        <View style = {headerConetentStyle}>
-          <Text style = {headerTextStyle}>
-            {topic}{"\n"}
+        <CardSection>
+          <View style = {headerConetentStyle}>
+            <Text style = {headerTextStyle}>
+              {topic}{"\n"}
+            </Text>
+          </View>				
+        </CardSection>
+
+        <CardSection>
+          <Text>
+            Phone Number{"\n"}{introduction}{"\n"}
           </Text>
-        </View>				
-      </CardSection>
+        </CardSection>
 
-      <CardSection>
-        <Text>
-          Phone Number{"\n"}{introduction}{"\n"}
-        </Text>
-      </CardSection>
+        <CardSection>
+          <Text>
+            Email:{"\n"}{body}{"\n"}
+          </Text>
+        </CardSection>
 
-      <CardSection>
-        <Text>
-          Email:{"\n"}{body}{"\n"}
-        </Text>
-      </CardSection>
-
-      <CardSection>
-        <Text>
-          Address:{"\n"}{end}{"\n"}
-        </Text>
-      </CardSection>
-    </Card>
+        <CardSection>
+          <Text>
+            Address:{"\n"}{end}{"\n"}
+          </Text>
+        </CardSection>
+      </Card>
     );
   }
 }
