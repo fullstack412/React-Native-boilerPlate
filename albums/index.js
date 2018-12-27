@@ -76,7 +76,8 @@ const AppStackNavigator = createStackNavigator({
   Calendar: Calendar,
   Surveys: Surveys,
   TownHall: TownHall,
-  Handbook: Handbook
+  Handbook: Handbook,
+  Header: Header
 });
 
 const AppDrawerNavigator = createDrawerNavigator({
@@ -92,7 +93,8 @@ const AppDrawerNavigator = createDrawerNavigator({
   Other_Sprints: OSList,
   FAQ: FAQ,
   Contact: Contact,
-  Log_In: LoginScreen
+  Log_In: LoginScreen,
+  Header: Header
 }, {
   contentComponent: SideMenu
 });
