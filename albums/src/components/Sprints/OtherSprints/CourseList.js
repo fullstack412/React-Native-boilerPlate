@@ -38,10 +38,13 @@ class CourseList extends Component {
 
   mapOutCourses() {
     return this.state.courses.map(element => (
-      <CourseDetail key = {element.topic} info = {element} />
+      <CourseDetail key = {element.topic} info = {element} gotoButton = {this.gotoButton.bind(this)}/>
     ))
   }
 
+  gotoButton(btn) {
+    this.props.navigation.navigate(btn);
+  }
 
   render() {
     return (

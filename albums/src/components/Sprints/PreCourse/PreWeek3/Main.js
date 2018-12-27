@@ -15,38 +15,48 @@ class Main extends Component {
     const end = 'This guide covers the various navigation components available in React Native. If you are just getting started with navigation, you will probably want to use React Navigation. React Navigation provides an easy to use navigation solution, with the ability to present common stack navigation and tabbed navigation patterns on both iOS and Android.'
     return (
       <Card>
-      <CardSection>
-        <View style = {headerConetentStyle}>
-          <Text style = {headerTextStyle}>
-            {topic}{"\n"}
+        <CardSection>
+          <View style = {headerConetentStyle}>
+            <Text style = {headerTextStyle}>
+              {topic}{"\n"}
+            </Text>
+          </View>				
+        </CardSection>
+
+        <CardSection>
+          <Text>
+            Introduction:{"\n"}{introduction}{"\n"}
           </Text>
-        </View>				
-      </CardSection>
+        </CardSection>
 
-      <CardSection>
-        <Text>
-          Introduction:{"\n"}{introduction}{"\n"}
-        </Text>
-      </CardSection>
+        <CardSection>
+          <Text>
+            Body:{"\n"}{body}{"\n"}
+          </Text>
+        </CardSection>
 
-      <CardSection>
-        <Text>
-          Body:{"\n"}{body}{"\n"}
-        </Text>
-      </CardSection>
+        <CardSection>
+          <Text>
+            Ending:{"\n"}{end}{"\n"}
+          </Text>
+        </CardSection>
 
-      <CardSection>
-        <Text>
-          Ending:{"\n"}{end}{"\n"}
-        </Text>
-      </CardSection>
-
-      <CardSection>
-        <Button>
-          Home
-        </Button>
-      </CardSection>
-    </Card>
+        <CardSection>
+          <Button onPress = {()=>this.props.navigation.navigate('PCWeek2')}>
+            Previous
+          </Button>
+        </CardSection>
+        <CardSection>
+          <Button onPress = {()=>this.props.navigation.navigate('PCWeek4')}>
+            Next
+          </Button>
+        </CardSection>
+        <CardSection>
+          <Button onPress = {()=>this.props.navigation.navigate('PCList')}>
+            Home
+          </Button>
+        </CardSection>
+      </Card>
     );
   }
 }

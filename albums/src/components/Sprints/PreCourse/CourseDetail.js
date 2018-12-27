@@ -1,18 +1,13 @@
 import React, { Component } from 'react';
-import { Text, View, Image, StyleSheet, TouchableOpacity, Button } from 'react-native';
-import { Card, CardSection, Header } from '../../common';
+import { Text, View, Image, StyleSheet, TouchableOpacity } from 'react-native';
+import { Card, CardSection, Header, Button } from '../../common';
 import Icon from 'react-native-vector-icons/Ionicons';
-import { createStackNavigator } from 'react-navigation';
-import Prep1 from './PreWeek1/Main';
-import Prep2 from './PreWeek2/Main';
-import Prep3 from './PreWeek3/Main';
-import Prep4 from './PreWeek4/Main';
+
 
 
 const CourseDetail = (props) => {
-  console.log('props CourseDetail', props)
-  const { topic, introduction, image } = props.info;
-    
+  const { topic, introduction, image, button } = props.info;
+  const { gotoButton } = props;
   const { thumbnailStyle, headerConetentStyle, thumbnailContainerStyle, headerTextStyle } = Styles;
   
 
@@ -39,18 +34,18 @@ const CourseDetail = (props) => {
       </CardSection>
 
       <CardSection>
-        <Button title = 'Go Page' onPress = {()=>{console.log(this.props.navigation)}}>
+        <Button onPress = {()=> gotoButton(button)}>
+          Go To Page
         </Button>
       </CardSection>	
-      <CardSection>
+      {/* <CardSection>
         <TouchableOpacity>
           <Icon size = {30} name= "ios-trash" color = "red"/>
         </TouchableOpacity>
-      </CardSection>	
+      </CardSection>	 */}
     </Card>
   );
 }
-
 
 const Styles = StyleSheet.create({
   headerConetentStyle: {
