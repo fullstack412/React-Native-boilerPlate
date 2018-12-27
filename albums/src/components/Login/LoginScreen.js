@@ -3,7 +3,7 @@
 import firebase from 'firebase';
 import React, { Component } from 'react';
 import { View, StyleSheet } from 'react-native';
-import { Header, Button, Spinner, CardSection } from '../common';
+import { Header, Button, Spinner, CardSection, Card } from '../common';
 import LoginForm from './LoginForm';
 import api from '../../../noDelete'
 
@@ -43,26 +43,43 @@ class LoginScreen extends Component {
       );
     } else if (this.state.loggedIn === true) {
       return (
-        <CardSection>
-          <Button onPress = {()=>this.props.navigation.navigate('CodeCompiler')}>
-            Code Compiler
-          </Button>
-          <Button onPress = {()=>this.props.navigation.navigate('Calendar')}>
-            Calendar
-          </Button>
-          <Button onPress = {()=>this.props.navigation.navigate('Surveys')}>
-            Surveys
-          </Button>
-          <Button onPress = {()=>this.props.navigation.navigate('TownHall')}>
-            TownHall
-          </Button>
-          <Button onPress = {()=>this.props.navigation.navigate('Handbook')}>
-            Student Handbook
-          </Button>
-          <Button onPress = {() => firebase.auth().signOut()}>
-            Logging Out
-          </Button>
-        </CardSection>
+        <Card>
+          <CardSection>
+            <Button onPress = {()=>this.props.navigation.navigate('CodeCompiler')}>
+              Code Compiler
+            </Button>
+          </CardSection>
+
+          <CardSection>
+            <Button onPress = {()=>this.props.navigation.navigate('Calendar')}>
+              Calendar
+            </Button>
+          </CardSection>
+
+          <CardSection>
+            <Button onPress = {()=>this.props.navigation.navigate('Surveys')}>
+              Surveys
+            </Button>
+          </CardSection>
+
+          <CardSection>
+            <Button onPress = {()=>this.props.navigation.navigate('TownHall')}>
+              TownHall
+            </Button>
+          </CardSection>
+
+          <CardSection>
+            <Button onPress = {()=>this.props.navigation.navigate('Handbook')}>
+              Student Handbook
+            </Button>
+          </CardSection>
+          
+          <CardSection>
+            <Button onPress = {() => firebase.auth().signOut()}>
+              Logging Out
+            </Button>
+          </CardSection>
+        </Card>
       )
     } else {
       return <LoginForm />;
