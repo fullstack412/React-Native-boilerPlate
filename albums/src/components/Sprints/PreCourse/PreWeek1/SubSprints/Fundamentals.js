@@ -1,10 +1,68 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { Button, Card, CardSection, Header } from '../../../../common';
+import { Button, Card, CardSection, Playquiz } from '../../../../common';
 
 class Fundamentals extends Component {
   constructor(props) {
     super(props)
+    this.state = {
+      quizData: {
+        "quiz" : {
+          "quiz1" : {
+            "question1" : {
+              "correctoption" : "option1",
+              "options" : {
+                "option1" : "Boolean",
+                "option2" : "String",
+                "option3" : "String and Boolean",
+                "option4" : "Number"
+              },
+              "question" : "'True' is a "
+            },
+            "question2" : {
+              "correctoption" : "option3",
+              "options" : {
+                  "option1" : "Boolean",
+                  "option2" : "String",
+                  "option3" : "Number",
+                  "option4" : "String and Number"
+                },
+              "question" : "6 is a "
+            },
+            "question3" : {
+              "correctoption" : "option2",
+              "options" : {
+                  "option1" : "18",
+                  "option2" : "'99' (data type is a String)",
+                  "option3" : "99 (data type is a Number)",
+                  "option4" : "The console will return an error message because JavaScript doesn't support type coercion"
+                },
+              "question" : "console.log('9' + 9) will display ____ on the console"
+            },
+            "question4" : {
+              "correctoption" : "option1",
+              "options" : {
+                  "option1" : "1",
+                  "option2" : "2",
+                  "option3" : "3",
+                  "option4" : "4"
+                },
+              "question" : "10 % 3 ="
+            },
+            "question5" : {
+              "correctoption" : "option2",
+              "options" : {
+                  "option1" : "expression",
+                  "option2" : "declaration",
+                  "option3" : "expression and declaration",
+                  "option4" : "No idea. Coding is hard."
+                },
+              "question" : "function foo() { return 'bar' } is a function _____"
+            }
+          }
+        }      
+      }
+    }
   }
 
   render() {
@@ -68,7 +126,7 @@ class Fundamentals extends Component {
             }`}
           </Text>
         </CardSection>
-        
+        <Playquiz quizData = { this.state.quizData }/>
         <CardSection>
           <Button onPress = {()=>this.props.navigation.navigate('PCWeek2')}>
             Next
