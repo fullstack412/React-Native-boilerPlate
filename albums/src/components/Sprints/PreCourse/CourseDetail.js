@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Text, View, Image, StyleSheet, TouchableOpacity } from 'react-native';
-import { Card, CardSection, Header, Button } from '../../common';
+import { Card, CardSection, Header, Button, Animbutton } from '../../common';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 
@@ -37,7 +37,9 @@ const CourseDetail = (props) => {
         <Button onPress = {()=> gotoButton(button)}>
           Go To Page
         </Button>
+        <Animbutton onColor={"blue"} effect={"bounce"} _onPress={(status) => {}} text="Bounce" />
       </CardSection>	
+
       {/* <CardSection>
         <TouchableOpacity>
           <Icon size = {30} name= "ios-trash" color = "red"/>
