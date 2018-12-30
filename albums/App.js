@@ -28,6 +28,7 @@ import Revision from './src/components/Sprints/PreCourse/PreWeek4/SubSprints/Rev
 import Testing from './src/components/Sprints/PreCourse/PreWeek4/SubSprints/Testing';
 import Twitler from './src/components/Sprints/PreCourse/PreWeek4/SubSprints/Twitler';
 import WebDev from './src/components/Sprints/PreCourse/PreWeek4/SubSprints/WebDev';
+import Objects from './src/components/Sprints/PreCourse/PreWeek2/SubSprints/Objects';
 
 
 import CodeCompiler from './src/components/Features/CodeCompiler/Main';
@@ -90,7 +91,8 @@ const AppStackNavigator = createStackNavigator({
   Surveys: Surveys,
   TownHall: TownHall,
   Handbook: Handbook,
-  Header: Header
+  Header: Header,
+  Objects:Objects
 });
 
 // after import you 

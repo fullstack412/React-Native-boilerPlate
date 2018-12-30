@@ -46,13 +46,7 @@ class CourseDetail extends Component {
             { this.renderPicker() }
           </Picker>
         </CardSection>
-        
-        {/* <CardSection>
-          <Button onPress = {()=> gotoButton(button)}>
-            Go To Page
-          </Button>
-          <Animbutton onColor={"blue"} effect={"bounce"} _onPress={(status) => {}} text="Bounce" />
-        </CardSection>	 */}
+
 
         {/* <CardSection>
           <TouchableOpacity>

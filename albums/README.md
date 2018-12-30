@@ -1,6 +1,6 @@
 # Remote Review
 
-React Native mobile app that supplements RBK instructional materials
+React Native mobile application that supplements RBK instructional materials
 
 ## Workflow Tracker
 [Team Waffle](https://waffle.io/RBK5HIRProject/boilerPlate)
