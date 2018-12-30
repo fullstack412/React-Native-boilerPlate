@@ -5,50 +5,57 @@ import Icon from 'react-native-vector-icons/Ionicons';
 
 
 
-const CourseDetail = (props) => {
-  const { topic, introduction, image, button } = props.info;
-  const { gotoButton } = props;
-  const { thumbnailStyle, headerConetentStyle, thumbnailContainerStyle, headerTextStyle, pickerContainerStyle } = Styles;
-  
+class CourseDetail extends Component {
+  renderPicker() {
+    return this.props.info.menuOptions.map(element => (
+      <Picker.Item label={element} value={element} key = {element}/>
+    ))
+  }
 
-  return (
-    <Card>
-      <CardSection>
-        <View style = {thumbnailContainerStyle}>
-            <Image 
-              style = {thumbnailStyle} 
-              source = {image}
-            />
-        </View>
-        <View style = {headerConetentStyle}>
-          <Text style = {headerTextStyle}>
-            {topic}{"\n"}
+  render() {
+    const { topic, introduction, image, button, menuOptions } = this.props.info;
+    const { gotoButton } = this.props;
+    const { thumbnailStyle, headerConetentStyle, thumbnailContainerStyle, headerTextStyle, pickerContainerStyle } = Styles;
+    return (
+      <Card>
+        <CardSection>
+          <View style = {thumbnailContainerStyle}>
+              <Image 
+                style = {thumbnailStyle} 
+                source = {image}
+              />
+          </View>
+          <View style = {headerConetentStyle}>
+            <Text style = {headerTextStyle}>
+              {topic}{"\n"}
+            </Text>
+          </View>				
+        </CardSection>
+
+        <CardSection>
+          <Text>
+            Introduction:{"\n"}{introduction}{"\n"}
           </Text>
-        </View>				
-      </CardSection>
+        </CardSection>
 
-      <CardSection>
-        <Text>
-          Introduction:{"\n"}{introduction}{"\n"}
-        </Text>
-      </CardSection>
+        <CardSection>
+          <Picker
+            style = { pickerContainerStyle }
+            onValueChange={(itemValue) => gotoButton(itemValue)} >
+            <Picker.Item label="Select Options" value = "DropDown" /> 
+            { this.renderPicker() }
+          </Picker>
+        </CardSection>
 
 
-      
-      {/* <CardSection>
-        <Button onPress = {()=> gotoButton(button)}>
-          Go To Page
-        </Button>
-        <Animbutton onColor={"blue"} effect={"bounce"} _onPress={(status) => {}} text="Bounce" />
-      </CardSection>	 */}
-
-      {/* <CardSection>
-        <TouchableOpacity>
-          <Icon size = {30} name= "ios-trash" color = "red"/>
-        </TouchableOpacity>
-      </CardSection>	 */}
-    </Card>
-  );
+        {/* <CardSection>
+          <TouchableOpacity>
+            <Icon size = {30} name= "ios-trash" color = "red"/>
+          </TouchableOpacity>
+        </CardSection>	 */}
+      </Card>
+    );
+  }
 }
 
 const Styles = StyleSheet.create({
