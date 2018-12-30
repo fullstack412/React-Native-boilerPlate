@@ -4,65 +4,7 @@ import { Button, Card, CardSection, Playquiz } from '../../../common';
 import Home from '../CourseList';
 
 class Main extends Component {
-  state = {
-    quizData: {
-      "quiz" : {
-        "quiz1" : {
-          "question1" : {
-            "correctoption" : "option3",
-            "options" : {
-              "option1" : "Java",
-              "option2" : "PHP",
-              "option3" : "Javascript",
-              "option4" : "Python"
-            },
-            "question" : "React is a ____ library"
-          },
-          "question2" : {
-            "correctoption" : "option4",
-            "options" : {
-                "option1" : "XML",
-                "option2" : "YML",
-                "option3" : "HTML",
-                "option4" : "JSX"
-              },
-            "question" : "____ tag syntax is used in React"
-          },
-          "question3" : {
-            "correctoption" : "option1",
-            "options" : {
-                "option1" : "Single root DOM node",
-                "option2" : "Double root DOM node",
-                "option3" : "Multiple root DOM node",
-                "option4" : "None of the above"
-              },
-            "question" : "Application built with just React usually have ____"
-          },
-          "question4" : {
-            "correctoption" : "option2",
-            "options" : {
-                "option1" : "mutable",
-                "option2" : "immutable",
-                "option3" : "variable",
-                "option4" : "none of the above"
-              },
-            "question" : "React elements are ____"
-          },
-          "question5" : {
-            "correctoption" : "option3",
-            "options" : {
-                "option1" : "functions",
-                "option2" : "array",
-                "option3" : "components",
-                "option4" : "json data"
-              },
-            "question" : "React allows to split UI into independent and reusable pieses of ____"
-          }
-        }
-      }      
-    }
-  }
-
+  
   render() {
     const { thumbnailStyle, headerConetentStyle, thumbnailContainerStyle, headerTextStyle } = Styles;
     const topic = 'Pre-course Week 4'
@@ -71,43 +13,35 @@ class Main extends Component {
     const end = 'This guide covers the various navigation components available in React Native. If you are just getting started with navigation, you will probably want to use React Navigation. React Navigation provides an easy to use navigation solution, with the ability to present common stack navigation and tabbed navigation patterns on both iOS and Android.';
 
     return (
-      
       <Card>
         <CardSection>
-          <View style = {headerConetentStyle}>
-            <Text style = {headerTextStyle}>
-              {topic}{"\n"}
-            </Text>
-          </View>				
-        </CardSection>
-
-        <CardSection>
-          <Text>
-          How should I study for RBK?{"\n"}{introduction}{"\n"}
-          </Text>
-        </CardSection>
-
-        <CardSection>
-          <Text>
-            Who is Fatema:{"\n"}{body}{"\n"}
-          </Text>
-        </CardSection>
-
-        <CardSection>
-          <Text>
-            Where is RBK:{"\n"}{end}{"\n"}
-          </Text>
-        </CardSection>
-
-        <Playquiz quizData = { this.state.quizData }/>
-        <CardSection>
-          <Button onPress = {()=>this.props.navigation.navigate('PCWeek3')}>
-            Previous
+          <Button onPress = {()=> this.props.navigation.navigate('Git')}>
+            Git
           </Button>
         </CardSection>
         <CardSection>
-          <Button onPress = {()=>this.props.navigation.navigate('PCList')}>
-            Home
+          <Button onPress = {()=> this.props.navigation.navigate('Project')}>
+            Project
+          </Button>
+        </CardSection>
+        <CardSection>
+          <Button onPress = {()=> this.props.navigation.navigate('Revision')}>
+            Revision
+          </Button>
+        </CardSection>
+        <CardSection>
+          <Button onPress = {()=> this.props.navigation.navigate('Testing')}>
+            Testing
+          </Button>
+        </CardSection>
+        <CardSection>
+          <Button onPress = {()=> this.props.navigation.navigate('Twitler')}>
+            Twitler
+          </Button>
+        </CardSection>
+        <CardSection>
+          <Button onPress = {()=> this.props.navigation.navigate('WebDev')}>
+            Web Development
           </Button>
         </CardSection>
       </Card>
