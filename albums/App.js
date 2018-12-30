@@ -65,9 +65,7 @@ const CustomDrawerComponent = (props) => {
   )
 }
 
-// import the component you create at the top of this page
-// Here is how to link your imported component to the any navigation
-// [name to be used] : name imported 
+// export default createStackNavigator({
 const AppStackNavigator = createStackNavigator({
   PCList: PCList,
   PCWeek1: PCWeek1,
@@ -95,8 +93,7 @@ const AppStackNavigator = createStackNavigator({
   Header: Header
 });
 
-// Here is how to link your imported component to the side drawer
-// [name to be used] : name imported 
+// after import you 
 const AppDrawerNavigator = createDrawerNavigator({
   AppStackNavigator: AppStackNavigator,
   Prep_Course_Sprints: PCList,
