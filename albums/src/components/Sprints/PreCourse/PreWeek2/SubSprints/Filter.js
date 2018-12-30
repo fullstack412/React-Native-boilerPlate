@@ -6,9 +6,7 @@ import { Button, Card, CardSection, Playquiz } from '../../../../common';
 class Filter extends Component{
   constructor(props){
       super(props)
-      this.state{
-
-      }
+      
   }
   render(){
       return(

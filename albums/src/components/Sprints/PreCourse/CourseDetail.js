@@ -42,7 +42,7 @@ const CourseDetail = (props) => {
           <Picker.Item label="Revision" value="Revision" />
           <Picker.Item label="Testing" value="Testing" />
           <Picker.Item label="Twitler" value="Twitler" />
-          <Picker.Item label="WebDev" value="WebDev" />
+          <Picker.Item label="Objects" value="Objects" />
          </Picker>
       </CardSection>
       
