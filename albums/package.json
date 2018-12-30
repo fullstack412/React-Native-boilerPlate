@@ -12,6 +12,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "@expo/vector-icons": "^8.1.0",
     "axios": "^0.18.0",
     "expo": "^31.0.6",
     "firebase": "^5.0.3",

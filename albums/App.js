@@ -18,10 +18,17 @@ import JSDataStructure from './src/components/Sprints/JSSprints/DataStructure/Ma
 import OSList from './src/components/Sprints/OtherSprints/CourseList';
 
 import PCList from './src/components/Sprints/PreCourse/CourseList';
-import PCWeek1 from './src/components/Sprints/PreCourse/PreWeek1/Main';
+import PCWeek1 from './src/components/Sprints/PreCourse/PreWeek1/SubSprints/Fundamentals';
 import PCWeek2 from './src/components/Sprints/PreCourse/PreWeek2/Main';
 import PCWeek3 from './src/components/Sprints/PreCourse/PreWeek3/Main';
 import PCWeek4 from './src/components/Sprints/PreCourse/PreWeek4/Main';
+import Git from './src/components/Sprints/PreCourse/PreWeek4/SubSprints/Git';
+import Project from './src/components/Sprints/PreCourse/PreWeek4/SubSprints/Project';
+import Revision from './src/components/Sprints/PreCourse/PreWeek4/SubSprints/Revision';
+import Testing from './src/components/Sprints/PreCourse/PreWeek4/SubSprints/Testing';
+import Twitler from './src/components/Sprints/PreCourse/PreWeek4/SubSprints/Twitler';
+import WebDev from './src/components/Sprints/PreCourse/PreWeek4/SubSprints/WebDev';
+
 
 import CodeCompiler from './src/components/Features/CodeCompiler/Main';
 import Calendar from './src/components/Features/GoogleCalendar/Main';
@@ -31,10 +38,15 @@ import Handbook from './src/components/Features/Handbook';
 import FAQ from './src/components/Features/FAQ';
 import Contact from './src/components/Features/Contact';
 
+//TODO:Delete later
+// import Navigate from '../albums/src/components/Menu/App';
+
 export default class App extends React.Component {
   render() {
     return (
-      <AppDrawerNavigator />     
+        <AppDrawerNavigator />
+        // <AppStackNavigator />     
+      // <Navigate />
     )
   }
 }
@@ -54,28 +66,18 @@ const CustomDrawerComponent = (props) => {
 }
 
 // export default createStackNavigator({
-// // const AppStackNavigator = createStackNavigator({
-//   // FSList: FSList,
-//   // JSList: JSList,
-//   // OSList: OSList,
-//   PCList: {
-//     screen: PCList
-//   },
-//   PCWeek1: {
-//     screen: PCWeek1
-//   }
-//   // PCWeek2: PCWeek2,
-//   // PCWeek3: PCWeek3,
-//   // PCWeek4: PCWeek4,
-//   // JSDataStructure: JSDataStructure
-// })
-
 const AppStackNavigator = createStackNavigator({
   PCList: PCList,
   PCWeek1: PCWeek1,
   PCWeek2: PCWeek2,
   PCWeek3: PCWeek3,
   PCWeek4: PCWeek4,
+  Git: Git,
+  Project: Project,
+  Revision: Revision,
+  Testing: Testing,
+  Twitler: Twitler,
+  WebDev: WebDev,
   FSList: FSList,
   Recastly: Recastly,
   Angular: Angular,
@@ -87,25 +89,9 @@ const AppStackNavigator = createStackNavigator({
   Calendar: Calendar,
   Surveys: Surveys,
   TownHall: TownHall,
-  Handbook: Handbook
+  Handbook: Handbook,
+  Header: Header
 });
-
-// const AppDrawerNavigator = createDrawerNavigator({
-//   Prep_Course: PCList,
-//   Prep_Week_1: PCWeek1,
-//   Prep_Week_2: PCWeek2,
-//   Prep_Week_3: PCWeek3,
-//   Prep_Week_4: PCWeek4,
-//   Full_Stack: FSList,
-//   JS_Sprints: JSList,
-//   JSDataStructure: JSDataStructure,
-//   Other_Sprints: OSList,
-//   FAQ: FAQ,
-//   Contact: Contact,
-//   Log_In: LoginScreen
-// }, {
-//   contentComponent: SideMenu
-// })
 
 const AppDrawerNavigator = createDrawerNavigator({
   AppStackNavigator: AppStackNavigator,
@@ -120,7 +106,8 @@ const AppDrawerNavigator = createDrawerNavigator({
   Other_Sprints: OSList,
   FAQ: FAQ,
   Contact: Contact,
-  Log_In: LoginScreen
+  Log_In: LoginScreen,
+  Header: Header
 }, {
   contentComponent: SideMenu
 });

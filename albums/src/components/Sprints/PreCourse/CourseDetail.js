@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Text, View, Image, StyleSheet, TouchableOpacity } from 'react-native';
-import { Card, CardSection, Header, Button } from '../../common';
+import { Text, View, Image, StyleSheet, TouchableOpacity, Platform, Picker, Alert } from 'react-native';
+import { Card, CardSection, Header, Button, Animbutton } from '../../common';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 
@@ -8,7 +8,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 const CourseDetail = (props) => {
   const { topic, introduction, image, button } = props.info;
   const { gotoButton } = props;
-  const { thumbnailStyle, headerConetentStyle, thumbnailContainerStyle, headerTextStyle } = Styles;
+  const { thumbnailStyle, headerConetentStyle, thumbnailContainerStyle, headerTextStyle, pickerContainerStyle } = Styles;
   
 
   return (
@@ -34,10 +34,25 @@ const CourseDetail = (props) => {
       </CardSection>
 
       <CardSection>
+        <Picker
+          style = { pickerContainerStyle }
+          onValueChange={(itemValue) => gotoButton(itemValue)} >
+          <Picker.Item label="Git" value="Git" />
+          <Picker.Item label="Project" value="Project" />
+          <Picker.Item label="Revision" value="Revision" />
+          <Picker.Item label="Testing" value="Testing" />
+          <Picker.Item label="Twitler" value="Twitler" />
+          <Picker.Item label="WebDev" value="WebDev" />
+         </Picker>
+      </CardSection>
+      
+      {/* <CardSection>
         <Button onPress = {()=> gotoButton(button)}>
           Go To Page
         </Button>
-      </CardSection>	
+        <Animbutton onColor={"blue"} effect={"bounce"} _onPress={(status) => {}} text="Bounce" />
+      </CardSection>	 */}
+
       {/* <CardSection>
         <TouchableOpacity>
           <Icon size = {30} name= "ios-trash" color = "red"/>
@@ -64,6 +79,11 @@ const Styles = StyleSheet.create({
     alignItems: 'center',
     marginLeft: 20,
     marginRight: 20
+  },
+  pickerContainerStyle: {
+    flex: 1,
+    justifyContent: "center",
+    margin :30
   }
 });
 
