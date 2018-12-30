@@ -46,11 +46,11 @@ class Main extends Component {
             Previous
           </Button>
         </CardSection>
-        <CardSection>
+        {/* <CardSection>
           <Button onPress = {()=>this.props.navigation.navigate('PCWeek4')}>
             Next
           </Button>
-        </CardSection>
+        </CardSection> */}
         <CardSection>
           <Button onPress = {()=>this.props.navigation.navigate('PCList')}>
             Home
