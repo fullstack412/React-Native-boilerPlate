@@ -17,14 +17,15 @@ class CourseList extends Component {
       body: {
         intro: '' 
       },
-      menuOptions: {
-        option1 : 'Git',
-        option2 : 'Project', 
-        option3 : 'Revision', 
-        option4 : 'Testing', 
-        option5 : 'Twitler', 
-        option6 : 'WebDev'
-      }
+      // put subsprint stack navigator name in menuOptions array
+      menuOptions: [
+        'Git', 
+        'Project', 
+        'Revision', 
+        'Testing', 
+        'Twitler', 
+        'WebDev'
+      ]
     }, {
       topic: 'Prep Week 2',
       introduction: 'Objects, Data Modeling, Higher Order Function, each function, map function, filter function',
@@ -33,14 +34,14 @@ class CourseList extends Component {
       body: {
         intro: ''
       },
-      menuOptions: {
-        option1 : 'Git',
-        option2 : 'Project', 
-        option3 : 'Revision', 
-        option4 : 'Testing', 
-        option5 : 'Twitler', 
-        option6 : 'WebDev'
-      }
+      menuOptions: [
+        'Git', 
+        'Project', 
+        'Revision', 
+        'Testing', 
+        'Twitler', 
+        'WebDev'
+      ]
     }, {
       topic: 'Prep Week 3',
       introduction: 'Reduce, Abstraction, Closure, Data Modeling, OOP, HTML, CSS, jQuery',
@@ -49,14 +50,14 @@ class CourseList extends Component {
       body: { 
         intro: ''
       },
-      menuOptions: {
-        option1 : 'Git',
-        option2 : 'Project', 
-        option3 : 'Revision', 
-        option4 : 'Testing', 
-        option5 : 'Twitler', 
-        option6 : 'WebDev'
-      }
+      menuOptions: [
+        'Git', 
+        'Project', 
+        'Revision', 
+        'Testing', 
+        'Twitler', 
+        'WebDev'
+      ]      
     }, {
       topic: 'Prep Week 4',
       introduction: 'Web Development, Git, Twitler, Testing, Revision, Project',
@@ -65,14 +66,14 @@ class CourseList extends Component {
       body: {
         intro: ''
       },
-      menuOptions: {
-        option1 : 'Git',
-        option2 : 'Project', 
-        option3 : 'Revision', 
-        option4 : 'Testing', 
-        option5 : 'Twitler', 
-        option6 : 'WebDev'
-      }
+      menuOptions: [
+        'Git', 
+        'Project', 
+        'Revision', 
+        'Testing', 
+        'Twitler', 
+        'WebDev'
+      ]
     }
   ]};
 
