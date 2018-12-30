@@ -61,7 +61,6 @@ class CourseList extends Component {
     this.props.navigation.navigate(btn);
   }
 
-
   render() {
     return (
       <ScrollView>
