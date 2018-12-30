@@ -25,6 +25,7 @@ class Objects extends Component{
                 <Text>
                     what is Objects? {"\n"}{introduction}{"\n"}
                 </Text>
+               
             </CardSection>
         </Card>
       )

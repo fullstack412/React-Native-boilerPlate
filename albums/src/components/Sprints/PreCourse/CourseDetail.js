@@ -33,18 +33,7 @@ const CourseDetail = (props) => {
         </Text>
       </CardSection>
 
-      <CardSection>
-        <Picker
-          style = { pickerContainerStyle }
-          onValueChange={(itemValue) => gotoButton(itemValue)} >
-          <Picker.Item label="Git" value="Git" />
-          <Picker.Item label="Project" value="Project" />
-          <Picker.Item label="Revision" value="Revision" />
-          <Picker.Item label="Testing" value="Testing" />
-          <Picker.Item label="Twitler" value="Twitler" />
-          <Picker.Item label="Objects" value="Objects" />
-         </Picker>
-      </CardSection>
+
       
       {/* <CardSection>
         <Button onPress = {()=> gotoButton(button)}>
