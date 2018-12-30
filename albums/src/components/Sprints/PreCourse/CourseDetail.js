@@ -6,11 +6,9 @@ import Icon from 'react-native-vector-icons/Ionicons';
 
 
 const CourseDetail = (props) => {
-  const { topic, introduction, image, button } = props.info;
+  const { topic, introduction, image, button, menuOptions } = props.info;
   const { gotoButton } = props;
   const { thumbnailStyle, headerConetentStyle, thumbnailContainerStyle, headerTextStyle, pickerContainerStyle } = Styles;
-  
-
   return (
     <Card>
       <CardSection>
@@ -34,16 +32,18 @@ const CourseDetail = (props) => {
       </CardSection>
 
       <CardSection>
-        <Picker
+        { renderPicker() }
+        {/* <Picker
           style = { pickerContainerStyle }
           onValueChange={(itemValue) => gotoButton(itemValue)} >
-          <Picker.Item label="Git" value="Git" />
-          <Picker.Item label="Project" value="Project" />
-          <Picker.Item label="Revision" value="Revision" />
-          <Picker.Item label="Testing" value="Testing" />
-          <Picker.Item label="Twitler" value="Twitler" />
-          <Picker.Item label="WebDev" value="WebDev" />
-         </Picker>
+          <Picker.Item label="Select Options" value = "DropDown" /> 
+          <Picker.Item label={menuOptions.option1} value={menuOptions.option1} />
+          <Picker.Item label={menuOptions.option2} value={menuOptions.option2} />
+          <Picker.Item label={menuOptions.option3} value={menuOptions.option3} />
+          <Picker.Item label={menuOptions.option4} value={menuOptions.option4} />
+          <Picker.Item label={menuOptions.option5} value={menuOptions.option5} />
+          <Picker.Item label={menuOptions.option6} value={menuOptions.option6} />
+        </Picker> */}
       </CardSection>
       
       {/* <CardSection>

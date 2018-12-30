@@ -16,6 +16,14 @@ class CourseList extends Component {
       button: 'PCWeek1',
       body: {
         intro: '' 
+      },
+      menuOptions: {
+        option1 : 'Git',
+        option2 : 'Project', 
+        option3 : 'Revision', 
+        option4 : 'Testing', 
+        option5 : 'Twitler', 
+        option6 : 'WebDev'
       }
     }, {
       topic: 'Prep Week 2',
@@ -24,6 +32,14 @@ class CourseList extends Component {
       button: 'PCWeek2',
       body: {
         intro: ''
+      },
+      menuOptions: {
+        option1 : 'Git',
+        option2 : 'Project', 
+        option3 : 'Revision', 
+        option4 : 'Testing', 
+        option5 : 'Twitler', 
+        option6 : 'WebDev'
       }
     }, {
       topic: 'Prep Week 3',
@@ -32,6 +48,14 @@ class CourseList extends Component {
       button: 'PCWeek3',
       body: { 
         intro: ''
+      },
+      menuOptions: {
+        option1 : 'Git',
+        option2 : 'Project', 
+        option3 : 'Revision', 
+        option4 : 'Testing', 
+        option5 : 'Twitler', 
+        option6 : 'WebDev'
       }
     }, {
       topic: 'Prep Week 4',
@@ -40,6 +64,14 @@ class CourseList extends Component {
       button: 'PCWeek4',
       body: {
         intro: ''
+      },
+      menuOptions: {
+        option1 : 'Git',
+        option2 : 'Project', 
+        option3 : 'Revision', 
+        option4 : 'Testing', 
+        option5 : 'Twitler', 
+        option6 : 'WebDev'
       }
     }
   ]};

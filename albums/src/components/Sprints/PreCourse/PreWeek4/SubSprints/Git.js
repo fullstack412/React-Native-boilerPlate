@@ -65,7 +65,26 @@ class Git extends Component {
   render() {
     const { thumbnailStyle, headerConetentStyle, thumbnailContainerStyle, headerTextStyle } = Styles;
     const topic = 'Git'
-    const introduction = '';
+    const introduction = 'Install Git: \n Go to: https://git-scm.com/downloads \
+    Click Download for your Operating System: \
+    After installation, open the terminal window (command + space), \
+    type in “terminal”, open the application like the ones shown below\
+    Terminal is the programmer preferred way to navigate around the folders in the desktop\
+    Navigate between folders in terminal\
+    cd [folder name]: Go inside a folder\
+    cd .. : exit current folder\
+    dir : display all the files/folders in the current folder (windows) \
+    ls : display all the files/folders in the current folder (mac)\
+    pwd : display the path to the current file\
+    Download/update the code from a repository on your github \n \
+    git clone [repo url]: first time \n \
+    git pull: after first time \n \
+    Other useful Git Commands \n \
+    git log: look up previous git commit messages \n \n \
+    Three steps process for upload local repository to github \n \
+    git add [file] \n \
+    git commit -m [descriptive message] \n \
+    git push \n '
     const body = 'Git Good.';
     const end = 'The end';
 
@@ -82,7 +101,8 @@ class Git extends Component {
 
         <CardSection>
           <Text>
-          What is Git? {"\n"}{introduction}{"\n"}
+          Install Git {"\n"}
+          {introduction}{"\n"}
           </Text>
         </CardSection>
 
