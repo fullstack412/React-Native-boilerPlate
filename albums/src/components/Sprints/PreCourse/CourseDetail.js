@@ -8,7 +8,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 class CourseDetail extends Component {
   renderPicker() {
     return this.props.info.menuOptions.map(element => (
-      <Picker.Item label={element} value={element} />
+      <Picker.Item label={element} value={element} key = {element}/>
     ))
   }
 
