@@ -64,9 +64,9 @@ const CustomDrawerComponent = (props) => {
 
 const AppStackNavigator = createStackNavigator({
   PCList: PCList,
-  PCWeek1: PCWeek1,
-  PCWeek2: PCWeek2,
-  PCWeek3: PCWeek3,
+  // PCWeek1: PCWeek1,
+  // PCWeek2: PCWeek2,
+  // PCWeek3: PCWeek3,
   // PCWeek4: PCWeek4,
   Git: Git,
   Project: Project,
@@ -94,8 +94,8 @@ const AppDrawerNavigator = createDrawerNavigator({
   AppStackNavigator: AppStackNavigator,
   Prep_Course_Sprints: PCList,
   Prep_Week_1: PCWeek1,
-  Prep_Week_2: PCWeek2,
-  Prep_Week_3: PCWeek3,
+  // Prep_Week_2: PCWeek2,
+  // Prep_Week_3: PCWeek3,
   // Prep_Week_4: PCWeek4,
   Full_Stack_Sprints: FSList,
   JS_Sprints: JSList,
