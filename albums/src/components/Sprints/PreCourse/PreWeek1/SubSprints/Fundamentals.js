@@ -125,7 +125,7 @@ class Fundamentals extends Component {
         </CardSection>
         <Playquiz quizData = { this.state.quizData }/>
         <CardSection>
-          <Button onPress = {()=>this.props.navigation.navigate('PCWeek2')}>
+          <Button onPress = {()=>this.props.navigation.navigate('PCList')}>
             Next
           </Button>
         </CardSection>
