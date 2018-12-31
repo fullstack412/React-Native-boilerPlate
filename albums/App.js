@@ -39,15 +39,11 @@ import Handbook from './src/components/Features/Handbook';
 import FAQ from './src/components/Features/FAQ';
 import Contact from './src/components/Features/Contact';
 
-//TODO:Delete later
-// import Navigate from '../albums/src/components/Menu/App';
-
 export default class App extends React.Component {
   render() {
     return (
         <AppDrawerNavigator />
         // <AppStackNavigator />     
-      // <Navigate />
     )
   }
 }
@@ -66,7 +62,6 @@ const CustomDrawerComponent = (props) => {
   )
 }
 
-// export default createStackNavigator({
 const AppStackNavigator = createStackNavigator({
   PCList: PCList,
   PCWeek1: PCWeek1,
@@ -95,7 +90,6 @@ const AppStackNavigator = createStackNavigator({
   Objects:Objects
 });
 
-// after import you 
 const AppDrawerNavigator = createDrawerNavigator({
   AppStackNavigator: AppStackNavigator,
   Prep_Course_Sprints: PCList,
