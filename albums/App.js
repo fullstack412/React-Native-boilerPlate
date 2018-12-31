@@ -21,13 +21,14 @@ import PCList from './src/components/Sprints/PreCourse/CourseList';
 import PCWeek1 from './src/components/Sprints/PreCourse/PreWeek1/SubSprints/Fundamentals';
 import PCWeek2 from './src/components/Sprints/PreCourse/PreWeek2/Main';
 import PCWeek3 from './src/components/Sprints/PreCourse/PreWeek3/Main';
-import PCWeek4 from './src/components/Sprints/PreCourse/PreWeek4/Main';
+// import PCWeek4 from './src/components/Sprints/PreCourse/PreWeek4/Main';
 import Git from './src/components/Sprints/PreCourse/PreWeek4/SubSprints/Git';
 import Project from './src/components/Sprints/PreCourse/PreWeek4/SubSprints/Project';
 import Revision from './src/components/Sprints/PreCourse/PreWeek4/SubSprints/Revision';
 import Testing from './src/components/Sprints/PreCourse/PreWeek4/SubSprints/Testing';
 import Twitler from './src/components/Sprints/PreCourse/PreWeek4/SubSprints/Twitler';
 import WebDev from './src/components/Sprints/PreCourse/PreWeek4/SubSprints/WebDev';
+import Objects from './src/components/Sprints/PreCourse/PreWeek2/SubSprints/Objects';
 
 
 import CodeCompiler from './src/components/Features/CodeCompiler/Main';
@@ -71,7 +72,7 @@ const AppStackNavigator = createStackNavigator({
   PCWeek1: PCWeek1,
   PCWeek2: PCWeek2,
   PCWeek3: PCWeek3,
-  PCWeek4: PCWeek4,
+  // PCWeek4: PCWeek4,
   Git: Git,
   Project: Project,
   Revision: Revision,
@@ -90,16 +91,18 @@ const AppStackNavigator = createStackNavigator({
   Surveys: Surveys,
   TownHall: TownHall,
   Handbook: Handbook,
-  Header: Header
+  Header: Header,
+  Objects:Objects
 });
 
+// after import you 
 const AppDrawerNavigator = createDrawerNavigator({
   AppStackNavigator: AppStackNavigator,
   Prep_Course_Sprints: PCList,
   Prep_Week_1: PCWeek1,
   Prep_Week_2: PCWeek2,
   Prep_Week_3: PCWeek3,
-  Prep_Week_4: PCWeek4,
+  // Prep_Week_4: PCWeek4,
   Full_Stack_Sprints: FSList,
   JS_Sprints: JSList,
   JSDataStructure: JSDataStructure,

@@ -16,7 +16,16 @@ class CourseList extends Component {
       button: 'PCWeek1',
       body: {
         intro: '' 
-      }
+      },
+      // put subsprint stack navigator name in menuOptions array
+      menuOptions: [
+        'Git', 
+        'Project', 
+        'Revision', 
+        'Testing', 
+        'Twitler', 
+        'WebDev'
+      ]
     }, {
       topic: 'Prep Week 2',
       introduction: 'Objects, Data Modeling, Higher Order Function, each function, map function, filter function',
@@ -24,7 +33,15 @@ class CourseList extends Component {
       button: 'PCWeek2',
       body: {
         intro: ''
-      }
+      },
+      menuOptions: [
+        'Git', 
+        'Project', 
+        'Revision', 
+        'Testing', 
+        'Twitler', 
+        'WebDev'
+      ]
     }, {
       topic: 'Prep Week 3',
       introduction: 'Reduce, Abstraction, Closure, Data Modeling, OOP, HTML, CSS, jQuery',
@@ -32,7 +49,15 @@ class CourseList extends Component {
       button: 'PCWeek3',
       body: { 
         intro: ''
-      }
+      },
+      menuOptions: [
+        'Git', 
+        'Project', 
+        'Revision', 
+        'Testing', 
+        'Twitler', 
+        'WebDev'
+      ]      
     }, {
       topic: 'Prep Week 4',
       introduction: 'Web Development, Git, Twitler, Testing, Revision, Project',
@@ -40,7 +65,15 @@ class CourseList extends Component {
       button: 'PCWeek4',
       body: {
         intro: ''
-      }
+      },
+      menuOptions: [
+        'Git', 
+        'Project', 
+        'Revision', 
+        'Testing', 
+        'Twitler', 
+        'WebDev'
+      ]
     }
   ]};
 
