@@ -8,54 +8,53 @@ class Git extends Component {
       "quiz" : {
         "quiz1" : {
           "question1" : {
-            "correctoption" : "option3",
+            "correctoption" : "option1",
             "options" : {
-              "option1" : "Java",
-              "option2" : "PHP",
-              "option3" : "Javascript",
-              "option4" : "Python"
+              "option1" : "git init",
+              "option2" : "git add",
+              "option3" : "git push",
+              "option4" : "git log"
             },
-            "question" : "React is a ____ library"
+            "question" : "Which command should you use to initialize a new Git repository?"
           },
           "question2" : {
             "correctoption" : "option4",
             "options" : {
-                "option1" : "XML",
-                "option2" : "YML",
-                "option3" : "HTML",
-                "option4" : "JSX"
+                "option1" : "git add",
+                "option2" : "git push",
+                "option3" : "git init",
+                "option4" : "git commit -m 'message"
               },
-            "question" : "____ tag syntax is used in React"
+            "question" : "Which command should you use after git add ."
           },
           "question3" : {
-            "correctoption" : "option1",
-            "options" : {
-                "option1" : "Single root DOM node",
-                "option2" : "Double root DOM node",
-                "option3" : "Multiple root DOM node",
-                "option4" : "None of the above"
-              },
-            "question" : "Application built with just React usually have ____"
-          },
-          "question4" : {
-            "correctoption" : "option2",
-            "options" : {
-                "option1" : "mutable",
-                "option2" : "immutable",
-                "option3" : "variable",
-                "option4" : "none of the above"
-              },
-            "question" : "React elements are ____"
-          },
-          "question5" : {
             "correctoption" : "option3",
             "options" : {
-                "option1" : "functions",
-                "option2" : "array",
-                "option3" : "components",
-                "option4" : "json data"
+                "option1" : "git init",
+                "option2" : "git log",
+                "option3" : "git push",
+                "option4" : "git pull",
               },
-            "question" : "React allows to split UI into independent and reusable pieses of ____"
+            "question" : "How to upload your local work to github"
+          },
+          "question4" : {
+            "correctoption" : "option3",
+            "options" : {
+                "option1" : "git init",
+                "option3" : "git push",
+                "option4" : "git pull",
+              },
+            "question" : "How to update local git repo with newer version of Github repo?"
+          },
+          "question5" : {
+            "correctoption" : "option4",
+            "options" : {
+                "option1" : "git icecream",
+                "option2" : "git push",
+                "option3" : "git add .",
+                "option4" : "git merge"
+              },
+            "question" : "How to merge different git branches?"
           }
         }
       }      
@@ -64,29 +63,31 @@ class Git extends Component {
 
   render() {
     const { thumbnailStyle, headerConetentStyle, thumbnailContainerStyle, headerTextStyle } = Styles;
-    const topic = 'Git'
-    const introduction = 'Install Git: \n Go to: https://git-scm.com/downloads \
-    Click Download for your Operating System: \
-    After installation, open the terminal window (command + space), \
-    type in “terminal”, open the application like the ones shown below\
-    Terminal is the programmer preferred way to navigate around the folders in the desktop\
-    Navigate between folders in terminal\
-    cd [folder name]: Go inside a folder\
-    cd .. : exit current folder\
-    dir : display all the files/folders in the current folder (windows) \
-    ls : display all the files/folders in the current folder (mac)\
-    pwd : display the path to the current file\
-    Download/update the code from a repository on your github \n \
-    git clone [repo url]: first time \n \
-    git pull: after first time \n \
-    Other useful Git Commands \n \
-    git log: look up previous git commit messages \n \n \
-    Three steps process for upload local repository to github \n \
-    git add [file] \n \
-    git commit -m [descriptive message] \n \
-    git push \n '
-    const body = 'Git Good.';
-    const end = 'The end';
+    const topic = 'Git';
+    const introduction = 'Git and GitHub are tools to help manage our files. They also help us share our work with other programmers';
+    const body = 
+    'Install Git: \n Go to: https://git-scm.com/downloads \n\
+Click Download for your Operating System:\n\
+After installation, open the terminal window (command + space),\n \
+type in “terminal”, open the application like the ones shown below\n\
+Terminal is the programmer preferred way to navigate around the folders in the desktop\n\n\
+Navigate between folders in terminal\n\
+cd [folder name]: Go inside a folder\n\
+cd .. : exit current folder\n\
+dir : display all the files/folders in the current folder (windows) \n\
+ls : display all the files/folders in the current folder (mac)\n\
+pwd : display the path to the current file\n\n\
+Download/update the code from a repository on your github \n \
+git clone [repo url]: first time \n \
+git pull: after first time \n \
+Other useful Git Commands \n \
+git log: look up previous git commit messages \n \
+git reset --hard [commit ID you found from git log] : go back to the code you wrote in a previous commit \n \n \
+Three steps process for upload local repository to github \n \
+git add [file] \n \
+git commit -m [descriptive message] \n \
+git push \n ';
+    const end = 'Git is the most popular version control system. You will become more and more familiar with Git and GitHub in the months to come';
 
     return (
       
@@ -108,13 +109,13 @@ class Git extends Component {
 
         <CardSection>
           <Text>
-            How to use git? {"\n"}{body}{"\n"}
+            {body}{"\n"}
           </Text>
         </CardSection>
 
         <CardSection>
           <Text>
-            More information: {"\n"}{end}{"\n"}
+            {end}{"\n"}
           </Text>
         </CardSection>
 
