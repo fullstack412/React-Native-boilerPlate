@@ -9,7 +9,65 @@ class Comparison extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      quizData: {
+        "quiz" : {
+          "quiz1" : {
+            "question1" : {
+              "correctoption" : "option2",
+              "options" : {
+                "option1" : "True",
+                "option2" : "False"
+              },
+              "question" : "3 === '3' evaluates to"
+            },
+            "question2" : {
+              "correctoption" : "option2",
+              "options" : {
+                  "option1" : "True",
+                  "option2" : "False"
+                },
+              "question" : "2 != '2' evaluates to"
+            },
+            "question3" : {
+              "correctoption" : "option1",
+              "options" : {
+                  "option1" : "the block of code inside the if statement will be returned",
+                  "option2" : "the block of code inside the else statement will be returned"
+                },
+              "question" : `
+              function ifElse(boolean){  
+                 if (boolean) {
+                   return 'the block of code inside the if statement will be returned'
+                 } else {
+                   return 'the block of code inside the else statement will be returned'
+                 }
+               }
+               
+               ifElse (true);
 
+
+               What will the function ifElse return in this scenario?
+               `
+            },
+            "question4" : {
+              "correctoption" : "option1",
+              "options" : {
+                  "option1" : "True",
+                  "option2" : "False"
+                },
+              "question" : "'2' === 2 || 'hello' === 'hello' evaluates to"
+            },
+            "question5" : {
+              "correctoption" : "option2",
+              "options" : {
+                  "option1" : "True",
+                  "option2" : "False"
+                },
+              "question" : "'2' === 2 && 'hello' === 'hello' evaluates to"
+            }
+          }
+        }      
+      }
     }
   }
 
@@ -116,6 +174,7 @@ class Comparison extends Component {
             `}
           </Text>
         </CardSection>
+        <Playquiz quizData = { this.state.quizData }/>
         <CardSection>
           <Button onPress = {()=>this.props.navigation.navigate('PCWeek2')}>
             Next
