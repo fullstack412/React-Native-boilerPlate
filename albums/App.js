@@ -19,8 +19,8 @@ import OSList from './src/components/Sprints/OtherSprints/CourseList';
 
 import PCList from './src/components/Sprints/PreCourse/CourseList';
 import PCWeek1 from './src/components/Sprints/PreCourse/PreWeek1/SubSprints/Fundamentals';
-import PCWeek2 from './src/components/Sprints/PreCourse/PreWeek2/Main';
-import PCWeek3 from './src/components/Sprints/PreCourse/PreWeek3/Main';
+// import PCWeek2 from './src/components/Sprints/PreCourse/PreWeek2/Main';
+// import PCWeek3 from './src/components/Sprints/PreCourse/PreWeek3/Main';
 // import PCWeek4 from './src/components/Sprints/PreCourse/PreWeek4/Main';
 import Git from './src/components/Sprints/PreCourse/PreWeek4/SubSprints/Git';
 import Project from './src/components/Sprints/PreCourse/PreWeek4/SubSprints/Project';
