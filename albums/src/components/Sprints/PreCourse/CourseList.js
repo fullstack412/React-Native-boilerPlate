@@ -23,7 +23,7 @@ class CourseList extends Component {
         'Booleans, Comparisons, and Operators', 
         'Variables and Repetition in JavaScript', 
         'While Loop', 
-        'Arrays and For loops'
+        'Arrays and For Loops'
       ]
     }, {
       topic: 'Prep Week 2',

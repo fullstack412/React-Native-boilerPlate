@@ -24,7 +24,7 @@ import Fundamentals from './src/components/Sprints/PreCourse/PreWeek1/SubSprints
 import Comparison from './src/components/Sprints/PreCourse/PreWeek1/SubSprints/Comparison';
 import Variables from './src/components/Sprints/PreCourse/PreWeek1/SubSprints/Variables';
 import WhileLoop from './src/components/Sprints/PreCourse/PreWeek1/SubSprints/WhileLoop';
-
+import ArraysAndForLoop from './src/components/Sprints/PreCourse/PreWeek1/SubSprints/ArraysAndForLoop';
 
 import PCWeek2 from './src/components/Sprints/PreCourse/PreWeek2/Main';
 import PCWeek3 from './src/components/Sprints/PreCourse/PreWeek3/Main';
@@ -80,6 +80,7 @@ const AppStackNavigator = createStackNavigator({
   "Booleans, Comparisons, and Operators": Comparison,
   "Variables and Repetition in JavaScript": Variables,
   "While Loop": WhileLoop,
+  "Arrays and For Loops": ArraysAndForLoop,
   PCWeek2: PCWeek2,
   PCWeek3: PCWeek3,
   // PCWeek4: PCWeek4,
