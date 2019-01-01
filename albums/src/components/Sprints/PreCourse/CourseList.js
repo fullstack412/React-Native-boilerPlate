@@ -32,12 +32,7 @@ class CourseList extends Component {
         intro: ''
       },
       menuOptions: [
-        'Git', 
-        'Objects', 
-        'Revision', 
-        'Testing', 
-        'Twitler', 
-        'WebDev'
+        'Objects'
       ]
     }, {
       topic: 'Prep Week 3',
@@ -47,12 +42,6 @@ class CourseList extends Component {
         intro: ''
       },
       menuOptions: [
-        'Git', 
-        'Project', 
-        'Revision', 
-        'Testing', 
-        'Twitler', 
-        'WebDev'
       ]      
     }, {
       topic: 'Prep Week 4',
@@ -63,10 +52,7 @@ class CourseList extends Component {
       },
       menuOptions: [
         'Git', 
-        'Project', 
-        'Revision', 
         'Testing', 
-        'Twitler', 
         'WebDev'
       ]
     }

@@ -189,7 +189,7 @@ git branch -D [local_branch]: delete local branch'
 
         <Playquiz quizData = { this.state.quizData }/>
         <CardSection>
-          <Button onPress = {()=>this.props.navigation.navigate('Project')}>
+          <Button onPress = {()=>this.props.navigation.navigate('Testing')}>
             Next
           </Button>
         </CardSection>
