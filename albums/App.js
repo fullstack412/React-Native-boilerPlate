@@ -19,8 +19,8 @@ import OSList from './src/components/Sprints/OtherSprints/CourseList';
 
 import PCList from './src/components/Sprints/PreCourse/CourseList';
 import PCWeek1 from './src/components/Sprints/PreCourse/PreWeek1/SubSprints/Fundamentals';
-import PCWeek2 from './src/components/Sprints/PreCourse/PreWeek2/Main';
-import PCWeek3 from './src/components/Sprints/PreCourse/PreWeek3/Main';
+// import PCWeek2 from './src/components/Sprints/PreCourse/PreWeek2/Main';
+// import PCWeek3 from './src/components/Sprints/PreCourse/PreWeek3/Main';
 // import PCWeek4 from './src/components/Sprints/PreCourse/PreWeek4/Main';
 import Git from './src/components/Sprints/PreCourse/PreWeek4/SubSprints/Git';
 import Project from './src/components/Sprints/PreCourse/PreWeek4/SubSprints/Project';
@@ -39,15 +39,11 @@ import Handbook from './src/components/Features/Handbook';
 import FAQ from './src/components/Features/FAQ';
 import Contact from './src/components/Features/Contact';
 
-//TODO:Delete later
-// import Navigate from '../albums/src/components/Menu/App';
-
 export default class App extends React.Component {
   render() {
     return (
         <AppDrawerNavigator />
         // <AppStackNavigator />     
-      // <Navigate />
     )
   }
 }
@@ -66,12 +62,11 @@ const CustomDrawerComponent = (props) => {
   )
 }
 
-// export default createStackNavigator({
 const AppStackNavigator = createStackNavigator({
   PCList: PCList,
-  PCWeek1: PCWeek1,
-  PCWeek2: PCWeek2,
-  PCWeek3: PCWeek3,
+  // PCWeek1: PCWeek1,
+  // PCWeek2: PCWeek2,
+  // PCWeek3: PCWeek3,
   // PCWeek4: PCWeek4,
   Git: Git,
   Project: Project,
@@ -95,13 +90,12 @@ const AppStackNavigator = createStackNavigator({
   Objects:Objects
 });
 
-// after import you 
 const AppDrawerNavigator = createDrawerNavigator({
   AppStackNavigator: AppStackNavigator,
   Prep_Course_Sprints: PCList,
   Prep_Week_1: PCWeek1,
-  Prep_Week_2: PCWeek2,
-  Prep_Week_3: PCWeek3,
+  // Prep_Week_2: PCWeek2,
+  // Prep_Week_3: PCWeek3,
   // Prep_Week_4: PCWeek4,
   Full_Stack_Sprints: FSList,
   JS_Sprints: JSList,

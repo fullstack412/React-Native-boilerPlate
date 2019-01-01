@@ -29,12 +29,16 @@ import ArraysAndForLoop from './src/components/Sprints/PreCourse/PreWeek1/SubSpr
 import PCWeek2 from './src/components/Sprints/PreCourse/PreWeek2/Main';
 import PCWeek3 from './src/components/Sprints/PreCourse/PreWeek3/Main';
 // import PCWeek4 from './src/components/Sprints/PreCourse/PreWeek4/Main';
+
+import Objects from './src/components/Sprints/PreCourse/PreWeek2/SubSprints/Objects';
+
 import Git from './src/components/Sprints/PreCourse/PreWeek4/SubSprints/Git';
 import Project from './src/components/Sprints/PreCourse/PreWeek4/SubSprints/Project';
 import Revision from './src/components/Sprints/PreCourse/PreWeek4/SubSprints/Revision';
 import Testing from './src/components/Sprints/PreCourse/PreWeek4/SubSprints/Testing';
 import Twitler from './src/components/Sprints/PreCourse/PreWeek4/SubSprints/Twitler';
 import WebDev from './src/components/Sprints/PreCourse/PreWeek4/SubSprints/WebDev';
+
 
 
 import CodeCompiler from './src/components/Features/CodeCompiler/Main';
@@ -45,15 +49,11 @@ import Handbook from './src/components/Features/Handbook';
 import FAQ from './src/components/Features/FAQ';
 import Contact from './src/components/Features/Contact';
 
-//TODO:Delete later
-// import Navigate from '../albums/src/components/Menu/App';
-
 export default class App extends React.Component {
   render() {
     return (
         <AppDrawerNavigator />
         // <AppStackNavigator />     
-      // <Navigate />
     )
   }
 }
@@ -72,7 +72,6 @@ const CustomDrawerComponent = (props) => {
   )
 }
 
-// export default createStackNavigator({
 const AppStackNavigator = createStackNavigator({
   PCList: PCList,
   "JavaScript Fundamentals and Functions": Fundamentals,
@@ -80,8 +79,8 @@ const AppStackNavigator = createStackNavigator({
   "Variables and Repetition in JavaScript": Variables,
   "While Loop": WhileLoop,
   "Arrays and For Loops": ArraysAndForLoop,
-  PCWeek2: PCWeek2,
-  PCWeek3: PCWeek3,
+  // PCWeek2: PCWeek2,
+  // PCWeek3: PCWeek3,
   // PCWeek4: PCWeek4,
   Git: Git,
   Project: Project,
@@ -101,15 +100,15 @@ const AppStackNavigator = createStackNavigator({
   Surveys: Surveys,
   TownHall: TownHall,
   Handbook: Handbook,
-  Header: Header
+  Header: Header,
+  Objects:Objects
 });
 
-// after import you 
 const AppDrawerNavigator = createDrawerNavigator({
   AppStackNavigator: AppStackNavigator,
   Prep_Course_Sprints: PCList,
-  Prep_Week_2: PCWeek2,
-  Prep_Week_3: PCWeek3,
+  // Prep_Week_2: PCWeek2,
+  // Prep_Week_3: PCWeek3,
   // Prep_Week_4: PCWeek4,
   Full_Stack_Sprints: FSList,
   JS_Sprints: JSList,

@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {NavigationActions} from 'react-navigation';
-import {ScrollView, Text, View, StyleSheet, Image } from 'react-native';
+import {ScrollView, Text, View, StyleSheet, Image, TouchableOpacity, Linking } from 'react-native';
 
 class SideMenu extends Component {
   navigateToScreen = (route) => () => {
@@ -23,7 +23,7 @@ class SideMenu extends Component {
               <Text style={navSectionStyle} onPress={this.navigateToScreen('Prep_Course_Sprints')}>
                 Prep Course Menu
               </Text>                
-              <Text style={navItemStyle} onPress={this.navigateToScreen('Prep_Week_1')}>
+              {/* <Text style={navItemStyle} onPress={this.navigateToScreen('Prep_Week_1')}>
                 Week 1
               </Text>
               <Text style={navItemStyle} onPress={this.navigateToScreen('Prep_Week_2')}>
@@ -34,7 +34,7 @@ class SideMenu extends Component {
               </Text>
               <Text style={navItemStyle} onPress={this.navigateToScreen('Prep_Week_4')}>
                 Week 4
-              </Text>
+              </Text> */}
             </View>
           </View>
           <View>
@@ -42,9 +42,9 @@ class SideMenu extends Component {
               <Text style={navSectionStyle} onPress={this.navigateToScreen('JS_Sprints')}>
                 Javascript Sprints Menu
               </Text>
-              <Text style={navItemStyle} onPress={this.navigateToScreen('JSDataStructure')}>
+              {/* <Text style={navItemStyle} onPress={this.navigateToScreen('JSDataStructure')}>
                 Data Structure
-              </Text>
+              </Text> */}
             </View>
           </View>
           <View>
@@ -52,9 +52,9 @@ class SideMenu extends Component {
               <Text style={navSectionStyle} onPress={this.navigateToScreen('Full_Stack_Sprints')}>
                 Full Stack Sprints Menu
               </Text>
-              <Text style={navItemStyle} onPress={this.navigateToScreen('JSDataStructure')}>
+              {/* <Text style={navItemStyle} onPress={this.navigateToScreen('JSDataStructure')}>
                 Place Holder
-              </Text>
+              </Text> */}
             </View>
           </View>
           <View>
@@ -62,9 +62,9 @@ class SideMenu extends Component {
               <Text style={navSectionStyle} onPress={this.navigateToScreen('Other_Sprints')}>
                 Other Sprints Menu
               </Text>
-              <Text style={navItemStyle} onPress={this.navigateToScreen('JSDataStructure')}>
+              {/* <Text style={navItemStyle} onPress={this.navigateToScreen('JSDataStructure')}>
                 Place Holder
-              </Text>
+              </Text> */}
             </View>
           </View>
           <View>
@@ -90,7 +90,10 @@ class SideMenu extends Component {
           </View>
         </ScrollView>
         <View style={footerContainer}>
-          <Text>Click on your Sprint to View</Text>
+          {/* <Text>Click on your Sprint to View</Text> */}
+          <TouchableOpacity>
+            <Text onPress = {() => {Linking.openURL('http://rbk.org')}}>RBK.org</Text>
+          </TouchableOpacity>
         </View>
       </View>
     );
