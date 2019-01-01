@@ -26,8 +26,8 @@ import Variables from './src/components/Sprints/PreCourse/PreWeek1/SubSprints/Va
 import WhileLoop from './src/components/Sprints/PreCourse/PreWeek1/SubSprints/WhileLoop';
 import ArraysAndForLoop from './src/components/Sprints/PreCourse/PreWeek1/SubSprints/ArraysAndForLoop';
 
-import PCWeek2 from './src/components/Sprints/PreCourse/PreWeek2/Main';
-import PCWeek3 from './src/components/Sprints/PreCourse/PreWeek3/Main';
+//import PCWeek2 from './src/components/Sprints/PreCourse/PreWeek2/Main';
+//import PCWeek3 from './src/components/Sprints/PreCourse/PreWeek3/Main';
 // import PCWeek4 from './src/components/Sprints/PreCourse/PreWeek4/Main';
 
 import Objects from './src/components/Sprints/PreCourse/PreWeek2/SubSprints/Objects';
