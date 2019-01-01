@@ -62,31 +62,44 @@ class Git extends Component {
   }
 
   render() {
-    const { thumbnailStyle, headerConetentStyle, thumbnailContainerStyle, headerTextStyle } = Styles;
+    const { thumbnailStyle, headerConetentStyle, thumbnailContainerStyle, headerTextStyle, boldText } = Styles;
     const topic = 'Git';
     const introduction = 'Git and GitHub are tools to help manage our files. They also help us share our work with other programmers';
-    const body = 
-    'Install Git: \n Go to: https://git-scm.com/downloads \n\
-Click Download for your Operating System:\n\
-After installation, open the terminal window (command + space),\n \
-type in “terminal”, open the application like the ones shown below\n\
-Terminal is the programmer preferred way to navigate around the folders in the desktop\n\n\
-Navigate between folders in terminal\n\
-cd [folder name]: Go inside a folder\n\
+    const body = [
+      [
+        'Install Git:', 
+        'Go to: https://git-scm.com/downloads \n\
+After installation, open the terminal window (command + space), type in “terminal”, open the application like the picture shown below\n\
+Terminal is the programmer preferred way to navigate around the folders in the desktop'
+      ],[
+        'Navigate between folders in terminal:',
+        'cd [folder name]: Go inside a folder\n\
 cd .. : exit current folder\n\
 dir : display all the files/folders in the current folder (windows) \n\
 ls : display all the files/folders in the current folder (mac)\n\
-pwd : display the path to the current file\n\n\
-Download/update the code from a repository on your github \n \
-git clone [repo url]: first time \n \
-git pull: after first time \n \
-Other useful Git Commands \n \
-git log: look up previous git commit messages \n \
-git reset --hard [commit ID you found from git log] : go back to the code you wrote in a previous commit \n \n \
-Three steps process for upload local repository to github \n \
-git add [file] \n \
-git commit -m [descriptive message] \n \
-git push \n ';
+pwd : display the path to the current file'
+      ],[
+        'Download/update the code from a repository on your github:',
+        'git clone [repo url]: first time \n\
+git pull: after first time'
+      ],[
+        'Other useful Git Commands:',
+        'git log: look up previous git commit messages \n\
+git reset --hard [commit ID you found from git log] : go back to the code you wrote in a previous commit'
+      ], [
+        'Three steps process for upload local repository to github:',
+        'git add [file] \ngit commit -m [descriptive message] \ngit push'
+      ], [
+        'Advanced Git Commands: ',
+        'git status: show which branch you located and whether you commit any changes \n\
+git log --oneline: shows previous commit messages in a readable format\n\
+git tag [tag_name] : sets repo with a tag \n\
+git remote: list all remote repos \n\
+git branch: list all branches \n\
+git checkout -b [branch_name]: create a new branch and switch to that branch \n\
+git branch -D [local_branch]: delete local branch'
+      ]
+    ]
     const end = 'Git is the most popular version control system. You will become more and more familiar with Git and GitHub in the months to come';
 
     return (
@@ -95,24 +108,79 @@ git push \n ';
         <CardSection>
           <View style = {headerConetentStyle}>
             <Text style = {headerTextStyle}>
-              {topic}{"\n"}
+              {topic}
             </Text>
           </View>				
         </CardSection>
 
         <CardSection>
           <Text>
-          Install Git {"\n"}
           {introduction}{"\n"}
           </Text>
         </CardSection>
 
         <CardSection>
+          <Text style={ boldText }>
+            {body[0][0]}
+          </Text>
+        </CardSection>
+        <CardSection>
           <Text>
-            {body}{"\n"}
+            {body[0][1]}
           </Text>
         </CardSection>
 
+        <CardSection>
+          <Text style={ boldText }>
+            {body[1][0]}
+          </Text>
+        </CardSection>
+        <CardSection>
+          <Text>
+            {body[1][1]}
+          </Text>
+        </CardSection>
+
+        <CardSection>
+          <Text style={ boldText }>
+            {body[2][0]}
+          </Text>
+        </CardSection>
+        <CardSection>
+          <Text>
+            {body[2][1]}
+          </Text>
+        </CardSection>
+        <CardSection>
+          <Text style={ boldText }>
+            {body[3][0]}
+          </Text>
+        </CardSection>
+        <CardSection>
+          <Text>
+            {body[3][1]}
+          </Text>
+        </CardSection>
+        <CardSection>
+          <Text style={ boldText }>
+            {body[4][0]}
+          </Text>
+        </CardSection>
+        <CardSection>
+          <Text>
+            {body[4][1]}
+          </Text>
+        </CardSection>
+        <CardSection>
+          <Text style={ boldText }>
+            {body[5][0]}
+          </Text>
+        </CardSection>
+        <CardSection>
+          <Text>
+            {body[5][1]}
+          </Text>
+        </CardSection>
         <CardSection>
           <Text>
             {end}{"\n"}
@@ -152,6 +220,9 @@ const Styles = StyleSheet.create({
     alignItems: 'center',
     marginLeft: 20,
     marginRight: 20
+  },
+  boldText: {
+    fontWeight: 'bold'
   }
 });
 export default Git;
