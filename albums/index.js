@@ -75,7 +75,6 @@ const CustomDrawerComponent = (props) => {
 // export default createStackNavigator({
 const AppStackNavigator = createStackNavigator({
   PCList: PCList,
-  //PCWeek1: PCWeek1,
   "JavaScript Fundamentals and Functions": Fundamentals,
   "Booleans, Comparisons, and Operators": Comparison,
   "Variables and Repetition in JavaScript": Variables,
@@ -109,7 +108,6 @@ const AppStackNavigator = createStackNavigator({
 const AppDrawerNavigator = createDrawerNavigator({
   AppStackNavigator: AppStackNavigator,
   Prep_Course_Sprints: PCList,
-  //Prep_Week_1: PCWeek1,
   Prep_Week_2: PCWeek2,
   Prep_Week_3: PCWeek3,
   // Prep_Week_4: PCWeek4,
