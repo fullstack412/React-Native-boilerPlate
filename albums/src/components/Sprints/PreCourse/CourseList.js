@@ -20,7 +20,7 @@ class CourseList extends Component {
       menuOptions: [
         'JavaScript Fundamentals and Functions', 
         'Booleans, Comparisons, and Operators', 
-        'Variables and Repetition in JavaScript', 
+        'Variables in JavaScript', 
         'While Loop', 
         'Arrays and For Loops'
       ]
