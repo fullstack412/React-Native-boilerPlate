@@ -20,10 +20,51 @@ class WhileLoop extends Component {
             </Text>
           </View>				
         </CardSection>
-
         <CardSection>
           <Text>
             Introduction:{"\n"}{introduction}{"\n"}
+          </Text>
+        </CardSection>
+        <CardSection>
+          <Text>
+            Here is a refresher on the syntax of the "while" loop:
+            {"\n"}
+            {
+              `
+              while (<this statement is true>) {
+                // execute this line of code
+                // change something so that the true statement in the parenthesis above gets closer to being false
+                // If you do not change anything, you will end up creating an infinite while loop and your browser will crash
+              }
+              `
+            }
+            {"\n"}
+            For example:
+            {"\n"}
+            {
+              `var num = 6;
+               while (num > 0) {
+                 console.log(num);
+                 num--;
+               }
+            `
+            }
+            {"\n"}
+            The console will log: 
+            {"\n"}
+            6
+            {"\n"}
+            5
+            {"\n"}
+            4
+            {"\n"}
+            3
+            {"\n"}
+            2
+            {"\n"}
+            1
+            {"\n"}
+
           </Text>
         </CardSection>
         <CardSection>
