@@ -22,6 +22,7 @@ import PCList from './src/components/Sprints/PreCourse/CourseList';
 //PC Week 1 Sprints
 import Fundamentals from './src/components/Sprints/PreCourse/PreWeek1/SubSprints/Fundamentals';
 import Comparison from './src/components/Sprints/PreCourse/PreWeek1/SubSprints/Comparison';
+import Variables from './src/components/Sprints/PreCourse/PreWeek1/SubSprints/Variables';
 
 import PCWeek2 from './src/components/Sprints/PreCourse/PreWeek2/Main';
 import PCWeek3 from './src/components/Sprints/PreCourse/PreWeek3/Main';
@@ -75,6 +76,7 @@ const AppStackNavigator = createStackNavigator({
   //PCWeek1: PCWeek1,
   "JavaScript Fundamentals and Functions": Fundamentals,
   "Booleans, Comparisons, and Operators": Comparison,
+  "Variables and Repetition in JavaScript": Variables,
   PCWeek2: PCWeek2,
   PCWeek3: PCWeek3,
   // PCWeek4: PCWeek4,
