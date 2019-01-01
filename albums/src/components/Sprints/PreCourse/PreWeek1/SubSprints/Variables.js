@@ -5,6 +5,104 @@ import { Button, Card, CardSection, Playquiz } from '../../../../common';
 class Variables extends Component {
   constructor(props) {
     super(props)
+    this.state = {
+      quizData: {
+        "quiz" : {
+          "quiz1" : {
+            "question1" : {
+              "correctoption" : "option3",
+              "options" : {
+                "option1" : "var 'foo' = 'bar'",
+                "option2" : "foo = bar",
+                "option3" : "var foo = bar",
+                "option4" : "Both the first and third options are proper variable declarations"
+              },
+              "question" : "Which of the following is a proper variable declaration?"
+            },
+            "question2" : {
+              "correctoption" : "option4",
+              "options" : {
+                  "option1" : "foobar",
+                  "option2" : "bar",
+                  "option3" : "Reference Error",
+                  "option4" : "1"
+                },
+              "question" : `
+              function foo() {
+                var bar = 1;
+                console.log(bar);
+                return 'foobar';
+              }
+              foo();
+
+              What will be logged to the console?
+              `
+            },
+            "question3" : {
+              "correctoption" : "option1",
+              "options" : {
+                  "option1" : "bar",
+                  "option2" : "world",
+                  "option3" : "hello world",
+                  "option4" : "Reference Error"
+                },
+              "question" : `
+              var foo = 'bar';
+              function hello() {
+                foo = 'world';
+                return 'hello world';
+              }
+              console.log(foo);
+              hello();
+
+              What will be logged to the console?
+
+              `
+            },
+            "question4" : {
+              "correctoption" : "option2",
+              "options" : {
+                "option1" : "bar",
+                "option2" : "world",
+                "option3" : "hello world",
+                "option4" : "Reference Error"
+                },
+              "question" : `
+              var foo = 'bar';
+              function hello() {
+                foo = 'world';
+                return 'hello world';
+              }
+              hello();
+              console.log(foo);
+
+              What will be logged to the console?
+
+              `
+            },
+            "question5" : {
+              "correctoption" : "option4",
+              "options" : {
+                  "option1" : "foo bar",
+                  "option2" : "2",
+                  "option3" : "world",
+                  "option4" : "Reference Error"
+                },
+              "question" : `
+              function world() {
+                var hello = 'foo bar';
+                return 2;
+              }
+              world();
+              console.log(hello);
+
+              What will be logged to the console?
+              `
+            }
+          }
+        }      
+      }
+    }
   }
 
   render() {
@@ -85,6 +183,7 @@ class Variables extends Component {
             Since "str" is not available in the global scope, the console log results in a Reference Error.
           </Text>
         </CardSection>
+        <Playquiz quizData = { this.state.quizData }/>
         <CardSection>
           <Button onPress = {()=>this.props.navigation.navigate('PCWeek2')}>
             Next
