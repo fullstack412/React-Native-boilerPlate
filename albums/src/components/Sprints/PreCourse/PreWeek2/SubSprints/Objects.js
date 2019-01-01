@@ -42,15 +42,8 @@ class Objects extends Component{
                   "option2" : "obj.1prop,\n obj.prop name"
                 },
               "question" : "what is the correct syntax from the following ?"
-            },
-            "question5" : {
-              "correctoption" : "option2",
-              "options" : {
-                  "option1" : "True",
-                  "option2" : "False"
-                },
-              "question" : ""
             }
+           
           }
         }      
       }
