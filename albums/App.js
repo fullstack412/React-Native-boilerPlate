@@ -18,7 +18,14 @@ import JSDataStructure from './src/components/Sprints/JSSprints/DataStructure/Ma
 import OSList from './src/components/Sprints/OtherSprints/CourseList';
 
 import PCList from './src/components/Sprints/PreCourse/CourseList';
-import PCWeek1 from './src/components/Sprints/PreCourse/PreWeek1/SubSprints/Fundamentals';
+
+//PC Week 1 Sprints
+import Fundamentals from './src/components/Sprints/PreCourse/PreWeek1/SubSprints/Fundamentals';
+import Comparison from './src/components/Sprints/PreCourse/PreWeek1/SubSprints/Comparison';
+import Variables from './src/components/Sprints/PreCourse/PreWeek1/SubSprints/Variables';
+import WhileLoop from './src/components/Sprints/PreCourse/PreWeek1/SubSprints/WhileLoop';
+import ArraysAndForLoop from './src/components/Sprints/PreCourse/PreWeek1/SubSprints/ArraysAndForLoop';
+
 // import PCWeek2 from './src/components/Sprints/PreCourse/PreWeek2/Main';
 // import PCWeek3 from './src/components/Sprints/PreCourse/PreWeek3/Main';
 // import PCWeek4 from './src/components/Sprints/PreCourse/PreWeek4/Main';
@@ -64,7 +71,11 @@ const CustomDrawerComponent = (props) => {
 
 const AppStackNavigator = createStackNavigator({
   PCList: PCList,
-  // PCWeek1: PCWeek1,
+  "JavaScript Fundamentals and Functions": Fundamentals,
+  "Booleans, Comparisons, and Operators": Comparison,
+  "Variables and Repetition in JavaScript": Variables,
+  "While Loop": WhileLoop,
+  "Arrays and For Loops": ArraysAndForLoop,
   // PCWeek2: PCWeek2,
   // PCWeek3: PCWeek3,
   // PCWeek4: PCWeek4,
@@ -93,7 +104,6 @@ const AppStackNavigator = createStackNavigator({
 const AppDrawerNavigator = createDrawerNavigator({
   AppStackNavigator: AppStackNavigator,
   Prep_Course_Sprints: PCList,
-  Prep_Week_1: PCWeek1,
   // Prep_Week_2: PCWeek2,
   // Prep_Week_3: PCWeek3,
   // Prep_Week_4: PCWeek4,

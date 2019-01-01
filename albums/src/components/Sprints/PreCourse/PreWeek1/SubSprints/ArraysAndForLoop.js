@@ -2,15 +2,15 @@ import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Button, Card, CardSection, Playquiz } from '../../../../common';
 
-class Variables extends Component {
+class ArraysAndForLoop extends Component {
   constructor(props) {
     super(props)
   }
 
   render() {
     const { headerConetentStyle, headerTextStyle } = Styles;
-    const topic = "Variables and Repetition in JavaScript";
-    const introduction = 'This section is dedicated to reviewing variable declarations in JavaScript and how to make your code DRY';
+    const topic = "Arrays and For Loops";
+    const introduction = 'This section is dedicated to reviewing arrays and for loops in JavaScript';
     return (
       <Card>
         <CardSection>
@@ -61,4 +61,4 @@ const Styles = StyleSheet.create({
   }
 });
 
-export default Variables;
+export default ArraysAndForLoop;

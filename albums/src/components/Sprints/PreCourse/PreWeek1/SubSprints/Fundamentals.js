@@ -17,7 +17,7 @@ class Fundamentals extends Component {
                 "option3" : "String and Boolean",
                 "option4" : "Number"
               },
-              "question" : "'True' is a "
+              "question" : "True is a "
             },
             "question2" : {
               "correctoption" : "option3",

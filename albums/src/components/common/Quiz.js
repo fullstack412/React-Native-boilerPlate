@@ -86,7 +86,7 @@ class Quiz extends Component {
   next(){
     if(this.qno < arrnew.length-1){
       this.qno++
- 
+      
       this.setState({ countCheck: 0, question: arrnew[this.qno].question, options: arrnew[this.qno].options, correctoption : arrnew[this.qno].correctoption})
     }else{
       

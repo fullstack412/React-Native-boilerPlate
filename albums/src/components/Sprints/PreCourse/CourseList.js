@@ -18,12 +18,11 @@ class CourseList extends Component {
       },
       // put subsprint stack navigator name in menuOptions array
       menuOptions: [
-        'Git', 
-        'Project', 
-        'Revision', 
-        'Testing', 
-        'Twitler', 
-        'WebDev'
+        'JavaScript Fundamentals and Functions', 
+        'Booleans, Comparisons, and Operators', 
+        'Variables and Repetition in JavaScript', 
+        'While Loop', 
+        'Arrays and For Loops'
       ]
     }, {
       topic: 'Prep Week 2',
