@@ -29,16 +29,13 @@ import ArraysAndForLoop from './src/components/Sprints/PreCourse/PreWeek1/SubSpr
 //import PCWeek2 from './src/components/Sprints/PreCourse/PreWeek2/Main';
 //import PCWeek3 from './src/components/Sprints/PreCourse/PreWeek3/Main';
 // import PCWeek4 from './src/components/Sprints/PreCourse/PreWeek4/Main';
-
-import Objects from './src/components/Sprints/PreCourse/PreWeek2/SubSprints/Objects';
-
 import Git from './src/components/Sprints/PreCourse/PreWeek4/SubSprints/Git';
 import Project from './src/components/Sprints/PreCourse/PreWeek4/SubSprints/Project';
 import Revision from './src/components/Sprints/PreCourse/PreWeek4/SubSprints/Revision';
 import Testing from './src/components/Sprints/PreCourse/PreWeek4/SubSprints/Testing';
 import Twitler from './src/components/Sprints/PreCourse/PreWeek4/SubSprints/Twitler';
 import WebDev from './src/components/Sprints/PreCourse/PreWeek4/SubSprints/WebDev';
-
+import Objects from './src/components/Sprints/PreCourse/PreWeek2/SubSprints/Objects';
 
 
 import CodeCompiler from './src/components/Features/CodeCompiler/Main';
