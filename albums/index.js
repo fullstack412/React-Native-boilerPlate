@@ -26,17 +26,11 @@ import Variables from './src/components/Sprints/PreCourse/PreWeek1/SubSprints/Va
 import WhileLoop from './src/components/Sprints/PreCourse/PreWeek1/SubSprints/WhileLoop';
 import ArraysAndForLoop from './src/components/Sprints/PreCourse/PreWeek1/SubSprints/ArraysAndForLoop';
 
-//import PCWeek2 from './src/components/Sprints/PreCourse/PreWeek2/Main';
-//import PCWeek3 from './src/components/Sprints/PreCourse/PreWeek3/Main';
-// import PCWeek4 from './src/components/Sprints/PreCourse/PreWeek4/Main';
-import Git from './src/components/Sprints/PreCourse/PreWeek4/SubSprints/Git';
-import Project from './src/components/Sprints/PreCourse/PreWeek4/SubSprints/Project';
-import Revision from './src/components/Sprints/PreCourse/PreWeek4/SubSprints/Revision';
-import Testing from './src/components/Sprints/PreCourse/PreWeek4/SubSprints/Testing';
-import Twitler from './src/components/Sprints/PreCourse/PreWeek4/SubSprints/Twitler';
-import WebDev from './src/components/Sprints/PreCourse/PreWeek4/SubSprints/WebDev';
 import Objects from './src/components/Sprints/PreCourse/PreWeek2/SubSprints/Objects';
 
+import Git from './src/components/Sprints/PreCourse/PreWeek4/SubSprints/Git';
+import Testing from './src/components/Sprints/PreCourse/PreWeek4/SubSprints/Testing';
+import WebDev from './src/components/Sprints/PreCourse/PreWeek4/SubSprints/WebDev';
 
 import CodeCompiler from './src/components/Features/CodeCompiler/Main';
 import Calendar from './src/components/Features/GoogleCalendar/Main';
@@ -76,14 +70,8 @@ const AppStackNavigator = createStackNavigator({
   "Variables in JavaScript": Variables,
   "While Loop": WhileLoop,
   "Arrays and For Loops": ArraysAndForLoop,
-  // PCWeek2: PCWeek2,
-  // PCWeek3: PCWeek3,
-  // PCWeek4: PCWeek4,
   Git: Git,
-  Project: Project,
-  Revision: Revision,
   Testing: Testing,
-  Twitler: Twitler,
   WebDev: WebDev,
   FSList: FSList,
   Recastly: Recastly,
@@ -104,9 +92,6 @@ const AppStackNavigator = createStackNavigator({
 const AppDrawerNavigator = createDrawerNavigator({
   AppStackNavigator: AppStackNavigator,
   Prep_Course_Sprints: PCList,
-  // Prep_Week_2: PCWeek2,
-  // Prep_Week_3: PCWeek3,
-  // Prep_Week_4: PCWeek4,
   Full_Stack_Sprints: FSList,
   JS_Sprints: JSList,
   JSDataStructure: JSDataStructure,

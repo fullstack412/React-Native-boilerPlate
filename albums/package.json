@@ -9,7 +9,8 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "eject": "expo eject",
-    "test": "jest"
+    "test": "jest",
+    "Android-start": "react-native run-android"
   },
   "dependencies": {
     "@expo/vector-icons": "^8.1.0",
