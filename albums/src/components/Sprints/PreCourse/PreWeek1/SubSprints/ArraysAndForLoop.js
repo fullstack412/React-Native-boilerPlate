@@ -20,10 +20,64 @@ class ArraysAndForLoop extends Component {
             </Text>
           </View>				
         </CardSection>
-
         <CardSection>
           <Text>
             Introduction:{"\n"}{introduction}{"\n"}
+          </Text>
+        </CardSection>
+        <CardSection>
+          <Text>
+            This is an array:
+            {"\n"}
+            var thisIsAnArray = [1, 2, 3, 4];
+            {"\n"}
+            An array is a collection of data. An array will always have an opening bracket, [, and a closing bracket, ]. 
+            Each individual piece of data in an array is separated by commas. An array can be empty, and an array can also 
+            store any types of data. Here are some more examples of arrays:
+            {"\n"}
+            var thisIsAnEmptyArray = [];
+            {"\n"}
+            var thisIsAnArrayWithALotOfDifferentDataTypes = [1, 'hello world', 'foo bar', true, false];
+            {"\n"}
+            Arrays also have different properties that can be accessed. Arrays have a length property which tells you how many elements 
+            are in an array. 
+            {"\n"}
+            var thisIsAnotherArray = ['hello', 'world'];
+            console.log(thisIsAnotherArray.length) // => 2;
+            {"\n"}
+            Arrays have a push property that allows you to add a piece of data to the end of an array.
+            {"\n"}
+            var foo = ['hello', 'bar'];
+            {"\n"}
+            foo.push('world');
+            {"\n"}
+            console.log(foo) // => ['hello', 'bar', 'world'];
+            {"\n"}
+            Arrays have a pop property that allows you to remove a piece of data from the end of an array.
+            {"\n"}
+            foo.pop();
+            {"\n"}
+            console.log(foo) // =>['hello', 'bar'];
+            {"\n"}
+            Arrays have a shift property that allows you to remove a piece of data from the beginning of an array.
+            {"\n"}
+            foo.shift();
+            {"\n"}
+            console.log(foo) // => ['bar'];
+            {"\n"}
+            Arrays have an unshift property that allows you to add data to the beginning of an array.
+            {"\n"}
+            foo.unshift('hello world');
+            {"\n"}
+            console.log('foo') // => ['hello world', 'bar'];
+            {"\n"}
+          </Text>
+        </CardSection>
+        <CardSection>
+          <Text>
+            You can iterate through arrays by using for loops. Here is a refresher on the syntax of for loops:
+            {"\n"}
+            
           </Text>
         </CardSection>
         <CardSection>
