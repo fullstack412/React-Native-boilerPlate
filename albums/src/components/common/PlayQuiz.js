@@ -39,15 +39,17 @@ class Playquiz extends Component {
                   <Text style={styles.score}>Congrats you scored {score}% </Text>
                 </View>)
     }else if(score >= 60){
-      return (<View style={styles.innerContainer}>
-                 <View style={{ flexDirection: "row"}} >
-                     <Icon name="trophy" size={30} color="white" />
-                     <Icon name="trophy" size={30} color="white" />
-                     <Icon name="trophy" size={30} color="white" />
-                  </View>
-                  <Text style={styles.score}>You are the master</Text>
-                  <Text style={styles.score}>Congrats you scored {score}% </Text>
-                </View>)
+      return (
+        <View style={styles.innerContainer}>
+          <View style={{ flexDirection: "row"}} >
+              <Icon name="trophy" size={30} color="white" />
+              <Icon name="trophy" size={30} color="white" />
+              <Icon name="trophy" size={30} color="white" />
+          </View>
+          <Text style={styles.score}>You are the master</Text>
+          <Text style={styles.score}>Congrats you scored {score}% </Text>
+        </View>
+      )
     }
   }
   render() {
@@ -59,14 +61,11 @@ class Playquiz extends Component {
                     <Text style={styles.toolbarTitle}></Text>
                     <Text style={styles.toolbarButton}></Text>
       </View> */}
-       { this.state.quizFinish ? <View style={styles.container}>
-           <View style={styles.circle}>
-
-             { this._scoreMessage(this.state.score) }
-           </View>
-
-       </View> :  <Quiz quizFinish={(score) => this._quizFinish(score)} quizData = { this.props.quizData } /> }
-
+        { this.state.quizFinish ? <View style={styles.container}>
+          <View style={styles.circle}>
+            { this._scoreMessage(this.state.score) }
+          </View>
+        </View> : <Quiz quizFinish={(score) => this._quizFinish(score)} quizData = { this.props.quizData } /> }
       </View>
     );
   }

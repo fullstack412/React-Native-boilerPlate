@@ -71,10 +71,12 @@ class Quiz extends Component {
     const jdata = this.props.quizData.quiz.quiz1
     arrnew = Object.keys(jdata).map( function(k) { return jdata[k] });
     this.state = {
+      buttonRotation: ['bounce', 'flash', 'jello', 'pulse', 'rotate', 'rubberBand', 'shake', 'swing', 'tada', 'wobble'],
       question : arrnew[this.qno].question,
       options : arrnew[this.qno].options,
       correctoption : arrnew[this.qno].correctoption,
-      countCheck : 0
+      countCheck : 0,
+      buttonStatus: false
     }
   }
   prev(){
@@ -114,10 +116,8 @@ class Quiz extends Component {
     let _this = this
     const currentOptions = this.state.options
     const options = Object.keys(currentOptions).map( function(k) {
-      return (  <View key={k} style={{margin:10}}>
- 
-        <Animbutton countCheck={_this.state.countCheck} onColor={"green"} effect={"tada"} _onPress={(status) => _this._answer(status,k)} text={currentOptions[k]} />
- 
+      return (  <View key={k} style={{margin:10}}> 
+        <Animbutton countCheck={_this.state.countCheck} onColor={"green"} effect={_this.state.buttonRotation[_this.qno]}_onPress={(status) => _this._answer(status,k)} text={currentOptions[k]} />
       </View>)
     });
  
