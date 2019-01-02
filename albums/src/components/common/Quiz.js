@@ -117,7 +117,7 @@ class Quiz extends Component {
     const currentOptions = this.state.options
     const options = Object.keys(currentOptions).map( function(k) {
       return (  <View key={k} style={{margin:10}}> 
-        <Animbutton countCheck={_this.state.countCheck} onColor={"green"} effect={_this.state.buttonRotation[_this.qno]}_onPress={(status) => _this._answer(status,k)} text={currentOptions[k]} />
+        <Animbutton countCheck={_this.state.countCheck} gionColor={"green"} effect={_this.state.buttonRotation[_this.qno]}_onPress={(status) => _this._answer(status,k)} text={currentOptions[k]} />
       </View>)
     });
  

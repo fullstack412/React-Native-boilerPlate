@@ -27,10 +27,10 @@ class CourseList extends Component {
       image: require('../../../assets/html.png'),
       menuOptions: [
         'Objects', 
-        'DataModeling',
-        'HigherOrderEach', 
-        'Map', 
-        'Filter'
+        'Data Modeling',
+        'Higher Order Function: Each', 
+        'Higher Order Function: Map', 
+        'Higher Order Function: Filter'
       ]
     }, {
       topic: 'Prep Week 3',

@@ -80,15 +80,21 @@ const AppStackNavigator = createStackNavigator({
   "Variables in JavaScript": Variables,
   "While Loop": WhileLoop,
   "Arrays and For Loops": ArraysAndForLoop,
+  // Week 2
+  "Objects":Objects,
+  "Data Modeling":DataModeling,
+  "Higher Order Function: Each":HigherOrderEach,
+  "Higher Order Function: Map":Map,
+  "Higher Order Function: Filter":Filter,
   // Week 3
   "HTML, CSS and jQuery": HTMLCSSjQuery,
   "Closures And Adding Methods": AbstractClosureDM,
   "OOP": OOP,
   "Reduce": Reduce,
   // Week 4
-  Git: Git,
-  Testing: Testing,
-  WebDev: WebDev,
+  "Git": Git,
+  "Testing": Testing,
+  "Web Development": WebDev,
 
   FSList: FSList,
   Recastly: Recastly,
@@ -102,15 +108,7 @@ const AppStackNavigator = createStackNavigator({
   Surveys: Surveys,
   TownHall: TownHall,
   Handbook: Handbook,
-  Header: Header,
-  Objects:Objects,
-  DataModeling:DataModeling,
-  HigherOrderEach:HigherOrderEach,
-  Map:Map,
-  Filter:Filter
-
-  
-  // HTMLCSSjQuery: HTMLCSSjQuery
+  Header: Header
 });
 
 const AppDrawerNavigator = createDrawerNavigator({
