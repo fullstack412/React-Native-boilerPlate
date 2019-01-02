@@ -39,6 +39,17 @@ class ArraysAndForLoop extends Component {
             {"\n"}
             var thisIsAnArrayWithALotOfDifferentDataTypes = [1, 'hello world', 'foo bar', true, false];
             {"\n"}
+            Each value in an array can be accessed by referring to its index. Arrays are 0-indexed, which means the first element is at index 0, 
+            the second element is at index 1, the third element is at index 2, etc. 
+            {"\n"}
+            Here are a few examples of how you can access specific elements in an array:
+            {"\n"}
+            thisIsAnArrayWithALotOfDifferentDataTypes[0] // => 1
+            {"\n"}
+            thisIsAnArrayWithALotOfDifferentDataTypes[1] // => 'hello world'
+            {"\n"}
+            thisIsAnArrayWithALotOfDifferentDataTypes[2] // => 'foo bar'
+            {"\n"}
             Arrays also have different properties that can be accessed. Arrays have a length property which tells you how many elements 
             are in an array. 
             {"\n"}
@@ -77,7 +88,25 @@ class ArraysAndForLoop extends Component {
           <Text>
             You can iterate through arrays by using for loops. Here is a refresher on the syntax of for loops:
             {"\n"}
-            
+            var anExampleOfAnotherArray = ['hello', 'world', 'foo', 'bar'];
+            {"\n"}
+            {
+            `for (var i = 0; i < anExampleOfAnotherArray.length; i++) {
+              console.log(anExampleOfAnotherArray[i]);
+            }
+            `
+            }
+            {"\n"}
+            If that for loop were to run, the console would log the following:
+            {"\n"}
+            'hello'
+            {"\n"}
+            'world'
+            {"\n"}
+            'foo'
+            {"\n"}
+            'bar'
+            {"\n"}
           </Text>
         </CardSection>
         <CardSection>
