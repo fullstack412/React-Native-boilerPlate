@@ -26,6 +26,14 @@ import Variables from './src/components/Sprints/PreCourse/PreWeek1/SubSprints/Va
 import WhileLoop from './src/components/Sprints/PreCourse/PreWeek1/SubSprints/WhileLoop';
 import ArraysAndForLoop from './src/components/Sprints/PreCourse/PreWeek1/SubSprints/ArraysAndForLoop';
 
+//PC week2 Sprints
+import Objects from './src/components/Sprints/PreCourse/PreWeek2/SubSprints/Objects';
+import DataModeling from './src/components/Sprints/PreCourse/PreWeek2/SubSprints/DataModeling';
+import HigherOrderEach from './src/components/Sprints/PreCourse/PreWeek2/SubSprints/HigherOrderEach';
+import Map from './src/components/Sprints/PreCourse/PreWeek2/SubSprints/Map';
+import Filter from './src/components/Sprints/PreCourse/PreWeek2/SubSprints/Filter';
+
+
 // import PCWeek2 from './src/components/Sprints/PreCourse/PreWeek2/Main';
 // import PCWeek3 from './src/components/Sprints/PreCourse/PreWeek3/Main';
 // import PCWeek4 from './src/components/Sprints/PreCourse/PreWeek4/Main';
@@ -35,8 +43,6 @@ import Revision from './src/components/Sprints/PreCourse/PreWeek4/SubSprints/Rev
 import Testing from './src/components/Sprints/PreCourse/PreWeek4/SubSprints/Testing';
 import Twitler from './src/components/Sprints/PreCourse/PreWeek4/SubSprints/Twitler';
 import WebDev from './src/components/Sprints/PreCourse/PreWeek4/SubSprints/WebDev';
-import Objects from './src/components/Sprints/PreCourse/PreWeek2/SubSprints/Objects';
-
 
 import CodeCompiler from './src/components/Features/CodeCompiler/Main';
 import Calendar from './src/components/Features/GoogleCalendar/Main';
@@ -98,7 +104,13 @@ const AppStackNavigator = createStackNavigator({
   TownHall: TownHall,
   Handbook: Handbook,
   Header: Header,
-  Objects:Objects
+  Objects:Objects,
+  DataModeling:DataModeling,
+  HigherOrderEach:HigherOrderEach,
+  Map:Map,
+  Filter:Filter
+
+
 });
 
 const AppDrawerNavigator = createDrawerNavigator({

@@ -32,12 +32,11 @@ class CourseList extends Component {
         intro: ''
       },
       menuOptions: [
-        'Git', 
         'Objects', 
-        'Revision', 
-        'Testing', 
-        'Twitler', 
-        'WebDev'
+        'DataModeling',
+        'HigherOrderEach', 
+        'Map', 
+        'Filter'
       ]
     }, {
       topic: 'Prep Week 3',
