@@ -182,6 +182,11 @@ git branch -D [local_branch]: delete local branch'
           </Text>
         </CardSection>
         <CardSection>
+          <Text style={ boldText }>
+            Conclusion:
+          </Text>
+        </CardSection>
+        <CardSection>
           <Text>
             {end}{"\n"}
           </Text>
@@ -189,7 +194,7 @@ git branch -D [local_branch]: delete local branch'
 
         <Playquiz quizData = { this.state.quizData }/>
         <CardSection>
-          <Button onPress = {()=>this.props.navigation.navigate('Project')}>
+          <Button onPress = {()=>this.props.navigation.navigate('Testing')}>
             Next
           </Button>
         </CardSection>

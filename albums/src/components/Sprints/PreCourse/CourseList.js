@@ -20,7 +20,7 @@ class CourseList extends Component {
       menuOptions: [
         'JavaScript Fundamentals and Functions', 
         'Booleans, Comparisons, and Operators', 
-        'Variables and Repetition in JavaScript', 
+        'Variables in JavaScript', 
         'While Loop', 
         'Arrays and For Loops'
       ]
@@ -32,11 +32,13 @@ class CourseList extends Component {
         intro: ''
       },
       menuOptions: [
+
         'Objects', 
         'DataModeling',
         'HigherOrderEach', 
         'Map', 
         'Filter'
+
       ]
     }, {
       topic: 'Prep Week 3',
@@ -46,26 +48,21 @@ class CourseList extends Component {
         intro: ''
       },
       menuOptions: [
-        'Git', 
-        'Project', 
-        'Revision', 
-        'Testing', 
-        'Twitler', 
-        'WebDev'
+        'Reduce', 
+        'Closures And Adding Methods', 
+        'OOP', 
+        'HTML, CSS and jQuery'
       ]      
     }, {
       topic: 'Prep Week 4',
-      introduction: 'Web Development, Git, Twitler, Testing, Revision, Project',
+      introduction: 'More indepth view of Web Development with jQuery, how to use Git, and understand the basics of testing',
       image: require('../../../assets/javascript.png'),
       body: {
         intro: ''
       },
       menuOptions: [
         'Git', 
-        'Project', 
-        'Revision', 
         'Testing', 
-        'Twitler', 
         'WebDev'
       ]
     }
