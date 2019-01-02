@@ -53,14 +53,14 @@ class WebDev extends Component {
   render() {
     const { thumbnailStyle, headerConetentStyle, thumbnailContainerStyle, headerTextStyle, boldText } = Styles;
     const topic = 'Web Development';
-    const introduction = 'This is your first immersion with Full-stack Development. ';
+    const introduction = 'All websites can be developed by HTML, Javascript, and CSS. Frameworks are introduced to make the development easier.';
     const body = [
       [
         'There are three foundations in Web Development', 
-        'HTML: defines the content and structure of a website. Think of it as the frame of a car, how many car doors, wheels, windows are needed.\n\
+        'HTML: defines the content and structure of a website. Think of it as the frame of a car, how many car doors, wheels, windows are needed.\n\n\
 Javascript: provides the interaction for the webpage. If you have a clickable button on the page that alerts a message, they that\'s where Javascript \
 comes in. Javascript is not limited to that simple example. In the car example, Javascript will be the connection between the control and the head light, \
-air conditioning controller and the air conditioning.   \n\
+air conditioning controller and the air conditioning.   \n\n\
 CSS: decides how the website is going to look. It doesn\'t change the content, but it changes how the content is displayed. For the car example, \
 CSS decides the paint color of the car, how big the car windows are \n'
       ],[
@@ -69,11 +69,11 @@ CSS decides the paint color of the car, how big the car windows are \n'
 Programmers use jQuery to simplify the process of designing complex websites.\n\
 jQuery builds on Javascript, but it has its own unique syntax.'
       ],[
-        'How to use jQuery?',
+        'How to import jQuery?',
         'Like any external library, programmers would need to import the library in the HTML page between the <head></head>. \n \
 Here are the few ways you can import jQuery:\n\
-1. Download jQuery to your local folder (I named it lib in this case) and import it like so <script src="lib/jquery.js"></script>\n\
-2. Or you can use a jQuery library someone else uploaded online <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">\n\
+1. Download jQuery to your local folder (I named it lib in this case) and import it like so \n<script src="lib/jquery.js"></script>\n\
+2. Or you can use a jQuery library someone else uploaded online \n<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">\n\n\
 They both do imports jQuery, but just getting the jQuery library from different places. Option 1 is like download a movie and then watch it. Option 2 is like streaming a movie online\
 '
       ],[
@@ -92,10 +92,11 @@ val(): Gets or sets the value attribute of an element\n\
 text(): Gets the combined text of an element and its children\n\
 each(): Iterates over a set of matched elements'
       ],[
-        'Other major Frameworks',
-        'React: \n\
-Backbone: \n\
-Angular: \n'
+        'Advanced: Other major Frameworks',
+        'React: Structure the entire website as a combinations of different components. It\'s like building each car parts on their own, \
+car doors, engine, windows, etc. Those components are eventually linked together to build a functional car.\n\n\
+Backbone: In backbone, the data, what\'s being displayed on the page, and how data is changed are separated into different layers. \n\n\
+Angular: Angular offers another different ways of frontend framework. It works particularly well in formed and document based webapplications\n\n'
       ]
     ]
     const end = 'This is your first immersion to become a fullstack developer. If your experience was unpleasant, knowing most of technologies\
@@ -160,7 +161,7 @@ might just found a hobby that also pays salary!';
             {body[3][1]}
           </Text>
         </CardSection>
-        {/* <CardSection>
+        <CardSection>
           <Text style={ boldText }>
             {body[4][0]}
           </Text>
@@ -170,7 +171,7 @@ might just found a hobby that also pays salary!';
             {body[4][1]}
           </Text>
         </CardSection>
-        <CardSection>
+        {/* <CardSection>
           <Text style={ boldText }>
             {body[5][0]}
           </Text>
@@ -180,6 +181,11 @@ might just found a hobby that also pays salary!';
             {body[5][1]}
           </Text>
         </CardSection> */}
+        <CardSection>
+          <Text style={ boldText }>
+            Conclusion:
+          </Text>
+        </CardSection>
         <CardSection>
           <Text>
             {end}{"\n"}
