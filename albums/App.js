@@ -25,30 +25,17 @@ import Comparison from './src/components/Sprints/PreCourse/PreWeek1/SubSprints/C
 import Variables from './src/components/Sprints/PreCourse/PreWeek1/SubSprints/Variables';
 import WhileLoop from './src/components/Sprints/PreCourse/PreWeek1/SubSprints/WhileLoop';
 import ArraysAndForLoop from './src/components/Sprints/PreCourse/PreWeek1/SubSprints/ArraysAndForLoop';
-
-
-//PC week2 Sprints
-import Objects from './src/components/Sprints/PreCourse/PreWeek2/SubSprints/Objects';
-import DataModeling from './src/components/Sprints/PreCourse/PreWeek2/SubSprints/DataModeling';
-import HigherOrderEach from './src/components/Sprints/PreCourse/PreWeek2/SubSprints/HigherOrderEach';
-import Map from './src/components/Sprints/PreCourse/PreWeek2/SubSprints/Map';
-import Filter from './src/components/Sprints/PreCourse/PreWeek2/SubSprints/Filter';
-
-
-// import PCWeek2 from './src/components/Sprints/PreCourse/PreWeek2/Main';
-// import PCWeek3 from './src/components/Sprints/PreCourse/PreWeek3/Main';
-// import PCWeek4 from './src/components/Sprints/PreCourse/PreWeek4/Main';
-
-import Git from './src/components/Sprints/PreCourse/PreWeek4/SubSprints/Git';
-import Testing from './src/components/Sprints/PreCourse/PreWeek4/SubSprints/Testing';
-import WebDev from './src/components/Sprints/PreCourse/PreWeek4/SubSprints/WebDev';
-
+// PC Week 2 Sprints
+import Objects from './src/components/Sprints/PreCourse/PreWeek2/SubSprints/Objects'; 
+// PC Week 3 Sprints
 import HTMLCSSjQuery from './src/components/Sprints/PreCourse/PreWeek3/SubSprints/HTMLCSSjQuery';
 import AbstractClosureDM from './src/components/Sprints/PreCourse/PreWeek3/SubSprints/AbstractClosureDM';
 import OOP from './src/components/Sprints/PreCourse/PreWeek3/SubSprints/OOP';
 import Reduce from './src/components/Sprints/PreCourse/PreWeek3/SubSprints/Reduce';
-
-
+// PC Week 4 Sprints
+import Git from './src/components/Sprints/PreCourse/PreWeek4/SubSprints/Git';
+import Testing from './src/components/Sprints/PreCourse/PreWeek4/SubSprints/Testing';
+import WebDev from './src/components/Sprints/PreCourse/PreWeek4/SubSprints/WebDev';
 
 import CodeCompiler from './src/components/Features/CodeCompiler/Main';
 import Calendar from './src/components/Features/GoogleCalendar/Main';
@@ -83,21 +70,22 @@ const CustomDrawerComponent = (props) => {
 
 const AppStackNavigator = createStackNavigator({
   PCList: PCList,
+  // Week 1
   "JavaScript Fundamentals and Functions": Fundamentals,
   "Booleans, Comparisons, and Operators": Comparison,
   "Variables in JavaScript": Variables,
   "While Loop": WhileLoop,
   "Arrays and For Loops": ArraysAndForLoop,
-  // PCWeek2: PCWeek2,
-  // PCWeek3: PCWeek3,
+  // Week 3
   "HTML, CSS and jQuery": HTMLCSSjQuery,
   "Closures And Adding Methods": AbstractClosureDM,
   "OOP": OOP,
   "Reduce": Reduce,
-  // PCWeek4: PCWeek4,
+  // Week 4
   Git: Git,
   Testing: Testing,
   WebDev: WebDev,
+
   FSList: FSList,
   Recastly: Recastly,
   Angular: Angular,
@@ -111,21 +99,13 @@ const AppStackNavigator = createStackNavigator({
   TownHall: TownHall,
   Handbook: Handbook,
   Header: Header,
-  Objects:Objects,
-  DataModeling:DataModeling,
-  HigherOrderEach:HigherOrderEach,
-  Map:Map,
-  Filter:Filter,
-  HTMLCSSjQuery: HTMLCSSjQuery
-
+  Objects:Objects
+  // HTMLCSSjQuery: HTMLCSSjQuery
 });
 
 const AppDrawerNavigator = createDrawerNavigator({
   AppStackNavigator: AppStackNavigator,
   Prep_Course_Sprints: PCList,
-  // Prep_Week_2: PCWeek2,
-  // Prep_Week_3: PCWeek3,
-  // Prep_Week_4: PCWeek4,
   Full_Stack_Sprints: FSList,
   JS_Sprints: JSList,
   JSDataStructure: JSDataStructure,
