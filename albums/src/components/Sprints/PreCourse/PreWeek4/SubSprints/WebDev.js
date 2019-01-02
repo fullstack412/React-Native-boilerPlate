@@ -64,13 +64,35 @@ air conditioning controller and the air conditioning.   \n\
 CSS: decides how the website is going to look. It doesn\'t change the content, but it changes how the content is displayed. For the car example, \
 CSS decides the paint color of the car, how big the car windows are \n'
       ],[
-        'jQuery Frameworks',
-        'Frameworks are powerful tools that build on HTML, CSS, and Javascript. You can build any websites without framework, but using frameworks can significantly \
-decrease the complexity of the websites.\n\
-jQuery: a Javascript framework\n\
+        'jQuery Framework',
+        'Frameworks like jQuery are powerful tools that build on HTML, CSS, and Javascript. \
+Programmers use jQuery to simplify the process of designing complex websites.\n\
+jQuery builds on Javascript, but it has its own unique syntax.'
+      ],[
+        'How to use jQuery?',
+        'Like any external library, programmers would need to import the library in the HTML page between the <head></head>. \n \
+Here are the few ways you can import jQuery:\n\
+1. Download jQuery to your local folder (I named it lib in this case) and import it like so <script src="lib/jquery.js"></script>\n\
+2. Or you can use a jQuery library someone else uploaded online <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">\n\
+They both do imports jQuery, but just getting the jQuery library from different places. Option 1 is like download a movie and then watch it. Option 2 is like streaming a movie online\
 '
       ],[
-        'Other Frameworks',
+        'Common jQuery functions',
+        'find(): Selects elements based on the provided selector string\n\
+hide(): Hides an element if it was visible\n\
+show(): Shows an element if it was hidden\n\
+html(): Gets or sets an inner HTML of an element\n\
+append() Injects an element into the DOM after the selected element\n\
+prepend() Injects an element into the DOM before the selected element\n\
+on(): Attaches an event listener to an element\n\
+off() Detaches an event listener from an element\n\
+css(): Gets or sets the style attribute value of an element\n\
+attr() Gets or sets any attribute of an element\n\
+val(): Gets or sets the value attribute of an element\n\
+text(): Gets the combined text of an element and its children\n\
+each(): Iterates over a set of matched elements'
+      ],[
+        'Other major Frameworks',
         'React: \n\
 Backbone: \n\
 Angular: \n'
@@ -138,7 +160,7 @@ might just found a hobby that also pays salary!';
             {body[3][1]}
           </Text>
         </CardSection>
-        <CardSection>
+        {/* <CardSection>
           <Text style={ boldText }>
             {body[4][0]}
           </Text>
@@ -157,7 +179,7 @@ might just found a hobby that also pays salary!';
           <Text>
             {body[5][1]}
           </Text>
-        </CardSection>
+        </CardSection> */}
         <CardSection>
           <Text>
             {end}{"\n"}
@@ -167,7 +189,7 @@ might just found a hobby that also pays salary!';
         <Playquiz quizData = { this.state.quizData }/>
         <CardSection>
           <Button onPress = {()=>this.props.navigation.navigate('Testing')}>
-            Next
+            Previous
           </Button>
         </CardSection>
         <CardSection>
