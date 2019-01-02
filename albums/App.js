@@ -27,6 +27,10 @@ import WhileLoop from './src/components/Sprints/PreCourse/PreWeek1/SubSprints/Wh
 import ArraysAndForLoop from './src/components/Sprints/PreCourse/PreWeek1/SubSprints/ArraysAndForLoop';
 // PC Week 2 Sprints
 import Objects from './src/components/Sprints/PreCourse/PreWeek2/SubSprints/Objects'; 
+import DataModeling from './src/components/Sprints/PreCourse/PreWeek2/SubSprints/DataModeling';
+import HigherOrderEach from './src/components/Sprints/PreCourse/PreWeek2/SubSprints/HigherOrderEach';
+import Map from './src/components/Sprints/PreCourse/PreWeek2/SubSprints/Map';
+import Filter from'./src/components/Sprints/PreCourse/PreWeek2/SubSprints/Filter'
 // PC Week 3 Sprints
 import HTMLCSSjQuery from './src/components/Sprints/PreCourse/PreWeek3/SubSprints/HTMLCSSjQuery';
 import AbstractClosureDM from './src/components/Sprints/PreCourse/PreWeek3/SubSprints/AbstractClosureDM';
@@ -99,7 +103,13 @@ const AppStackNavigator = createStackNavigator({
   TownHall: TownHall,
   Handbook: Handbook,
   Header: Header,
-  Objects:Objects
+  Objects:Objects,
+  DataModeling:DataModeling,
+  HigherOrderEach:HigherOrderEach,
+  Map:Map,
+  Filter:Filter
+
+  
   // HTMLCSSjQuery: HTMLCSSjQuery
 });
 
