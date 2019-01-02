@@ -20,37 +20,21 @@ import OSList from './src/components/Sprints/OtherSprints/CourseList';
 import PCList from './src/components/Sprints/PreCourse/CourseList';
 
 //PC Week 1 Sprints
-import Fundamentals from './src/components/Sprints/PreCourse/PreWeek1/SubSprints/Fundamentals';
+import Fundamentals from './src/components/Sprints/PreCourse/PreWegiek1/SubSprints/Fundamentals';
 import Comparison from './src/components/Sprints/PreCourse/PreWeek1/SubSprints/Comparison';
 import Variables from './src/components/Sprints/PreCourse/PreWeek1/SubSprints/Variables';
 import WhileLoop from './src/components/Sprints/PreCourse/PreWeek1/SubSprints/WhileLoop';
 import ArraysAndForLoop from './src/components/Sprints/PreCourse/PreWeek1/SubSprints/ArraysAndForLoop';
 
-
-//PC week2 Sprints
 import Objects from './src/components/Sprints/PreCourse/PreWeek2/SubSprints/Objects';
-import DataModeling from './src/components/Sprints/PreCourse/PreWeek2/SubSprints/DataModeling';
-import HigherOrderEach from './src/components/Sprints/PreCourse/PreWeek2/SubSprints/HigherOrderEach';
-import Map from './src/components/Sprints/PreCourse/PreWeek2/SubSprints/Map';
-import Filter from './src/components/Sprints/PreCourse/PreWeek2/SubSprints/Filter';
-
-
-// import PCWeek2 from './src/components/Sprints/PreCourse/PreWeek2/Main';
-// import PCWeek3 from './src/components/Sprints/PreCourse/PreWeek3/Main';
-// import PCWeek4 from './src/components/Sprints/PreCourse/PreWeek4/Main';
 
 import Git from './src/components/Sprints/PreCourse/PreWeek4/SubSprints/Git';
 import Testing from './src/components/Sprints/PreCourse/PreWeek4/SubSprints/Testing';
 import WebDev from './src/components/Sprints/PreCourse/PreWeek4/SubSprints/WebDev';
-<<<<<<< HEAD
-=======
-
->>>>>>> 8d3666a62d5353527f0ac2343725ef9d18eaf1ab
 import HTMLCSSjQuery from './src/components/Sprints/PreCourse/PreWeek3/SubSprints/HTMLCSSjQuery';
 import AbstractClosureDM from './src/components/Sprints/PreCourse/PreWeek3/SubSprints/AbstractClosureDM';
 import OOP from './src/components/Sprints/PreCourse/PreWeek3/SubSprints/OOP';
 import Reduce from './src/components/Sprints/PreCourse/PreWeek3/SubSprints/Reduce';
-
 
 
 import CodeCompiler from './src/components/Features/CodeCompiler/Main';
@@ -115,12 +99,7 @@ const AppStackNavigator = createStackNavigator({
   Handbook: Handbook,
   Header: Header,
   Objects:Objects,
-  DataModeling:DataModeling,
-  HigherOrderEach:HigherOrderEach,
-  Map:Map,
-  Filter:Filter,
   HTMLCSSjQuery: HTMLCSSjQuery
-
 });
 
 const AppDrawerNavigator = createDrawerNavigator({
