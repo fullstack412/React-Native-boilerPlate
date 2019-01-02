@@ -8,53 +8,42 @@ class WebDev extends Component {
       "quiz" : {
         "quiz1" : {
           "question1" : {
-            "correctoption" : "option1",
+            "correctoption" : "option3",
             "options" : {
-              "option1" : "git init",
-              "option2" : "git add",
-              "option3" : "git push",
-              "option4" : "git log"
+              "option1" : "Hot Tea Milky Lollipop",
+              "option2" : "Hulk Thor Magneto Loki",
+              "option3" : "Hypertext Markup Language",
+              "option4" : "Hal taqulu Masalama La"
             },
-            "question" : "Which command should you use to initialize a new Git repository?"
+            "question" : "What does HTML stand for?"
           },
           "question2" : {
             "correctoption" : "option4",
             "options" : {
-                "option1" : "git add",
-                "option2" : "git push",
-                "option3" : "git init",
-                "option4" : "git commit -m 'message"
+                "option1" : "deliver butter",
+                "option2" : "perform unit test",
+                "option3" : "links HTML with Javascript code",
+                "option4" : "adding styles to the website"
               },
-            "question" : "Which command should you use after git add ."
+            "question" : "What is the purpose of CSS?"
           },
           "question3" : {
-            "correctoption" : "option3",
+            "correctoption" : "option1",
             "options" : {
-                "option1" : "git init",
-                "option2" : "git log",
-                "option3" : "git push",
-                "option4" : "git pull",
+                "option1" : "setInterval(myFunction(){}, 3000);",
+                "option2" : "setInterval(myFunction(){}, 3);",
+                "option3" : "setTimeout(myFunction(){}, 3000);",
+                "option4" : "setTimeout(myFunction(){}, 3);",
               },
-            "question" : "How to upload your local work to github"
+            "question" : "Which function performs myfunction every 3 seconds?"
           },
           "question4" : {
-            "correctoption" : "option3",
+            "correctoption" : "option1",
             "options" : {
-                "option1" : "git init",
-                "option3" : "git push",
-                "option4" : "git pull",
+                "option1" : "<script src=\"lib/jquery.js\"></script>",
+                "option2" : "<script src=\"src/javascriptYouWrite.js\"></script>"
               },
-            "question" : "How to update local git repo with newer version of Github repo?"
-          },
-          "question5" : {
-            "correctoption" : "option4",
-            "options" : {
-                "option1" : "git icecream",
-                "option2" : "git push",
-                "option3" : "git add .",
-                "option4" : "git merge"
-              },
-            "question" : "How to merge different git branches?"
+            "question" : "Which file should you load first in your .html file?"
           }
         }
       }      
@@ -63,45 +52,33 @@ class WebDev extends Component {
 
   render() {
     const { thumbnailStyle, headerConetentStyle, thumbnailContainerStyle, headerTextStyle, boldText } = Styles;
-    const topic = 'Git';
-    const introduction = 'Git and GitHub are tools to help manage our files. They also help us share our work with other programmers';
+    const topic = 'Web Development';
+    const introduction = 'This is your first immersion with Full-stack Development. ';
     const body = [
       [
-        'Install Git:', 
-        'Go to: https://git-scm.com/downloads \n\
-After installation, open the terminal window (command + space), type in “terminal”, open the application like the picture shown below\n\
-Terminal is the programmer preferred way to navigate around the folders in the desktop'
+        'There are three foundations in Web Development', 
+        'HTML: defines the content and structure of a website. Think of it as the frame of a car, how many car doors, wheels, windows are needed.\n\
+Javascript: provides the interaction for the webpage. If you have a clickable button on the page that alerts a message, they that\'s where Javascript \
+comes in. Javascript is not limited to that simple example. In the car example, Javascript will be the connection between the control and the head light, \
+air conditioning controller and the air conditioning.   \n\
+CSS: decides how the website is going to look. It doesn\'t change the content, but it changes how the content is displayed. For the car example, \
+CSS decides the paint color of the car, how big the car windows are \n'
       ],[
-        'Navigate between folders in terminal:',
-        'cd [folder name]: Go inside a folder\n\
-cd .. : exit current folder\n\
-dir : display all the files/folders in the current folder (windows) \n\
-ls : display all the files/folders in the current folder (mac)\n\
-pwd : display the path to the current file'
+        'jQuery Frameworks',
+        'Frameworks are powerful tools that build on HTML, CSS, and Javascript. You can build any websites without framework, but using frameworks can significantly \
+decrease the complexity of the websites.\n\
+jQuery: a Javascript framework\n\
+'
       ],[
-        'Download/update the code from a repository on your github:',
-        'git clone [repo url]: first time \n\
-git pull: after first time'
-      ],[
-        'Other useful Git Commands:',
-        'git log: look up previous git commit messages \n\
-git reset --hard [commit ID you found from git log] : go back to the code you wrote in a previous commit'
-      ], [
-        'Three steps process for upload local repository to github:',
-        'git add [file] \ngit commit -m [descriptive message] \ngit push'
-      ], [
-        'Advanced Git Commands: ',
-        'git status: show which branch you located and whether you commit any changes \n\
-git log --oneline: shows previous commit messages in a readable format\n\
-git tag [tag_name] : sets repo with a tag \n\
-git remote: list all remote repos \n\
-git branch: list all branches \n\
-git checkout -b [branch_name]: create a new branch and switch to that branch \n\
-git branch -D [local_branch]: delete local branch'
+        'Other Frameworks',
+        'React: \n\
+Backbone: \n\
+Angular: \n'
       ]
     ]
-    const end = 'Git is the most popular version control system. You will become more and more familiar with Git and GitHub in the months to come';
-
+    const end = 'This is your first immersion to become a fullstack developer. If your experience was unpleasant, knowing most of technologies\
+you struggle to understand is going to get easier. It takes time to pick up a skill from 0. If you are already having fun, congratulations, you\
+might just found a hobby that also pays salary!';
     return (
       
       <Card>

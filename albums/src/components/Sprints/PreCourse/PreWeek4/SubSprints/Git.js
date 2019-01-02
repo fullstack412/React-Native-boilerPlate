@@ -182,6 +182,11 @@ git branch -D [local_branch]: delete local branch'
           </Text>
         </CardSection>
         <CardSection>
+          <Text style={ boldText }>
+            Conclusion:
+          </Text>
+        </CardSection>
+        <CardSection>
           <Text>
             {end}{"\n"}
           </Text>

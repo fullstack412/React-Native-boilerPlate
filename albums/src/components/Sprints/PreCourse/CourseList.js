@@ -45,7 +45,7 @@ class CourseList extends Component {
       ]      
     }, {
       topic: 'Prep Week 4',
-      introduction: 'Web Development, Git, Twitler, Testing, Revision, Project',
+      introduction: 'More indepth view of Web Development with jQuery, how to use Git, and understand the basics of testing',
       image: require('../../../assets/javascript.png'),
       body: {
         intro: ''

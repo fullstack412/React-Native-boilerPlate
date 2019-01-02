@@ -8,53 +8,50 @@ class Testing extends Component {
       "quiz" : {
         "quiz1" : {
           "question1" : {
-            "correctoption" : "option1",
-            "options" : {
-              "option1" : "git init",
-              "option2" : "git add",
-              "option3" : "git push",
-              "option4" : "git log"
-            },
-            "question" : "Which command should you use to initialize a new Git repository?"
-          },
-          "question2" : {
             "correctoption" : "option4",
             "options" : {
-                "option1" : "git add",
-                "option2" : "git push",
-                "option3" : "git init",
-                "option4" : "git commit -m 'message"
+              "option1" : "Tool Does Development",
+              "option2" : "Total Development Disaster",
+              "option3" : "Teeth Destroy Dinosaur",
+              "option4" : "Test Driven Development"
+            },
+            "question" : "What does TDD stand for?"
+          },
+          "question2" : {
+            "correctoption" : "option2",
+            "options" : {
+                "option1" : "Write Code",
+                "option2" : "Write Test",
+                "option3" : "Run Test"
               },
-            "question" : "Which command should you use after git add ."
+            "question" : "What comes first?"
           },
           "question3" : {
-            "correctoption" : "option3",
+            "correctoption" : "option2",
             "options" : {
-                "option1" : "git init",
-                "option2" : "git log",
-                "option3" : "git push",
-                "option4" : "git pull",
+                "option1" : "it('sample test', function(){})",
+                "option2" : "beforeEach(function(){})"
               },
-            "question" : "How to upload your local work to github"
+            "question" : "What runs first?"
           },
           "question4" : {
-            "correctoption" : "option3",
+            "correctoption" : "option1",
             "options" : {
-                "option1" : "git init",
-                "option3" : "git push",
-                "option4" : "git pull",
+                "option1" : "describe()",
+                "option3" : "it()",
+                "option4" : "before()",
               },
-            "question" : "How to update local git repo with newer version of Github repo?"
+            "question" : "What command is used to group multiple test cases together?"
           },
           "question5" : {
             "correctoption" : "option4",
             "options" : {
-                "option1" : "git icecream",
-                "option2" : "git push",
-                "option3" : "git add .",
-                "option4" : "git merge"
+                "option1" : "details how much RAM is dedicated to the current test",
+                "option2" : "specify how long the test cases should take",
+                "option3" : "identifies each individual test cases",
+                "option4" : "a scary movie clown"
               },
-            "question" : "How to merge different git branches?"
+            "question" : "What does \"it\" do in testing?"
           }
         }
       }      
@@ -93,7 +90,7 @@ describe(\'Testing summation function\', function() {\n\
   expect(myFunction(23, 10)).to.equal(33);\n\
   });\n\
 })\n\
-The point for these tests is to see whether it is doing what you designed to do. \n\
+The point for these tests is to see whether myFunction is doing what you designed to do. \n\
 So since you know 2 + 3 = 5 and 23 + 10 = 33. So you set those conditions to check if your \
 function works as good as your brain.'
       ]
@@ -115,7 +112,7 @@ Treat each of passed test as a small celebration on your journey to become a Ful
 
         <CardSection>
           <Text>
-          {introduction}{"\n"}
+          {introduction}
           </Text>
         </CardSection>
 
@@ -151,7 +148,12 @@ Treat each of passed test as a small celebration on your journey to become a Ful
             {body[2][1]}
           </Text>
         </CardSection>
-        
+
+        <CardSection>
+          <Text style={ boldText }>
+            Conclusion: 
+          </Text>
+        </CardSection>        
         <CardSection>
           <Text>
             {end}{"\n"}
