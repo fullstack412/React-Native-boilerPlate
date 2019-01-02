@@ -71,7 +71,7 @@ class Quiz extends Component {
     const jdata = this.props.quizData.quiz.quiz1
     arrnew = Object.keys(jdata).map( function(k) { return jdata[k] });
     this.state = {
-      buttonRotation: ['bounce', 'flash', 'jello', 'pulse', 'rotate', 'rubberBand', 'shake', 'swing', 'tada', 'wobble', 'bounce', 'flash', 'jello', 'pulse', 'rotate', 'rubberBand', 'shake', 'swing', 'tada', 'wobble'],
+      buttonRotation: ['bounce', 'flash', 'jello', 'pulse', 'rotate', 'rubberBand', 'shake', 'swing', 'tada', 'wobble', 'bounce', 'flash', 'jello', 'pulse', 'rotate', 'rubberBand', 'shake', 'swing', 'tada', 'wobble', 'bounce', 'flash', 'jello', 'pulse', 'rotate', 'rubberBand', 'shake', 'swing', 'tada', 'wobble'],
       question : arrnew[this.qno].question,
       options : arrnew[this.qno].options,
       correctoption : arrnew[this.qno].correctoption,
