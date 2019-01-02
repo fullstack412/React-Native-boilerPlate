@@ -53,27 +53,50 @@ class WebDev extends Component {
   render() {
     const { thumbnailStyle, headerConetentStyle, thumbnailContainerStyle, headerTextStyle, boldText } = Styles;
     const topic = 'Web Development';
-    const introduction = 'This is your first immersion with Full-stack Development. ';
+    const introduction = 'All websites can be developed by HTML, Javascript, and CSS. Frameworks are introduced to make the development easier.';
     const body = [
       [
         'There are three foundations in Web Development', 
-        'HTML: defines the content and structure of a website. Think of it as the frame of a car, how many car doors, wheels, windows are needed.\n\
+        'HTML: defines the content and structure of a website. Think of it as the frame of a car, how many car doors, wheels, windows are needed.\n\n\
 Javascript: provides the interaction for the webpage. If you have a clickable button on the page that alerts a message, they that\'s where Javascript \
 comes in. Javascript is not limited to that simple example. In the car example, Javascript will be the connection between the control and the head light, \
-air conditioning controller and the air conditioning.   \n\
+air conditioning controller and the air conditioning.   \n\n\
 CSS: decides how the website is going to look. It doesn\'t change the content, but it changes how the content is displayed. For the car example, \
 CSS decides the paint color of the car, how big the car windows are \n'
       ],[
-        'jQuery Frameworks',
-        'Frameworks are powerful tools that build on HTML, CSS, and Javascript. You can build any websites without framework, but using frameworks can significantly \
-decrease the complexity of the websites.\n\
-jQuery: a Javascript framework\n\
+        'jQuery Framework',
+        'Frameworks like jQuery are powerful tools that build on HTML, CSS, and Javascript. \
+Programmers use jQuery to simplify the process of designing complex websites.\n\
+jQuery builds on Javascript, but it has its own unique syntax.'
+      ],[
+        'How to import jQuery?',
+        'Like any external library, programmers would need to import the library in the HTML page between the <head></head>. \n \
+Here are the few ways you can import jQuery:\n\
+1. Download jQuery to your local folder (I named it lib in this case) and import it like so \n<script src="lib/jquery.js"></script>\n\
+2. Or you can use a jQuery library someone else uploaded online \n<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">\n\n\
+They both do imports jQuery, but just getting the jQuery library from different places. Option 1 is like download a movie and then watch it. Option 2 is like streaming a movie online\
 '
       ],[
-        'Other Frameworks',
-        'React: \n\
-Backbone: \n\
-Angular: \n'
+        'Common jQuery functions',
+        'find(): Selects elements based on the provided selector string\n\
+hide(): Hides an element if it was visible\n\
+show(): Shows an element if it was hidden\n\
+html(): Gets or sets an inner HTML of an element\n\
+append() Injects an element into the DOM after the selected element\n\
+prepend() Injects an element into the DOM before the selected element\n\
+on(): Attaches an event listener to an element\n\
+off() Detaches an event listener from an element\n\
+css(): Gets or sets the style attribute value of an element\n\
+attr() Gets or sets any attribute of an element\n\
+val(): Gets or sets the value attribute of an element\n\
+text(): Gets the combined text of an element and its children\n\
+each(): Iterates over a set of matched elements'
+      ],[
+        'Advanced: Other major Frameworks',
+        'React: Structure the entire website as a combinations of different components. It\'s like building each car parts on their own, \
+car doors, engine, windows, etc. Those components are eventually linked together to build a functional car.\n\n\
+Backbone: In backbone, the data, what\'s being displayed on the page, and how data is changed are separated into different layers. \n\n\
+Angular: Angular offers another different ways of frontend framework. It works particularly well in formed and document based webapplications\n\n'
       ]
     ]
     const end = 'This is your first immersion to become a fullstack developer. If your experience was unpleasant, knowing most of technologies\
@@ -148,7 +171,7 @@ might just found a hobby that also pays salary!';
             {body[4][1]}
           </Text>
         </CardSection>
-        <CardSection>
+        {/* <CardSection>
           <Text style={ boldText }>
             {body[5][0]}
           </Text>
@@ -156,6 +179,11 @@ might just found a hobby that also pays salary!';
         <CardSection>
           <Text>
             {body[5][1]}
+          </Text>
+        </CardSection> */}
+        <CardSection>
+          <Text style={ boldText }>
+            Conclusion:
           </Text>
         </CardSection>
         <CardSection>
@@ -167,7 +195,7 @@ might just found a hobby that also pays salary!';
         <Playquiz quizData = { this.state.quizData }/>
         <CardSection>
           <Button onPress = {()=>this.props.navigation.navigate('Testing')}>
-            Next
+            Previous
           </Button>
         </CardSection>
         <CardSection>
