@@ -59,7 +59,7 @@ class Map extends Component{
 }
 
 const Styles=StyleSheet.create({
-  container:{
+container:{
     flexDirection: 'row'
 },
 textContainer:{
