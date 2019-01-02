@@ -32,7 +32,13 @@ class CourseList extends Component {
         intro: ''
       },
       menuOptions: [
-        'Objects'
+
+        'Objects', 
+        'DataModeling',
+        'HigherOrderEach', 
+        'Map', 
+        'Filter'
+
       ]
     }, {
       topic: 'Prep Week 3',

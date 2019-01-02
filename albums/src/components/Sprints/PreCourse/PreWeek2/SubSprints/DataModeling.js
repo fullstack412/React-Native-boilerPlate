@@ -9,9 +9,7 @@ class DataModeling extends Component{
      
   }
   render(){
-      return(
-
-      )
+     
   }
 }
 
