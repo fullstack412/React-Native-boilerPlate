@@ -31,6 +31,12 @@ import Objects from './src/components/Sprints/PreCourse/PreWeek2/SubSprints/Obje
 import Git from './src/components/Sprints/PreCourse/PreWeek4/SubSprints/Git';
 import Testing from './src/components/Sprints/PreCourse/PreWeek4/SubSprints/Testing';
 import WebDev from './src/components/Sprints/PreCourse/PreWeek4/SubSprints/WebDev';
+import Objects from './src/components/Sprints/PreCourse/PreWeek2/SubSprints/Objects';
+import HTMLCSSjQuery from './src/components/Sprints/PreCourse/PreWeek3/SubSprints/HTMLCSSjQuery';
+import AbstractClosureDM from './src/components/Sprints/PreCourse/PreWeek3/SubSprints/AbstractClosureDM';
+import OOP from './src/components/Sprints/PreCourse/PreWeek3/SubSprints/OOP';
+import Reduce from './src/components/Sprints/PreCourse/PreWeek3/SubSprints/Reduce';
+
 
 import CodeCompiler from './src/components/Features/CodeCompiler/Main';
 import Calendar from './src/components/Features/GoogleCalendar/Main';
@@ -70,6 +76,13 @@ const AppStackNavigator = createStackNavigator({
   "Variables in JavaScript": Variables,
   "While Loop": WhileLoop,
   "Arrays and For Loops": ArraysAndForLoop,
+  // PCWeek2: PCWeek2,
+  // PCWeek3: PCWeek3,
+  "HTML, CSS and jQuery": HTMLCSSjQuery,
+  "Closures And Adding Methods": AbstractClosureDM,
+  "OOP": OOP,
+  "Reduce": Reduce,
+  // PCWeek4: PCWeek4,
   Git: Git,
   Testing: Testing,
   WebDev: WebDev,
@@ -86,7 +99,8 @@ const AppStackNavigator = createStackNavigator({
   TownHall: TownHall,
   Handbook: Handbook,
   Header: Header,
-  Objects:Objects
+  Objects:Objects,
+  HTMLCSSjQuery: HTMLCSSjQuery
 });
 
 const AppDrawerNavigator = createDrawerNavigator({

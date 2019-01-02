@@ -42,6 +42,10 @@ class CourseList extends Component {
         intro: ''
       },
       menuOptions: [
+        'Reduce', 
+        'Closures And Adding Methods', 
+        'OOP', 
+        'HTML, CSS and jQuery'
       ]      
     }, {
       topic: 'Prep Week 4',
