@@ -26,16 +26,28 @@ import Variables from './src/components/Sprints/PreCourse/PreWeek1/SubSprints/Va
 import WhileLoop from './src/components/Sprints/PreCourse/PreWeek1/SubSprints/WhileLoop';
 import ArraysAndForLoop from './src/components/Sprints/PreCourse/PreWeek1/SubSprints/ArraysAndForLoop';
 
+
+//PC week2 Sprints
+import Objects from './src/components/Sprints/PreCourse/PreWeek2/SubSprints/Objects';
+import DataModeling from './src/components/Sprints/PreCourse/PreWeek2/SubSprints/DataModeling';
+import HigherOrderEach from './src/components/Sprints/PreCourse/PreWeek2/SubSprints/HigherOrderEach';
+import Map from './src/components/Sprints/PreCourse/PreWeek2/SubSprints/Map';
+import Filter from './src/components/Sprints/PreCourse/PreWeek2/SubSprints/Filter';
+
+
 // import PCWeek2 from './src/components/Sprints/PreCourse/PreWeek2/Main';
 // import PCWeek3 from './src/components/Sprints/PreCourse/PreWeek3/Main';
 // import PCWeek4 from './src/components/Sprints/PreCourse/PreWeek4/Main';
+
 import Git from './src/components/Sprints/PreCourse/PreWeek4/SubSprints/Git';
-import Project from './src/components/Sprints/PreCourse/PreWeek4/SubSprints/Project';
-import Revision from './src/components/Sprints/PreCourse/PreWeek4/SubSprints/Revision';
 import Testing from './src/components/Sprints/PreCourse/PreWeek4/SubSprints/Testing';
-import Twitler from './src/components/Sprints/PreCourse/PreWeek4/SubSprints/Twitler';
 import WebDev from './src/components/Sprints/PreCourse/PreWeek4/SubSprints/WebDev';
-import Objects from './src/components/Sprints/PreCourse/PreWeek2/SubSprints/Objects';
+
+import HTMLCSSjQuery from './src/components/Sprints/PreCourse/PreWeek3/SubSprints/HTMLCSSjQuery';
+import AbstractClosureDM from './src/components/Sprints/PreCourse/PreWeek3/SubSprints/AbstractClosureDM';
+import OOP from './src/components/Sprints/PreCourse/PreWeek3/SubSprints/OOP';
+import Reduce from './src/components/Sprints/PreCourse/PreWeek3/SubSprints/Reduce';
+
 
 
 import CodeCompiler from './src/components/Features/CodeCompiler/Main';
@@ -78,12 +90,13 @@ const AppStackNavigator = createStackNavigator({
   "Arrays and For Loops": ArraysAndForLoop,
   // PCWeek2: PCWeek2,
   // PCWeek3: PCWeek3,
+  "HTML, CSS and jQuery": HTMLCSSjQuery,
+  "Closures And Adding Methods": AbstractClosureDM,
+  "OOP": OOP,
+  "Reduce": Reduce,
   // PCWeek4: PCWeek4,
   Git: Git,
-  Project: Project,
-  Revision: Revision,
   Testing: Testing,
-  Twitler: Twitler,
   WebDev: WebDev,
   FSList: FSList,
   Recastly: Recastly,
@@ -98,7 +111,13 @@ const AppStackNavigator = createStackNavigator({
   TownHall: TownHall,
   Handbook: Handbook,
   Header: Header,
-  Objects:Objects
+  Objects:Objects,
+  DataModeling:DataModeling,
+  HigherOrderEach:HigherOrderEach,
+  Map:Map,
+  Filter:Filter,
+  HTMLCSSjQuery: HTMLCSSjQuery
+
 });
 
 const AppDrawerNavigator = createDrawerNavigator({
