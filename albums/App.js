@@ -31,7 +31,6 @@ import Objects from './src/components/Sprints/PreCourse/PreWeek2/SubSprints/Obje
 import Git from './src/components/Sprints/PreCourse/PreWeek4/SubSprints/Git';
 import Testing from './src/components/Sprints/PreCourse/PreWeek4/SubSprints/Testing';
 import WebDev from './src/components/Sprints/PreCourse/PreWeek4/SubSprints/WebDev';
-import Objects from './src/components/Sprints/PreCourse/PreWeek2/SubSprints/Objects';
 import HTMLCSSjQuery from './src/components/Sprints/PreCourse/PreWeek3/SubSprints/HTMLCSSjQuery';
 import AbstractClosureDM from './src/components/Sprints/PreCourse/PreWeek3/SubSprints/AbstractClosureDM';
 import OOP from './src/components/Sprints/PreCourse/PreWeek3/SubSprints/OOP';
