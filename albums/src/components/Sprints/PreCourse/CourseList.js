@@ -47,12 +47,10 @@ class CourseList extends Component {
         intro: ''
       },
       menuOptions: [
-        'Git', 
-        'Project', 
-        'Revision', 
-        'Testing', 
-        'Twitler', 
-        'WebDev'
+        'Reduce', 
+        'Closures And Adding Methods', 
+        'OOP', 
+        'HTML, CSS and jQuery'
       ]      
     }, {
       topic: 'Prep Week 4',

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Image, Dimensions } from 'react-native';
 import { Button, Card, CardSection, Playquiz } from '../../../../common';
 
 class HTMLCSSjQuery extends Component {
@@ -18,19 +18,17 @@ HTML elements are the building blocks of HTML pages.\n\
 HTML elements are represented by tags.\n\
 HTML tags label pieces of content such as "heading", "paragraph", "table", and so on Browsers do not display the HTML tags, but use them to render the content of the page.'
       ],[
-        'Lets analyze this website',
-        'Add Image'
+        'Lets analyze this website'
       ],[
         'HTML Elements',
         'As we have seen in the previous photo there is a lot of elements in that HTML page.\n\
-These elements can be add to a website using something called tags. So what is an HTML tag ?\n\
-Add Image\n\
-A tag has a “start tag”, “end tag”, some content and optional attributes.\n\
+These elements can be add to a website using something called tags. So what is an HTML tag ?',
+
+'A tag has a “start tag”, “end tag”, some content and optional attributes.\n\
 HTML elements can have attributes such as: class, id. For example:\n\
 <p id="paragraph">I\'\m a paragraph</p>'
       ],[
-        'The anatomy of an HTML document',
-        'Add Image'
+        'The anatomy of an HTML document'
       ],[
         'HTML elements enable us to',
         'Add content.\n\
@@ -166,9 +164,10 @@ Add Image'
           </Text>
         </CardSection>
         <CardSection>
-          <Text>
-            {body[1][1]}
-          </Text>
+          <Image
+          style={{width: 300, height: 300}}
+          source={require('../assets/1.jpg')}
+        />
         </CardSection>
 
         <CardSection>
@@ -180,6 +179,13 @@ Add Image'
           <Text>
             {body[2][1]}
           </Text>
+          <Image
+          style={{width: 200, height: 200}}
+          source={require('../assets/2.png')} 
+        />
+          <Text>
+            {body[2][2]}
+          </Text>
         </CardSection>
         <CardSection>
           <Text style={ boldText }>
@@ -187,9 +193,10 @@ Add Image'
           </Text>
         </CardSection>
         <CardSection>
-          <Text>
-            {body[3][1]}
-          </Text>
+        <Image
+          style={{width: 200, height: 200}}
+          source={require('../assets/3.png')} 
+        />
         </CardSection>
         <CardSection>
           <Text style={ boldText }>
