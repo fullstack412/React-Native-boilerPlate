@@ -5,6 +5,104 @@ import { Button, Card, CardSection, Playquiz } from '../../../../common';
 class ArraysAndForLoop extends Component {
   constructor(props) {
     super(props)
+    this.state = {
+      quizData: {
+        "quiz" : {
+          "quiz1" : {
+            "question1" : {
+              "correctoption" : "option4",
+              "options" : {
+                "option1" : "true",
+                "option2" : "false",
+                "option3" : "hello",
+                "option4" : "world"
+              },
+              "question" : `
+              var array = [true, false, 'hello', 'world'];
+              console.log(array[3]);
+
+              What is logged to the console?
+              `
+            },
+            "question2" : {
+              "correctoption" : "option1",
+              "options" : {
+                  "option1" : "array.push('foobar')",
+                  "option2" : "array.pop('foobar')",
+                  "option3" : "array.shift('foobar')",
+                  "option4" : "array.unshift('foobar')"
+                },
+              "question" : `
+              var array = [true, false, 'hello', 'world'];
+              
+              I want to add 'foobar' to the end of this array. How would I do that?
+              `
+            },
+            "question3" : {
+              "correctoption" : "option4",
+              "options" : {
+                "option1" : "array.push('foobar')",
+                "option2" : "array.pop('foobar')",
+                "option3" : "array.shift('foobar')",
+                "option4" : "array.unshift('foobar')"
+                },
+              "question" : `
+              var array = [true, false, 'hello', 'world'];
+              
+              I want to add 'foobar' to the beginning of this array. How would I do that?
+              `
+            },
+            "question4" : {
+              "correctoption" : "option2",
+              "options" : {
+                "option1" : "BLANK1 = var i = 0, BLANK2 = i < array.length, BLANK3 = i--",
+                "option2" : "BLANK1 = var i = 0, BLANK2 = i < array.length, BLANK3 = i++",
+                "option3" : "BLANK1 = var i = 0, BLANK2 = i <= array.length, BLANK3 = i++",
+                "option4" : "BLANK1 = var i = 1, BLANK2 = array.length < 1, BLANK3 = i++",
+                },
+              "question" : `
+              var array = [true, false, 'hello', 'world'];
+              for (BLANK1; BLANK2; BLANK3) {
+                console.log(array[i]);
+              }
+
+              Fill in the blanks so that the console logs the following to the console:
+              true
+              false
+              'hello'
+              'world'
+              `
+            },
+            "question5" : {
+              "correctoption" : "option1",
+              "options" : {
+                  "option1" : "BLANK1 = array[i] % 2 !== 0, BLANK2 = newArray.push(array[i])",
+                  "option2" : "BLANK1 = array[i] % 2 === 0, BLANK2 = newArray.push(array[i])",
+                  "option3" : "BLANK1 = array[i] % 2 !== 0, BLANK2 = newArray.pop(array[i])",
+                  "option4" : "BLANK1 = array[i] % 2 !== 0, BLANK2 = newArray.unshift(array[i])",
+                },
+              "question" : `
+              Write a function remove that accepts an array of numbers and removes all even numbers from the array and returns a new array.
+
+              var array = [1, 2, 3, 4, 5, 6]
+              remove(array) // => [1, 3, 5]
+              function remove(array) {
+                var newArray = [];
+                for (var i = 0; i < array.length; i++) {
+                  if (BLANK1 {
+                    BLANK2
+                  }
+                }
+                return newArray;
+              }
+
+              Fill in the blanks.
+              `
+            }
+          }
+        }      
+      }
+    }
   }
 
   render() {
@@ -109,6 +207,7 @@ class ArraysAndForLoop extends Component {
             {"\n"}
           </Text>
         </CardSection>
+        <Playquiz quizData = { this.state.quizData }/>
         <CardSection>
           <Button onPress = {()=>this.props.navigation.navigate('PCWeek2')}>
             Next
