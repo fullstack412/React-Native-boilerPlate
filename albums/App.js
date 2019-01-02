@@ -73,7 +73,7 @@ const AppStackNavigator = createStackNavigator({
   PCList: PCList,
   "JavaScript Fundamentals and Functions": Fundamentals,
   "Booleans, Comparisons, and Operators": Comparison,
-  "Variables and Repetition in JavaScript": Variables,
+  "Variables in JavaScript": Variables,
   "While Loop": WhileLoop,
   "Arrays and For Loops": ArraysAndForLoop,
   // PCWeek2: PCWeek2,
