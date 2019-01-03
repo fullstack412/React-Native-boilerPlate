@@ -64,77 +64,79 @@ class Objects extends Component{
     const Iterate= 'Iterating through objects: ';
     const IteratingSyntax='Like most things in JavaScript, there is certainly more than one way to iterate over an object.\n This is the syntax:\n for (variable in object) { ...\n}';
     const { thumbnailStyle,title,container,textContainer}=Styles
-    
       return(
         <Card>
-            <CardSection>
-                <View>
-                    <Text style={title}>
-                       {topic}{"\n"}
-                    </Text>
-                </View>
-            </CardSection>
-            <CardSection style={container}>
-                <Image 
-                    style= {thumbnailStyle}
-                    source={require('../../../../../assets/object.png')}/>
-                
-                <Text style={textContainer} >
-                    {Question} {"\n"}{"\n"}{introduction}{"\n"}
-                </Text>
-            </CardSection >
-            
-            <CardSection style={container}>
-                <Image 
-                    style= {thumbnailStyle}
-                    source={require('../../../../../assets/IMG_20181231_193433.png')}/>
-                
-                <Text style={textContainer}>
-                    {CreateObj}{"\n"}{"\n"}{DecleareObject}{"\n"}
-                </Text>  
-            </CardSection>
-            <CardSection  style={container}>
-                <Text style={textContainer}>
-                   <Text style={{fontWeight:'bold'}}> {AccessObj}{"\n"}{"\n"}</Text>
-                    {Ways}{"\n"}{"\n"}
-                    {FirstType}{"\n"}{"\n"}
-                    
-                
-                    <Text style={{fontWeight: 'bold'}}>
-                       This is the syntax: {"\n"}
-                    </Text> 
-
-                    <Text>
-                    objectName.propertyName ;{"\n"}{"\n"}
-                    </Text>
-                   <Text style={container}>
-                     {SecondType}{"\n"}{"\n"}
-                   </Text>
-                   <Text style={{fontWeight: 'bold'}}>
-                     This is the syntax: {"\n"} 
-                   </Text>
-                   <Text>
-                    objectName["propertyName"] ;{"\n"}{"\n"}
-                    </Text>
-                </Text>
-                
-            </CardSection>
-            <CardSection style={container}>
+          <CardSection>
+            <View>
+              <Text style={title}>
+                {topic}{"\n"}
+              </Text>
+            </View>
+          </CardSection>
+          <CardSection style={container}>
+            <Image 
+              style= {thumbnailStyle}
+              source={require('../../../../../assets/object.png')}/>
+            <Text style={textContainer} >
+              {Question} {"\n"}{"\n"}{introduction}{"\n"}
+            </Text>
+          </CardSection >
+          <CardSection style={container}>
+            <Image 
+              style= {thumbnailStyle}
+              source={require('../../../../../assets/IMG_20181231_193433.png')}/>
+            <Text style={textContainer}>
+              {CreateObj}{"\n"}{"\n"}{DecleareObject}{"\n"}
+            </Text>  
+          </CardSection>
+          <CardSection  style={container}>
+            <Text style={textContainer}>
+              <Text style={{fontWeight:'bold'}}> {AccessObj}{"\n"}{"\n"}</Text>
+              {Ways}{"\n"}{"\n"}
+              {FirstType}{"\n"}{"\n"}
+              <Text style={{fontWeight: 'bold'}}>
+                This is the syntax: {"\n"}
+              </Text> 
+              <Text>
+                objectName.propertyName ;{"\n"}{"\n"}
+              </Text>
+              <Text style={container}>
+                {SecondType}{"\n"}{"\n"}
+              </Text>
+              <Text style={{fontWeight: 'bold'}}>
+                This is the syntax: {"\n"} 
+              </Text>
+              <Text>
+                objectName["propertyName"] ;{"\n"}{"\n"}
+              </Text>
+            </Text>
+          </CardSection>
+          <CardSection style={container}>
             <Text style={{fontWeight:'bold'}}>
-               {Iterate} {"\n"}
-                <Text style={{fontWeight:'normal'}}>
-              {IteratingSyntax}
+              {Iterate} {"\n"}
+              <Text style={{fontWeight:'normal'}}>
+                {IteratingSyntax}
+              </Text>
             </Text>
-            </Text>
-            </CardSection>
-            <CardSection style={container}>
+          </CardSection>
+          <CardSection style={container}>
             <View >
               <Playquiz  quizData = { this.state.quizData }/>
             </View>
-            </CardSection>
+          </CardSection>
 
+          <CardSection>
+            <Button onPress = {()=>this.props.navigation.navigate('Data Modeling')}>
+              Next
+            </Button>
+          </CardSection>
+          <CardSection>
+            <Button onPress = {()=>this.props.navigation.navigate('PCList')}>
+              Home
+            </Button>
+          </CardSection>
         </Card>
-      )
+    )
   }
 }
 
