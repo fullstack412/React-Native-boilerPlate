@@ -162,7 +162,12 @@ Treat each of passed test as a small celebration on your journey to become a Ful
 
         <Playquiz quizData = { this.state.quizData }/>
         <CardSection>
-          <Button onPress = {()=>this.props.navigation.navigate('Testing')}>
+          <Button onPress = {()=>this.props.navigation.navigate('Git')}>
+            Previous
+          </Button>
+        </CardSection>
+        <CardSection>
+          <Button onPress = {()=>this.props.navigation.navigate('Web Development')}>
             Next
           </Button>
         </CardSection>

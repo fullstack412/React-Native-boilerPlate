@@ -13,9 +13,6 @@ class CourseList extends Component {
       topic: 'Prep Week 1', 
       introduction: 'Function, booleans, comparisons, logical operators, repetition, variables, while loop, array, for', 
       image: require('../../../assets/loop.png'),
-      body: {
-        intro: '' 
-      },
       // put subsprint stack navigator name in menuOptions array
       menuOptions: [
         'JavaScript Fundamentals and Functions', 
@@ -28,19 +25,17 @@ class CourseList extends Component {
       topic: 'Prep Week 2',
       introduction: 'Objects, Data Modeling, Higher Order Function, each function, map function, filter function',
       image: require('../../../assets/html.png'),
-      body: {
-        intro: ''
-      },
       menuOptions: [
-        'Objects'
+        'Objects', 
+        'Data Modeling',
+        'Higher Order Function: Each', 
+        'Higher Order Function: Map', 
+        'Higher Order Function: Filter'
       ]
     }, {
       topic: 'Prep Week 3',
       introduction: 'Reduce, Abstraction, Closure, Data Modeling, OOP, HTML, CSS, jQuery',
       image: require('../../../assets/git.png'),
-      body: { 
-        intro: ''
-      },
       menuOptions: [
         'Reduce', 
         'Closures And Adding Methods', 
@@ -51,13 +46,10 @@ class CourseList extends Component {
       topic: 'Prep Week 4',
       introduction: 'More indepth view of Web Development with jQuery, how to use Git, and understand the basics of testing',
       image: require('../../../assets/javascript.png'),
-      body: {
-        intro: ''
-      },
       menuOptions: [
-        'Git', 
-        'Testing', 
-        'WebDev'
+        'Git',
+        'Testing',
+        'Web Development'
       ]
     }
   ]};
