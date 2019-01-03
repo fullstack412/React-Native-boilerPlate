@@ -131,7 +131,7 @@ class WhileLoop extends Component {
   }
 
   render() {
-    const { headerConetentStyle, headerTextStyle } = Styles;
+    const { headerConetentStyle, headerTextStyle, container, textContainer } = Styles;
     const topic = "While Loop";
     const introduction = 'This section is dedicated to reviewing while loops in JavaScript';
     return (
@@ -148,10 +148,12 @@ class WhileLoop extends Component {
             Introduction:{"\n"}{introduction}{"\n"}
           </Text>
         </CardSection>
-        <CardSection>
-          <Text>
+        <CardSection style = { container }>
+          <Text style = { textContainer }> 
+            <Text style = {{ fontWeight: 'bold', color: 'purple' }}>
             Here is a refresher on the syntax of the "while" loop:
-            {"\n"}
+            </Text>
+            {"\n"}{"\n"}
             {
               `
               while (<this statement is true>) {
@@ -206,6 +208,13 @@ class WhileLoop extends Component {
 }
 
 const Styles = StyleSheet.create({
+  container:{
+    flexDirection: 'row'
+  },
+  textContainer:{
+    flex: 1,
+     flexWrap: 'wrap'
+  },
   headerConetentStyle: {
     flexDirection: 'column',
     justifyContent: 'space-around'
