@@ -26,8 +26,6 @@ import Variables from './src/components/Sprints/PreCourse/PreWeek1/SubSprints/Va
 import WhileLoop from './src/components/Sprints/PreCourse/PreWeek1/SubSprints/WhileLoop';
 import ArraysAndForLoop from './src/components/Sprints/PreCourse/PreWeek1/SubSprints/ArraysAndForLoop';
 
-import Objects from './src/components/Sprints/PreCourse/PreWeek2/SubSprints/Objects';
-
 import Git from './src/components/Sprints/PreCourse/PreWeek4/SubSprints/Git';
 import Testing from './src/components/Sprints/PreCourse/PreWeek4/SubSprints/Testing';
 import WebDev from './src/components/Sprints/PreCourse/PreWeek4/SubSprints/WebDev';
