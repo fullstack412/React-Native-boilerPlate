@@ -65,44 +65,58 @@ class Map extends Component{
     return(
       <Card>
         <CardSection>
-        <View>
+          <View>
             <Text style={title}>
               {topic}{"\n"}
             </Text>
           </View>
         </CardSection>
         <CardSection style={container}>
-                <Image 
-                    style= {thumbnailStyle}
-                    source={require('../../../../../assets/Pic5.jpeg')}/>
-                
-                <Text style={textContainer} >
-                    {Difine} {"\n"}{"\n"}
-                </Text>
-            </CardSection >
-            <CardSection style={container}> 
-              <Text style={{fontWeight:'bold',color:'green'}}>
-                {function1}{"\n"}{"\n"}
-              </Text>
-              <Image
-              style={{width:300,height:175}}
-              source={require('../../../../../assets/Pic6.png')}/>
-            </CardSection>
-            <CardSection>
-              <Text>
-                {ImplementEach}{"\n"}{"\n"}
-                To make our function works with objects also:{'\n'}{"\n"}
-                <Text style={{fontWeight:'bold',color:'green'}}>
-                {ImproveMap}
+          <Image 
+            style= {thumbnailStyle}
+            source={require('../../../../../assets/Pic5.jpeg')}/>
+          <Text style={textContainer} >
+            {Difine} {"\n"}{"\n"}
+          </Text>
+        </CardSection >
+        <CardSection style={container}> 
+          <Text style={{fontWeight:'bold',color:'green'}}>
+            {function1}{"\n"}{"\n"}
+          </Text>
+          <Image
+            style={{width:300,height:175}}
+            source={require('../../../../../assets/Pic6.png')}/>
+        </CardSection>
+        <CardSection>
+          <Text>
+            {ImplementEach}{"\n"}{"\n"}
+            To make our function works with objects also:{'\n'}{"\n"}
+            <Text style={{fontWeight:'bold',color:'green'}}>
+              {ImproveMap}
+            </Text>
+          </Text>
+        </CardSection>
+        <CardSection style={container}>
+          <View >
+            <Playquiz  quizData = { this.state.quizData }/>
+          </View>
+        </CardSection>
 
-                </Text>
-              </Text>
-            </CardSection>
-            <CardSection style={container}>
-            <View >
-              <Playquiz  quizData = { this.state.quizData }/>
-            </View>
-            </CardSection>
+        <CardSection>
+          <Button onPress = {()=>this.props.navigation.navigate('Higher Order Function: Each')}>
+            Previous
+          </Button>
+        </CardSection>
+        <CardSection>
+          <Button onPress = {()=>this.props.navigation.navigate('Higher Order Function: Filter')}>
+            Next
+          </Button>
+        </CardSection>
+        <CardSection>
+          <Button onPress = {()=>this.props.navigation.navigate('PCList')}>
+            Home
+          </Button>
+        </CardSection>
       </Card>
     )
      
