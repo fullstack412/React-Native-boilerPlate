@@ -106,7 +106,7 @@ class Variables extends Component {
   }
 
   render() {
-    const { headerConetentStyle, headerTextStyle } = Styles;
+    const { headerConetentStyle, headerTextStyle, container, textContainer } = Styles;
     const topic = "Variables in JavaScript";
     const introduction = 'This section is dedicated to reviewing variable declarations in JavaScript';
     return (
@@ -124,18 +124,22 @@ class Variables extends Component {
             Introduction:{"\n"}{introduction}{"\n"}
           </Text>
         </CardSection>
-        <CardSection>
-          <Text>
+        <CardSection style = { container }>
+          <Text style = { textContainer }>
+          <Text style={{ fontWeight: 'bold', color: 'purple' }}>
             Variables in JavaScript are declared with "var", followed by the name of the variable (always lower case and written in camelCase), the "=" assignment operator, and finally the value you're assigning the variable to.
-            {"\n"}
+            {"\n"}{"\n"}
+          </Text>
             For example: 
             {"\n"}
             var firstName = "Hugh";
             {"\n"}
             var lastName = "Bosely";
-            {"\n"}
+            {"\n"}{"\n"}
+            <Text style={{ fontWeight: 'bold', color: 'purple' }}>
             Those are both examples of proper variable declarations. You can also declare a variable without assigning it to anything.
-            {"\n"}
+            </Text>
+            {"\n"}{"\n"}
             var fullName;
             {"\n"}
             In this case, if you logged "fullName" to the console, the console would return "undefined". If later in my code, I wrote something like...
@@ -143,12 +147,14 @@ class Variables extends Component {
             fullName = "Hugh Bosely"
             {"\n"}
             Then, when I logged fullName to the console, it would return "Hugh Bosely".
-            {"\n"}
+            {"\n"}{"\n"}
+            <Text style={{ color: 'purple' }}>
             Where you declare your variables in JavaScript is also very important. Variables declared inside of functions are only accessible inside of those functions. 
             Variables declared outside of functions are accessible anywhere in your code. This region outside of functions is called 
-            the global scope. Functions have what is called their own local scope. Scope is a term you will hear about a lot in JavaScript, but for now,
+            the <Text style = {{ fontWeight: 'bold' }}>global scope. </Text> Functions have what is called their own <Text style = {{ fontWeight: 'bold' }}>local scope. Scope </Text> is a term you will hear about a lot in JavaScript, but for now,
             we are just introducing the basics. Here are some examples on how local and global scope can affect your variable declarations:
-            {"\n"}
+            </Text>
+            {"\n"}{"\n"}
             {
             `var number = 4;
              function writeAString() {
@@ -200,6 +206,13 @@ class Variables extends Component {
 }
 
 const Styles = StyleSheet.create({
+  container:{
+    flexDirection: 'row'
+  },
+  textContainer:{
+    flex: 1,
+     flexWrap: 'wrap'
+    },
   headerConetentStyle: {
     flexDirection: 'column',
     justifyContent: 'space-around'

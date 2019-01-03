@@ -66,7 +66,7 @@ class Fundamentals extends Component {
   }
 
   render() {
-    const { headerConetentStyle, headerTextStyle } = Styles;
+    const { headerConetentStyle, headerTextStyle, container, textContainer } = Styles;
     const topic = 'Fundamentals and Functions'
     const introduction = 'This section is dedicated to reviewing JavaScript fundamentals';
     return (
@@ -85,12 +85,14 @@ class Fundamentals extends Component {
           </Text>
         </CardSection>
 
-        <CardSection>
-          <Text>
+        <CardSection style = { container }>
+        <Text style = { textContainer }>
+          <Text style={{ fontWeight: 'bold', color: 'purple' }}>
             There are 6 different primitive data types in JavaScript.
-              {"\n"}
             A primitive is data that is not an object and has no methods
-              {"\n"}
+          {"\n"}{"\n"}
+          </Text>
+          <Text>
               Number: 1, 2, 3
               {"\n"}
               String: "Hello World"
@@ -104,12 +106,15 @@ class Fundamentals extends Component {
               Symbol: var symbol = Symbol();
               {"\n"}
           </Text>
+          </Text>
         </CardSection>
 
-        <CardSection>
-          <Text>
+        <CardSection style = { container }>
+          <Text style = { textContainer }>
+            <Text style = {{ fontWeight: 'bold', color: 'purple' }}>
             There are two ways of writing functions.
-            {"\n"}
+            </Text>
+            {"\n"}{"\n"}
             Function declaration: 
             {"\n"}
             {`function helloWorld() {
@@ -140,6 +145,13 @@ class Fundamentals extends Component {
 }
 
 const Styles = StyleSheet.create({
+  container:{
+    flexDirection: 'row'
+  },
+  textContainer:{
+    flex: 1,
+     flexWrap: 'wrap'
+    },
   headerConetentStyle: {
     flexDirection: 'column',
     justifyContent: 'space-around'
