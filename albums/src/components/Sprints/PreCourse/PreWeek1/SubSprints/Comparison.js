@@ -72,7 +72,7 @@ class Comparison extends Component {
   }
 
   render() {
-    const { headerConetentStyle, headerTextStyle } = Styles;
+    const { headerConetentStyle, headerTextStyle, container, textContainer } = Styles;
     const topic = "Booleans, Comparisons, Conditionals, and Logical Operators";
     const introduction = 'This section is dedicated to reviewing Booleans, if/else statements, and comparison and logical operators.';
     return (
@@ -91,18 +91,22 @@ class Comparison extends Component {
           </Text>
         </CardSection>
 
-        <CardSection>
-          <Text>
-            Booleans are a data type that are used to represent true and false values. 
-            {"\n"}
+        <CardSection style = { container }>
+          <Text style = { textContainer }>
+            <Text style = {{ fontWeight: 'bold', color: 'purple' }}>
+              Booleans are a data type that are used to represent true and false values. 
+            </Text>
+            {"\n"}{"\n"}
             {`For example, if you type into your console "9 < 3", your console will return the Boolean, false.`}
             {"\n"}
             {`If you type into your console "3 < 9", your console will return the Boolean, true.`}
-            {"\n"}
-            There are many different comparison operators that can be used to produce Booleans. 
-            {"\n"}
-            These are the comparison operators that can be used in JavaScript:
-            {"\n"}
+            {"\n"}{"\n"}
+            <Text style = {{ fontWeight: 'bold', color: 'purple' }}>
+              There are many different comparison operators that can be used to produce Booleans. 
+              {"\n"}
+              These are the comparison operators that can be used in JavaScript:
+            </Text>
+            {"\n"}{"\n"}
             {`> greater than`}
             {"\n"}
             {`< less than`}
@@ -114,22 +118,26 @@ class Comparison extends Component {
             {`=== equal to`}
             {"\n"}
             {`!== not equal to`}
-            {"\n"}
+            {"\n"}{"\n"}
+            <Text style = {{ fontWeight: 'bold', color: 'purple' }}>
             JavaScript also has the comparison operators == and !=. In general, it is preferable to use === and !==, 
             because both of those symbols ensure that the value as well as the type are the same. You should only use == and != in very
             rare circumstances. Here are some examples to clarify the difference between == and === and between != and !==. 
-            {"\n"}
+            {"\n"}{"\n"}
+            </Text>
             1 == '1' // => true
             {"\n"}
             1 === '1' // => false
           </Text>
         </CardSection>
-        <CardSection>
-          <Text>
+        <CardSection style = { container } >
+          <Text style = { textContainer }>
+          <Text style = {{ fontWeight: 'bold', color: 'purple' }}>
             {`JavaScript also has the following logical operators: !, ||, &&.`}
-            {"\n"}
+            </Text>
+            {"\n"}{"\n"}
             ! reverses the value of a Boolean expression. For example:
-            {"\n"}
+            {"\n"}{"\n"}
             !false // => true
             {"\n"}
             !(3 > 2) // => false
@@ -145,16 +153,16 @@ class Comparison extends Component {
             1 != true // => false
             {"\n"}
             1 !== true // => true
-            {"\n"}
+            {"\n"}{"\n"}
             || evaluates two expressions. If either expression is true, the entire statement is considered true. 
             If neither expression is true, then the statement will evaluate to false.
-            {"\n"}
+            {"\n"}{"\n"}
             'hello' === 'world' || 'hello' === 'hello' // => true
             {"\n"}
             'hello' === 'world' || 'foo' === 'bar' // => false
-            {"\n"}
+            {"\n"}{"\n"}
             {`&& evaluates two expressions. If both expressions are true, the statement is considered true. If either statement is false, the entire statement is false.`}
-            {"\n"}
+            {"\n"}{"\n"}
             {`hello' === 'hello' && 'world' === 'world' // => true`}
             {"\n"}
             {`'hello' === 'hello' && 'foo' === 'bar' // => false`}
@@ -191,6 +199,13 @@ class Comparison extends Component {
 }
 
 const Styles = StyleSheet.create({
+  container:{
+    flexDirection: 'row'
+  },
+  textContainer:{
+    flex: 1,
+     flexWrap: 'wrap'
+  },
   headerConetentStyle: {
     flexDirection: 'column',
     justifyContent: 'space-around'
