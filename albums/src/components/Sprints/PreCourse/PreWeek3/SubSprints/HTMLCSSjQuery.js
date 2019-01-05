@@ -98,8 +98,7 @@ $("body").append(box);'
 <p class="intro">Hello World!</p> $("p.intro")\n\
 <div id="greeting"><p class="intro">Hello World!</p></div> $("#greeting .intro")'
       ],
-      [
-        'Adding a class to an element using jQuery -- breaking it down',
+        ['Adding a class to an element using jQuery -- breaking it down',
         '$("p").addClass("special");\n\
 "$": global jQuery function. can also be jQuery.\n\
 "("p")": insert selector between quotes to find DOM element. returns in a "jquery collection".\n\
@@ -157,8 +156,9 @@ And here is what we get.'
         </CardSection>
         <CardSection>
           <Image
-            style={{ width: 300, height: 300 }}
+            style={{flex:1}}
             source={require('../assets/1.jpg')}
+            resizeMode="contain"
           />
         </CardSection>
 
@@ -167,10 +167,17 @@ And here is what we get.'
         </CardSection>
         <CardSection>
           <Text>{body[2][1]}</Text>
+          </CardSection>
+          <CardSection>
           <Image
-            style={{ width: 200, height: 200 }}
+            style={{flex:1}}
             source={require('../assets/2.png')}
+            resizeMode="contain"
           />
+
+          </CardSection>
+          
+          <CardSection>
           <Text>{body[2][2]}</Text>
         </CardSection>
         <CardSection>
@@ -178,8 +185,9 @@ And here is what we get.'
         </CardSection>
         <CardSection>
           <Image
-            style={{ width: 200, height: 200 }}
+            style={{flex:1}}
             source={require('../assets/3.png')}
+            resizeMode="contain"
           />
         </CardSection>
         <CardSection>
@@ -205,8 +213,9 @@ And here is what we get.'
         </CardSection>
         <CardSection>
           <Image
-            style={{ width: 200, height: 200 }}
+            style={{flex:1}}
             source={require('../assets/4.png')}
+            resizeMode="contain"
           />
         </CardSection>
         <CardSection>
@@ -214,8 +223,9 @@ And here is what we get.'
         </CardSection>
         <CardSection>
           <Image
-            style={{ width: 200, height: 200 }}
+            style={{flex:1}}
             source={require('../assets/5.png')}
+            resizeMode="contain"
           />
         </CardSection>
         <CardSection>
@@ -223,8 +233,9 @@ And here is what we get.'
         </CardSection>
         <CardSection>
           <Image
-            style={{ width: 200, height: 200 }}
+            style={{flex:1}}
             source={require('../assets/6.png')}
+            resizeMode="contain"
           />
         </CardSection>
         <CardSection>
@@ -238,8 +249,9 @@ And here is what we get.'
         </CardSection>
         <CardSection>
           <Image
-            style={{ width: 200, height: 200 }}
+            style={{flex:1}}
             source={require('../assets/7.png')}
+            resizeMode="contain"
           />
         </CardSection>
         <CardSection>
@@ -265,8 +277,9 @@ And here is what we get.'
         </CardSection>
         <CardSection>
           <Image
-            style={{ width: 200, height: 200 }}
+            style={{flex:1}}
             source={require('../assets/8.png')}
+            resizeMode="contain"
           />
         </CardSection>
         <CardSection>
