@@ -70,6 +70,22 @@ class DataModeling extends Component{
          style= {thumbnailStyle1}
          source={require('../../../../../assets/Pic9.jpg')}/>
         </CardSection>
+
+        <CardSection>
+          <Button onPress = {()=>this.props.navigation.navigate('Objects')}>
+            Previous
+          </Button>
+        </CardSection>
+        <CardSection>
+          <Button onPress = {()=>this.props.navigation.navigate('Higher Order Function: Each')}>
+            Next
+          </Button>
+        </CardSection>
+        <CardSection>
+          <Button onPress = {()=>this.props.navigation.navigate('PCList')}>
+            Home
+          </Button>
+        </CardSection>
       </Card>
     )
      

@@ -106,7 +106,7 @@ class ArraysAndForLoop extends Component {
   }
 
   render() {
-    const { headerConetentStyle, headerTextStyle } = Styles;
+    const { headerConetentStyle, headerTextStyle, container, textContainer } = Styles;
     const topic = "Arrays and For Loops";
     const introduction = 'This section is dedicated to reviewing arrays and for loops in JavaScript';
     return (
@@ -123,69 +123,87 @@ class ArraysAndForLoop extends Component {
             Introduction:{"\n"}{introduction}{"\n"}
           </Text>
         </CardSection>
-        <CardSection>
-          <Text>
+        <CardSection style = { container }>
+          <Text style = { textContainer }>
+          <Text style={{ fontWeight: 'bold', color: 'purple' }}>
             This is an array:
-            {"\n"}
+          </Text>
+            {"\n"}{"\n"}
             var thisIsAnArray = [1, 2, 3, 4];
-            {"\n"}
+            {"\n"}{"\n"}
+          <Text style={{ fontWeight: 'bold', color: 'purple' }}>
             An array is a collection of data. An array will always have an opening bracket, [, and a closing bracket, ]. 
             Each individual piece of data in an array is separated by commas. An array can be empty, and an array can also 
             store any types of data. Here are some more examples of arrays:
-            {"\n"}
+          </Text>
+            {"\n"}{"\n"}
             var thisIsAnEmptyArray = [];
             {"\n"}
             var thisIsAnArrayWithALotOfDifferentDataTypes = [1, 'hello world', 'foo bar', true, false];
-            {"\n"}
+            {"\n"}{"\n"}
+          <Text style={{ fontWeight: 'bold', color: 'purple' }}>            
             Each value in an array can be accessed by referring to its index. Arrays are 0-indexed, which means the first element is at index 0, 
             the second element is at index 1, the third element is at index 2, etc. 
             {"\n"}
             Here are a few examples of how you can access specific elements in an array:
-            {"\n"}
+            </Text>
+            {"\n"}{"\n"}
             thisIsAnArrayWithALotOfDifferentDataTypes[0] // => 1
             {"\n"}
             thisIsAnArrayWithALotOfDifferentDataTypes[1] // => 'hello world'
             {"\n"}
             thisIsAnArrayWithALotOfDifferentDataTypes[2] // => 'foo bar'
-            {"\n"}
+            {"\n"}{"\n"}
+          <Text style={{ fontWeight: 'bold', color: 'purple' }}>
             Arrays also have different properties that can be accessed. Arrays have a length property which tells you how many elements 
             are in an array. 
+            </Text>
             {"\n"}
             var thisIsAnotherArray = ['hello', 'world'];
             console.log(thisIsAnotherArray.length) // => 2;
-            {"\n"}
+            {"\n"}{"\n"}
+          <Text style={{ fontWeight: 'bold', color: 'purple' }}>
             Arrays have a push property that allows you to add a piece of data to the end of an array.
-            {"\n"}
+            </Text>
+            {"\n"}{"\n"}
             var foo = ['hello', 'bar'];
             {"\n"}
             foo.push('world');
             {"\n"}
             console.log(foo) // => ['hello', 'bar', 'world'];
-            {"\n"}
+            {"\n"}{"\n"}
+          <Text style={{ fontWeight: 'bold', color: 'purple' }}>
             Arrays have a pop property that allows you to remove a piece of data from the end of an array.
-            {"\n"}
+            </Text>
+            {"\n"}{"\n"}
             foo.pop();
             {"\n"}
             console.log(foo) // =>['hello', 'bar'];
-            {"\n"}
+            {"\n"}{"\n"}
+          <Text style={{ fontWeight: 'bold', color: 'purple' }}>            
             Arrays have a shift property that allows you to remove a piece of data from the beginning of an array.
-            {"\n"}
+            </Text>
+            {"\n"}{"\n"}
             foo.shift();
             {"\n"}
             console.log(foo) // => ['bar'];
-            {"\n"}
+            {"\n"}{"\n"}
+          <Text style={{ fontWeight: 'bold', color: 'purple' }}>
             Arrays have an unshift property that allows you to add data to the beginning of an array.
-            {"\n"}
+            </Text>
+            {"\n"}{"\n"}
             foo.unshift('hello world');
             {"\n"}
             console.log('foo') // => ['hello world', 'bar'];
             {"\n"}
           </Text>
         </CardSection>
-        <CardSection>
-          <Text>
+        <CardSection style = { container }>
+          <Text style = { textContainer }>
+          <Text style={{ fontWeight: 'bold', color: 'purple' }}>
             You can iterate through arrays by using for loops. Here is a refresher on the syntax of for loops:
-            {"\n"}
+            </Text>
+            {"\n"}{"\n"}
             var anExampleOfAnotherArray = ['hello', 'world', 'foo', 'bar'];
             {"\n"}
             {
@@ -224,6 +242,13 @@ class ArraysAndForLoop extends Component {
 }
 
 const Styles = StyleSheet.create({
+  container:{
+    flexDirection: 'row'
+  },
+  textContainer:{
+    flex: 1,
+     flexWrap: 'wrap'
+  },
   headerConetentStyle: {
     flexDirection: 'column',
     justifyContent: 'space-around'

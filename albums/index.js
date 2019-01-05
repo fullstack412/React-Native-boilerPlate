@@ -108,9 +108,7 @@ const AppStackNavigator = createStackNavigator({
   Surveys: Surveys,
   TownHall: TownHall,
   Handbook: Handbook,
-  Header: Header,
-  Objects:Objects
-  // HTMLCSSjQuery: HTMLCSSjQuery
+  Header: Header
 });
 
 const AppDrawerNavigator = createDrawerNavigator({

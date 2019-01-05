@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Button, Card, CardSection, Playquiz } from '../../../../common';
+import { Image } from 'react-native';
 
 class Reduce extends Component {
 
@@ -31,6 +32,11 @@ iv (initialValueOptional): Value to use as the first argument to the first call 
             </Text>
           </View>				
         </CardSection>
+        <CardSection style={{ flexDirection: 'row'}}>
+        <Image 
+         style= {{height: 100 ,width: 355}}
+         source={require('../assets/reduce.png')}/>
+        </CardSection>
 
         <CardSection>
           <Text>
@@ -50,8 +56,11 @@ iv (initialValueOptional): Value to use as the first argument to the first call 
         </CardSection>
 
         <CardSection>
-          <Text>
+          <Text style={{fontWeight:'bold',color:'black'}}>
+            The Last Version : {"\n"}{"\n"}
+          <Text style={{fontWeight:'bold',color:'orange'}}>
             {end}{"\n"}
+          </Text>
           </Text>
         </CardSection>
 

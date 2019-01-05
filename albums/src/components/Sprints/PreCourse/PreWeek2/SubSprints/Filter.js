@@ -58,16 +58,16 @@ class Filter extends Component{
     return(
       <Card>
         <CardSection>
-        <View>
+          <View>
             <Text style={title}>
               {topic}{"\n"}
             </Text>
           </View>
         </CardSection>
         <CardSection style={container}>
-        <Image 
-         style= {thumbnailStyle1}
-         source={require('../../../../../assets/Pic7.png')}/>
+          <Image 
+          style= {thumbnailStyle1}
+          source={require('../../../../../assets/Pic7.png')}/>
         </CardSection>
         <CardSection style={container}>
           <Text style={{fontWeight:'bold'}}>
@@ -83,11 +83,21 @@ class Filter extends Component{
           </Text>
         </CardSection>
         <CardSection style={container}>
-            <View >
-              <Playquiz  quizData = { this.state.quizData }/>
-            </View>
-            </CardSection>
-
+          <View >
+            <Playquiz  quizData = { this.state.quizData }/>
+          </View>
+        </CardSection>
+        
+        <CardSection>
+          <Button onPress = {()=>this.props.navigation.navigate('Higher Order Function: Map')}>
+            Previous
+          </Button>
+        </CardSection>
+        <CardSection>
+          <Button onPress = {()=>this.props.navigation.navigate('PCList')}>
+            Home
+          </Button>
+        </CardSection>
       </Card>
 
     )
