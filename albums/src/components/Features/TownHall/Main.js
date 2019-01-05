@@ -51,6 +51,25 @@ class Main extends Component {
             Submit
           </Button>
         </CardSection>
+        
+        <CardSection>
+          <Button onPress = {()=>this.props.navigation.navigate('Calendar')}>
+            Calendar
+          </Button>
+        </CardSection>
+
+        <CardSection>
+          <Button onPress = {()=>this.props.navigation.navigate('Surveys')}>
+            Surveys
+          </Button>
+        </CardSection>
+
+        <CardSection>
+          <Button onPress = {()=>this.props.navigation.navigate('Handbook')}>
+            Student Handbook
+          </Button>
+        </CardSection>
+
       </Card>
     );
   }

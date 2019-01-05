@@ -44,13 +44,6 @@ class LoginScreen extends Component {
     } else if (this.state.loggedIn === true) {
       return (
         <Card>
-          <Header/>
-          <CardSection>
-            <Button onPress = {()=>this.props.navigation.navigate('CodeCompiler')}>
-              Code Compiler
-            </Button>
-          </CardSection>
-
           <CardSection>
             <Button onPress = {()=>this.props.navigation.navigate('Calendar')}>
               Calendar

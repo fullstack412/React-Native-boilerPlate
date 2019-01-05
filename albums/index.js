@@ -41,7 +41,6 @@ import Git from './src/components/Sprints/PreCourse/PreWeek4/SubSprints/Git';
 import Testing from './src/components/Sprints/PreCourse/PreWeek4/SubSprints/Testing';
 import WebDev from './src/components/Sprints/PreCourse/PreWeek4/SubSprints/WebDev';
 
-import CodeCompiler from './src/components/Features/CodeCompiler/Main';
 import Calendar from './src/components/Features/GoogleCalendar/Main';
 import Surveys from './src/components/Features/Surveys/Main';
 import TownHall from './src/components/Features/TownHall/Main';
@@ -103,7 +102,6 @@ const AppStackNavigator = createStackNavigator({
   JSList: JSList,
   JSDataStructure: JSDataStructure,
   OSList: OSList,
-  CodeCompiler: CodeCompiler,
   Calendar: Calendar,
   Surveys: Surveys,
   TownHall: TownHall,
