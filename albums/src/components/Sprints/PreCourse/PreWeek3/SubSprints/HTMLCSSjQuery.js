@@ -297,8 +297,8 @@ And here is what we get.'
         </CardSection>
 
         <CardSection>
-          <Button onPress={() => this.props.navigation.navigate('Project')}>
-            Next
+          <Button onPress={() => this.props.navigation.navigate('OOP')}>
+            Previous
           </Button>
         </CardSection>
         <CardSection>

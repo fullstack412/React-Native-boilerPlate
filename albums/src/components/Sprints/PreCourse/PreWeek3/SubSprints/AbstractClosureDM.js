@@ -85,7 +85,12 @@ class AbstractClosureDM extends Component {
         </CardSection>
 
         <CardSection>
-          <Button onPress = {()=>this.props.navigation.navigate('Project')}>
+          <Button onPress = {()=>this.props.navigation.navigate('Reduce')}>
+            Previous
+          </Button>
+        </CardSection>
+        <CardSection>
+          <Button onPress = {()=>this.props.navigation.navigate('OOP')}>
             Next
           </Button>
         </CardSection>

@@ -61,7 +61,12 @@ class OOP extends Component {
         </CardSection>
 
         <CardSection>
-          <Button onPress = {()=>this.props.navigation.navigate('Project')}>
+          <Button onPress = {()=>this.props.navigation.navigate('Closures And Adding Methods')}>
+            Previous
+          </Button>
+        </CardSection>
+        <CardSection>
+          <Button onPress = {()=>this.props.navigation.navigate('HTML, CSS and jQuery')}>
             Next
           </Button>
         </CardSection>
