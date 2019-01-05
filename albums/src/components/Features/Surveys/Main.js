@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { Button, Card, CardSection } from '../../common';
+import { Header, Button, Card, CardSection } from '../../common';
 
 class Main extends Component {
 
@@ -13,6 +13,7 @@ class Main extends Component {
     
     return (
       <Card>
+        <Header />
         <CardSection>
           <View style = {headerConetentStyle}>
             <Text style = {headerTextStyle}>

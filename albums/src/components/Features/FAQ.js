@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { Button, Card, CardSection } from '../common';
+import { Header, Button, Card, CardSection } from '../common';
 
 
 class FAQ extends Component {
@@ -15,32 +15,33 @@ class FAQ extends Component {
     
     return (
       <Card>
-      <CardSection>
-        <View style = {headerConetentStyle}>
-          <Text style = {headerTextStyle}>
-            {topic}{"\n"}
+        <Header />
+        <CardSection>
+          <View style = {headerConetentStyle}>
+            <Text style = {headerTextStyle}>
+              {topic}{"\n"}
+            </Text>
+          </View>				
+        </CardSection>
+
+        <CardSection>
+          <Text>
+          How should I study for RBK?{"\n"}{introduction}{"\n"}
           </Text>
-        </View>				
-      </CardSection>
+        </CardSection>
 
-      <CardSection>
-        <Text>
-        How should I study for RBK?{"\n"}{introduction}{"\n"}
-        </Text>
-      </CardSection>
+        <CardSection>
+          <Text>
+            What is RBK?{"\n"}{body}{"\n"}
+          </Text>
+        </CardSection>
 
-      <CardSection>
-        <Text>
-          What is RBK?{"\n"}{body}{"\n"}
-        </Text>
-      </CardSection>
-
-      <CardSection>
-        <Text>
-          Where is RBK?{"\n"}{end}{"\n"}
-        </Text>
-      </CardSection>
-    </Card>
+        <CardSection>
+          <Text>
+            Where is RBK?{"\n"}{end}{"\n"}
+          </Text>
+        </CardSection>
+      </Card>
     );
   }
 }

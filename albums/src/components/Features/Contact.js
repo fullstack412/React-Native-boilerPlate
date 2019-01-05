@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { Button, Card, CardSection } from '../common';
+import { Header, Button, Card, CardSection } from '../common';
 
 
 class Contact extends Component {
@@ -16,32 +16,33 @@ class Contact extends Component {
     
     return (
       <Card>
-      <CardSection>
-        <View style = {headerConetentStyle}>
-          <Text style = {headerTextStyle}>
-            {topic}{"\n"}
+        <Header />
+        <CardSection>
+          <View style = {headerConetentStyle}>
+            <Text style = {headerTextStyle}>
+              {topic}{"\n"}
+            </Text>
+          </View>				
+        </CardSection>
+
+        <CardSection>
+          <Text>
+            Phone Number{"\n"}{introduction}{"\n"}
           </Text>
-        </View>				
-      </CardSection>
+        </CardSection>
 
-      <CardSection>
-        <Text>
-          Phone Number{"\n"}{introduction}{"\n"}
-        </Text>
-      </CardSection>
+        <CardSection>
+          <Text>
+            Email:{"\n"}{body}{"\n"}
+          </Text>
+        </CardSection>
 
-      <CardSection>
-        <Text>
-          Email:{"\n"}{body}{"\n"}
-        </Text>
-      </CardSection>
-
-      <CardSection>
-        <Text>
-          Address:{"\n"}{end}{"\n"}
-        </Text>
-      </CardSection>
-    </Card>
+        <CardSection>
+          <Text>
+            Address:{"\n"}{end}{"\n"}
+          </Text>
+        </CardSection>
+      </Card>
     );
   }
 }
