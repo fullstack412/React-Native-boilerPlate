@@ -10,7 +10,7 @@ class WebDev extends Component {
           "question1" : {
             "correctoption" : "option3",
             "options" : {
-              "option1" : "Hot Tea Milky Lollipop",
+              "option1" : "Horizontal Text Machine Language",
               "option2" : "Hulk Thor Magneto Loki",
               "option3" : "Hypertext Markup Language",
               "option4" : "Hal taqulu Masalama La"
@@ -35,15 +35,15 @@ class WebDev extends Component {
                 "option3" : "setTimeout(myFunction(){}, 3000);",
                 "option4" : "setTimeout(myFunction(){}, 3);",
               },
-            "question" : "Which function performs myfunction every 3 seconds?"
+            "question" : "Which function performs myFunction every 3 seconds?"
           },
           "question4" : {
             "correctoption" : "option1",
             "options" : {
                 "option1" : "<script src=\"lib/jquery.js\"></script>",
-                "option2" : "<script src=\"src/javascriptYouWrite.js\"></script>"
+                "option2" : "<script src=\"src/index.js\"></script>"
               },
-            "question" : "Which file should you load first in your .html file?"
+            "question" : "Which file should be loaded first in .html file? Assume index.js uses jQuery?"
           }
         }
       }      
@@ -57,10 +57,10 @@ class WebDev extends Component {
     const body = [
       [
         'There are three foundations in Web Development', 
-        'HTML: defines the content and structure of a website. Think of it as the frame of a car, how many car doors, wheels, windows are needed.\n\n\
-Javascript: provides the interaction for the webpage. If you have a clickable button on the page that alerts a message, they that\'s where Javascript \
-comes in. Javascript is not limited to that simple example. In the car example, Javascript will be the connection between the control and the head light, \
-air conditioning controller and the air conditioning.   \n\n\
+        'HTML: defines the content and structure of a website. Think of it as the frame of a car, how many car doors, where do the wheels go?\n\n\
+Javascript: provides the interaction for the webpage. A simple example is when you click a button, then it pops up an alert with a message \
+Javascript is not limited to this simple example. In the car example, Javascript will be the connection between the light control and the head light, \
+the stick shift and the engine.   \n\n\
 CSS: decides how the website is going to look. It doesn\'t change the content, but it changes how the content is displayed. For the car example, \
 CSS decides the paint color of the car, how big the car windows are \n'
       ],[

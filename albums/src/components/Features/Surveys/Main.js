@@ -27,6 +27,24 @@ class Main extends Component {
             Input:{"\n"}{introduction}{"\n"}
           </Text>
         </CardSection>
+
+                  <CardSection>
+            <Button onPress = {()=>this.props.navigation.navigate('Calendar')}>
+              Calendar
+            </Button>
+          </CardSection>
+
+          <CardSection>
+            <Button onPress = {()=>this.props.navigation.navigate('TownHall')}>
+              TownHall
+            </Button>
+          </CardSection>
+
+          <CardSection>
+            <Button onPress = {()=>this.props.navigation.navigate('Handbook')}>
+              Student Handbook
+            </Button>
+          </CardSection>
       </Card>
     );
   }

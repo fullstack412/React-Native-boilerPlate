@@ -23,28 +23,13 @@ class SideMenu extends Component {
               <Text style={navSectionStyle} onPress={this.navigateToScreen('Prep_Course_Sprints')}>
                 Prep Course Menu
               </Text>                
-              {/* <Text style={navItemStyle} onPress={this.navigateToScreen('Prep_Week_1')}>
-                Week 1
-              </Text>
-              <Text style={navItemStyle} onPress={this.navigateToScreen('Prep_Week_2')}>
-                Week 2
-              </Text>
-              <Text style={navItemStyle} onPress={this.navigateToScreen('Prep_Week_3')}>
-                Week 3
-              </Text>
-              <Text style={navItemStyle} onPress={this.navigateToScreen('Prep_Week_4')}>
-                Week 4
-              </Text> */}
             </View>
           </View>
-          <View>
+          {/* <View>
             <View style={sectionHeadingStyle}>
               <Text style={navSectionStyle} onPress={this.navigateToScreen('JS_Sprints')}>
                 Javascript Sprints Menu
               </Text>
-              {/* <Text style={navItemStyle} onPress={this.navigateToScreen('JSDataStructure')}>
-                Data Structure
-              </Text> */}
             </View>
           </View>
           <View>
@@ -52,9 +37,6 @@ class SideMenu extends Component {
               <Text style={navSectionStyle} onPress={this.navigateToScreen('Full_Stack_Sprints')}>
                 Full Stack Sprints Menu
               </Text>
-              {/* <Text style={navItemStyle} onPress={this.navigateToScreen('JSDataStructure')}>
-                Place Holder
-              </Text> */}
             </View>
           </View>
           <View>
@@ -62,11 +44,8 @@ class SideMenu extends Component {
               <Text style={navSectionStyle} onPress={this.navigateToScreen('Other_Sprints')}>
                 Other Sprints Menu
               </Text>
-              {/* <Text style={navItemStyle} onPress={this.navigateToScreen('JSDataStructure')}>
-                Place Holder
-              </Text> */}
             </View>
-          </View>
+          </View> */}
           <View>
             <View style={sectionHeadingStyle}>
               <Text style={navSectionStyle} onPress={this.navigateToScreen('FAQ')}>
