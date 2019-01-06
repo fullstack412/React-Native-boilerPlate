@@ -41,6 +41,8 @@ import Git from './src/components/Sprints/PreCourse/PreWeek4/SubSprints/Git';
 import Testing from './src/components/Sprints/PreCourse/PreWeek4/SubSprints/Testing';
 import WebDev from './src/components/Sprints/PreCourse/PreWeek4/SubSprints/WebDev';
 
+import Quiz from './src/components/Sprints/PreCourse/FinalQuiz'
+
 import Calendar from './src/components/Features/GoogleCalendar/Main';
 import Surveys from './src/components/Features/Surveys/Main';
 import TownHall from './src/components/Features/TownHall/Main';
@@ -83,8 +85,8 @@ const AppStackNavigator = createStackNavigator({
   "Objects":Objects,
   "Data Modeling":DataModeling,
   "Higher Order Function: Each":HigherOrderEach,
-  "Higher Order Function: Map": Map,
-  "Higher Order Function: Filter": Filter,
+  "Higher Order Function: Map":Map,
+  "Higher Order Function: Filter":Filter,
   // Week 3
   "HTML, CSS and jQuery": HTMLCSSjQuery,
   "Closures And Adding Methods": AbstractClosureDM,
@@ -94,6 +96,7 @@ const AppStackNavigator = createStackNavigator({
   "Git": Git,
   "Testing": Testing,
   "Web Development": WebDev,
+  "Quiz": Quiz,
 
   FSList: FSList,
   Recastly: Recastly,

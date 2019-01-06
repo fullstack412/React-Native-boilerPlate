@@ -14,6 +14,7 @@ class Quiz extends Component {
  
     const jdata = this.props.quizData.quiz.quiz1
     arrnew = Object.keys(jdata).map( function(k) { return jdata[k] });
+    arrnew = this.shuffle(arrnew);
     this.state = {
       buttonRotation: ['bounce', 'flash', 'jello', 'pulse', 'rotate', 'rubberBand', 'shake', 'swing', 'tada', 'wobble', 'bounce', 'flash', 'jello', 'pulse', 'rotate', 'rubberBand', 'shake', 'swing', 'tada', 'wobble', 'bounce', 'flash', 'jello', 'pulse', 'rotate', 'rubberBand', 'shake', 'swing', 'tada', 'wobble'],
       buttonColor: ['red', 'blue', 'green', 'brown', 'orange', 'green', 'blue', 'red', 'orange', 'green','red', 'blue', 'green', 'brown', 'orange', 'green', 'blue', 'red', 'orange', 'green','red', 'blue', 'green', 'brown', 'orange', 'green', 'blue', 'red', 'orange', 'green'],
@@ -24,6 +25,18 @@ class Quiz extends Component {
       buttonStatus: false
     }
   }
+
+  shuffle(array) {
+    let n = array.length, i, t;
+    while (n) {
+      i = Math.floor(Math.random() * n--);
+      t = array[i];
+      array[i] = array[n];
+      array[n] = t;
+    }
+    return array
+  }
+
   prev(){
     if(this.qno > 0){
       this.qno--

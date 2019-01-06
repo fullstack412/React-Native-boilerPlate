@@ -51,6 +51,13 @@ class CourseList extends Component {
         'Testing',
         'Web Development'
       ]
+    }, {
+      topic: 'Final Prep Quiz',
+      introduction: 'This will help you prepare for your assessment at the end of the Prep Course',
+      image: require('../../../assets/FinalQuiz.png'),
+      menuOptions: [
+        'Quiz'
+      ]
     }
   ]};
 

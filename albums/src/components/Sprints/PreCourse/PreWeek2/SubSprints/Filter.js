@@ -40,8 +40,6 @@ class Filter extends Component{
                   },
                 "question" : "var words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present']; \n function result(words){\n return filter(words,function(string){ \n return string.length > 6 ;\n })\n };\n  console.log(result);"
               }
-            
-             
             }
           }      
         }
