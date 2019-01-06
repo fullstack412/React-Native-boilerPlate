@@ -46,8 +46,8 @@ For example, heated seat for this car, additional lights for the other car, no c
         </CardSection>
         <CardSection style={container}>
           <Image 
-          style= {thumbnailStyle1}
-          source={require('../../../../../assets/dataModelingRobot.jpg')}/>
+            style= {thumbnailStyle1}
+            source={require('../../../../../assets/dataModelingRobot.jpg')}/>
         </CardSection>
         <CardSection>
           <Text style={{fontWeight:'bold'}}>
@@ -115,19 +115,19 @@ For example, heated seat for this car, additional lights for the other car, no c
 const Styles=StyleSheet.create({
   container:{
     flexDirection: 'row'
-},
-textContainer:{
-  flex: 1,
-  flexWrap: 'wrap'
-},
-title: {
-  fontSize: 19,
-  fontWeight: 'bold'
+  },
+  textContainer:{
+    flex: 1,
+    flexWrap: 'wrap'
+  },
+  title: {
+    fontSize: 19,
+    fontWeight: 'bold'
 
-},
-thumbnailStyle1:{
-  height: 250 ,
-  width: 355
+  },
+  thumbnailStyle1:{
+    height: 250 ,
+    width: 355
   }
 })
 
