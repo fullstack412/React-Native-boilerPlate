@@ -92,7 +92,7 @@ val(): Gets or sets the value attribute of an element\n\
 text(): Gets the combined text of an element and its children\n\
 each(): Iterates over a set of matched elements'
       ],[
-        'Advanced: Other major Frameworks',
+        'Advanced: Other major Libraries/Frameworks',
         'React: Structure the entire website as a combinations of different components. It\'s like building each car parts on their own, \
 car doors, engine, windows, etc. Those components are eventually linked together to build a functional car.\n\n\
 Backbone: In backbone, the data, what\'s being displayed on the page, and how data is changed are separated into different layers. \n\n\

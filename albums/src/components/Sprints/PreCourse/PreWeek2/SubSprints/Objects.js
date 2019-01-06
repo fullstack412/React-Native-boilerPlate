@@ -53,9 +53,9 @@ class Objects extends Component{
   render(){
     const topic= 'Objects';
     const Question='What is Object?';
-    const introduction = 'Objects are variables , A JavaScript object is a collection of unordered properties';
+    const introduction = 'Objects can be declared as variables. An object is a collection of UNORDERED properties that can be accessed through the corresponding KEYS';
     const CreateObj= 'Creating Objects in JavaScript';
-    const DecleareObject= 'an object is made up of multiple members, each of which has a [name] and a [value],Each [name/value] pair must be separated by a (comma), and the [name and value] in each case are separated by a (colon)';
+    const DecleareObject= 'An object is made up of multiple key and property pairs, each of which has a [name] and a [value],Each [name/value] pair must be separated by a (comma), and the [name and value] in each case are separated by a (colon)';
     const AccessObj= 'Accessing Object Properties:';
     const Ways='There are two ways to access the properties of an object: dot notation (.) and bracket notation ([]), similar to an array.'
     const FirstType='1. Access Object Properties using Dot notation(.) : is used most frequently.';

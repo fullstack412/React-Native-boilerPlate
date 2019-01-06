@@ -32,7 +32,7 @@ class Testing extends Component {
                 "option1" : "it('sample test', function(){})",
                 "option2" : "beforeEach(function(){})"
               },
-            "question" : "What runs first?"
+            "question" : "What command will be executed first in the testing suit?"
           },
           "question4" : {
             "correctoption" : "option1",
@@ -44,7 +44,7 @@ class Testing extends Component {
             "question" : "What command is used to group multiple test cases together?"
           },
           "question5" : {
-            "correctoption" : "option4",
+            "correctoption" : "option3",
             "options" : {
                 "option1" : "details how much RAM is dedicated to the current test",
                 "option2" : "specify how long the test cases should take",
@@ -95,7 +95,7 @@ So since you know 2 + 3 = 5 and 23 + 10 = 33. So you set those conditions to che
 function works as good as your brain.'
       ]
     ]
-    const end = 'In the future sprints, you will encounter a huge amount of test cases. Those tests are designed to lead you to the correct answer\
+    const end = 'In the future sprints, you will encounter a huge amount of test cases. Those tests are designed to lead you to the correct answer \
 The more tests you pass, the closer you will became to the end goal.\n\
 Treat each of passed test as a small celebration on your journey to become a Full-stack developer';
 
