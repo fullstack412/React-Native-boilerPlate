@@ -11,13 +11,13 @@ class Quiz extends Component {
     super(props);
     this.qno = 0
     this.score = 0
- 
+
     const jdata = this.props.quizData.quiz.quiz1
     arrnew = Object.keys(jdata).map( function(k) { return jdata[k] });
     arrnew = this.shuffle(arrnew);
     this.state = {
-      buttonRotation: ['bounce', 'flash', 'jello', 'pulse', 'rotate', 'rubberBand', 'shake', 'swing', 'tada', 'wobble', 'bounce', 'flash', 'jello', 'pulse', 'rotate', 'rubberBand', 'shake', 'swing', 'tada', 'wobble', 'bounce', 'flash', 'jello', 'pulse', 'rotate', 'rubberBand', 'shake', 'swing', 'tada', 'wobble'],
-      buttonColor: ['red', 'blue', 'green', 'brown', 'orange', 'green', 'blue', 'red', 'orange', 'green','red', 'blue', 'green', 'brown', 'orange', 'green', 'blue', 'red', 'orange', 'green','red', 'blue', 'green', 'brown', 'orange', 'green', 'blue', 'red', 'orange', 'green'],
+      buttonRotation: ['bounce', 'flash', 'jello', 'pulse', 'rotate', 'rubberBand', 'shake', 'swing', 'tada', 'wobble', 'bounce', 'flash', 'jello', 'pulse', 'rotate', 'rubberBand', 'shake', 'swing', 'tada', 'wobble', 'bounce', 'flash', 'jello', 'pulse', 'rotate', 'rubberBand', 'shake', 'swing', 'tada', 'wobble', 'bounce', 'flash', 'jello', 'pulse', 'rotate', 'rubberBand', 'shake', 'swing', 'tada', 'wobble', 'bounce', 'flash', 'jello', 'pulse', 'rotate', 'rubberBand', 'shake', 'swing', 'tada', 'wobble', 'bounce', 'flash', 'jello', 'pulse', 'rotate', 'rubberBand', 'shake', 'swing', 'tada', 'wobble', 'bounce', 'flash', 'jello', 'pulse', 'rotate', 'rubberBand', 'shake', 'swing', 'tada', 'wobble', 'bounce', 'flash', 'jello', 'pulse', 'rotate', 'rubberBand', 'shake', 'swing', 'tada', 'wobble', 'bounce', 'flash', 'jello', 'pulse', 'rotate', 'rubberBand', 'shake', 'swing', 'tada', 'wobble'],
+      buttonColor: ['blue', 'green', 'brown', 'green', 'blue', 'green','blue', 'green', 'brown', 'green', 'blue', 'green', 'blue', 'green', 'brown', 'green', 'blue', 'green', 'blue', 'green', 'brown', 'green', 'blue', 'green','blue', 'green', 'brown', 'green', 'blue', 'green', 'blue', 'green', 'brown', 'green', 'blue', 'green', 'blue', 'green', 'brown', 'green', 'blue', 'green','blue', 'green', 'brown', 'green', 'blue', 'green', 'blue', 'green', 'brown', 'green', 'blue', 'green', 'blue', 'green', 'brown', 'green', 'blue', 'green','blue', 'green', 'brown', 'green', 'blue', 'green', 'blue', 'green', 'brown', 'green', 'blue', 'green', 'blue', 'green', 'brown', 'green', 'blue', 'green','blue', 'green', 'brown', 'green', 'blue', 'green', 'blue', 'green', 'brown', 'green', 'blue', 'green'],
       question : arrnew[this.qno].question,
       options : arrnew[this.qno].options,
       correctoption : arrnew[this.qno].correctoption,

@@ -191,7 +191,12 @@ class Variables extends Component {
         </CardSection>
         <Playquiz quizData = { this.state.quizData }/>
         <CardSection>
-          <Button onPress = {()=>this.props.navigation.navigate('PCWeek2')}>
+          <Button onPress = {()=>this.props.navigation.navigate('Booleans, Comparisons, and Operators')}>
+            Previous
+          </Button>
+        </CardSection>
+        <CardSection>
+          <Button onPress = {()=>this.props.navigation.navigate('While Loop')}>
             Next
           </Button>
         </CardSection>

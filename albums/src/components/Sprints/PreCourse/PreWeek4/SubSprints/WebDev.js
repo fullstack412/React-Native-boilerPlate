@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Image } from 'react-native';
 import { Button, Card, CardSection, Playquiz } from '../../../../common';
 
 class WebDev extends Component {
@@ -57,12 +57,12 @@ class WebDev extends Component {
     const body = [
       [
         'There are three foundations in Web Development', 
-        'HTML: defines the content and structure of a website. Think of it as the frame of a car, how many car doors, where do the wheels go?\n\n\
-Javascript: provides the interaction for the webpage. A simple example is when you click a button, then it pops up an alert with a message \
-Javascript is not limited to this simple example. In the car example, Javascript will be the connection between the light control and the head light, \
-the stick shift and the engine.   \n\n\
+        'HTML: defines the content and structure of a website. Think of it as the frame of a house, it decides on having how many windows, is there a living room?\n\n\
+Javascript: provides the interaction of the webpage. It tells the HTML components to perform certain actions. A simple example is when you click a button, then a pop up alert will be shown. \
+In the house analogy, Javascript is the connection between the light switch to the light, \
+and air conditioner controller to the air conditioner.    \n\n\
 CSS: decides how the website is going to look. It doesn\'t change the content, but it changes how the content is displayed. For the car example, \
-CSS decides the paint color of the car, how big the car windows are \n'
+CSS decides the whether you want the car to be painted blue, how big the car windows are. \n'
       ],[
         'jQuery Framework',
         'Frameworks like jQuery are powerful tools that build on HTML, CSS, and Javascript. \
@@ -70,11 +70,11 @@ Programmers use jQuery to simplify the process of designing complex websites.\n\
 jQuery builds on Javascript, but it has its own unique syntax.'
       ],[
         'How to import jQuery?',
-        'Like any external library, programmers would need to import the library in the HTML page between the <head></head>. \n \
+        'Like any external library, programmers would need to import the library in the HTML page between the <head></head> tags. \n \
 Here are the few ways you can import jQuery:\n\
 1. Download jQuery to your local folder (I named it lib in this case) and import it like so \n<script src="lib/jquery.js"></script>\n\
 2. Or you can use a jQuery library someone else uploaded online \n<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">\n\n\
-They both do imports jQuery, but just getting the jQuery library from different places. Option 1 is like download a movie and then watch it. Option 2 is like streaming a movie online\
+They both import jQuery, but from different places. Option 1 is like download a movie and then watch it. Option 2 is like streaming a movie online\
 '
       ],[
         'Common jQuery functions',
@@ -92,15 +92,14 @@ val(): Gets or sets the value attribute of an element\n\
 text(): Gets the combined text of an element and its children\n\
 each(): Iterates over a set of matched elements'
       ],[
-        'Advanced: Other major Frameworks',
-        'React: Structure the entire website as a combinations of different components. It\'s like building each car parts on their own, \
-car doors, engine, windows, etc. Those components are eventually linked together to build a functional car.\n\n\
-Backbone: In backbone, the data, what\'s being displayed on the page, and how data is changed are separated into different layers. \n\n\
-Angular: Angular offers another different ways of frontend framework. It works particularly well in formed and document based webapplications\n\n'
+        'Advanced: Other major Libraries/Frameworks',
+        'React: Structure the entire website as a combinations of different components. It\'s like building each room of the house on its own, and put them together at the end.\n\n\
+Backbone: This framework separate the logic in three different layers: The data logic, what\'s being displayed on the page, and how data is changed. If you are curious, search about the concept of MVC: Model View Controller \n\n\
+Angular: Angular offers another different design from React and Backbone. It works particularly well in formed and document based webapplications\n\n'
       ]
     ]
     const end = 'This is your first immersion to become a fullstack developer. If your experience was unpleasant, knowing most of technologies\
-you struggle to understand is going to get easier. It takes time to pick up a skill from 0. If you are already having fun, congratulations, you\
+you struggle to understand is going to get easier. It takes time to pick up a skill from zero. And if you are already having fun, congratulations, you\
 might just found a hobby that also pays salary!';
     return (
       
@@ -128,6 +127,11 @@ might just found a hobby that also pays salary!';
           <Text>
             {body[0][1]}
           </Text>
+        </CardSection>
+        <CardSection style={container}>
+          <Image 
+            style= {thumbnailStyle1}
+            source={require('../../../../../assets/webDev0.jpg')}/>
         </CardSection>
 
         <CardSection>
@@ -191,6 +195,11 @@ might just found a hobby that also pays salary!';
             {end}{"\n"}
           </Text>
         </CardSection>
+        <CardSection style={container}>
+          <Image 
+            style= {thumbnailStyle1}
+            source={require('../../../../../assets/webDev1.png')}/>
+        </CardSection>
 
         <Playquiz quizData = { this.state.quizData }/>
         <CardSection>
@@ -228,6 +237,13 @@ const Styles = StyleSheet.create({
   },
   boldText: {
     fontWeight: 'bold'
+  },
+  container:{
+    flexDirection: 'row'
+  },
+  thumbnailStyle1:{
+    height: 250 ,
+    width: 355
   }
 });
 export default WebDev;

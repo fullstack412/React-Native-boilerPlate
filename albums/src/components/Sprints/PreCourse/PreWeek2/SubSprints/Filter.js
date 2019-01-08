@@ -15,11 +15,11 @@ class Filter extends Component{
               "question1" : {
                 "correctoption" : "option2",
                 "options" : {
-                  "option1" : "['Matt','Mastodon','Cat']",
+                  "option1" : "['Matt','Mtn','Cat']",
                   "option2" : "['Matt','Cat']",
                   "option3" : "'Matt,Cat'"
                 },
-                "question" : " var string=['hello','Matt','Mastodon','Cat','Dog'];\n function match(string){\n return filter(string,function(element){\n return element.includes('at')\n  }\n};   \n console.log(match); "
+                "question" : " var string=['hello','Matt','Mtn','Cat','Dog'];\nfunction match(string){\n    return filter(string,function(element){\n        return element.includes('at')\n    }\n};   \nconsole.log(match); "
                 },
               "question2" : {
                 "correctoption" : "option1",
@@ -29,7 +29,7 @@ class Filter extends Component{
                     "option3" : "{2,4,6,8,10}"
                     
                   },
-                "question" : "var number=[1,2,3,4,5,6,7,8,9,10] \n function even(number){\n return filter(number,function(num){\n return num%2 === 0\n })\n }; \n console.log(even);"
+                "question" : "var number=[1,2,3,4,5,6,7,8,9,10] \nfunction even(number){\n    return filter(number,function(num){\n        return num%2 === 0\n })\n    }; \nconsole.log(even);"
               },
               "question3" : {
                 "correctoption" : "option2",
@@ -38,7 +38,7 @@ class Filter extends Component{
                     "option2" : "['exuberant', 'destruction', 'present']",
                     "option3" : "['exuberant', 'destruction']"
                   },
-                "question" : "var words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present']; \n function result(words){\n return filter(words,function(string){ \n return string.length > 6 ;\n })\n };\n  console.log(result);"
+                "question" : "var words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present']; \nfunction result(words){\n    return filter(words,function(string){        \n return string.length > 6 ;\n    })\n};\nconsole.log(result);"
               }
             }
           }      
@@ -49,8 +49,24 @@ class Filter extends Component{
   render(){
     const topic='Filter';
     const Question='What Is Filter?';
-    const Define='Filter receives the same arguments as map, and works very similarly. The only difference is that the callback needs to return either true or false. If it returns true then the array keeps that element and if it returns false the element is filtered out.';
-    const function1='function filter(array,predicate ) {\n  var acc=[]\n  each(array,function(element)){\n    if(predicate(element){\n     acc.push(element) \n    }\n  })\n return acc \n};';
+    const Define='As the name suggests, Filter keeps the element you don\'t want from the ones you want. \
+As the programmer, you defined a condition about what kind of element you want. And then you pass that condition \
+through the filter. Filter will automatically apply your condition to every element inside the array.\
+Filter works very similarly to map. The only difference is that the conditions you define needs to return either true or false. \
+If it returns true then the array takes that element and if it returns false that element is filtered out.';
+    const example ='The example above shows a list of shapes being passed through the filter. And the output of the filter are only circles. Here is an example in code:'
+    const function1='var filteringNumbers = [-50, 10, -20, 14, -55, -89];\n\
+function filteringCondition(number) {\n\
+    if (number > 0) {\n\
+        return true;\n\
+    } else {\n\
+        return false;\n\
+    }\n\
+}\n\
+fileringNumbers.filter(filteringCondition)\n\
+result is: [10, 14]\n\
+This function applies the filteringCondition on the array filteringNumber. The filteringCondition is a callback function that passed in the to the built-in filter function as a callback. The filteringCondition tells the filter to only keeps the positive numbers.'
+
     const { thumbnailStyle,title,container,textContainer,thumbnailStyle1}=Styles
     
     return(
@@ -62,11 +78,7 @@ class Filter extends Component{
             </Text>
           </View>
         </CardSection>
-        <CardSection style={container}>
-          <Image 
-          style= {thumbnailStyle1}
-          source={require('../../../../../assets/Pic7.png')}/>
-        </CardSection>
+
         <CardSection style={container}>
           <Text style={{fontWeight:'bold'}}>
             {Question}{"\n"}{"\n"}
@@ -75,6 +87,18 @@ class Filter extends Component{
             </Text>
           </Text>
         </CardSection>
+
+        <CardSection style={container}>
+          <Image 
+          style= {thumbnailStyle1}
+          source={require('../../../../../assets/Pic7.png')}/>
+        </CardSection>
+        <CardSection style={container}>
+          <Text style={{fontWeight:'normal'}}>
+            {example}
+          </Text>
+        </CardSection>
+
         <CardSection style={container} >
           <Text style={{fontWeight:'bold',color:'#FF33A8'}}>
             {function1}
