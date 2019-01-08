@@ -96,12 +96,12 @@ $("body").append(box);'
 <div id="greeting"><p class="intro">Hello World!</p></div> $("#greeting .intro")'
       ],
       ['Adding a class to an element using jQuery -- breaking it down',
-        '$("p").addClass("special");\n\
-"$": global jQuery function. can also be jQuery.\n\
-"("p")": insert selector between quotes to find DOM element. returns in a "jquery collection".\n\
-"addClass("special")": built-in jQuery method that adds the specified class to the collection.\n\
-This is the output in our HTML:\n\
-<p class="special">Hello Reactor Prep 5! How are you doing?</p>'
+        '$("p").addClass("special");\n\Explanation:\n\
+"$": Global jQuery function.(can also be jQuery)\n\
+"("p")": Insert selector between quotes to find DOM element.(returns in a "jquery collection")\n\
+"addClass("special")": Built-in jQuery method that adds the specified class to the collection.\n\
+\n\This is the output in our HTML:\n\
+<p class="Special">Hello Hacker Prep Cohort 6!</p>'
       ],
       ['How to include jQuery in your HTML'],
       [
