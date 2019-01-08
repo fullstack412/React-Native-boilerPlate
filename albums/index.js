@@ -53,9 +53,9 @@ import Contact from './src/components/Features/Contact';
 export default class App extends React.Component {
   render() {
     return (
-      <AbstractClosureDM />
-      // joza uncomment this line and delete this
-      // <AppDrawerNavigator />
+      // <AbstractClosureDM />
+      // jozaa uncomment line 58 and delete line 56 after finish the style
+      <AppDrawerNavigator />
       // <AppStackNavigator />     
     )
   }
