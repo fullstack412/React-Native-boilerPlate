@@ -104,27 +104,26 @@ $("body").append(box);'
 <p class="Special">Hello Hacker Prep Cohort 6!</p>'
       ],
       ['How to include jQuery in your HTML'],
-      [
-        'HTML and JavaScript interactions',
-        'we are going to learn how to use JavaScript to select HTML elements and handle HTML events.\n\
+      ['HTML and JavaScript interactions',
+        'We are going to learn how to use JavaScript to select HTML elements and handle HTML events.\n\
 We have a webpage that contains an image, we need to create a button that when pressed it changes the image on that page.\n\
 So how do we do that :\n\
 This is the image that we need to change and it have "id" of "myImage":\n\
 <img id="myImage" src="https://i.imgur.com/81qyN1y.jpg">\n\
 First we create the button, and give it an "id":\n\
 <button id="myButton">Click Me!</button>\n\
-Second in JavaScript we can select elements in an html file using jQuery selector\n\
-So now in our JavaScript file we need to select the button and the image using the id and assign them to a variable :\n\
+Second in JavaScript we can select elements in an html file using jQuery selector.\n\
+So now in our JavaScript file we need to select the button and the image using the id and assign them to a variable:\n\
 var image = $("#myImage");\n\
 var button = $("#myButton");\n\
 Finally we need to detect the button click and handle it by changing the image source :\n\
 button.onclick = function() {\n\
   image.src = "https://i.imgur.com/rClC9md.jpg";\n\
 };\n\
-And here is what we get.'
+And here is what we get.\n\And thats it.'
       ]
     ];
-    const end = 'And thats it.';
+    // const end = 'And thats it.';
 
     return (
       <Card>
@@ -285,12 +284,6 @@ And here is what we get.'
           <Text style={black}>{body[16][1]}</Text>
         </CardSection>
 
-        <CardSection>
-          <Text style={black}>
-            {end}
-            {'\n'}
-          </Text>
-        </CardSection>
 
         <CardSection>
           <Button onPress={() => this.props.navigation.navigate('OOP')}>
