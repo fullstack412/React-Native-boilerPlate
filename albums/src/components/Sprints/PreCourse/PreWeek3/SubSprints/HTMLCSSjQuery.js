@@ -24,14 +24,12 @@ HTML elements are represented by tags.\n\
 HTML tags label pieces of content such as "heading", "paragraph", "table", and so on Browsers do not display the HTML tags, but use them to render the content of the page.'
       ],
       ['Lets analyze this website'],
-      [
-        'HTML Elements',
+      ['HTML Elements',
         'As we have seen in the previous photo there is a lot of elements in that HTML page.\n\
 These elements can be add to a website using something called tags. So what is an HTML tag ?',
 
         'A tag has a “start tag”, “end tag”, some content and optional attributes.\n\
-HTML elements can have attributes such as: class, id. For example:\n\
-<p id="paragraph">I\'m a paragraph</p>'
+HTML elements can have attributes such as: class, id. For example: <p id="paragraph">I\'m a paragraph</p>'
       ],
       ['The anatomy of an HTML document'],
       [
@@ -42,24 +40,24 @@ Add links.\n\
 Add heading.\n\
 Add Forms.\n\
 Add tables.\n\
-HTML is the skeleton of any web page. It is the skeleton of the internet.'
+HTML is the skeleton of any web page.\n\
+It is the skeleton of the internet.'
       ],
       [
         'Some of HTML elements',
-        '<!DOCTYPE html> declaration defines this document to be HTML5.\n\
-<html> element is the root element of an HTML page.\n\
-<head> element contains meta information about the page.\n\
-<title> element specifies a title for the page.\n\
-<body> element contains the visible page content.\n\
-<h1> element defines a large heading.\n\
-<p> element defines a paragraph.\n\
-<button> element defines a button.'
+        '<!DOCTYPE html>: declaration defines this document to be HTML5.\n\
+<html>: element is the root element of an HTML page.\n\
+<head>: element contains meta information about the page.\n\
+<title>: element specifies a title for the page.\n\
+<body>: element contains the visible page content.\n\
+<h1>: element defines a large heading.\n\
+<p>: element defines a paragraph.\n\
+<button>: element defines a button.'
       ],
 
       [
         'What is CSS?',
-        "CSS stands for (Cascading Style Sheets), Used to describe the presentation of HTML document. Like HTML, CSS is not really a programming language.\n\
-        It's designed primarily to enable the separation of presentation and content. We can easily control HTML elements by using css selector to apply styles selectively to elements in HTML documents."
+        "CSS stands for (Cascading Style Sheets).\n\Used to describe the presentation of HTML document.\n\Like HTML, CSS is not really a programming language.\n\It's designed primarily to enable the separation of presentation and content.\n\We can easily control HTML elements by using css selector to apply styles selectively to elements in HTML documents."
       ],
       ['The anatomy of CSS selector'],
       ['Selectors in CSS'],
@@ -67,7 +65,7 @@ HTML is the skeleton of any web page. It is the skeleton of the internet.'
 
       [
         'jQuery',
-        'jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, etc. much simpler. It allow you to do a ton of things without writing a ton of code.'
+        'jQuery is a fast, small, and feature-rich JavaScript library.\n\It makes things like HTML document traversal and manipulation, event handling, etc.\n\much simpler, it allow you to do a ton of things without writing a ton of code.'
       ],
       ['The anatomy of a jQuery selector'],
       [
@@ -137,7 +135,7 @@ And here is what we get.'
         </CardSection>
 
         <CardSection>
-          <Text>
+          <Text style={black}>
             {introduction}
           </Text>
         </CardSection>
@@ -146,7 +144,7 @@ And here is what we get.'
           <Text style={boldText}>{body[0][0]}</Text>
         </CardSection>
         <CardSection>
-          <Text>{body[0][1]}</Text>
+          <Text style={black}>{body[0][1]}</Text>
         </CardSection>
 
         <CardSection>
@@ -164,7 +162,7 @@ And here is what we get.'
           <Text style={boldText}>{body[2][0]}</Text>
         </CardSection>
         <CardSection>
-          <Text>{body[2][1]}</Text>
+          <Text style={black}>{body[2][1]}</Text>
         </CardSection>
         <CardSection>
           <Image
@@ -176,7 +174,7 @@ And here is what we get.'
         </CardSection>
 
         <CardSection>
-          <Text>{body[2][2]}</Text>
+          <Text style={black}>{body[2][2]}</Text>
         </CardSection>
         <CardSection>
           <Text style={boldText}>{body[3][0]}</Text>
@@ -192,19 +190,19 @@ And here is what we get.'
           <Text style={boldText}>{body[4][0]}</Text>
         </CardSection>
         <CardSection>
-          <Text>{body[4][1]}</Text>
+          <Text style={black}>{body[4][1]}</Text>
         </CardSection>
         <CardSection>
           <Text style={boldText}>{body[5][0]}</Text>
         </CardSection>
         <CardSection>
-          <Text>{body[5][1]}</Text>
+          <Text style={black}>{body[5][1]}</Text>
         </CardSection>
         <CardSection>
           <Text style={boldText}>{body[6][0]}</Text>
         </CardSection>
         <CardSection>
-          <Text>{body[6][1]}</Text>
+          <Text style={black}>{body[6][1]}</Text>
         </CardSection>
         <CardSection>
           <Text style={boldText}>{body[7][0]}</Text>
@@ -240,7 +238,7 @@ And here is what we get.'
           <Text style={boldText}>{body[10][0]}</Text>
         </CardSection>
         <CardSection>
-          <Text>{body[10][1]}</Text>
+          <Text style={black}>{body[10][1]}</Text>
         </CardSection>
         <CardSection>
           <Text style={boldText}>{body[11][0]}</Text>
@@ -256,19 +254,19 @@ And here is what we get.'
           <Text style={boldText}>{body[12][0]}</Text>
         </CardSection>
         <CardSection>
-          <Text>{body[12][1]}</Text>
+          <Text style={black}>{body[12][1]}</Text>
         </CardSection>
         <CardSection>
           <Text style={boldText}>{body[13][0]}</Text>
         </CardSection>
         <CardSection>
-          <Text>{body[13][1]}</Text>
+          <Text style={black}>{body[13][1]}</Text>
         </CardSection>
         <CardSection>
           <Text style={boldText}>{body[14][0]}</Text>
         </CardSection>
         <CardSection>
-          <Text>{body[14][1]}</Text>
+          <Text style={black}>{body[14][1]}</Text>
         </CardSection>
         <CardSection>
           <Text style={boldText}>{body[15][0]}</Text>
@@ -284,11 +282,11 @@ And here is what we get.'
           <Text style={boldText}>{body[16][0]}</Text>
         </CardSection>
         <CardSection>
-          <Text>{body[16][1]}</Text>
+          <Text style={black}>{body[16][1]}</Text>
         </CardSection>
 
         <CardSection>
-          <Text>
+          <Text style={black}>
             {end}
             {'\n'}
           </Text>
@@ -315,7 +313,8 @@ const Styles = StyleSheet.create({
     justifyContent: 'space-around'
   },
   headerTextStyle: {
-    fontSize: 30
+    fontSize: 30,
+    color: 'black'
   },
   thumbnailStyle: {
     height: 46,
@@ -328,7 +327,8 @@ const Styles = StyleSheet.create({
     marginRight: 20
   },
   boldText: {
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    color: 'black'
   },
   black: {
     color: 'black'
