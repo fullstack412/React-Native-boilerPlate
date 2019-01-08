@@ -9,14 +9,13 @@ class HTMLCSSjQuery extends Component {
       headerConetentStyle,
       thumbnailContainerStyle,
       headerTextStyle,
-      boldText
+      boldText,
+      black
     } = Styles;
     const topic = 'HTML CSS and jQuery';
     const introduction =
-      'HTML provides the basic structure of sites, which is enhanced and modified by other technologies like CSS and JavaScript. CSS is used to control presentation, formatting, and layout. jQuery is a JavaScript library that simplifies the interaction between HTML, CSS, and JavaScript';
-    const body = [
-      [
-        'What is HTML?',
+      `HTML provides the basic structure of sites, which is enhanced and modified by other technologies like CSS and JavaScript.\nCSS is used to control presentation, formatting, and layout.\njQuery is a JavaScript library that simplifies the interaction between HTML, CSS, and JavaScript.`;
+    const body = [['What is HTML?',
         'HTML is the standard markup language for creating Web pages.\n\
 HTML stands for Hyper Text Markup Language.\n\
 HTML describes the structure of Web pages using markup.\n\
@@ -98,7 +97,7 @@ $("body").append(box);'
 <p class="intro">Hello World!</p> $("p.intro")\n\
 <div id="greeting"><p class="intro">Hello World!</p></div> $("#greeting .intro")'
       ],
-        ['Adding a class to an element using jQuery -- breaking it down',
+      ['Adding a class to an element using jQuery -- breaking it down',
         '$("p").addClass("special");\n\
 "$": global jQuery function. can also be jQuery.\n\
 "("p")": insert selector between quotes to find DOM element. returns in a "jquery collection".\n\
@@ -140,7 +139,6 @@ And here is what we get.'
         <CardSection>
           <Text>
             {introduction}
-            {'\n'}
           </Text>
         </CardSection>
 
@@ -156,7 +154,7 @@ And here is what we get.'
         </CardSection>
         <CardSection>
           <Image
-            style={{flex:1}}
+            style={{ flex: 1 }}
             source={require('../assets/1.jpg')}
             resizeMode="contain"
           />
@@ -167,17 +165,17 @@ And here is what we get.'
         </CardSection>
         <CardSection>
           <Text>{body[2][1]}</Text>
-          </CardSection>
-          <CardSection>
+        </CardSection>
+        <CardSection>
           <Image
-            style={{flex:1}}
+            style={{ flex: 1 }}
             source={require('../assets/2.png')}
             resizeMode="contain"
           />
 
-          </CardSection>
-          
-          <CardSection>
+        </CardSection>
+
+        <CardSection>
           <Text>{body[2][2]}</Text>
         </CardSection>
         <CardSection>
@@ -185,7 +183,7 @@ And here is what we get.'
         </CardSection>
         <CardSection>
           <Image
-            style={{flex:1}}
+            style={{ flex: 1 }}
             source={require('../assets/3.png')}
             resizeMode="contain"
           />
@@ -213,7 +211,7 @@ And here is what we get.'
         </CardSection>
         <CardSection>
           <Image
-            style={{flex:1}}
+            style={{ flex: 1 }}
             source={require('../assets/4.png')}
             resizeMode="contain"
           />
@@ -223,7 +221,7 @@ And here is what we get.'
         </CardSection>
         <CardSection>
           <Image
-            style={{flex:1}}
+            style={{ flex: 1 }}
             source={require('../assets/5.png')}
             resizeMode="contain"
           />
@@ -233,7 +231,7 @@ And here is what we get.'
         </CardSection>
         <CardSection>
           <Image
-            style={{flex:1}}
+            style={{ flex: 1 }}
             source={require('../assets/6.png')}
             resizeMode="contain"
           />
@@ -249,7 +247,7 @@ And here is what we get.'
         </CardSection>
         <CardSection>
           <Image
-            style={{flex:1}}
+            style={{ flex: 1 }}
             source={require('../assets/7.png')}
             resizeMode="contain"
           />
@@ -277,7 +275,7 @@ And here is what we get.'
         </CardSection>
         <CardSection>
           <Image
-            style={{flex:1}}
+            style={{ flex: 1 }}
             source={require('../assets/8.png')}
             resizeMode="contain"
           />
@@ -331,6 +329,9 @@ const Styles = StyleSheet.create({
   },
   boldText: {
     fontWeight: 'bold'
-  }
+  },
+  black: {
+    color: 'black'
+  },
 });
 export default HTMLCSSjQuery;
