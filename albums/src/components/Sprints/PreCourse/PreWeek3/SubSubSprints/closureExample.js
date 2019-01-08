@@ -44,7 +44,11 @@ export default class ClosureExample extends Component {
             <Text style={Styles.amount}>
                 &nbsp;amount
             </Text>
-              &nbsp;>= 0) {'{'}{'\n'}
+              &nbsp;>=
+              <Text style={Styles.text}>
+                &nbsp;0
+              </Text>
+              ) {'{'}{'\n'}
               <Text style={Styles.balance}>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;balance
             </Text>
@@ -57,13 +61,21 @@ export default class ClosureExample extends Component {
                 &nbsp;amount
             </Text>
               ;{'\n'}
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return ‘Success to withdraw:‘ +
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return ‘
+              <Text style={Styles.text}>
+                Success to withdraw:
+              </Text>
+              ‘ +
               <Text style={Styles.amount}>
                 &nbsp;amount
               </Text>
               ;{'\n'}
               &nbsp;&nbsp;&nbsp;&nbsp;{'}'}{'\n'}
-              &nbsp;&nbsp;&nbsp;&nbsp;return ‘Failed to withdraw:‘ +
+              &nbsp;&nbsp;&nbsp;&nbsp;return ‘
+              <Text style={Styles.text}>
+                Failed to withdraw:
+              </Text>
+              ‘ +
               <Text style={Styles.amount}>
                 &nbsp;amount
             </Text>
@@ -73,9 +85,7 @@ export default class ClosureExample extends Component {
             &nbsp;&nbsp;return
             <Text style={Styles.withdraw}>
               &nbsp;withdraw
-
             </Text>
-
             ;{'\n'}{'}'}
           </Text>
         </Text>
