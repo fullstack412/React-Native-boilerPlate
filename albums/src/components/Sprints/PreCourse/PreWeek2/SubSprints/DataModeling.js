@@ -116,6 +116,10 @@ const Styles=StyleSheet.create({
   container:{
     flexDirection: 'row'
   },
+  thumbnailStyle1:{
+    height: 250 ,
+    width: 355
+  },
   textContainer:{
     flex: 1,
     flexWrap: 'wrap'
@@ -123,11 +127,6 @@ const Styles=StyleSheet.create({
   title: {
     fontSize: 19,
     fontWeight: 'bold'
-
-  },
-  thumbnailStyle1:{
-    height: 250 ,
-    width: 355
   }
 })
 
