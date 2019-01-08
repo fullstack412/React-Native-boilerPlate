@@ -2,14 +2,14 @@ import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Button, Card, CardSection, Playquiz } from '../../../../common';
 import { Image } from 'react-native';
-import ReduceSyntax from '../SubSubSprints/reduceSyntax';
-import ReduceSyntaxExplanation from '../SubSubSprints/reduceSyntaxExplanation';
-import ReduceExample from '../SubSubSprints/reduceExample';
+import ClosureExample from '../SubSubSprints/closureExample';
+import ClosureExampleExplanation from '../SubSubSprints/closureExampleExplanation';
+
 
 export default class AbstractClosureDM extends Component {
   render() {
-    const topic = 'Clousers + Adding Methods';
-    const introduction = '';
+    const topic = 'Closures';
+    const introduction = 'A closure is the combination of a function and the lexical environment within which that function was declared.';
     return (
       <Card>
         <CardSection>
@@ -21,8 +21,8 @@ export default class AbstractClosureDM extends Component {
         </CardSection>
         <CardSection style={{ flexDirection: 'row' }}>
           <Image
-            style={{ height: 100, width: 350 }}
-            source={require('../assets/reduce.png')} />
+            style={{ height: 150, width: 300 }}
+            source={require('../assets/closure.png')} />
         </CardSection>
 
         <CardSection>
@@ -31,15 +31,20 @@ export default class AbstractClosureDM extends Component {
           </Text>
         </CardSection>
 
-        <ReduceSyntax />
+        <CardSection  >
+          <Text style={Styles.boldText}>
+            Let's take an example and break it down:
+          </Text>
+        </CardSection>
 
-        <ReduceSyntaxExplanation />
 
-        <ReduceExample />
+        <ClosureExample />
+
+
 
         <CardSection  >
           <Text style={Styles.boldText}>
-            Let's see what happened step by step:
+            Let's take an example and break it down:
           </Text>
         </CardSection>
 
@@ -62,17 +67,17 @@ export default class AbstractClosureDM extends Component {
         </CardSection>
 
         <CardSection>
-          <Button onPress = {()=>this.props.navigation.navigate('OOP')}>
+          <Button onPress={() => this.props.navigation.navigate('OOP')}>
             Next
           </Button>
         </CardSection>
         <CardSection>
-          <Button onPress = {()=>this.props.navigation.navigate('Reduce')}>
+          <Button onPress={() => this.props.navigation.navigate('Reduce')}>
             Previous
           </Button>
         </CardSection>
         <CardSection>
-          <Button onPress = {()=>this.props.navigation.navigate('PCList')}>
+          <Button onPress={() => this.props.navigation.navigate('PCList')}>
             Home
           </Button>
         </CardSection>
