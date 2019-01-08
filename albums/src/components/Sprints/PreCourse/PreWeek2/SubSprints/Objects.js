@@ -17,13 +17,14 @@ class Objects extends Component{
                 "option1" : "person.['name']",
                 "option2" : "person.name[1]"
               },
-              "question" : "If you have this object:\n var person = {\n name: ['Tal', 'Omari'],\n age: 25,\n gender: 'Female',\n interests: ['Coding', 'Dancing'] \n }\n and you want to git the value 'Omari';"
+              "question" : "How to get the value 'Omari' from object:\nvar person = {\n    name: ['Tal', 'Omari'],\n    age: 25,\n    gender: 'Female',\n    interests: ['Coding', 'Dancing']\n};"
             },
             "question2" : {
               "correctoption" : "option1",
               "options" : {
                   "option1" : "meow",
-                  "option2" : "woof"
+                  "option2" : "woof",
+                  "option3" : "undefined"
                 },
               "question" : "var obj = {\n cat: 'meow',\n dog: 'woof'\n}; var dog = 'cat';\n var sound = obj[dog];\n console.log(sound);"
             },
