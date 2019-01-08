@@ -1,101 +1,83 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Button, Card, CardSection, Playquiz } from '../../../../common';
+import { Image } from 'react-native';
+import ClosureExample from '../SubSubSprints/closureExample';
+import ClosureExampleExplanation from '../SubSubSprints/closureExampleExplanation';
 
-class AbstractClosureDM extends Component {
 
+export default class AbstractClosureDM extends Component {
   render() {
-    const { thumbnailStyle, headerConetentStyle, thumbnailContainerStyle, headerTextStyle, boldText } = Styles;
-    const topic = 'Clousers + Adding Methods';
-    const introduction = '';
-    const body = [
-      [
-        'Here we have a function return another function', 
-        'function closuer(initial) {\n\
-            var balance = initial;\n\
-            function withdraw(amount) {\n\
-              if (balance - amount >= 0) {\n\
-                balance = balance - amount;\n\
-                return "Withdraw: ";\n\
-              }\n\
-              return "Insufficient funds.";\n\
-            }\n\
-            return withdraw;\n\
-          }'
-      ],
-      [
-        'Here the same but we return and object', 
-        'function addingMethod(initial) {\n\
-            var balance=initial\n\
-            var S = {\n\
-              balance: initial,\n\
-              withdraw: function (amount) {\n\
-                if (S.balance - amount >= 0) {\n\
-                  S.balance = S.balance - amount;\n\
-                  return "Withdraw: " + amount;\n\
-                }\n\
-                return "Insufficient funds.";\n\
-              },\n\
-              show: function show1() {\n\
-                return "Balance: " + balance;\n\
-              }\n\
-            }\n\
-            return S\n\
-          }'
-      ]
-    ]
-
+    const topic = 'Closures';
+    const introduction = 'A closure is the combination of a function and the lexical environment within which that function was declared.';
     return (
-      
       <Card>
         <CardSection>
-          <View style = {headerConetentStyle}>
-            <Text style = {headerTextStyle}>
+          <View style={Styles.headerConetentStyle}>
+            <Text style={Styles.headerTextStyle}>
               {topic}
             </Text>
-          </View>				
+          </View>
+        </CardSection>
+        <CardSection style={{ flexDirection: 'row' }}>
+          <Image
+            style={{ height: 150, width: 300 }}
+            source={require('../assets/closure.png')} />
         </CardSection>
 
         <CardSection>
-          <Text>
-          {introduction}{"\n"}
+          <Text style={Styles.text}>
+            {introduction}
           </Text>
         </CardSection>
 
-        <CardSection>
-          <Text style={ boldText }>
-            {body[0][0]}
-          </Text>
-        </CardSection>
-        <CardSection>
-          <Text>
-            {body[0][1]}
+        <CardSection  >
+          <Text style={Styles.boldText}>
+            Let's take an example and break it down:
           </Text>
         </CardSection>
 
-        <CardSection>
-          <Text style={ boldText }>
-            {body[1][0]}
-          </Text>
-        </CardSection>
-        <CardSection>
-          <Text>
-            {body[1][1]}
+
+        <ClosureExample />
+
+
+
+        <CardSection  >
+          <Text style={Styles.boldText}>
+            Let's take an example and break it down:
           </Text>
         </CardSection>
 
-        <CardSection>
-          <Button onPress = {()=>this.props.navigation.navigate('Reduce')}>
-            Previous
-          </Button>
+        <CardSection >
+          <Image
+            style={{ width: 340, height: 125 }}
+            source={require('../assets/reduceWithIV.png')} />
         </CardSection>
+
+        <CardSection  >
+          <Text style={Styles.boldText}>
+
+          </Text>
+        </CardSection>
+
+        <CardSection >
+          <Image
+            style={{ width: 340, height: 99 }}
+            source={require('../assets/reduceWithoutIV.png')} />
+        </CardSection>
+
         <CardSection>
-          <Button onPress = {()=>this.props.navigation.navigate('OOP')}>
+          <Button onPress={() => this.props.navigation.navigate('OOP')}>
             Next
           </Button>
         </CardSection>
         <CardSection>
-          <Button onPress = {()=>this.props.navigation.navigate('PCList')}>
+          <Button onPress={() => this.props.navigation.navigate('Reduce')}>
+            Previous
+          </Button>
+        </CardSection>
+        <CardSection>
+          <Button onPress={() => this.props.navigation.navigate('PCList')}>
             Home
           </Button>
         </CardSection>
@@ -107,10 +89,12 @@ class AbstractClosureDM extends Component {
 const Styles = StyleSheet.create({
   headerConetentStyle: {
     flexDirection: 'column',
-    justifyContent: 'space-around'
+    justifyContent: 'space-around',
   },
   headerTextStyle: {
-    fontSize: 30
+    fontSize: 30,
+    fontWeight: 'bold',
+    color: 'black',
   },
   thumbnailStyle: {
     height: 46,
@@ -123,7 +107,36 @@ const Styles = StyleSheet.create({
     marginRight: 20
   },
   boldText: {
-    fontWeight: 'bold'
-  }
+    fontWeight: 'bold',
+    color: 'black'
+  },
+  boldHeader: {
+    fontWeight: 'bold',
+    color: 'black',
+    fontSize: 17,
+  },
+  text: {
+    color: 'black'
+  },
+  array: {
+    color: 'red',
+  },
+  reduce: {
+    color: 'blue',
+  },
+  cb: {
+    color: 'green',
+  },
+  acc: {
+    color: '#9932CC',
+  },
+  elem: {
+    color: '#FF8C00',
+  },
+  i: {
+    color: 'red',
+  },
+  iv: {
+    color: '#FF00FF',
+  },
 });
-export default AbstractClosureDM;
