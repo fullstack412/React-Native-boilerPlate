@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, Linking } from 'react-native';
 import { Button, Card, CardSection, Playquiz } from '../../../../common';
 import { Image } from 'react-native';
 
@@ -63,8 +63,8 @@ function filteringCondition(number) {\n\
         return false;\n\
     }\n\
 }\n\
-fileringNumbers.filter(filteringCondition)\n\
-result is: [10, 14]\n\
+fileringNumbers.filter(filteringCondition)\n'
+  const function2 = 'result is: [10, 14]\n\
 This function applies the filteringCondition on the array filteringNumber. The filteringCondition is a callback function that passed in the to the built-in filter function as a callback. The filteringCondition tells the filter to only keeps the positive numbers.'
 
     const { thumbnailStyle,title,container,textContainer,thumbnailStyle1}=Styles
@@ -104,6 +104,19 @@ This function applies the filteringCondition on the array filteringNumber. The f
             {function1}
           </Text>
         </CardSection>
+        <CardSection style={container} >
+          <Text style={{fontWeight:'bold'}}>
+            {function2}
+          </Text>
+        </CardSection>
+        <CardSection>
+          <TouchableOpacity onPress={() => Linking.openURL('https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter')}>
+            <Text style={{color: 'blue'}}>
+              For more information on Filter
+            </Text>
+          </TouchableOpacity>
+        </CardSection>
+
         <CardSection style={container}>
           <View >
             <Playquiz  quizData = { this.state.quizData }/>
