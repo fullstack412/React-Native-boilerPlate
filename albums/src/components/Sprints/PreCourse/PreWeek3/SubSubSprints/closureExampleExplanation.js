@@ -9,42 +9,8 @@ export default class closureExampleExplanation extends Component {
     return (
       <CardSection>
         <Text style={Styles.boldHeader}>
-          Example:&nbsp;{'\n'}
-          <Text style={Styles.array}>
-            [1,5,6]
-            </Text>
-          .
-            <Text style={Styles.reduce}>
-            reduce
-            </Text>
-          ({'\n'}
-          <Text style={Styles.cb}>
-            &nbsp;&nbsp;function
-            </Text>
-          (
-            <Text style={Styles.acc}>
-            acc
-            </Text>
-          ,
-            <Text style={Styles.elem}>
-            elem
-            </Text>
-          ,
-            <Text style={Styles.i}>
-            i
-            </Text>
-          ){'{'}{'\n'}
-          <Text style={Styles.array}>
-            &nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;
-            </Text>
-          <Text style={Styles.cb}>
-            acc+elem{'\n'}
-          </Text>
-          &nbsp;&nbsp;},{'\n'}
-          <Text style={Styles.iv}>
-            0
-            </Text>
-          )
+          Example:We have function called closure return withdraw and it is a functionand this function return if the withdraw success or failed lets test thesevar account1= closure(100)var account2= closure(200)this line make a two copy from the function closure but with initial =100 and the other one initial =200 now if I call account1 what I will get?Yes another function called withdraw but again the initial = 100 not initial =200
+
         </Text>
       </CardSection>
     );

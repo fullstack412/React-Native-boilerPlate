@@ -9,7 +9,7 @@ import ReduceExample from '../SubSubSprints/reduceExample';
 export default class OOP extends Component {
   render() {
     const topic = 'OOP';
-    const introduction = '';
+    const introduction = 'OOP (Object-Oriented Programming) is an approach in programming in which data is encapsulated within objects and the object itself is operated on, rather than its component parts.';
     return (
       <Card>
         <CardSection>
@@ -21,8 +21,8 @@ export default class OOP extends Component {
         </CardSection>
         <CardSection style={{ flexDirection: 'row' }}>
           <Image
-            style={{ height: 100, width: 350 }}
-            source={require('../assets/reduce.png')} />
+            style={{ height: 150, width: 300 }}
+            source={require('../assets/closure.png')} />
         </CardSection>
 
         <CardSection>
@@ -31,48 +31,58 @@ export default class OOP extends Component {
           </Text>
         </CardSection>
 
-        <ReduceSyntax />
-
-        <ReduceSyntaxExplanation />
-
-        <ReduceExample />
-
         <CardSection  >
           <Text style={Styles.boldText}>
-            Let's see what happened step by step:
+            Let's take an example and break it down:
           </Text>
         </CardSection>
 
-        <CardSection >
+        <CardSection  >
+          <Text style={Styles.boldText}>
+          function oop(initial) {'{'}
+var S = {'{}'}
+S.balance = initial;
+S.withdraw = withdraw1;
+S.show = show1;
+return S
+{'}'}
+var show1 = function () {'{'}
+console.log("this here is: ", this)
+return 'Balance: ' + this.balance;
+{'}'}
+var withdraw1 = function (amount) {'{'}
+if (this.balance - amount >= 0) {'{'}
+this.balance = this.balance - amount;
+return 'Withdraw: ' + amount + " Balance: " + this.balance;
+{'}'}
+return 'Insufficient funds.';
+{'}'}
+          </Text>
+        </CardSection>
+        <CardSection  >
+          <Text style={Styles.boldText}>
+          Now we will develop the function that we didbefore we have problem about each time we make a new variable from the function it will take another copy from it and this thing will use a lot of space in big scaleso lets think in a way to decrease this spacemake the function outside and to reach them by the objectwe but them in the key of tis objectbut now how we can pass the value from this object to the function are outsideso here where we will use the keyword “this”what is this?It is a keyword represent the object in the left of the dot (the one who called this function) [90% the time]
+          </Text>
+        </CardSection>
+   
+        {/* <CardSection >
           <Image
             style={{ width: 340, height: 125 }}
             source={require('../assets/reduceWithIV.png')} />
-        </CardSection>
-
-        <CardSection  >
-          <Text style={Styles.boldText}>
-
-          </Text>
-        </CardSection>
-
-        <CardSection >
-          <Image
-            style={{ width: 340, height: 99 }}
-            source={require('../assets/reduceWithoutIV.png')} />
-        </CardSection>
+        </CardSection> */}
 
         <CardSection>
-          <Button onPress = {()=>this.props.navigation.navigate('HTML, CSS and jQuery')}>
+          <Button onPress={() => this.props.navigation.navigate('HTML, CSS and jQuery')}>
             Next
           </Button>
         </CardSection>
         <CardSection>
-          <Button onPress = {()=>this.props.navigation.navigate('Closures And Adding Methods')}>
+          <Button onPress={() => this.props.navigation.navigate('Closures And Adding Methods')}>
             Previous
           </Button>
         </CardSection>
         <CardSection>
-          <Button onPress = {()=>this.props.navigation.navigate('PCList')}>
+          <Button onPress={() => this.props.navigation.navigate('PCList')}>
             Home
           </Button>
         </CardSection>
