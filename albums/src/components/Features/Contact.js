@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Header, Button, Card, CardSection } from '../common';
 
-
 class Contact extends Component {
 
   
@@ -18,30 +17,37 @@ class Contact extends Component {
       <Card>
         <Header />
         <CardSection>
-          <View style = {headerConetentStyle}>
-            <Text style = {headerTextStyle}>
-              {topic}{"\n"}
+          <Text style={{fontWeight:'bold'}}>
+            If you have any questions, please contact us between 9 am and 5 pm from Sunday through Thursday. Our offices are closed for public holidays, but you can still email us.
+          </Text>
+        </CardSection>
+
+        <CardSection>
+          <Text style={{fontWeight:'bold'}}>
+            Phone: {"\n"}
+            <Text style={{fontWeight:'normal'}}>
+              +(962) 7 9777 1441
             </Text>
-          </View>				
-        </CardSection>
-
-        <CardSection>
-          <Text>
-            Phone Number{"\n"}{introduction}{"\n"}
           </Text>
         </CardSection>
 
         <CardSection>
-          <Text>
-            Email:{"\n"}{body}{"\n"}
+          <Text style={{fontWeight:'bold'}}>
+            Email: {"\n"}
+            <Text style={{fontWeight:'normal'}}> 
+              info@rbk.org
+            </Text>
           </Text>
         </CardSection>
 
         <CardSection>
-          <Text>
-            Address:{"\n"}{end}{"\n"}
+          <Text style={{fontWeight:'bold'}}>
+            Address: {"\n"}
+            <Text style={{fontWeight:'normal'}}>
+              Khalda 19 Zarkashi Street Building 19 Amman, Jordan.
+            </Text>
           </Text>
-        </CardSection>
+        </CardSection>        
       </Card>
     );
   }
