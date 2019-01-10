@@ -36,35 +36,47 @@ export default class AbstractClosureDM extends Component {
             Let's take an example and break it down:
           </Text>
         </CardSection>
-
-
         <ClosureExample />
-
-
-
+        <ClosureExampleExplanation />
         <CardSection  >
           <Text style={Styles.boldText}>
-            Let's take an example and break it down:
+          Now remember if you want to execute function  you write the name of the function and ()so now you can understand it like thisthe variable account1 or 2 is a varible inside it a functionso lets execute itacccount1(5)what will happened ?It will execute the function withdraw with 5the answer will be Success withdraw 5but how much the balance now ?Yes, 95what about acccount2(15)?The same it is success to withdraw 15 but the balance will be 185so what we get from this clouser is separate variable use the same function and return what this function return depend on each one values
           </Text>
         </CardSection>
-
-        <CardSection >
+        <CardSection  >
+          <Text style={Styles.boldText}>
+          Now What if we want to return many functionwhat we can use?We can use an object and each key have a fucntionso now the same function but return objectand this object as we said have many keys each one of themis a functionso if I make accout3= addingMethod(300)accout4= addingMethod(400)if I call accout3 or 4 it will return to me and object have function inside each key like thisnow if I want to excuse each one you can understand it like thisaccount3 and 4 is and variable inside it function return to me an object so it is objectremember how can reach key inside object?By the name of the object .  The name of the keyso account3.withdraw it will give as the function but I need to execute itso account3.withdraw (50)it will give me the return success withdraw 50 and the balance is 250what about account4. balanceyes 400 so each one of them is separated than the other it is likethey are a copy from the function addingMethod
+          </Text>
+        </CardSection>
+        <CardSection  >
+          <Text style={Styles.boldText}>
+          Here the same but we return and object 
+function addingMethod(initial) {'{'}
+  var balance=initial
+  var S = {'{'}
+    balance: initial,
+    withdraw: function (amount) {'{'}
+      if (S.balance - amount >= 0) {'{'}
+        S.balance = S.balance - amount;
+        return 'Withdraw: ' + amount;
+        {'}'}
+      return 'Insufficient funds.';
+      {'}'},
+    show: function show1() {'{'}
+      return 'Balance: ' + balance;
+      {'}'}
+      {'}'}
+  return S
+{'}'}
+          </Text>
+        </CardSection>
+        {/* <CardSection >
           <Image
             style={{ width: 340, height: 125 }}
             source={require('../assets/reduceWithIV.png')} />
-        </CardSection>
+        </CardSection> */}
 
-        <CardSection  >
-          <Text style={Styles.boldText}>
 
-          </Text>
-        </CardSection>
-
-        <CardSection >
-          <Image
-            style={{ width: 340, height: 99 }}
-            source={require('../assets/reduceWithoutIV.png')} />
-        </CardSection>
 
         <CardSection>
           <Button onPress={() => this.props.navigation.navigate('OOP')}>
