@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, Linking, TouchableOpacity} from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, Linking } from 'react-native';
 import { Button, Card, CardSection, Playquiz } from '../../../../common';
 import { Image } from 'react-native';
 
@@ -14,16 +14,16 @@ class Map extends Component{
             "question1" : {
               "correctoption" : "option2",
               "options" : {
-                "option1" : "[1,16,81]",
+                "option1" : "[1, 16, 81]",
                 "option2" : "[1, 2, 3]",
-                "option3" : "'1,16,81'"
+                "option3" : "'1, 16, 81'"
               },
               "question" : "var numbers = [1, 4, 9];\nfunction roots(numbers){\n    return map(numbers,function(element){\n        return Math.sqrt(element)\n    })\n}\nconsole.log(roots) "
               },
             "question2" : {
               "correctoption" : "option1",
               "options" : {
-                  "option1" : "[2, 3, 6, 13]",
+                  "option1" : "[2,3,6,13]",
                   "option2" : "[2,3,5,12]",
                   "option3" : "[2,2,5,12]"
                   
@@ -33,16 +33,25 @@ class Map extends Component{
             "question3" : {
               "correctoption" : "option1",
               "options" : {
-                  "option1" : " 0\n 1\n 2\n 3\n [1,3,5,7]",
-                  "option2" : " 0\n 1\n 2\n [0,1,3,5]"
+                  "option1" : "0\n1\n2\n3\n[1, 3, 5, 103]",
+                  "option2" : "[2,3,4,101]",
+                  "option3" : "0\n1\n2\n3",
+                  "option4" : "[]"
                     },
-              "question" : "var array = [1, 2, 3, 4];\nfunction test(array){\n    return map(array,function(x,i){\n        console.log(i)\n        return x+i\n    })\n}\nconsole.log(test)"
+              "question" : "var arr = [1, 2, 3, 100];\n\
+function test(array) {\n\
+  return arr.map(function(x, i) {\n\
+    console.log(i);\n\
+    return x + i;\n\
+  })\n\
+}\n\
+console.log(test(arr));"
             },
             "question4" : {
               "correctoption" : "option1",
               "options" : {
                   "option1" : "[1, 4, 9]",
-                  "option2" : "{ 'a': 1, 'b': 4, 'c': 9 } ",
+                  "option2" : "{'a':1,'b':4,'c':9}",
                   "option3" : "{'a':1,'b':2,'c':3}"
                     },
               "question" : "var myObject = { 'a': 1, 'b': 2, 'c': 3 }\nfunction IterateObj(myObject){\n    return map(myObject,function(value,key){\n        return value*value\n    })\n}\nconsole.log (IterateObj)"
@@ -54,10 +63,15 @@ class Map extends Component{
   }
   render(){
     const topic='Map';
-    const Difine='The map() method is used to apply a function on every element in an array.\n A new array is then returned.';
-    const function1='function map(n,f){\n    var acc=[]\n    each(n,function(element,i){\n        acc.push(f(element,i))\n    })\n    return acc \n};';
-    const ImplementEach='Of Course, you have to declare Each() before because you will get (Each is not defined) ';
-    const ImproveMap='function map(n,f){\n    var acc=[]\n if(!Array.isArray(n)){\n        acc={}\n    }\n    each(n,function(element,key){\n        acc[key]=f(element,key })\n    return acc\n}'
+    const Define='The map() is another Javascript built in function. Both map and forEach/each iterate through the array element by element. However, different from forEach, map returns a new array instead of implement the process on the current array. For example:';
+    const function1='var array = [1, 2, 3, 20, -5];\n\
+function plusOne(x) {\n\
+    return x + 1;\n\
+}\n\
+var newMap = array.map(plusOne)';
+    const ImplementEach='In this example, you pass every element of the array through the plusOne function. The original array was not changed throughout the process. The changed results is stored in another variable:\n';
+    const ImplementEach1 = 'newMap = [1, 3, 4, 21, -4]';
+    const ImproveMap='Both each and map can be replaced by a simple for loop. However, higher order functions like this is a cleaner way to perform certain operations. Map may be confusing at the begining, but map can save you a lot of trouble once you master its syntax.'
     const { thumbnailStyle,title,container,textContainer,thumbnailStyle1}=Styles
     return(
       <Card>
@@ -69,29 +83,41 @@ class Map extends Component{
           </View>
         </CardSection>
         <CardSection style={container}>
-          <Image 
-            style= {thumbnailStyle}
-            source={require('../../../../../assets/Pic5.jpeg')}/>
-          <Text style={textContainer} >
-            {Difine} {"\n"}{"\n"}
-          </Text>
-        </CardSection >
+          <View style = {{flex: 7, flexDirection: 'row'}}>
+            <Image 
+              style= {thumbnailStyle}
+              source={require('../../../../../assets/Pic5.jpeg')}/>
+          </View>
+          <View style = {{flex: 17, flexDirection: 'row'}}>
+            <Text style={textContainer} >
+              {Define}
+            </Text>
+          </View>
+        </CardSection>
         <CardSection style={container}> 
           <Text style={{fontWeight:'bold',color:'green'}}>
-            {function1}{"\n"}{"\n"}
-          </Text>
-          <Image
-            style={{width:300,height:175}}
-            source={require('../../../../../assets/Pic6.png')}/>
+            {function1}
+          </Text>          
         </CardSection>
         <CardSection>
           <Text>
-            {ImplementEach}{"\n"}{"\n"}
-            To make our function works with objects also:{'\n'}{"\n"}
+            {ImplementEach}{"\n"}
             <Text style={{fontWeight:'bold',color:'green'}}>
-              {ImproveMap}
+              {ImplementEach1}
             </Text>
           </Text>
+        </CardSection>
+        <CardSection>
+          <Text>
+            {ImproveMap}
+          </Text>
+        </CardSection>
+
+
+        <CardSection style={container}> 
+          <Image
+            style={{width:300,height:175}}
+            source={require('../../../../../assets/Pic6.png')}/>
         </CardSection>
 
         <CardSection>
