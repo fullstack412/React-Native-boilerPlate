@@ -44,6 +44,24 @@ class Main extends Component {
       storageBucket: storageBucket,
       messagingSenderId: messagingSenderId
     });
+
+    firebase.database().ref(`townhall`).once('value', (data) => {
+      data = data.toJSON();
+      let sprintList = {...this.state.sprintList};
+      if (data !== null) {
+        console.warn('all values: ', data);
+        Object.keys(data).map((key) => (
+          sprintList[key] = Object.keys(data[key]).length
+        ))
+      }
+      this.setState({
+        sprintList
+      })
+      console.warn('counter: ', this.state.sprintList['Objects'])
+    }).catch((error) => {
+      Alert.alert('Please restart the App, due to error: ', error);
+    })
+
   }
 
   dropDownSprintList() {
@@ -62,7 +80,7 @@ class Main extends Component {
       sprintList
     })
     let questionCount = this.state.sprintList[this.state.sprint];
-    firebase.database().ref(`users/${this.state.sprint}/${questionCount}`).set(
+    firebase.database().ref(`townhall/${this.state.sprint}/${questionCount}`).set(
       {
         name: this.state.name,
         question: this.state.question
@@ -76,7 +94,7 @@ class Main extends Component {
 
   requestQuestions() {
     let currentSprint = this.state.sprint
-    firebase.database().ref(`users/${currentSprint}`).once('value', (data) => {
+    firebase.database().ref(`townhall/${currentSprint}`).once('value', (data) => {
       data = data.toJSON();
       if (data !== null) {
         this.setState({
