@@ -47,24 +47,26 @@ class Main extends Component {
   }
 
   dropDownSprintList() {
-    // return ['JavaScript Fundamentals and Functions', 
-    // 'Booleans, Comparisons, and Operators', 
-    // 'Variables in JavaScript', 
-    // 'While Loop'].map(element => (
-    return Object.keys(this.state.sprintList).map(element => (
+    let dropDownList = this.state.sprintList;
+    return Object.keys(dropDownList).map(element => (
       <Picker.Item label={element} value={element} key = {element}/>
     ))
   }
 
   submitQuestion() {
+    let sprintList = {...this.state.sprintList};
+    if (sprintList[this.state.sprint] !== undefined) {
+      sprintList[this.state.sprint]++;
+    } 
+
     this.setState({
-      sprintList: this.state.sprintList[this.state.sprint]++ 
+      sprintList
     })
-    firebase.database().ref(`users/${this.state.sprint}`).set(
+    let questionCount = this.state.sprintList[this.state.sprint];
+    firebase.database().ref(`users/${this.state.sprint}/${questionCount}`).set(
       {
         name: this.state.name,
-        question: this.state.question,
-        count: this.state.sprintList[this.state.sprint]
+        question: this.state.question
       }
     ).then(() => {
       Alert.alert(`Thank you ${this.state.name}, you question has been submitted`);
@@ -74,29 +76,29 @@ class Main extends Component {
   }
 
   requestQuestions() {
-    firebase.database().ref('users/').once('value', (data) => {
-      data = data.toJSON()
-      this.setState({
-        allQuestions: 
-          Object.keys(data).map((key) => (
-            [key, data[key]['name'], data[key]['question'], data[key]['count']]
-          ))
-      })
-    }).then(() => {
-      console.warn(this.state.allQuestions)
-    })
-    .catch((error) => {
+    let currentSprint = this.state.sprint
+    firebase.database().ref(`users/${currentSprint}`).once('value', (data) => {
+      data = data.toJSON();
+      if (data !== null) {
+        this.setState({
+          allQuestions: 
+            Object.keys(data).map((key) => (
+              [data[key]['name'], data[key]['question']]
+            ))
+        })
+      }
+    }).catch((error) => {
       Alert.alert('Please restart the App, due to error: ', error);
     })
   }
 
   mapOutQuestions() {
     return this.state.allQuestions.map(element => (
-      <CardSection key = {element[2]}>
+      <CardSection key = {element[1]}>
         <Text style={{fontWeight:'bold'}}>
-          In sprint: {element[0]}{"\n"}
+          In sprint: {this.state.sprint}{"\n"}
           <Text style={{fontWeight:'normal'}}>
-            {element[1]} asked the question: {element[2]}
+            {element[0]} asked the question: {element[1]}
           </Text>
         </Text>
       </CardSection>
@@ -106,7 +108,7 @@ class Main extends Component {
   render() {
     const { thumbnailStyle, headerConetentStyle, thumbnailContainerStyle, headerTextStyle, textAreaContainer, textArea, nameText, pickerContainerStyle } = Styles;
     const topic = 'Townhall'
-    const introduction = 'Post questions about the sprint here';
+    const introduction = 'Select the sprint you are currently on, and post your question below.';
     
     return (
       <Card>
