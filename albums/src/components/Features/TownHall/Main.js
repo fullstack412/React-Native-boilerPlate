@@ -58,7 +58,6 @@ class Main extends Component {
     if (sprintList[this.state.sprint] !== undefined) {
       sprintList[this.state.sprint]++;
     } 
-
     this.setState({
       sprintList
     })
