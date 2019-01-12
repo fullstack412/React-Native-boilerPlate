@@ -79,7 +79,10 @@ const Styles = StyleSheet.create({
   pickerContainerStyle: {
     flex: 1,
     justifyContent: "center",
-    margin :30
+    margin :30,
+    height: 50,
+    width: 100,
+    alignItems: 'center'
   }
 });
 
