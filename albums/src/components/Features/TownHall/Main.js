@@ -192,7 +192,6 @@ class Main extends Component {
             Student Handbook
           </Button>
         </CardSection>
-
       </Card>
     );
   }
