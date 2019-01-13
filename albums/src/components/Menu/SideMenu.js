@@ -31,21 +31,21 @@ class SideMenu extends Component {
                 Javascript Sprints Menu
               </Text>
             </View>
-          </View>
-          <View>
-            <View style={sectionHeadingStyle}>
-              <Text style={navSectionStyle} onPress={this.navigateToScreen('Full_Stack_Sprints')}>
-                Full Stack Sprints Menu
-              </Text>
-            </View>
-          </View>
-          <View>
-            <View style={sectionHeadingStyle}>
-              <Text style={navSectionStyle} onPress={this.navigateToScreen('Other_Sprints')}>
-                Other Sprints Menu
-              </Text>
-            </View>
           </View> */}
+          <View>
+            <View style={sectionHeadingStyle}>
+              <Text style={navSectionStyle} onPress={this.navigateToScreen('Surveys')}>
+                Survey
+              </Text>
+            </View>
+          </View>
+          <View>
+            <View style={sectionHeadingStyle}>
+              <Text style={navSectionStyle} onPress={this.navigateToScreen('TownHall')}>
+                TownHall
+              </Text>
+            </View>
+          </View>
           <View>
             <View style={sectionHeadingStyle}>
               <Text style={navSectionStyle} onPress={this.navigateToScreen('FAQ')}>

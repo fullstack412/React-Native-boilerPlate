@@ -51,7 +51,7 @@ class WebDev extends Component {
   }
 
   render() {
-    const { thumbnailStyle, headerConetentStyle, thumbnailContainerStyle, headerTextStyle, boldText } = Styles;
+    const { thumbnailStyle, headerConetentStyle, thumbnailContainerStyle, headerTextStyle, boldText, container, thumbnailStyle1 } = Styles;
     const topic = 'Web Development';
     const introduction = 'All websites can be developed by HTML, Javascript, and CSS. Frameworks are introduced to make the development easier.';
     const body = [

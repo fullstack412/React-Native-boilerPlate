@@ -17,13 +17,14 @@ class Objects extends Component{
                 "option1" : "person.['name']",
                 "option2" : "person.name[1]"
               },
-              "question" : "If you have this object:\n var person = {\n name: ['Tal', 'Omari'],\n age: 25,\n gender: 'Female',\n interests: ['Coding', 'Dancing'] \n }\n and you want to git the value 'Omari';"
+              "question" : "How to get the value 'Omari' from object:\nvar person = {\n    name: ['Tal', 'Omari'],\n    age: 25,\n    gender: 'Female',\n    interests: ['Coding', 'Dancing']\n};"
             },
             "question2" : {
               "correctoption" : "option1",
               "options" : {
                   "option1" : "meow",
-                  "option2" : "woof"
+                  "option2" : "woof",
+                  "option3" : "undefined"
                 },
               "question" : "var obj = {\n cat: 'meow',\n dog: 'woof'\n}; var dog = 'cat';\n var sound = obj[dog];\n console.log(sound);"
             },
@@ -38,8 +39,8 @@ class Objects extends Component{
             "question4" : {
               "correctoption" : "option1",
               "options" : {
-                  "option1" : "obj['1prop'],\n obj['prop name']",
-                  "option2" : "obj.1prop,\n obj.prop name"
+                  "option1" : "var newObj = {'prop name': 12}; newObj['prop name']",
+                  "option2" : "var newObj = {'prop name': 12}; newObj.prop name"
                 },
               "question" : "what is the correct syntax from the following ?"
             }
@@ -48,21 +49,24 @@ class Objects extends Component{
         }      
       }
     }
-     
   }
+
   render(){
     const topic= 'Objects';
     const Question='What is Object?';
     const introduction = 'Objects can be declared as variables. An object is a collection of UNORDERED properties that can be accessed through the corresponding KEYS';
     const CreateObj= 'Creating Objects in JavaScript';
-    const DecleareObject= 'An object is made up of multiple key and property pairs, each of which has a [name] and a [value],Each [name/value] pair must be separated by a (comma), and the [name and value] in each case are separated by a (colon)';
+    const DecleareObject= 'An object is made up of multiple key and property pairs, each of which has a [name] and a [value],Each [name/value] pair must be separated by a (comma) from other pairs, and the [name and value] in each case are separated by a (colon).\n';
     const AccessObj= 'Accessing Object Properties:';
     const Ways='There are two ways to access the properties of an object: dot notation (.) and bracket notation ([]), similar to an array.'
     const FirstType='1. Access Object Properties using Dot notation(.) : is used most frequently.';
-    const Example='Example for an Object: \n var person = { \n name: ["Tal", "Omari"],\n age: 25,\n gender: "Female", \n interests: ["Coding", "Dancing"] \n };'
-    const SecondType='2. Access object Properties using bracket notation ([]): If the property of the object you are trying to access has a space in its name, you will need to use bracket notation.However, you can still use bracket notation on object properties without spaces.';
+    const Example='Example for an Object: \nvar person = {\n    name: ["Tal", "Omari"],\n    age: 25,\n    gender: "Female", \n    interests: ["Coding", "Dancing"]\n}'
+    const SecondType='2. Access object Properties using bracket notation ([]): If the property of the object you are trying to access has a space in its name, you will need to use bracket notation. However, you can still use bracket notation on object properties without spaces.';
     const Iterate= 'Iterating through objects: ';
-    const IteratingSyntax='Like most things in JavaScript, there is certainly more than one way to iterate over an object.\n This is the syntax:\n for (variable in object) { ...\n}';
+    const IteratingSyntax='Arrays are a special type of object. We can\'t iterate through all objects like we do for array. The right way to iterate through the person object is like this:\n\n'
+    const IteratingObject = 'for (var key in objectYouWantToIterate) {\n\
+    console.log(objectYouWantToIterate[key])\n\
+}';
     const { thumbnailStyle,title,container,textContainer}=Styles
       return(
         <Card>
@@ -74,20 +78,36 @@ class Objects extends Component{
             </View>
           </CardSection>
           <CardSection style={container}>
-            <Image 
-              style= {thumbnailStyle}
-              source={require('../../../../../assets/object.png')}/>
-            <Text style={textContainer} >
-              {Question} {"\n"}{"\n"}{introduction}{"\n"}
-            </Text>
+            <View style = {{flex: 7, flexDirection: 'row'}}>
+              <Image 
+                style= {thumbnailStyle}
+                source={require('../../../../../assets/object.png')}/>
+            </View>
+            <View style = {{flex: 17, flexDirection: 'row'}}>
+              <Text style={textContainer} style={{fontWeight:'bold'}}>
+                {Question}
+                {"\n"}{"\n"}
+                <Text style={textContainer} style={{fontWeight:'normal'}}>
+                  {introduction}
+                  </Text>
+              </Text>
+            </View>
           </CardSection >
           <CardSection style={container}>
-            <Image 
-              style= {thumbnailStyle}
-              source={require('../../../../../assets/IMG_20181231_193433.png')}/>
-            <Text style={textContainer}>
-              {CreateObj}{"\n"}{"\n"}{DecleareObject}{"\n"}
-            </Text>  
+            <View style = {{flex: 7, flexDirection: 'row'}}>
+              <Image 
+                style= {thumbnailStyle}
+                source={require('../../../../../assets/IMG_20181231_193433.png')}/>
+            </View>
+            <View style = {{flex: 17, flexDirection: 'row'}}>
+              <Text style={textContainer} style={{fontWeight:'bold'}}>
+                {CreateObj}
+                {"\n"}{"\n"}
+                <Text style={textContainer} style={{fontWeight:'normal'}}>
+                  {DecleareObject}
+                </Text>
+              </Text>
+            </View>
           </CardSection>
           <CardSection  style={container}>
             <Text style={textContainer}>
@@ -116,6 +136,9 @@ class Objects extends Component{
               {Iterate} {"\n"}
               <Text style={{fontWeight:'normal'}}>
                 {IteratingSyntax}
+                <Text style = {{fontWeight:'bold',color:'#FF33A8'}}>
+                  {IteratingObject}
+                </Text>
               </Text>
             </Text>
           </CardSection>
