@@ -9,7 +9,6 @@ class Main extends Component {
     name: '',
     question: '',
     sprint: '',
-    testAjax: '',
     allQuestions: [],
     sprintList: {
       'JavaScript Fundamentals and Functions': 0,
@@ -61,7 +60,6 @@ class Main extends Component {
     }).catch((error) => {
       Alert.alert('Please restart the App, due to error: ', error);
     })
-
   }
 
   dropDownSprintList() {
@@ -178,6 +176,7 @@ class Main extends Component {
             />
           </View>
         </CardSection>
+        
         <CardSection>
           <Button onPress = {() => this.submitQuestion()}>
             Submit
