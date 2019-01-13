@@ -4,11 +4,12 @@ import { Button, Card, CardSection, Playquiz } from '../../../../common';
 import { Image } from 'react-native';
 import ClosureExample from '../SubSubSprints/closureExample';
 import ClosureExampleExplanation from '../SubSubSprints/closureExampleExplanation';
-
+import AddingMethodsExample from '../SubSubSprints/addingMethodsExample';
+import AddingMethodsExampleExplanation from '../SubSubSprints/addingMethodsExampleExplanation';
 
 export default class AbstractClosureDM extends Component {
   render() {
-    const topic = 'Closures';
+    const topic = 'Closures, Adding Methods';
     const introduction = 'A closure is the combination of a function and the lexical environment within which that function was declared.';
     return (
       <Card>
@@ -41,32 +42,24 @@ export default class AbstractClosureDM extends Component {
 
         <ClosureExampleExplanation />
 
-        
+        {/* Adding Methods */}
         <CardSection  >
           <Text style={Styles.boldText}>
-          Now what if we want to return many functionwhat we can use?We can use an object and each key have a fucntionso now the same function but return objectand this object as we said have many keys each one of themis a functionso if I make accout3= addingMethod(300)accout4= addingMethod(400)if I call accout3 or 4 it will return to me and object have function inside each key like thisnow if I want to excuse each one you can understand it like thisaccount3 and 4 is and variable inside it function return to me an object so it is objectremember how can reach key inside object?By the name of the object .  The name of the keyso account3.withdraw it will give as the function but I need to execute itso account3.withdraw (50)it will give me the return success withdraw 50 and the balance is 250what about account4. balanceyes 400 so each one of them is separated than the other it is likethey are a copy from the function addingMethod
+          Now what if we want to return many functions what we can return?{'\n'}
+          We can return an object and each key inside it has a fucntion, 
+          so now lets improve the clouser and add methods to it.
+          
           </Text>
         </CardSection>
+
+        <AddingMethodsExample/>
+
+        <AddingMethodsExampleExplanation/>
+
         <CardSection  >
           <Text style={Styles.boldText}>
-          Here the same but we return and object 
-function addingMethod(initial) {'{'}
-  var balance=initial
-  var S = {'{'}
-    balance: initial,
-    withdraw: function (amount) {'{'}
-      if (S.balance - amount >= 0) {'{'}
-        S.balance = S.balance - amount;
-        return 'Withdraw: ' + amount;
-        {'}'}
-      return 'Insufficient funds.';
-      {'}'},
-    show: function show1() {'{'}
-      return 'Balance: ' + balance;
-      {'}'}
-      {'}'}
-  return S
-{'}'}
+          accout3= addingMethod(300)accout4= addingMethod(400)if I call accout3 or 4 it will return to me and object have function inside each key like thisnow if I want to excuse each one you can understand it like thisaccount3 and 4 is and variable inside it function return to me an object so it is objectremember how can reach key inside object?By the name of the object .  The name of the keyso account3.withdraw it will give as the function but I need to execute itso account3.withdraw (50)it will give me the return success withdraw 50 and the balance is 250what about account4. balanceyes 400 so each one of them is separated than the other it is likethey are a copy from the function addingMethod
+
           </Text>
         </CardSection>
         {/* <CardSection >
@@ -74,9 +67,6 @@ export default class AbstractClosureDM extends Component {
             style={{ width: 340, height: 125 }}
             source={require('../assets/reduceWithIV.png')} />
         </CardSection> */}
-
-
-
         <CardSection>
           <Button onPress={() => this.props.navigation.navigate('OOP')}>
             Next
