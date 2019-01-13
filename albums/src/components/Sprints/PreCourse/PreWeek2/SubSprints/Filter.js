@@ -109,6 +109,7 @@ This function applies the filteringCondition on the array filteringNumber. The f
             {function2}
           </Text>
         </CardSection>
+ 
         <CardSection>
           <TouchableOpacity onPress={() => Linking.openURL('https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter')}>
             <Text style={{color: 'blue'}}>
@@ -126,6 +127,11 @@ This function applies the filteringCondition on the array filteringNumber. The f
         <CardSection>
           <Button onPress = {()=>this.props.navigation.navigate('Higher Order Function: Map')}>
             Previous
+          </Button>
+        </CardSection>
+        <CardSection>
+          <Button onPress = {()=>this.props.navigation.navigate('Reduce')}>
+            Next
           </Button>
         </CardSection>
         <CardSection>

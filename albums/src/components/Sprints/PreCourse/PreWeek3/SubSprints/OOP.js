@@ -72,13 +72,13 @@ return 'Insufficient funds.';
         </CardSection> */}
 
         <CardSection>
-          <Button onPress={() => this.props.navigation.navigate('HTML, CSS and jQuery')}>
-            Next
+          <Button onPress={() => this.props.navigation.navigate('Closures And Adding Methods')}>
+            Previous
           </Button>
         </CardSection>
         <CardSection>
-          <Button onPress={() => this.props.navigation.navigate('Closures And Adding Methods')}>
-            Previous
+          <Button onPress={() => this.props.navigation.navigate('HTML, CSS and jQuery')}>
+            Next
           </Button>
         </CardSection>
         <CardSection>
