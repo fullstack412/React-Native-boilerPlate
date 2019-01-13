@@ -6,7 +6,7 @@ import ReduceSyntax from './reduceSyntax';
 
 export default class closureExampleExplanation extends Component {
   render() {
-    const { boldHeader, text, func, balance, closure, amount, withdraw, iv } = Styles;
+    const { boldHeader, text,bold, func, balance, closure, amount, withdraw, iv } = Styles;
 
     return (
       <CardSection>
@@ -32,7 +32,7 @@ export default class closureExampleExplanation extends Component {
           <Text style={amount}>
             the amount you want to withdraw
           </Text>
-          .{'\n'}So lets make some lines and explain it:{'\n'}var{' '}
+          .{'\n'}{'\n'}So lets make some lines and explain it:{'\n'}var{' '}
           <Text style={withdraw}>
             account1{' '}
           </Text>
@@ -70,15 +70,87 @@ export default class closureExampleExplanation extends Component {
           </Text>
           what I will get?{'\n'}Another function called{' '}
           <Text style={withdraw}>
-          withdraw{' '}
+            withdraw{' '}
           </Text>
           but again with{' '}
           <Text style={balance}>
             initial value 100{' '}
           </Text>
-          not 200.
-        </Text>
+          not 200.{'\n'}{'\n'}
+          {/* extra explanation */}
+          Now remember if you want to execute a function you will write the name of the function then parentheses.{'\n'}
+          So account1 or account2 is a varibles inside them a function, lets execute acccount1 now by the way we said:{'\n'}{'\n'}
+          <Text style={withdraw}>
+          acccount1(
+            <Text style={balance}>
+              5
+            </Text>
+            )
+          </Text>
+          ,{' '}now what will happened?{'\n'}
+          This line will execute the function{' '} 
+          <Text style={withdraw}>
+            withdraw{' '}
+          </Text>
+          that is inside the variable{' '}
+          <Text style={withdraw}>
+            account1{' '}
+          </Text>
+          with the argument{' '}
+          <Text style={balance}>
+            5
+          </Text>
+          .{'\n'}Now what is the output?{'\n'}{'"'}
+          Success withdraw{' '}
+          <Text style={balance}>
+            5
+          </Text>
+          {'"'}, and the balance will be{' '}
+          <Text style={balance}>
+            95
+          </Text>
 
+          {/* account2 */}
+           .{'\n'}{'\n'}What about if I execute{' '}
+           <Text style={withdraw}>
+          acccount2(
+            <Text style={balance}>
+              35
+            </Text>
+            )
+          </Text>
+          ?{'\n'}The same approach it will execute the{' '}
+          <Text style={withdraw}>
+            withdraw{' '}
+          </Text>
+          function that is inside the variable{' '}
+          <Text style={withdraw}>
+            account2{' '}
+          </Text>
+           and the output will be => {'"'}Success withdraw{' '}
+          <Text style={balance}>
+            35
+          </Text>
+          {'"'}, and the balance will be{' '}
+          <Text style={balance}>
+            165
+          </Text>
+          .{'\n'}{'\n'}
+          <Text style={bold}>
+            So what we get from the{' '}
+            <Text style={func}>
+              clouser{' '}
+            </Text>
+              is separate variable use the same function and return{' '}
+            <Text style={withdraw}>
+              what this function is returned{' '}
+            </Text>
+            <Text style={balance}>
+              depends on each one values
+            </Text>
+            .
+          </Text>
+        </Text>
       </CardSection>
     );
   }
@@ -92,6 +164,9 @@ const Styles = StyleSheet.create({
   },
   text: {
     color: 'black'
+  },
+  bold: {
+    fontWeight: 'bold',
   },
   func: {
     color: 'green',
