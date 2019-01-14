@@ -3,7 +3,7 @@
 import firebase from 'firebase';
 import React, { Component } from 'react';
 import { View, StyleSheet } from 'react-native';
-import { Header, Button, Spinner, CardSection, Card } from '../common';
+import { Button, Spinner, CardSection, Card } from '../common';
 import LoginForm from './LoginForm';
 import api from '../../../noDelete'
 
@@ -85,7 +85,7 @@ class LoginScreen extends Component {
   render() {
     return (
       <View>
-        <Header headerText = 'Login Page'/>
+        {/* <Header headerText = 'Login Page'/> */}
         {this.renderContent()}
       </View>
     ); 

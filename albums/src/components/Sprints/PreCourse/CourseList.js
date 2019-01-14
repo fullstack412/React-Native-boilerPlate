@@ -81,7 +81,7 @@ class CourseList extends Component {
   render() {
     return (
       <ScrollView>
-        <Header onPress = {this.props.navigation.openDrawer.bind(this)}/>
+        {/* <Header onPress = {this.props.navigation.openDrawer.bind(this)}/> */}
         {this.mapOutCourses()}
       </ScrollView>
     );
