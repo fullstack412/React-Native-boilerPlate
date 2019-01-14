@@ -9,7 +9,6 @@ class Main extends Component {
     name: '',
     question: '',
     sprint: '',
-    testAjax: '',
     allQuestions: [],
     sprintList: {
       'JavaScript Fundamentals and Functions': 0,
@@ -36,14 +35,31 @@ class Main extends Component {
 
 
   componentWillMount() {
-    firebase.initializeApp({
-      apiKey: apiKey,
-      authDomain: authDomain,
-      databaseURL: databaseURL,
-      projectId: projectId,
-      storageBucket: storageBucket,
-      messagingSenderId: messagingSenderId
-    });
+    if (!firebase.apps.length) {      
+      firebase.initializeApp({
+        apiKey: apiKey,
+        authDomain: authDomain,
+        databaseURL: databaseURL,
+        projectId: projectId,
+        storageBucket: storageBucket,
+        messagingSenderId: messagingSenderId
+      });
+    }
+
+    firebase.database().ref(`townhall`).once('value', (data) => {
+      data = data.toJSON();
+      let sprintList = {...this.state.sprintList};
+      if (data !== null) {
+        Object.keys(data).map((key) => (
+          sprintList[key] = Object.keys(data[key]).length
+        ))
+      }
+      this.setState({
+        sprintList
+      })
+    }).catch((error) => {
+      Alert.alert('Please restart the App, due to error: ', error);
+    })
   }
 
   dropDownSprintList() {
@@ -62,7 +78,7 @@ class Main extends Component {
       sprintList
     })
     let questionCount = this.state.sprintList[this.state.sprint];
-    firebase.database().ref(`users/${this.state.sprint}/${questionCount}`).set(
+    firebase.database().ref(`townhall/${this.state.sprint}/${questionCount}`).set(
       {
         name: this.state.name,
         question: this.state.question
@@ -76,7 +92,7 @@ class Main extends Component {
 
   requestQuestions() {
     let currentSprint = this.state.sprint
-    firebase.database().ref(`users/${currentSprint}`).once('value', (data) => {
+    firebase.database().ref(`townhall/${currentSprint}`).once('value', (data) => {
       data = data.toJSON();
       if (data !== null) {
         this.setState({
@@ -160,6 +176,7 @@ class Main extends Component {
             />
           </View>
         </CardSection>
+        
         <CardSection>
           <Button onPress = {() => this.submitQuestion()}>
             Submit

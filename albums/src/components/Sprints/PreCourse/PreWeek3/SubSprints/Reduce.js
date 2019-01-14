@@ -66,6 +66,11 @@ export default class Reduce extends Component {
         </CardSection>
 
         <CardSection>
+          <Button onPress = {()=>this.props.navigation.navigate('Higher Order Function: Filter')}>
+            Previous
+          </Button>
+        </CardSection>
+        <CardSection>
           <Button onPress={() => this.props.navigation.navigate('Closures And Adding Methods')}>
             Next
           </Button>

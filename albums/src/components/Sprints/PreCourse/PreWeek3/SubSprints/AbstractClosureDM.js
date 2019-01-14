@@ -68,15 +68,17 @@ export default class AbstractClosureDM extends Component {
             source={require('../assets/reduceWithIV.png')} />
         </CardSection> */}
         <CardSection>
-          <Button onPress={() => this.props.navigation.navigate('OOP')}>
-            Next
-          </Button>
-        </CardSection>
-        <CardSection>
           <Button onPress={() => this.props.navigation.navigate('Reduce')}>
             Previous
           </Button>
         </CardSection>
+
+        <CardSection>
+          <Button onPress={() => this.props.navigation.navigate('OOP')}>
+            Next
+          </Button>
+        </CardSection>
+
         <CardSection>
           <Button onPress={() => this.props.navigation.navigate('PCList')}>
             Home
