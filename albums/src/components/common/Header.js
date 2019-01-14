@@ -20,27 +20,28 @@ import { Left, Right, Icon} from 'native-base';
 const Header = ({ onPress }) => {
   const { textStyle, viewStyle} = styles;
   return (
-    <TouchableOpacity>
-      <Left>
-        <Icon name = 'menu' onPress={ onPress } style = {{justifyContent: 'flex-start'}}/>
-      </Left>
-    </TouchableOpacity>
-
-    // <TouchableOpacity style = {viewStyle}>
-    //   <Text style = {textStyle} onPress = {() => {Linking.openURL('http://rbk.org')}}>Hack Review from RBK</Text>
+    // <TouchableOpacity>
+    //   <Left>
+    //     <Icon name = 'menu' onPress={ onPress } style = {{justifyContent: 'flex-start'}}/>
+    //   </Left>
     // </TouchableOpacity>
+
+    <TouchableOpacity style = {viewStyle}>
+      <Text style = {textStyle} onPress = {() => {Linking.openURL('http://rbk.org')}}>RBK</Text>
+    </TouchableOpacity>
   );
 };
 
 const styles = StyleSheet.create({
   textStyle: {
-    fontSize: 18
+    fontSize: 18,
+    fontWeight:'bold'
   },
   viewStyle: {
     backgroundColor: '#f4428f',
-    // justifyContent: 'flex-start',
-    // alignItems: 'center',
-    height: 34,
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+    height: 24,
     paddingTop: 0,
     shadowColor: '#000',
     shadowOffset: {width: 0, height: 4},
