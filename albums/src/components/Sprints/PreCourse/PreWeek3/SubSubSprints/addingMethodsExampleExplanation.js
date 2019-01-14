@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Button, Card, CardSection, Playquiz } from '../../../../common';
-import { Image } from 'react-native';
-import ReduceSyntax from './reduceSyntax';
 
-export default class closureExampleExplanation extends Component {
+export default class AddingMethodsExampleExplanation extends Component {
   render() {
     const { boldHeader, text,bold, func, balance, closure, amount, withdraw, iv } = Styles;
 

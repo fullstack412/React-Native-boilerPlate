@@ -10,7 +10,7 @@ export default class ReduceSyntaxExplanation extends Component {
         <Text style={Styles.text}>
           <Text style={Styles.array}>
             <Text style={[Styles.boldText, Styles.array]}>
-              array:{' '}
+            array:{' '}
               </Text>
             the array you want to execute  the reduce function on it.{'\n'}{'\n'}
           </Text>

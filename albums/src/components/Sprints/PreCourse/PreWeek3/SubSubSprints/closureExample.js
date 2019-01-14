@@ -11,14 +11,14 @@ export default class ClosureExample extends Component {
       <CardSection>
         <Text style={text}>
           <Text style={boldHeader}>
-            Example:{' '}{'\n'}
+            Example:{'\n'}
           </Text>
           <Text style={func}>
             function closure(
                 <Text style={Styles.balance}>
               initial
                 </Text>
-            ) {'{'}{'\n'}
+            ){'{'}{'\n'}
             {' '}{' '}var
               <Text style={Styles.balance}>
               {' '}balance
@@ -34,11 +34,11 @@ export default class ClosureExample extends Component {
                 {' '}withdraw
               </Text>
               (
-                  <Text style={Styles.amount}>
+              <Text style={Styles.amount}>
                 amount
               </Text>
-              ) {'{'}{'\n'}
-              {' '}{' '}{' '}{' '}if (
+              ){'{'}{'\n'}
+              {' '}{' '}{' '}{' '}if(
                   <Text style={Styles.balance}>
                 balance
               </Text>
@@ -50,7 +50,7 @@ export default class ClosureExample extends Component {
                 <Text style={Styles.text}>
                 {' '}0
                 </Text>
-              ) {'{'}{'\n'}
+              ){'{'}{'\n'}
               <Text style={Styles.balance}>
                 {' '}{' '}{' '}{' '}{' '}{' '}balance
               </Text>
