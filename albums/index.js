@@ -1,8 +1,8 @@
 // For Android Studio Developers only
 import React from 'react';
-import {AppRegistry, View, StyleSheet, Text, SafeAreaView, ScrollView, Dimensions, Image } from 'react-native';
+import { AppRegistry, View, StyleSheet, Text, SafeAreaView, ScrollView, Dimensions, Image } from 'react-native';
 import { Header } from './src/components/common';
-import {createDrawerNavigator, DrawerItems, createStackNavigator} from 'react-navigation';
+import { createDrawerNavigator, DrawerItems, createStackNavigator } from 'react-navigation';
 
 import SideMenu from './src/components/Menu/SideMenu'
 import LoginScreen from './src/components/Login/LoginScreen';
@@ -26,11 +26,11 @@ import Variables from './src/components/Sprints/PreCourse/PreWeek1/SubSprints/Va
 import WhileLoop from './src/components/Sprints/PreCourse/PreWeek1/SubSprints/WhileLoop';
 import ArraysAndForLoop from './src/components/Sprints/PreCourse/PreWeek1/SubSprints/ArraysAndForLoop';
 // PC Week 2 Sprints
-import Objects from './src/components/Sprints/PreCourse/PreWeek2/SubSprints/Objects'; 
+import Objects from './src/components/Sprints/PreCourse/PreWeek2/SubSprints/Objects';
 import DataModeling from './src/components/Sprints/PreCourse/PreWeek2/SubSprints/DataModeling';
 import HigherOrderEach from './src/components/Sprints/PreCourse/PreWeek2/SubSprints/HigherOrderEach';
 import Map from './src/components/Sprints/PreCourse/PreWeek2/SubSprints/Map';
-import Filter from'./src/components/Sprints/PreCourse/PreWeek2/SubSprints/Filter'
+import Filter from './src/components/Sprints/PreCourse/PreWeek2/SubSprints/Filter'
 // PC Week 3 Sprints
 import HTMLCSSjQuery from './src/components/Sprints/PreCourse/PreWeek3/SubSprints/HTMLCSSjQuery';
 import AbstractClosureDM from './src/components/Sprints/PreCourse/PreWeek3/SubSprints/AbstractClosureDM';
@@ -53,8 +53,10 @@ import Contact from './src/components/Features/Contact';
 export default class App extends React.Component {
   render() {
     return (
-        <AppDrawerNavigator />
-        // <AppStackNavigator />     
+      // <AbstractClosureDM />
+      // jozaa uncomment line 58 and delete line 56 after finish the style
+      <AppDrawerNavigator />
+      // <AppStackNavigator />     
     )
   }
 }
@@ -62,13 +64,15 @@ export default class App extends React.Component {
 const CustomDrawerComponent = (props) => {
   const { drawerStyle, picStyle } = Styles;
   return (
-    <SafeAreaView style = {{ flex: 1}}>
-      <View style = { drawerStyle }>
-        <Image source = {require('./src/assets/profile1.png')} style = { picStyle } />
+    <SafeAreaView style={{ flex: 1 }}>
+
+      <View style={drawerStyle}>
+        <Image source={require('./src/assets/profile1.png')} style={picStyle} />
       </View>
       <ScrollView>
         <DrawerItems {...props} />
       </ScrollView>
+
     </SafeAreaView>
   )
 }
@@ -82,11 +86,11 @@ const AppStackNavigator = createStackNavigator({
   "While Loop": WhileLoop,
   "Arrays and For Loops": ArraysAndForLoop,
   // Week 2
-  "Objects":Objects,
-  "Data Modeling":DataModeling,
-  "Higher Order Function: Each":HigherOrderEach,
-  "Higher Order Function: Map":Map,
-  "Higher Order Function: Filter":Filter,
+  "Objects": Objects,
+  "Data Modeling": DataModeling,
+  "Higher Order Function: Each": HigherOrderEach,
+  "Higher Order Function: Map": Map,
+  "Higher Order Function: Filter": Filter,
   // Week 3
   "HTML, CSS and jQuery": HTMLCSSjQuery,
   "Closures And Adding Methods": AbstractClosureDM,
@@ -124,19 +128,19 @@ const AppDrawerNavigator = createDrawerNavigator({
   Log_In: LoginScreen,
   Header: Header
 }, {
-  contentComponent: SideMenu
-});
+    contentComponent: SideMenu
+  });
 
 const Styles = StyleSheet.create({
   drawerStyle: {
-    height: 150, 
-    backgroundColor: 'pink', 
-    alignItems: 'center', 
+    height: 150,
+    backgroundColor: 'pink',
+    alignItems: 'center',
     justifyContent: 'center'
   },
   picStyle: {
-    height: 120, 
-    width: 120, 
+    height: 120,
+    width: 120,
     borderRadius: 60
   }
 })

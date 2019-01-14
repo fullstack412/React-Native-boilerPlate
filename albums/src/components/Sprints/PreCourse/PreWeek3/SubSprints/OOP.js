@@ -1,77 +1,88 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Button, Card, CardSection, Playquiz } from '../../../../common';
+import { Image } from 'react-native';
+import ReduceSyntax from '../SubSubSprints/reduceSyntax';
+import ReduceSyntaxExplanation from '../SubSubSprints/reduceSyntaxExplanation';
+import ReduceExample from '../SubSubSprints/reduceExample';
 
-class OOP extends Component {
-
+export default class OOP extends Component {
   render() {
-    const { thumbnailStyle, headerConetentStyle, thumbnailContainerStyle, headerTextStyle, boldText } = Styles;
     const topic = 'OOP';
-    const introduction = '';
-    const body = [
-      [
-        'The same but we make the function outside and to reach the object we use word "this"', 
-        'function oop(initial) {\n\
-          var S = {}\n\
-          S.balance = initial;\n\
-          S.withdraw = withdraw1;\n\
-          S.show = show1;\n\
-          return S\n\
-          }\n\
-          var show1 = function () {\n\
-          console.log("this here is: ", this)\n\
-          return "Balance: " + this.balance;\n\
-          }\n\
-          var withdraw1 = function (amount) {\n\
-          if (this.balance - amount >= 0) {\n\
-          this.balance = this.balance - amount;\n\
-          return "Withdraw: " + amount + " Balance: " + this.balance;\n\
-          }\n\
-          return "Insufficient funds.";\n\
-          }'
-      ],
-    ]
-
+    const introduction = 'OOP (Object-Oriented Programming) is an approach in programming in which data is encapsulated within objects and the object itself is operated on, rather than its component parts.';
     return (
-      
       <Card>
         <CardSection>
-          <View style = {headerConetentStyle}>
-            <Text style = {headerTextStyle}>
+          <View style={Styles.headerConetentStyle}>
+            <Text style={Styles.headerTextStyle}>
               {topic}
             </Text>
-          </View>				
+          </View>
+        </CardSection>
+        <CardSection style={{ flexDirection: 'row' }}>
+          <Image
+            style={{ height: 150, width: 300 }}
+            source={require('../assets/closure.png')} />
         </CardSection>
 
         <CardSection>
-          <Text>
-          {introduction}{"\n"}
+          <Text style={Styles.text}>
+            {introduction}
           </Text>
         </CardSection>
 
-        <CardSection>
-          <Text style={ boldText }>
-            {body[0][0]}
-          </Text>
-        </CardSection>
-        <CardSection>
-          <Text>
-            {body[0][1]}
+        <CardSection  >
+          <Text style={Styles.boldText}>
+            Let's take an example and break it down:
           </Text>
         </CardSection>
 
-        <CardSection>
-          <Button onPress = {()=>this.props.navigation.navigate('Closures And Adding Methods')}>
-            Previous
-          </Button>
+        <CardSection  >
+          <Text style={Styles.boldText}>
+            function oop(initial) {'{'}
+            var S = {'{}'}
+            S.balance = initial;
+            S.withdraw = withdraw1;
+            S.show = show1;
+            return S
+{'}'}
+            var show1 = function () {'{'}
+            console.log("this here is: ", this)
+            return 'Balance: ' + this.balance;
+{'}'}
+            var withdraw1 = function (amount) {'{'}
+            if (this.balance - amount >= 0) {'{'}
+            this.balance = this.balance - amount;
+            return 'Withdraw: ' + amount + " Balance: " + this.balance;
+{'}'}
+            return 'Insufficient funds.';
+{'}'}
+          </Text>
         </CardSection>
+        <CardSection  >
+          <Text style={Styles.boldText}>
+            Now we will develop the function that we didbefore we have problem about each time we make a new variable from the function it will take another copy from it and this thing will use a lot of space in big scaleso lets think in a way to decrease this spacemake the function outside and to reach them by the objectwe but them in the key of tis objectbut now how we can pass the value from this object to the function are outsideso here where we will use the keyword “this”what is this?It is a keyword represent the object in the left of the dot (the one who called this function) [90% the time]
+          </Text>
+        </CardSection>
+
+        {/* <CardSection >
+          <Image
+            style={{ width: 340, height: 125 }}
+            source={require('../assets/reduceWithIV.png')} />
+        </CardSection> */}
+
         <CardSection>
-          <Button onPress = {()=>this.props.navigation.navigate('HTML, CSS and jQuery')}>
+          <Button onPress={() => this.props.navigation.navigate('HTML, CSS and jQuery')}>
             Next
           </Button>
         </CardSection>
         <CardSection>
-          <Button onPress = {()=>this.props.navigation.navigate('PCList')}>
+          <Button onPress={() => this.props.navigation.navigate('Closures And Adding Methods')}>
+            Previous
+          </Button>
+        </CardSection>
+        <CardSection>
+          <Button onPress={() => this.props.navigation.navigate('PCList')}>
             Home
           </Button>
         </CardSection>
@@ -83,10 +94,12 @@ class OOP extends Component {
 const Styles = StyleSheet.create({
   headerConetentStyle: {
     flexDirection: 'column',
-    justifyContent: 'space-around'
+    justifyContent: 'space-around',
   },
   headerTextStyle: {
-    fontSize: 30
+    fontSize: 30,
+    fontWeight: 'bold',
+    color: 'black',
   },
   thumbnailStyle: {
     height: 46,
@@ -99,7 +112,36 @@ const Styles = StyleSheet.create({
     marginRight: 20
   },
   boldText: {
-    fontWeight: 'bold'
-  }
+    fontWeight: 'bold',
+    color: 'black'
+  },
+  boldHeader: {
+    fontWeight: 'bold',
+    color: 'black',
+    fontSize: 17,
+  },
+  text: {
+    color: 'black'
+  },
+  array: {
+    color: 'red',
+  },
+  reduce: {
+    color: 'blue',
+  },
+  cb: {
+    color: 'green',
+  },
+  acc: {
+    color: '#9932CC',
+  },
+  elem: {
+    color: '#FF8C00',
+  },
+  i: {
+    color: 'red',
+  },
+  iv: {
+    color: '#FF00FF',
+  },
 });
-export default OOP;

@@ -227,8 +227,8 @@ class ArraysAndForLoop extends Component {
         </CardSection>
         <Playquiz quizData = { this.state.quizData }/>
         <CardSection>
-          <Button onPress = {()=>this.props.navigation.navigate('PCWeek2')}>
-            Next
+          <Button onPress = {()=>this.props.navigation.navigate('While Loop')}>
+            Previous
           </Button>
         </CardSection>
         <CardSection>

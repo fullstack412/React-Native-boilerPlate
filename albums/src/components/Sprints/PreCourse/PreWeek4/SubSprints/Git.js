@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, Linking, Image } from 'react-native';
 import { Button, Card, CardSection, Playquiz } from '../../../../common';
 
 class Git extends Component {
@@ -62,16 +62,11 @@ class Git extends Component {
   }
 
   render() {
-    const { thumbnailStyle, headerConetentStyle, thumbnailContainerStyle, headerTextStyle, boldText } = Styles;
+    const { thumbnailStyle, headerConetentStyle, thumbnailContainerStyle, headerTextStyle, boldText, picStyle } = Styles;
     const topic = 'Git';
     const introduction = 'Git and GitHub are tools to help manage our files. They also help us share our work with other programmers';
     const body = [
       [
-        'Install Git:', 
-        'Go to: https://git-scm.com/downloads \n\
-After installation, open the terminal window (command + space), type in “terminal”, open the application like the picture shown below\n\
-Terminal is the programmer preferred way to navigate around the folders in the desktop'
-      ],[
         'Navigate between folders in terminal:',
         'cd [folder name]: Go inside a folder\n\
 cd .. : exit current folder\n\
@@ -141,6 +136,11 @@ git branch -D [local_branch]: delete local branch'
           </Text>
         </CardSection>
 
+        <CardSection style>
+          <Image 
+            style= {picStyle}
+            source={require('../../../../../assets/gitWorkflow.png')}/>
+        </CardSection>
         <CardSection>
           <Text style={ boldText }>
             {body[2][0]}
@@ -169,16 +169,6 @@ git branch -D [local_branch]: delete local branch'
         <CardSection>
           <Text>
             {body[4][1]}
-          </Text>
-        </CardSection>
-        <CardSection>
-          <Text style={ boldText }>
-            {body[5][0]}
-          </Text>
-        </CardSection>
-        <CardSection>
-          <Text>
-            {body[5][1]}
           </Text>
         </CardSection>
         <CardSection>
@@ -228,6 +218,13 @@ const Styles = StyleSheet.create({
   },
   boldText: {
     fontWeight: 'bold'
+  },
+
+  picStyle: {
+    flex: 1,
+    width: null,
+    height: 150,
+    resizeMode: 'contain'
   }
 });
 export default Git;

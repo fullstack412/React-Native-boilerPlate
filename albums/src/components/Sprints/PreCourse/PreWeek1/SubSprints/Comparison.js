@@ -184,7 +184,12 @@ class Comparison extends Component {
         </CardSection>
         <Playquiz quizData = { this.state.quizData }/>
         <CardSection>
-          <Button onPress = {()=>this.props.navigation.navigate('PCWeek2')}>
+          <Button onPress = {()=>this.props.navigation.navigate('JavaScript Fundamentals and Functions')}>
+            Previous
+          </Button>
+        </CardSection>
+        <CardSection>
+          <Button onPress = {()=>this.props.navigation.navigate('Variables in JavaScript')}>
             Next
           </Button>
         </CardSection>

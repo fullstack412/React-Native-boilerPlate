@@ -10,46 +10,46 @@ export default class ReduceSyntaxExplanation extends Component {
         <Text style={Styles.text}>
           <Text style={Styles.array}>
             <Text style={[Styles.boldText, Styles.array]}>
-              array:&nbsp;
+            array:{' '}
               </Text>
             the array you want to execute  the reduce function on it.{'\n'}{'\n'}
           </Text>
           <Text style={Styles.reduce}>
             <Text style={[Styles.boldText, Styles.reduce]}>
-              reduce:&nbsp;
+              reduce:{' '}
               </Text>
             reserved key work to execute  the reduce function.{'\n'}{'\n'}
           </Text>
           <Text style={Styles.cb}>
             <Text style={[Styles.boldText, Styles.cb]}>
-              cb (callback):&nbsp;
+              cb (callback):{' '}
               </Text>
-            function to execute it on each element in the array,&nbsp;
+            function to execute it on each element in the array,{' '}
               <Text style={[Styles.boldText, Styles.array]}>
               don’t forget to use return inside it.{'\n'}{'\n'}
             </Text>
           </Text>
           <Text style={Styles.acc}>
             <Text style={[Styles.boldText, Styles.acc]}>
-              acc (accumulator):&nbsp;
+              acc (accumulator):{' '}
               </Text>
             the accumulator accumulates the callback's return values; it is the accumulated value previously returned in the last invocation of the callback, or initialValue, if supplied.{'\n'}{'\n'}
           </Text>
           <Text style={Styles.elem}>
             <Text style={[Styles.boldText, Styles.elem]}>
-              elem (currentValue):&nbsp;
+              elem (currentValue):{' '}
               </Text>
             the current element being processed in the array.{'\n'}{'\n'}
           </Text>
           <Text style={Styles.i}>
             <Text style={[Styles.boldText, Styles.i]}>
-              i (currentIndexOptional):&nbsp;
+              i (currentIndexOptional):{' '}
               </Text>
             the index of the current element being processed in the array. Starts at index 0, if an initialValue is provided, and at index 1 otherwise.{'\n'}{'\n'}
           </Text>
           <Text style={Styles.iv}>
             <Text style={[Styles.boldText, Styles.iv]}>
-              iv (initialValueOptional):&nbsp;
+              iv (initialValueOptional):{' '}
               </Text>
             value to use as the first argument to the first call of the callback. If no initial value is supplied, the first element in the array will be used. Calling reduce() on an empty array without an initial value is an error.
             </Text>
