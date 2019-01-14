@@ -35,20 +35,21 @@ class Main extends Component {
 
 
   componentWillMount() {
-    firebase.initializeApp({
-      apiKey: apiKey,
-      authDomain: authDomain,
-      databaseURL: databaseURL,
-      projectId: projectId,
-      storageBucket: storageBucket,
-      messagingSenderId: messagingSenderId
-    });
+    if (!firebase.apps.length) {      
+      firebase.initializeApp({
+        apiKey: apiKey,
+        authDomain: authDomain,
+        databaseURL: databaseURL,
+        projectId: projectId,
+        storageBucket: storageBucket,
+        messagingSenderId: messagingSenderId
+      });
+    }
 
     firebase.database().ref(`townhall`).once('value', (data) => {
       data = data.toJSON();
       let sprintList = {...this.state.sprintList};
       if (data !== null) {
-        console.warn('all values: ', data);
         Object.keys(data).map((key) => (
           sprintList[key] = Object.keys(data[key]).length
         ))
@@ -56,7 +57,6 @@ class Main extends Component {
       this.setState({
         sprintList
       })
-      console.warn('counter: ', this.state.sprintList['Objects'])
     }).catch((error) => {
       Alert.alert('Please restart the App, due to error: ', error);
     })

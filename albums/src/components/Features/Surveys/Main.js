@@ -15,14 +15,16 @@ class Main extends Component {
 
 
   componentWillMount() {
-    firebase.initializeApp({
-      apiKey: apiKey,
-      authDomain: authDomain,
-      databaseURL: databaseURL,
-      projectId: projectId,
-      storageBucket: storageBucket,
-      messagingSenderId: messagingSenderId
-    });
+    if (!firebase.apps.length) {      
+      firebase.initializeApp({
+        apiKey: apiKey,
+        authDomain: authDomain,
+        databaseURL: databaseURL,
+        projectId: projectId,
+        storageBucket: storageBucket,
+        messagingSenderId: messagingSenderId
+      });
+    }
   }
 
   submitEmotion() {
