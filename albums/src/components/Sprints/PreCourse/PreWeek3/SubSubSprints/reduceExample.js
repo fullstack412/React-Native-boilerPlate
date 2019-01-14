@@ -9,7 +9,7 @@ export default class ReduceExample extends Component {
     return (
       <CardSection>
         <Text style={Styles.boldHeader}>
-          Example:&nbsp;{'\n'}
+          Example:{' '}{'\n'}
           <Text style={Styles.array}>
             [1,5,6]
             </Text>
@@ -19,7 +19,7 @@ export default class ReduceExample extends Component {
             </Text>
           ({'\n'}
           <Text style={Styles.cb}>
-            &nbsp;&nbsp;function
+            {' '}{' '}function
             </Text>
           (
             <Text style={Styles.acc}>
@@ -35,12 +35,12 @@ export default class ReduceExample extends Component {
             </Text>
           ){'{'}{'\n'}
           <Text style={Styles.array}>
-            &nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;
-            </Text>
+            {' '}{' '}{' '}{' '}return{' '}
+          </Text>
           <Text style={Styles.cb}>
             acc+elem{'\n'}
           </Text>
-          &nbsp;&nbsp;},{'\n'}
+          {' '}{' '}},{'\n'}
           <Text style={Styles.iv}>
             0
             </Text>

@@ -8,7 +8,7 @@ export default class ReduceSyntax extends Component {
     return (
       <CardSection>
         <Text style={Styles.boldHeader} >
-          Syntax:&nbsp;
+          Syntax:{' '}
         <Text style={Styles.array}>
             array
         </Text>

@@ -14,6 +14,9 @@ class LoginScreen extends Component {
   const = { apiKey, authDomain, databaseURL, projectId, storageBucket, messagingSenderId} = api.Authenticaltion
 
   componentWillMount() {
+    // if (!firebase.apps.length) {
+    //   firebase.initializeApp(config);
+    // }
     firebase.initializeApp({
       apiKey: apiKey,
       authDomain: authDomain,

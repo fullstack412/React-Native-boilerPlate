@@ -6,89 +6,92 @@ import ReduceSyntax from './reduceSyntax';
 
 export default class ClosureExample extends Component {
   render() {
-    const { boldHeader, text, func, balance, closure, amount, second, iv } = Styles;
+    const { boldHeader, text, func, balance, closure, amount, withdraw, iv } = Styles;
     return (
       <CardSection>
-        <Text style={boldHeader}>
-          Example:&nbsp;{'\n'}
+        <Text style={text}>
+          <Text style={boldHeader}>
+            Example:{'\n'}
+          </Text>
           <Text style={func}>
             function closure(
-              <Text style={Styles.balance}>
+                <Text style={Styles.balance}>
               initial
+                </Text>
+            ){'{'}{'\n'}
+            {' '}{' '}var
+              <Text style={Styles.balance}>
+              {' '}balance
               </Text>
-            ) {'{'}{'\n'}
-            &nbsp;&nbsp;var
-            <Text style={Styles.balance}>
-              &nbsp;balance
-            </Text>
-            &nbsp;=
-            <Text style={Styles.balance}>
-              &nbsp;initial
-            </Text>
+            {' '}=
+              <Text style={Styles.balance}>
+              {' '}initial
+              </Text>
             ;{'\n'}
             < Text style={Styles.closure}>
-              &nbsp;&nbsp;function
-              <Text style={Styles.withdraw}>
-                &nbsp;withdraw
-            </Text>
+              {' '}{' '}function
+                <Text style={Styles.withdraw}>
+                {' '}withdraw
+              </Text>
               (
-                <Text style={Styles.amount}>
+              <Text style={Styles.amount}>
                 amount
-            </Text>
-              ) {'{'}{'\n'}
-              &nbsp;&nbsp;&nbsp;&nbsp;if (
-                <Text style={Styles.balance}>
+              </Text>
+              ){'{'}{'\n'}
+              {' '}{' '}{' '}{' '}if(
+                  <Text style={Styles.balance}>
                 balance
-            </Text>
-              &nbsp;-
-            <Text style={Styles.amount}>
-                &nbsp;amount
-            </Text>
-              &nbsp;>=
-              <Text style={Styles.text}>
-                &nbsp;0
               </Text>
-              ) {'{'}{'\n'}
+              {' '}-
+              <Text style={Styles.amount}>
+                {' '}amount
+              </Text>
+              {' '}>=
+                <Text style={Styles.text}>
+                {' '}0
+                </Text>
+              ){'{'}{'\n'}
               <Text style={Styles.balance}>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;balance
-            </Text>
-              &nbsp;=
-            <Text style={Styles.balance}>
-                &nbsp;balance
-            </Text>
-              &nbsp;-
-            <Text style={Styles.amount}>
-                &nbsp;amount
-            </Text>
+                {' '}{' '}{' '}{' '}{' '}{' '}balance
+              </Text>
+              {' '}=
+              <Text style={Styles.balance}>
+                {' '}balance
+              </Text>
+              {' '}-
+              <Text style={Styles.amount}>
+                {' '}amount
+              </Text>
               ;{'\n'}
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return ‘
-              <Text style={Styles.text}>
+              {' '}{' '}{' '}{' '}{' '}{' '}return ‘
+                <Text style={Styles.text}>
                 Success to withdraw:
-              </Text>
+                </Text>
               ‘ +
-              <Text style={Styles.amount}>
-                &nbsp;amount
-              </Text>
+                <Text style={Styles.amount}>
+                {' '}amount
+                </Text>
               ;{'\n'}
-              &nbsp;&nbsp;&nbsp;&nbsp;{'}'}{'\n'}
-              &nbsp;&nbsp;&nbsp;&nbsp;return ‘
-              <Text style={Styles.text}>
+              {' '}{' '}{' '}{' '}{'}'}{'\n'}
+              {' '}{' '}{' '}{' '}return ‘
+                <Text style={Styles.text}>
                 Failed to withdraw:
-              </Text>
+                </Text>
               ‘ +
-              <Text style={Styles.amount}>
-                &nbsp;amount
-            </Text>
+                <Text style={Styles.amount}>
+                {' '}amount
+              </Text>
               ;{'\n'}
-              &nbsp;&nbsp;{'}'}{'\n'}
+              {' '}{' '}{'}'}{'\n'}
             </Text>
-            &nbsp;&nbsp;return
-            <Text style={Styles.withdraw}>
-              &nbsp;withdraw
-            </Text>
+            {' '}{' '}return
+              <Text style={Styles.withdraw}>
+              {' '}withdraw
+              </Text>
             ;{'\n'}{'}'}
           </Text>
         </Text>
+
       </CardSection >
     );
   }
@@ -101,6 +104,7 @@ const Styles = StyleSheet.create({
     fontSize: 17,
   },
   text: {
+    fontWeight: 'bold',
     color: 'black'
   },
   func: {
