@@ -149,6 +149,11 @@ class Objects extends Component{
           </CardSection>
 
           <CardSection>
+            <Button onPress = {()=>this.props.navigation.navigate('Arrays and For Loops')}>
+              Previous
+            </Button>
+          </CardSection>
+          <CardSection>
             <Button onPress = {()=>this.props.navigation.navigate('Data Modeling')}>
               Next
             </Button>

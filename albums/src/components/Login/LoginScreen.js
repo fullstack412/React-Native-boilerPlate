@@ -14,15 +14,17 @@ class LoginScreen extends Component {
   const = { apiKey, authDomain, databaseURL, projectId, storageBucket, messagingSenderId} = api.Authenticaltion
 
   componentWillMount() {
-    firebase.initializeApp({
-      apiKey: apiKey,
-      authDomain: authDomain,
-      databaseURL: databaseURL,
-      projectId: projectId,
-      storageBucket: storageBucket,
-      messagingSenderId: messagingSenderId
-    });
-
+    if (!firebase.apps.length) {      
+      firebase.initializeApp({
+        apiKey: apiKey,
+        authDomain: authDomain,
+        databaseURL: databaseURL,
+        projectId: projectId,
+        storageBucket: storageBucket,
+        messagingSenderId: messagingSenderId
+      });
+    }
+      
     // track whether user is logged in
     firebase.auth().onAuthStateChanged((user) => {
       if (user) {

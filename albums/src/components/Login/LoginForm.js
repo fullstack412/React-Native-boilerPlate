@@ -12,13 +12,21 @@ class LoginForm extends Component {
     // spinner is depends on loading
     this.setState({ error: '', loading: true });
 
+    // uncomment this if you want user to signup
+    // If user login with a new email and password combo, it automatically signs up a new account
+    
+    // firebase.auth().signInWithEmailAndPassword(email, password)
+    //   .then(this.onLoginSuccess.bind(this))
+    //   .catch(() => {
+    //     firebase.auth().createUserWithEmailAndPassword(email, password)
+    //       .then(this.onLoginSuccess.bind(this))
+    //       .catch(this.onLoginFail.bind(this));
+    //   });
+
+    // Only login, no signup
     firebase.auth().signInWithEmailAndPassword(email, password)
-      .then(this.onLoginSuccess.bind(this))
-      .catch(() => {
-        firebase.auth().createUserWithEmailAndPassword(email, password)
-          .then(this.onLoginSuccess.bind(this))
-          .catch(this.onLoginFail.bind(this));
-      });
+    .then(this.onLoginSuccess.bind(this))
+    .catch(() => (this.onLoginFail.bind(this)));
   }
 
   onLoginSuccess() {

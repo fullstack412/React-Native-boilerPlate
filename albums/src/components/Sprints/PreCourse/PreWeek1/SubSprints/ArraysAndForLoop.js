@@ -232,6 +232,11 @@ class ArraysAndForLoop extends Component {
           </Button>
         </CardSection>
         <CardSection>
+          <Button onPress = {()=>this.props.navigation.navigate('Objects')}>
+            Next
+          </Button>
+        </CardSection>
+        <CardSection>
           <Button onPress = {()=>this.props.navigation.navigate('PCList')}>
             Home
           </Button>

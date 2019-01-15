@@ -1,3 +1,5 @@
+//TODO: App red screen if you click on any of dates rendered on the top of the screen
+
 import React, { Component } from 'react';
 import {
   Text,
