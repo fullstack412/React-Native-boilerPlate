@@ -18,7 +18,7 @@ export default class AddingMethodsExampleExplanation extends Component {
           </Text>
           ={' '}
           <Text style={func}>
-            addingMethod(
+            addingMethods(
             <Text style={balance}>
               300
             </Text>
@@ -30,7 +30,7 @@ export default class AddingMethodsExampleExplanation extends Component {
           </Text>
           ={' '}
           <Text style={func}>
-            addingMethod(
+            addingMethods(
             <Text style={balance}>
               400
             </Text>
@@ -38,11 +38,15 @@ export default class AddingMethodsExampleExplanation extends Component {
           </Text>
           These lines make a two copy from the function{' '}
           <Text style={func}>
-            addingMethod{' '}
+            addingMethods{' '}
           </Text>
-          but with{' '}
+          but with initial value {' '}
           <Text style={balance}>
-            initial value 300 and 400{' '}
+            300{' '}
+          </Text>
+          and{' '}
+          <Text style={balance}>
+            400{' '}
           </Text>
           now if I call{' '}
           <Text style={object}>
@@ -60,15 +64,15 @@ export default class AddingMethodsExampleExplanation extends Component {
           <Text style={balance}>
             balance{' '}
           </Text>
-          variable (global for this {' '}
+          variable (global for thiss{' '}
           <Text style={object}>
             object{' '}
           </Text>
           and local for{' '}
           <Text style={func}>
-            addingMethod
+            addingMethods
           </Text>
-          ) and it value is:{' '}
+          ) and it value is{' '}
           <Text style={balance}>
             300{' '}
           </Text>
@@ -77,33 +81,79 @@ export default class AddingMethodsExampleExplanation extends Component {
             400
           </Text>
           .{'\n'}{'\n'}
-
-
-
           {/* extra explanation */}
-          Now remember if you want to execute a function you will write the name of the function then parentheses.{'\n'}
-          So account1 or account2 is a varibles inside them a function, lets execute acccount1 now by the way we said:{'\n'}{'\n'}
+          So now we have{' '}
           <Text style={object}>
-            acccount3(
-            <Text style={balance}>
-              5
-            </Text>
-            )
+            an object{' '}
           </Text>
-          ,{' '}now what will happened?{'\n'}
-          This line will execute the function{' '}
+          has{' '}
+          <Text style={key}>
+            keys{' '}
+          </Text>
+          inside it{' '}
+          <Text style={key}>
+            functions
+          </Text>
+          , so to execute a function we need the name of this function and parentheses as we siad above.{'\n'}
+          <Text style={bold}>
+            But remember, it is{' '}
+            <Text style={object}>
+              an object{' '}
+            </Text>
+            so the name of the{' '}
+            <Text style={key}>
+              function{' '}
+            </Text>
+            is the name of the{' '}
+            <Text style={key}>
+              key{' '}
+            </Text>
+            that is inside it.{'\n'}
+          </Text>
+          {'\n'}
+          So to execute the{' '}
+          <Text style={key}>
+            function{' '}
+          </Text>
+          that inside{' '}
+          <Text style={key}>
+            withdraw key {' '}
+          </Text>
+          we will write:{'\n'}
           <Text style={object}>
+            acccount3
+          </Text>
+          .
+          <Text style={key}>
+            withdraw
+          </Text>
+          (
+          <Text style={amount}>
+            95
+          </Text>
+          ),{' '}now what will happened?{'\n'}
+          This line will execute the{' '}
+          <Text style={key}>
+            function{' '}
+          </Text>
+          inside the key{' '}
+          <Text style={key}>
             withdraw{' '}
           </Text>
-          that is inside the variable{' '}
+          that is inside the{' '}
           <Text style={object}>
-            account1{' '}
+            object{' '}
           </Text>
           with the argument{' '}
-          <Text style={balance}>
-            5
+          <Text style={amount}>
+            95
           </Text>
-          .{'\n'}Now what is the output?{'\n'}{'"'}
+          .{'\n'}
+          What is the output and the value of the{' '}
+          <Text style={balance}>
+            balance{' '}
+          </Text>
+          ?{'\n'}
           Success withdraw{' '}
           <Text style={balance}>
             5
