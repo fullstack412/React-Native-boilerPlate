@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { Header, Button, Card, CardSection } from '../common';
+import { Button, Card, CardSection } from '../common';
 
 
 class FAQ extends Component {
@@ -43,7 +43,6 @@ class FAQ extends Component {
     
     return (
       <Card>
-        <Header />
         <CardSection>
           <Text style={{fontWeight:'bold'}}>
             FAQs (Frequently Asked Questions)
