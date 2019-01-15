@@ -6,7 +6,7 @@ import ReduceSyntax from './reduceSyntax';
 
 export default class closureExampleExplanation extends Component {
   render() {
-    const { boldHeader, text,bold, func, balance, closure, amount, withdraw, iv } = Styles;
+    const { boldHeader, text, bold, func, balance, closure, amount, withdraw, iv } = Styles;
 
     return (
       <CardSection>
@@ -60,35 +60,44 @@ export default class closureExampleExplanation extends Component {
           <Text style={func}>
             closure{' '}
           </Text>
-          but with{' '}
+          but with initial value{' '}
           <Text style={balance}>
-            initial value 100 and 200{' '}
+            100{' '}
           </Text>
-          now if I call{' '}
+          and{' '}
+          <Text style={balance}>
+            200{' '}
+          </Text>
+          .{'\n'}{'\n'}Now if I call{' '}
           <Text style={withdraw}>
             account1{' '}
           </Text>
-          what I will get?{'\n'}Another function called{' '}
+          what I will get?{'\n'}
+          Another function called{' '}
           <Text style={withdraw}>
             withdraw{' '}
           </Text>
-          but again with{' '}
+          but again with initial value{' '}
           <Text style={balance}>
-            initial value 100{' '}
+            100{' '}
           </Text>
-          not 200.{'\n'}{'\n'}
+          not{' '}
+          <Text style={balance}>
+            200
+          </Text>
+          .{'\n'}{'\n'}
           {/* extra explanation */}
           Now remember if you want to execute a function you will write the name of the function then parentheses.{'\n'}
           So account1 or account2 is a varibles inside them a function, lets execute acccount1 now by the way we said:{'\n'}{'\n'}
           <Text style={withdraw}>
-          acccount1(
-            <Text style={balance}>
+            acccount1(
+            <Text style={amount}>
               5
             </Text>
             )
           </Text>
           ,{' '}now what will happened?{'\n'}
-          This line will execute the function{' '} 
+          This line will execute the function{' '}
           <Text style={withdraw}>
             withdraw{' '}
           </Text>
@@ -100,9 +109,14 @@ export default class closureExampleExplanation extends Component {
           <Text style={balance}>
             5
           </Text>
-          .{'\n'}Now what is the output?{'\n'}{'"'}
-          Success withdraw{' '}
+          .{'\n'}{'\n'}
+          What is the output and the value of the{' '}
           <Text style={balance}>
+            balance{' '}
+          </Text>
+          ?{'\n'}
+          {'"'}Success to withdraw{' '}
+          <Text style={amount}>
             5
           </Text>
           {'"'}, and the balance will be{' '}
@@ -111,10 +125,10 @@ export default class closureExampleExplanation extends Component {
           </Text>
 
           {/* account2 */}
-           .{'\n'}{'\n'}What about if I execute{' '}
-           <Text style={withdraw}>
-          acccount2(
-            <Text style={balance}>
+          .{'\n'}{'\n'}What about if I execute{' '}
+          <Text style={withdraw}>
+            acccount2(
+            <Text style={amount}>
               35
             </Text>
             )
@@ -125,10 +139,16 @@ export default class closureExampleExplanation extends Component {
           </Text>
           function that is inside the variable{' '}
           <Text style={withdraw}>
-            account2{' '}
+            acccount2
           </Text>
-           and the output will be => {'"'}Success withdraw{' '}
+          .{'\n'}{'\n'}
+          What is the output and the value of the{' '}
           <Text style={balance}>
+            balance{' '}
+          </Text>
+          ?{'\n'}
+          {'"'}Success to withdraw{' '}
+          <Text style={amount}>
             35
           </Text>
           {'"'}, and the balance will be{' '}
@@ -141,7 +161,7 @@ export default class closureExampleExplanation extends Component {
             <Text style={func}>
               clouser{' '}
             </Text>
-              is separate variable use the same function and return{' '}
+            is separate variable use the same function and return{' '}
             <Text style={withdraw}>
               what this function is returned{' '}
             </Text>
