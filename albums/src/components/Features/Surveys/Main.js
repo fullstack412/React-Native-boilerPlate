@@ -11,7 +11,7 @@ class Main extends Component {
     emotion: ''
   }
 
-  const = { apiKey, authDomain, databaseURL, projectId, storageBucket, messagingSenderId, pickerContainerStyle } = api.Authenticaltion
+  const = { apiKey, authDomain, databaseURL, projectId, storageBucket, messagingSenderId, pickerContainerStyle } = api
 
 
   componentWillMount() {
