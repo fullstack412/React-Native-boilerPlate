@@ -12,7 +12,7 @@ class LoginScreen extends Component {
   // null: not sure if logged in, false: not logged in, true: logged in
   state = { loggedIn: null };
   const = { spinnerCenter } = Styles;
-  const = { apiKey, authDomain, databaseURL, projectId, storageBucket, messagingSenderId} = api.Authenticaltion
+  const = { apiKey, authDomain, databaseURL, projectId, storageBucket, messagingSenderId} = api
 
   componentWillMount() {
     if (!firebase.apps.length) {      
