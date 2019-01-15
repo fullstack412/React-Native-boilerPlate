@@ -147,6 +147,9 @@
 
 import React,{Component} from 'react';
 import Navigator from './src/components/Menu/routes';
+import { AppRegistry } from 'react-native';
+
+// export default class App extends React.Component {
 
 export default class App extends Component{
   render(){
@@ -155,6 +158,5 @@ export default class App extends Component{
     )
   }
 }
-
 
 AppRegistry.registerComponent('albums', () => App);
