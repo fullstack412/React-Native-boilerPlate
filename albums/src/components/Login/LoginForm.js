@@ -27,8 +27,7 @@ class LoginForm extends Component {
 
     firebase.auth().signInWithEmailAndPassword(email, password)
     .then(this.onLoginSuccess.bind(this))
-    .catch(() => (this.onLoginFail.bind(this)));
-   
+    .catch(this.onLoginFail.bind(this))
   }
 
   onLoginSuccess() {
@@ -41,6 +40,7 @@ class LoginForm extends Component {
   }
 
   onLoginFail() {
+    console.warn('error: ', this.state.error, 'loading: ', this.state.loading)
     this.setState({ 
       error: 'Authentication Failed',
       loading: false
