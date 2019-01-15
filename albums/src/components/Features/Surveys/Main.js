@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Alert, TextInput, StyleSheet, TouchableOpacity, Text, View, Picker, Linking } from 'react-native';
-import { Header, Button, Card, CardSection } from '../../common';
+import { Button, Card, CardSection } from '../../common';
 import firebase from 'firebase';
 import api from '../../../../noDelete';
 import moment from 'moment';
@@ -52,7 +52,6 @@ class Main extends Component {
     
     return (
       <Card>
-        <Header />
         <CardSection>
           <View style = {headerConetentStyle}>
             <Text style = {headerTextStyle}>

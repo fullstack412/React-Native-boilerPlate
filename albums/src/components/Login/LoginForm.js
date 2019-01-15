@@ -24,9 +24,11 @@ class LoginForm extends Component {
     //   });
 
     // Only login, no signup
+
     firebase.auth().signInWithEmailAndPassword(email, password)
     .then(this.onLoginSuccess.bind(this))
     .catch(() => (this.onLoginFail.bind(this)));
+   
   }
 
   onLoginSuccess() {

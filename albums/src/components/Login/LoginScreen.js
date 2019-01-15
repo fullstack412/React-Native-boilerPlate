@@ -3,9 +3,10 @@
 import firebase from 'firebase';
 import React, { Component } from 'react';
 import { View, StyleSheet } from 'react-native';
-import { Header, Button, Spinner, CardSection, Card } from '../common';
+import { Button, Spinner, CardSection, Card } from '../common';
 import LoginForm from './LoginForm';
-import api from '../../../noDelete'
+import api from '../../../noDelete';
+import Tiles from './LoginTiles'
 
 class LoginScreen extends Component {
   // null: not sure if logged in, false: not logged in, true: logged in
@@ -47,6 +48,14 @@ class LoginScreen extends Component {
       return (
         <Card>
           <CardSection>
+            <Button onPress = {() => firebase.auth().signOut()}>
+              Logging Out
+            </Button>
+          </CardSection>
+
+          <Tiles />
+
+          {/* <CardSection>
             <Button onPress = {()=>this.props.navigation.navigate('Calendar')}>
               Calendar
             </Button>
@@ -68,13 +77,9 @@ class LoginScreen extends Component {
             <Button onPress = {()=>this.props.navigation.navigate('Handbook')}>
               Student Handbook
             </Button>
-          </CardSection>
+          </CardSection> */}
           
-          <CardSection>
-            <Button onPress = {() => firebase.auth().signOut()}>
-              Logging Out
-            </Button>
-          </CardSection>
+
         </Card>
       )
     } else {
@@ -85,7 +90,7 @@ class LoginScreen extends Component {
   render() {
     return (
       <View>
-        <Header headerText = 'Login Page'/>
+        {/* <Header headerText = 'Login Page'/> */}
         {this.renderContent()}
       </View>
     ); 

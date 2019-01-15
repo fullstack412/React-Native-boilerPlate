@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { Header, Button, Card, CardSection } from '../common';
+import { Button, Card, CardSection } from '../common';
 
 
 class Handbook extends Component {
@@ -80,7 +80,6 @@ Now, how do we know you actually read this? If you did, send us your favorite so
     
     return (
       <Card>
-        <Header />
         <CardSection>
           <Text style={{fontWeight:'bold'}}>
             RBK STUDENT WIKI

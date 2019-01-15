@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { ScrollView, StyleSheet } from 'react-native';
 // import axios from 'axios';
 import CourseDetail from './CourseDetail';
-import { Header } from '../../common';
+
 
 
 class CourseList extends Component {
@@ -49,7 +49,6 @@ class CourseList extends Component {
   render() {
     return (
       <ScrollView>
-        <Header />
         {this.mapOutCourses()} 
       </ScrollView>
     );

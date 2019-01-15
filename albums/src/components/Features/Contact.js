@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { Header, Button, Card, CardSection } from '../common';
+import { Button, Card, CardSection } from '../common';
 
 class Contact extends Component {
 
@@ -15,7 +15,6 @@ class Contact extends Component {
     
     return (
       <Card>
-        <Header />
         <CardSection>
           <Text style={{fontWeight:'bold'}}>
             If you have any questions, please contact us between 9 am and 5 pm from Sunday through Thursday. Our offices are closed for public holidays, but you can still email us.
