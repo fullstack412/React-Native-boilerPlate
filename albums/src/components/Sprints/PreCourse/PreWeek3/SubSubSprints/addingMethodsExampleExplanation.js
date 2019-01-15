@@ -46,9 +46,9 @@ export default class AddingMethodsExampleExplanation extends Component {
           </Text>
           and{' '}
           <Text style={balance}>
-            400{' '}
+            400{'\n'}{'\n'}
           </Text>
-          now if I call{' '}
+          Now if I call{' '}
           <Text style={object}>
             account3{' '}
           </Text>
@@ -94,7 +94,7 @@ export default class AddingMethodsExampleExplanation extends Component {
           <Text style={key}>
             functions
           </Text>
-          , so to execute a function we need the name of this function and parentheses as we siad above.{'\n'}
+          , so to execute a function we need the name of this function and parentheses as we said above.{'\n'}{'\n'}
           <Text style={bold}>
             But remember, it is{' '}
             <Text style={object}>
@@ -121,17 +121,17 @@ export default class AddingMethodsExampleExplanation extends Component {
           </Text>
           we will write:{'\n'}
           <Text style={object}>
-            acccount3
+            account3
           </Text>
           .
           <Text style={key}>
-            withdraw
+            withdraw(
+            <Text style={amount}>
+              95
+            </Text>
+            )
           </Text>
-          (
-          <Text style={amount}>
-            95
-          </Text>
-          ),{' '}now what will happened?{'\n'}
+          ,{' '}now what will happened?{'\n'}
           This line will execute the{' '}
           <Text style={key}>
             function{' '}
@@ -148,60 +148,63 @@ export default class AddingMethodsExampleExplanation extends Component {
           <Text style={amount}>
             95
           </Text>
-          .{'\n'}
+          .{'\n'}{'\n'}
           What is the output and the value of the{' '}
           <Text style={balance}>
-            balance{' '}
+            balance
           </Text>
           ?{'\n'}
-          Success withdraw{' '}
-          <Text style={balance}>
-            5
+          {'"'}Success to withdraw{' '}
+          <Text style={amount}>
+            95
           </Text>
           {'"'}, and the balance will be{' '}
           <Text style={balance}>
-            95
+            205
           </Text>
-
-          {/* account2 */}
+          {/* account4.withdraw(75) */}
           .{'\n'}{'\n'}What about if I execute{' '}
           <Text style={object}>
-            acccount2(
-            <Text style={balance}>
-              35
+            account4
+            </Text>
+          .
+          <Text style={key}>
+            withdraw(
+            <Text style={amount}>
+              75
             </Text>
             )
           </Text>
-          ?{'\n'}The same approach it will execute the{' '}
-          <Text style={object}>
-            withdraw{' '}
-          </Text>
-          function that is inside the variable{' '}
-          <Text style={object}>
-            account2{' '}
-          </Text>
-          and the output will be => {'"'}Success withdraw{' '}
+          ?{'\n'}
+          {'"'}Success to withdraw{' '}
           <Text style={balance}>
-            35
+            75
           </Text>
           {'"'}, and the balance will be{' '}
           <Text style={balance}>
-            165
+            325
           </Text>
           .{'\n'}{'\n'}
+          {/* account3.checkBalance( ) */}
+          What about if I execute{' '}
+          <Text style={object}>
+            account3
+            </Text>
+          .
+          <Text style={key}>
+            checkBalance( )
+          </Text>
+          ?{'\n'}
+          {'"'}Your balance is: {' '}
+          <Text style={balance}>
+            205
+          </Text>
+          {'"'}.{'\n'}{'\n'}
           <Text style={bold}>
-            So what we get from the{' '}
-            <Text style={func}>
-              clouser{' '}
-            </Text>
-            is separate variable use the same function and return{' '}
-            <Text style={object}>
-              what this function is returned{' '}
-            </Text>
-            <Text style={balance}>
-              depends on each one values
-            </Text>
-            .
+            So by this approach, I improve the closure to has multiple functions that I can execute it.{'\n'}{'\n'}
+          </Text>
+          <Text style={closure}>
+            But we still have a small problem we will solve it in the next topic.
           </Text>
         </Text>
       </CardSection>
