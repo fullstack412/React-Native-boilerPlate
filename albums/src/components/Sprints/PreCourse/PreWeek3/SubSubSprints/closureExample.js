@@ -65,7 +65,7 @@ export default class ClosureExample extends Component {
               ;{'\n'}
               {' '}{' '}{' '}{' '}{' '}{' '}return ‘
                 <Text style={Styles.text}>
-                Success to withdraw:
+                Success to withdraw:{' '}
                 </Text>
               ‘ +
                 <Text style={Styles.amount}>
@@ -75,7 +75,7 @@ export default class ClosureExample extends Component {
               {' '}{' '}{' '}{' '}{'}'}{'\n'}
               {' '}{' '}{' '}{' '}return ‘
                 <Text style={Styles.text}>
-                Failed to withdraw:
+                Failed to withdraw:{' '}
                 </Text>
               ‘ +
                 <Text style={Styles.amount}>

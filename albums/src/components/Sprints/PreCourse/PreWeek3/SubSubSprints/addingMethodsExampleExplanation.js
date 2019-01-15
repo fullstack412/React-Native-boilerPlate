@@ -12,6 +12,8 @@ export default class AddingMethodsExampleExplanation extends Component {
           <Text style={boldHeader}>
             Explanation:{'\n'}
           </Text>
+          accout3= addingMethod(300)accout4= addingMethod(400)if I call accout3 or 4 it will return to me and object have function inside each key like thisnow if I want to excuse each one you can understand it like thisaccount3 and 4 is and variable inside it function return to me an object so it is objectremember how can reach key inside object?By the name of the object .  The name of the keyso account3.withdraw it will give as the function but I need to execute itso account3.withdraw (50)it will give me the return success withdraw 50 and the balance is 250what about account4. balanceyes 400 so each one of them is separated than the other it is likethey are a copy from the function addingMethod
+
           <Text style={func}>
             We have a function called closure it is take{' '}
           </Text>
