@@ -6,7 +6,8 @@ import Icon from 'react-native-vector-icons/AntDesign';
 
 import PCList from '../Sprints/PreCourse/CourseList';
 // import LoginScreen from '../Login/LoginScreen';
-import LoginScreen from '../Login/testLogin';
+import LoginScreen from '../Login/LoginScreen';
+import LoginTile from '../Login/LoginTiles';
 import DrawerScreen from './DrawerScreen';
 
 //PC Week 1 Sprints
@@ -156,7 +157,10 @@ const StackNavigator = createStackNavigator({
   Surveys: Surveys,
   TownHall: TownHall,
   Handbook: Handbook,
-  Login: LoginScreen
+  Login: LoginScreen,
+  FAQ: FAQ,
+  Contact: Contact,
+  LoginTile: LoginTile
 },{
   navigationOptions: ({ navigation }) => ({
     title: 'RBK',  // Title to appear in status bar

@@ -1,17 +1,12 @@
-/**
- * Day 18
- * Sortable List
- * has some performance issue or potential bug
- * little lag when drag
- * To be made to plugin
- */
-'use strict';
-
+// import firebase from 'firebase';
+// import api from '../../../noDelete'
 import React,{ Component } from 'react';
-import { Image,StyleSheet,LayoutAnimation,Text,TouchableHighlight,PanResponder,View } from 'react-native';
+import { Alert, Image, StyleSheet, LayoutAnimation, Text, TouchableOpacity, TouchableHighlight, PanResponder, View } from 'react-native';
+import { Button, Card, CardSection } from '../common';
 import Util from './utils';
 import Icon from 'react-native-vector-icons/Ionicons';
 import IconFA from 'react-native-vector-icons/FontAwesome';
+
 
 class Sortable extends Component{
   constructor() {
@@ -40,7 +35,14 @@ class Sortable extends Component{
     };
     // last item to be selected as default
     this.state = {
-      selected: 14,
+      selected: 12,
+      eachTileLink: [
+        ['JavaScript Fundamentals and Functions', 'Higher Order Function: Filter', 'Reduce'],
+        ['Git', 'Quiz', 'Contact'],
+        ['FAQ', 'Handbook', 'TownHall'],
+        ['Calendar', 'LogOut', 'Surveys'],
+        ['LoginScreen', 'LoginScreen', 'LoginScreen']
+      ],
       days: [{
         key: 0,
         title: "A stopwatch",
@@ -49,6 +51,8 @@ class Sortable extends Component{
         size: 48,
         color: "#ff856c",
         hideNav: false,
+        name: 'Week1'
+
       }, {
         key: 1,
         title: "A weather app",
@@ -57,6 +61,8 @@ class Sortable extends Component{
         size: 60,
         color: "#90bdc1",
         hideNav: true,
+        name: 'Week2'
+
       }, {
         key: 2,
         title: "twitter",
@@ -65,6 +71,7 @@ class Sortable extends Component{
         size: 50,
         color: "#2aa2ef",
         hideNav: true,
+        name: 'Week3'
       }, {
         key: 3,
         title: "cocoapods",
@@ -73,6 +80,7 @@ class Sortable extends Component{
         size: 50,
         color: "#FF9A05",
         hideNav: false,
+        name: 'Week4'
       }, {
         key: 4,
         title: "find my location",
@@ -81,6 +89,7 @@ class Sortable extends Component{
         size: 50,
         color: "#00D204",
         hideNav: false,
+        name: 'Quiz'
       }, {
         key: 5,
         title: "Spotify",
@@ -89,6 +98,7 @@ class Sortable extends Component{
         size: 50,
         color: "#777",
         hideNav: true,
+        name: 'Contact'
       }, {
         key: 6,
         title: "Moveable Circle",
@@ -97,6 +107,7 @@ class Sortable extends Component{
         size: 50,
         color: "#5e2a06",
         hideNav: true,
+        name: 'FAQ'
       }, {
         key: 7,
         title: "Swipe Left Menu",
@@ -105,6 +116,7 @@ class Sortable extends Component{
         size: 50,
         color: "#4285f4",
         hideNav: true,
+        name: 'Handbook'
       }, {
         key: 8,
         title: "Twitter Parallax View",
@@ -113,6 +125,7 @@ class Sortable extends Component{
         size: 50,
         color: "#2aa2ef",
         hideNav: true,
+        name: 'TownHall'
       }, {
         key: 9,
         title: "Tumblr Menu",
@@ -121,6 +134,7 @@ class Sortable extends Component{
         size: 50,
         color: "#37465c",
         hideNav: true,
+        name: 'Calendar'
       }, {
         key: 10,
         title: "OpenGL",
@@ -129,6 +143,7 @@ class Sortable extends Component{
         size: 50,
         color: "#2F3600",
         hideNav: false,
+        name: 'Log Out'
       }, {
         key: 11,
         title: "charts",
@@ -137,7 +152,9 @@ class Sortable extends Component{
         size: 50,
         color: "#fd8f9d",
         hideNav: false,
-      }, {
+        name: 'Survey'
+      },
+      {
         key: 12,
         title: "tweet",
         isFA: false,
@@ -145,6 +162,7 @@ class Sortable extends Component{
         size: 50,
         color: "#83709d",
         hideNav: true,
+        name: 'LoginScreen'
       }, {
         key: 13,
         title: "tinder",
@@ -153,6 +171,7 @@ class Sortable extends Component{
         size: 50,
         color: "#ff6b6b",
         hideNav: true,
+        name: 'LoginScreen'
       }, {
         key: 14,
         title: "Time picker",
@@ -161,11 +180,33 @@ class Sortable extends Component{
         size: 50,
         color: "#ec240e",
         hideNav: false,
-      }]
+        name: 'LoginScreen'
+      }
+    ]
     }
   }
 
   componentWillMount() {
+    // if (!firebase.apps.length) {      
+    //   firebase.initializeApp({
+    //     apiKey: apiKey,
+    //     authDomain: authDomain,
+    //     databaseURL: databaseURL,
+    //     projectId: projectId,
+    //     storageBucket: storageBucket,
+    //     messagingSenderId: messagingSenderId
+    //   });
+    // }
+      
+    // // track whether user is logged in
+    // firebase.auth().onAuthStateChanged((user) => {
+    //   if (user) {
+    //     this.setState({ loggedIn : true});
+    //   } else {
+    //     this.setState({ loggedIn : false});
+    //   }
+    // });
+
     this._panResponder = PanResponder.create({
       onStartShouldSetPanResponder: (evt, gestureState) => {
         return gestureState.dx!==0 || gestureState.dx!==0;
@@ -176,7 +217,7 @@ class Sortable extends Component{
         //30 to be offset
         this.topIndex = Math.floor((pageY - 30) / this._width);
         this.leftIndex = Math.floor((pageX) / this._width);
-        this.index = this.topIndex*3 + this.leftIndex;
+        this.index = this.topIndex * 3 + this.leftIndex;
         this.prev_left = this._width * this.leftIndex;
         this.prev_top = this._width * this.topIndex;
         this.setState({
@@ -240,7 +281,7 @@ class Sortable extends Component{
     }
   }
 
-  _release(evt, gestureState) {
+  _release(evt, gestureState, direct) {
     const shadowStyle = {
       opacity:1,
       shadowColor: "#000",
@@ -260,7 +301,6 @@ class Sortable extends Component{
       });
       LayoutAnimation.configureNext(this.animations);
     } else {
-      console.log(this.topIndex,this.leftIndex)
       let box = this.refs["box" + this.index];
       let top = this.topIndex*this._width;
       let left = this.leftIndex*this._width;
@@ -269,6 +309,12 @@ class Sortable extends Component{
       });
       LayoutAnimation.configureNext(this.animations);
     }
+    // select the the page to redirec to
+    let redirectPage = this.state.eachTileLink[this.topIndex][this.leftIndex]
+    if (redirectPage !== 'LogOut') {
+      console.warn('Log Out');
+    }
+    this.props.that.props.navigation.navigate(redirectPage)
   }
 
   render() {
@@ -276,9 +322,15 @@ class Sortable extends Component{
       let top = Math.floor(index/3)*this._width;
       let left = (index%3)*this._width;
       return(
-        <View ref={"box"+index} {...this._panResponder.panHandlers} key={elem.key} style={[styles.touchBox,{top,left}]} underlayColor="#eee">
+        <View 
+          ref={"box"+index} {...this._panResponder.panHandlers} 
+          key={elem.key} 
+          style={[styles.touchBox,{top,left}]} 
+          underlayColor="#eee" 
+          // underlayColor="#11f" 
+          >
           <View style={styles.boxContainer}>
-            <Text style={styles.boxText}>Day{index+1}</Text>
+            <Text style={styles.boxText}>{elem.name}</Text>
             {elem.isFA? <IconFA size={elem.size} name={elem.icon} style={[styles.boxIcon,{color:elem.color}]}></IconFA>:
               <Icon size={elem.size} name={elem.icon} style={[styles.boxIcon,{color:elem.color}]}></Icon>}
           </View>
@@ -302,7 +354,7 @@ export default class extends Component{
   render() {
     return(
       <View>
-        <Sortable/>
+        <Sortable that = {this}/>
       </View>
     )
   }
