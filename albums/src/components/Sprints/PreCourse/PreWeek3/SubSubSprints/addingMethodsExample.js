@@ -122,7 +122,7 @@ export default class AddingMethodsExample extends Component {
                 ;{'\n'}
                 {' '}{' '}{' '}{' '}{' '}{' '}return ‘
                 <Text style={Styles.text}>
-                  Your balance now is:{' '}
+                  Your balance after this deposit is:{' '}
                 </Text>
                 ‘ +
                 <Text style={Styles.balance}>
@@ -163,7 +163,6 @@ export default class AddingMethodsExample extends Component {
             ;{'\n'}{'}'}
           </Text>
         </Text>
-
       </CardSection >
     );
   }
