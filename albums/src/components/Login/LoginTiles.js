@@ -1,5 +1,5 @@
-// import firebase from 'firebase';
-// import api from '../../../noDelete'
+import firebase from 'firebase';
+import api from '../../../noDelete'
 import React,{ Component } from 'react';
 import { Alert, Image, StyleSheet, LayoutAnimation, Text, TouchableOpacity, TouchableHighlight, PanResponder, View } from 'react-native';
 import { Button, Card, CardSection } from '../common';
@@ -187,16 +187,16 @@ class Sortable extends Component{
   }
 
   componentWillMount() {
-    // if (!firebase.apps.length) {      
-    //   firebase.initializeApp({
-    //     apiKey: apiKey,
-    //     authDomain: authDomain,
-    //     databaseURL: databaseURL,
-    //     projectId: projectId,
-    //     storageBucket: storageBucket,
-    //     messagingSenderId: messagingSenderId
-    //   });
-    // }
+    if (!firebase.apps.length) {      
+      firebase.initializeApp({
+        apiKey: apiKey,
+        authDomain: authDomain,
+        databaseURL: databaseURL,
+        projectId: projectId,
+        storageBucket: storageBucket,
+        messagingSenderId: messagingSenderId
+      });
+    }
       
     // // track whether user is logged in
     // firebase.auth().onAuthStateChanged((user) => {
@@ -311,10 +311,14 @@ class Sortable extends Component{
     }
     // select the the page to redirec to
     let redirectPage = this.state.eachTileLink[this.topIndex][this.leftIndex]
-    if (redirectPage !== 'LogOut') {
-      console.warn('Log Out');
+    if (redirectPage === 'LogOut') {
+      // console.warn(this.props.that.props.navigation.state.params.toggle);
+      firebase.auth().signOut();
+      firebase.auth().onAuthStateChanged(this.props.that.props.navigation.state.params.toggle);
+      this.props.that.props.navigation.navigate('Home')
+    } else {
+      this.props.that.props.navigation.navigate(redirectPage)
     }
-    this.props.that.props.navigation.navigate(redirectPage)
   }
 
   render() {

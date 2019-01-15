@@ -11,7 +11,6 @@ class LoginForm extends Component {
     // loading checks whether it is currently loading
     // spinner is depends on loading
     this.setState({ error: '', loading: true });
-
     // uncomment this if you want user to signup
     // If user login with a new email and password combo, it automatically signs up a new account
     
@@ -40,7 +39,6 @@ class LoginForm extends Component {
   }
 
   onLoginFail() {
-    console.warn('error: ', this.state.error, 'loading: ', this.state.loading)
     this.setState({ 
       error: 'Authentication Failed',
       loading: false
