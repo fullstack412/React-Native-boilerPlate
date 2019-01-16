@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Button, Card, CardSection, Playquiz } from '../../../../common';
-import ReduceSyntax from './reduceSyntax';
 
 export default class AddingMethodsExample extends Component {
   render() {
@@ -87,6 +86,16 @@ export default class AddingMethodsExample extends Component {
               <Text style={variable}>
                 {' '}depositFunc
               </Text>
+              ,{'\n'}
+
+              {/* CheckBalance key */}
+              <Text style={key}>
+                {' '}{' '}{' '}{' '}checkBalance{' '}
+              </Text>
+              :
+              <Text style={variable}>
+                {' '}checkBalanceFunc
+              </Text>
               {'\n'}{' '}{' '}{'}'}{'\n'}
             </Text>
             {' '}{' '}return
@@ -96,6 +105,8 @@ export default class AddingMethodsExample extends Component {
             ;{'\n'}{'}'}{'\n'}
           </Text>
           {/* Global variables */}
+          {/* the first var withdrawFunc */}
+
           var
           <Text style={variable}>
             {' '}withdrawFunc{' '}
@@ -162,14 +173,68 @@ export default class AddingMethodsExample extends Component {
                   <Text style={amount}>
               {' '}amount
                 </Text>
+            ;{'\n'}{'}'}
+          </Text>
+          {'\n'}
+
+          {/* the second var depositFunc */}
+          var
+          <Text style={variable}>
+            {' '}depositFunc{' '}
+          </Text>
+          =
+          <Text style={variable}>
+            {' '}function(
+            <Text style={amount}>
+              amount
+            </Text>
+            ){'{'}{'\n'}
+            <Text style={object}>
+              {' '}{' '}this
+            </Text>
+            .
+            <Text style={balance}>
+              balance
+            </Text>
+            {' '}={' '}
+            <Text style={object}>
+              this
+            </Text>
+            .
+            <Text style={balance}>
+              balance
+            </Text>
+            {' '}+
+            <Text style={amount}>
+              {' '}amount
+            </Text>
+            ;{'\n'}
+            {' '}{' '}{' '}{' '}return ‘
+              <Text style={text}>
+              Success to withdraw:{' '}
+            </Text>
+            ‘ +
+              <Text style={amount}>
+              {' '}amount
+                  </Text>
+            ;{'\n'}
+            {' '}{' '}{'}'}{'\n'}
+            {' '}{' '}return ‘
+            <Text style={text}>
+              Failed to withdraw:{' '}
+            </Text>
+            ‘ +
+                  <Text style={amount}>
+              {' '}amount
+                </Text>
             ;{'\n'}
           </Text>
           <Text style={key}>
             {'}'}
           </Text>
-          ,{'\n'}
+          {'\n'}
 
-          {/* the second key deposit */}
+
           <Text style={key}>
             {' '}{' '}{' '}{' '}deposit{' '}
           </Text>

@@ -4,7 +4,7 @@ import { Button, Card, CardSection, Playquiz } from '../../../../common';
 
 export default class AddingMethodsExample extends Component {
   render() {
-    const { boldHeader,boldHText, text, func, balance, closure, amount, object, iv } = Styles;
+    const { boldHeader, boldText,text, func, balance, closure, amount, object, key} = Styles;
     return (
       <CardSection>
         <Text style={text}>
@@ -174,8 +174,10 @@ const Styles = StyleSheet.create({
     color: 'black',
     fontSize: 17,
   },
-  text: {
+  boldText: {
     fontWeight: 'bold',
+  },
+  text: {
     color: 'black'
   },
   func: {

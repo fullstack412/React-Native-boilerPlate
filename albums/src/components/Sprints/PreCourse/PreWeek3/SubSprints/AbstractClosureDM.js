@@ -11,11 +11,12 @@ export default class AbstractClosureDM extends Component {
   render() {
     const topic = 'Closures, Adding Methods';
     const introduction = 'A closure is the combination of a function and the lexical environment within which that function was declared.';
+    const { headerConetentStyle, headerTextStyle, thumbnailStyle, thumbnailContainerStyle, boldText, boldHeader, text, array, reduce, cb, acc, elem, i, iv } = Styles;
     return (
       <Card>
         <CardSection>
-          <View style={Styles.headerConetentStyle}>
-            <Text style={Styles.headerTextStyle}>
+          <View style={headerConetentStyle}>
+            <Text style={headerTextStyle}>
               {topic}
             </Text>
           </View>
@@ -27,13 +28,13 @@ export default class AbstractClosureDM extends Component {
         </CardSection>
 
         <CardSection>
-          <Text style={Styles.text}>
+          <Text style={text}>
             {introduction}
           </Text>
         </CardSection>
 
         <CardSection  >
-          <Text style={Styles.boldText}>
+          <Text style={boldText}>
             Let's take an example and break it down:
           </Text>
         </CardSection>
