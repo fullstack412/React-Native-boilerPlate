@@ -54,8 +54,19 @@ export default class Reduce extends Component {
           <Text style={boldText}>
             Now what if we use improve reduce ?{'\n'}
             What is improve reduce first ?{'\n'}
-            it is the same of reduce but without iv{'\n'}
-            acc:will be array[0], i:start from 1{'\n'}
+            it is the same of reduce but without{' '}
+            <Text style={iv}>
+              iv
+            </Text>
+            , the value of{' '}
+            <Text style={acc}>
+            acc{' '}
+            </Text>
+            will be array[0], the value of{' '}
+            <Text style={i}>
+            i{' '}
+            </Text>
+            start from 1.{'\n'}
             Let's see what happened step by step:
           </Text>
         </CardSection>
