@@ -32,14 +32,17 @@ export default class OOP extends Component {
         </CardSection>
         <CardSection  >
           <Text style={text}>
-            Now here we improved the function that we takes before.{'\n'}
-            We said that we have a problem, so what is this problem?{'\n'}
-            The problem is each time we make a new variable from the function
-            it will take another copy from it and this problem will{' '}
             <Text style={boldText}>
-              use a lot of space in a big scale
+              Now here we will improv the function that we takes before.{'\n'}
             </Text>
-            , so lets think in a way to decrease this space.{'\n'}
+            We said that we have a problem, so what is this problem?{'\n'}
+            <Text style={boldText}>
+              The problem is each time we make a new variable from the function
+              it will take another copy from it and this problem will use 
+              a lot of space in a big scale.{'\n'}
+            </Text>
+
+                     So lets think in a way to decrease this space.{'\n'}
 
             1- Put the functions outside to have it one time no matter how much we make copies from the main function.{'\n'}
             2- Reach this functions by pass thier name inside the key in the object that we returnd.{'\n'}
@@ -71,7 +74,7 @@ export default class OOP extends Component {
         </CardSection>
 
         <OOPExample />
-        
+
         <OOPExampleExplanation />
 
         <CardSection>

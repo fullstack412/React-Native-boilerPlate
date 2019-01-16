@@ -203,7 +203,7 @@ export default class AddingMethodsExampleExplanation extends Component {
           <Text style={bold}>
             So by this approach, We improve the closure to has multiple functions that we can execute it.{'\n'}{'\n'}
           </Text>
-          <Text style={closure}>
+          <Text style={[bold,closure]}>
             But we still have a small problem, and we will solve it in the next topic.
           </Text>
         </Text>
