@@ -251,5 +251,4 @@ const Styles = StyleSheet.create({
   key: {
     color: '#FF8C00',
   },
-
 });
