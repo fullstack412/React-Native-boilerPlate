@@ -208,7 +208,7 @@ might just found a hobby that also pays salary!';
           </Button>
         </CardSection>
         <CardSection>
-          <Button onPress = {()=>this.props.navigation.navigate('PCList')}>
+          <Button onPress = {()=>this.props.navigation.navigate('Home')}>
             Home
           </Button>
         </CardSection>

@@ -314,7 +314,7 @@ Now if we have the upper picture, then we click on the button, here is what we g
           </Button>
         </CardSection>        
         <CardSection>
-          <Button onPress={() => this.props.navigation.navigate('PCList')}>
+          <Button onPress={() => this.props.navigation.navigate('Home')}>
             Home
           </Button>
         </CardSection>

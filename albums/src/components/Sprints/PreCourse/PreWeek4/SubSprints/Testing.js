@@ -172,7 +172,7 @@ Treat each of passed test as a small celebration on your journey to become a Ful
           </Button>
         </CardSection>
         <CardSection>
-          <Button onPress = {()=>this.props.navigation.navigate('PCList')}>
+          <Button onPress = {()=>this.props.navigation.navigate('Home')}>
             Home
           </Button>
         </CardSection>

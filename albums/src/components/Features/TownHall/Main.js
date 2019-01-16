@@ -6,6 +6,8 @@ import api from '../../../../noDelete';
 
 class Main extends Component {
   state = {
+    authorized: [],
+    currentlyAuthorized: false,
     name: '',
     question: '',
     sprint: '',
@@ -60,6 +62,30 @@ class Main extends Component {
     }).catch((error) => {
       Alert.alert('Please restart the App, due to error: ', error);
     })
+
+    // pull from database to check who is the admin user
+    firebase.database().ref(`admin`).once('value', (data) => {
+      data = data.toJSON();
+      let authorized = [];
+      if (data !== null) {
+        Object.keys(data).map((key) => {
+          authorized.push(key)
+        })
+      }
+      this.setState({
+        authorized
+      })
+      this.state.authorized.map((id) => {
+        if (id === firebase.auth().currentUser.uid) {
+          this.setState({
+            currentlyAuthorized: true
+          })
+        }
+      })
+    }).catch((error) => {
+      Alert.alert('Please restart the App, due to error: ', error);
+    })
+
   }
 
   dropDownSprintList() {
@@ -92,19 +118,36 @@ class Main extends Component {
 
   requestQuestions() {
     let currentSprint = this.state.sprint
-    firebase.database().ref(`townhall/${currentSprint}`).once('value', (data) => {
-      data = data.toJSON();
-      if (data !== null) {
-        this.setState({
-          allQuestions: 
-            Object.keys(data).map((key) => (
-              [data[key]['name'], data[key]['question']]
-            ))
+
+    // check if the author has admin read access
+    if (firebase.auth().currentUser !== null) {
+      // this.state.authorized.map((id) => {
+      //   if (id === firebase.auth().currentUser.uid) {
+      if (this.state.currentlyAuthorized) {
+        firebase.database().ref(`townhall/${currentSprint}`).once('value', (data) => {
+          data = data.toJSON();
+          if (data !== null) {
+            this.setState({
+              allQuestions: 
+                Object.keys(data).map((key) => (
+                  [data[key]['name'], data[key]['question']]
+                ))
+            })
+          } else {
+            this.setState({
+              allQuestions: [[' ', 'None...']]
+            })
+          }
+        }).catch((error) => {
+          Alert.alert('Please restart the App, due to error: ', error);
         })
+        Alert.alert('Hi, the smartest and the most humble Fatema, here is your data')
+      } else {
+        Alert.alert('Sorry, you don\' have access to this information. Apply to be HIR');
       }
-    }).catch((error) => {
-      Alert.alert('Please restart the App, due to error: ', error);
-    })
+    } else {
+      Alert.alert('Please log in first')
+    }
   }
 
   mapOutQuestions() {
