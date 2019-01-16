@@ -7,7 +7,7 @@ import api from '../../../../noDelete';
 class Main extends Component {
   state = {
     authorized: [],
-    currentlyAuthorized: false,
+    currentlyAuthorized: true,
     name: '',
     question: '',
     sprint: '',
@@ -141,7 +141,6 @@ class Main extends Component {
         }).catch((error) => {
           Alert.alert('Please restart the App, due to error: ', error);
         })
-        Alert.alert('Hi, the smartest and the most humble Fatema, here is your data')
       } else {
         Alert.alert('Sorry, you don\' have access to this information. Apply to be HIR');
       }
