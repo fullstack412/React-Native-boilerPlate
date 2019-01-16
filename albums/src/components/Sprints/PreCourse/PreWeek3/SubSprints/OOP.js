@@ -9,7 +9,7 @@ export default class OOP extends Component {
   render() {
     const topic = 'OOP';
     const introduction = 'OOP (Object-Oriented Programming) is an approach in programming in which data is encapsulated within objects and the object itself is operated on, rather than its component parts.';
-    const { headerConetentStyle, headerTextStyle, thumbnailStyle, thumbnailContainerStyle, boldText, boldHeader, text, variable } = Styles
+    const { headerConetentStyle, headerTextStyle, thumbnailStyle, thumbnailContainerStyle, boldText, boldHeader, text,func, variable } = Styles
     return (
       <Card>
         <CardSection>
@@ -38,13 +38,20 @@ export default class OOP extends Component {
             We said that we have a problem, so what is this problem?{'\n'}
             <Text style={boldText}>
               The problem is each time we make a new variable from the function
-              it will take another copy from it and this problem will use 
-              a lot of space in a big scale.{'\n'}
+              it will take another copy from it and this problem will use
+              a lot of space in a big scale.{'\n'}{'\n'}
             </Text>
 
-                     So lets think in a way to decrease this space.{'\n'}
-
-            1- Put the functions outside to have it one time no matter how much we make copies from the main function.{'\n'}
+            So lets think in a way to decrease this space.{'\n'}
+            1- Put the{' '}
+            <Text style={variable}>
+              functions{' '}
+            </Text>
+            outside to have it one time no matter how much we make copies from the{' '}
+            <Text style={func}>
+              main function
+            </Text>
+            .{'\n'}
             2- Reach this functions by pass thier name inside the key in the object that we returnd.{'\n'}
             <Text style={boldText}>
               <Text style={variable}>
@@ -128,6 +135,9 @@ const Styles = StyleSheet.create({
   },
   text: {
     color: 'black'
+  },
+  func: {
+    color: 'green',
   },
   variable: {
     color: 'red',
