@@ -9,7 +9,7 @@ export default class OOP extends Component {
   render() {
     const topic = 'OOP';
     const introduction = 'OOP (Object-Oriented Programming) is an approach in programming in which data is encapsulated within objects and the object itself is operated on, rather than its component parts.';
-    const = {headerConetentStyle, headerTextStyle, thumbnailStyle, thumbnailContainerStyle, boldText, boldHeader, text, array, reduce, cb, acc, elem, i, iv}=Styles
+    const {headerConetentStyle, headerTextStyle, thumbnailStyle, thumbnailContainerStyle, boldText, boldHeader, text, array, reduce, cb, acc, elem, i, iv}=Styles
     return (
       <Card>
         <CardSection>
