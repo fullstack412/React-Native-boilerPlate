@@ -72,7 +72,7 @@ export default class AddingMethodsExampleExplanation extends Component {
           <Text style={func}>
             addingMethods
           </Text>
-          ) and it value is{' '}
+          ) and its value is{' '}
           <Text style={balance}>
             300{' '}
           </Text>
@@ -201,10 +201,10 @@ export default class AddingMethodsExampleExplanation extends Component {
           </Text>
           {'"'}.{'\n'}{'\n'}
           <Text style={bold}>
-            So by this approach, I improve the closure to has multiple functions that I can execute it.{'\n'}{'\n'}
+            So by this approach, We improve the closure to has multiple functions that we can execute it.{'\n'}{'\n'}
           </Text>
           <Text style={closure}>
-            But we still have a small problem we will solve it in the next topic.
+            But we still have a small problem, and we will solve it in the next topic.
           </Text>
         </Text>
       </CardSection>
