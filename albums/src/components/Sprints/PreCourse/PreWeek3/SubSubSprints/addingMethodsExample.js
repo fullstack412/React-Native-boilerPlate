@@ -4,7 +4,7 @@ import { Button, Card, CardSection, Playquiz } from '../../../../common';
 
 export default class AddingMethodsExample extends Component {
   render() {
-    const { boldHeader, boldText,text, func, balance, closure, amount, object, key} = Styles;
+    const { boldHeader, boldText, text, func, balance, closure, amount, object, key } = Styles;
     return (
       <CardSection>
         <Text style={text}>
@@ -16,152 +16,155 @@ export default class AddingMethodsExample extends Component {
           <Text style={boldHeader}>
             Example:{'\n'}
           </Text>
-          <Text style={func}>
-            function addingMethods(
-            <Text style={balance}>
-              initial
-            </Text>
-            ){'{'}{'\n'}
-            {' '}{' '}var
-            <Text style={balance}>
-              {' '}balance
-            </Text>
-            {' '}=
-            <Text style={balance}>
-              {' '}initial
-            </Text>
-            ;{'\n'}{' '}{' '}var
-            <Text style={object}>
-              {' '}object{' '}
-            </Text>
-            =
-            <Text style={object}>
-              {' '}{'{'}{'\n'}
-              <Text style={key}>
-                {' '}{' '}{' '}{' '}withdraw{' '}
-              </Text>
-              :
-              <Text style={key}>
-                {' '}function(
-                <Text style={amount}>
-                  amount
-                </Text>
-                ){'{'}{'\n'}
-                {' '}{' '}{' '}{' '}{' '}{' '}if(
-                <Text style={balance}>
-                  balance
-                </Text>
-                {' '}-
-                <Text style={amount}>
-                  {' '}amount
-                </Text>
-                {' '}>=
-                  <Text style={text}>
-                  {' '}0
-                  </Text>
-                ){'{'}{'\n'}
-                <Text style={balance}>
-                  {' '}{' '}{' '}{' '}{' '}{' '}{' '}{' '}balance
-                </Text>
-                {' '}=
+          <Text style={boldText}>
+            <Text style={func}>
+              function addingMethods(
               <Text style={balance}>
-                  {' '}balance
+                initial
               </Text>
-                {' '}-
-              <Text style={amount}>
-                  {' '}amount
-              </Text>
-                ;{'\n'}
-                {' '}{' '}{' '}{' '}{' '}{' '}{' '}{' '}return ‘
-                <Text style={text}>
-                  Success to withdraw:{' '}
-                </Text>
-                ‘ +
-                <Text style={amount}>
-                  {' '}amount
-                </Text>
-                ;{'\n'}
-                {' '}{' '}{' '}{' '}{' '}{' '}{'}'}{'\n'}
-                {' '}{' '}{' '}{' '}{' '}{' '}return ‘
-                <Text style={text}>
-                  Failed to withdraw:{' '}
-                </Text>
-                ‘ +
-                <Text style={amount}>
-                  {' '}amount
-              </Text>
-                ;{'\n'}
-              </Text>
-              <Text style={key}>
-                {' '}{' '}{' '}{' '}{'}'}
-              </Text>
-              ,{'\n'}
-
-              {/* the second key deposit */}
-              <Text style={key}>
-                {' '}{' '}{' '}{' '}deposit{' '}
-              </Text>
-              :
-              <Text style={key}>
-                {' '}function(
-                <Text style={amount}>
-                  amount
-                </Text>
-                ){'{'}{'\n'}
-                <Text style={balance}>
-                  {' '}{' '}{' '}{' '}{' '}{' '}balance
-                </Text>
-                {' '}=
+              ){'{'}{'\n'}
+              {' '}{' '}var
               <Text style={balance}>
-                  {' '}balance
+                {' '}balance
               </Text>
-                {' '}+
-              <Text style={amount}>
-                  {' '}amount
+              {' '}=
+              <Text style={balance}>
+                {' '}initial
               </Text>
-                ;{'\n'}
-                {' '}{' '}{' '}{' '}{' '}{' '}return ‘
-                <Text style={text}>
-                  Your balance after this deposit is:{' '}
-                </Text>
-                ‘ +
-                <Text style={balance}>
-                  {' '}balance
-                </Text>
-                ;{'\n'}
-              </Text>
-              <Text style={key}>
-                {' '}{' '}{' '}{' '}{'}'}
-              </Text>
-              ,{'\n'}
-              {/* the third key checkBalance */}
-              <Text style={key}>
-                {' '}{' '}{' '}{' '}checkBalance{' '}
-              </Text>
-              :
-              <Text style={key}>
-                {' '}function(){'{'}{'\n'}
-                {' '}{' '}{' '}{' '}{' '}{' '}return ‘
-                <Text style={text}>
-                  Your balance is:{' '}
-                </Text>
-                ‘ +
-                <Text style={balance}>
-                  {' '}balance
-                </Text>
-                ;{'\n'}
-              </Text>
-              <Text style={key}>
-                {' '}{' '}{' '}{' '}{'}'}{'\n'}
-              </Text>
-              {' '}{' '}{'}'}{'\n'}
-            </Text>
-            {' '}{' '}return
+              ;{'\n'}{' '}{' '}var
               <Text style={object}>
-              {' '}object
+                {' '}object{' '}
               </Text>
-            ;{'\n'}{'}'}
+              =
+              <Text style={object}>
+                {' '}{'{'}{'\n'}
+                <Text style={key}>
+                  {' '}{' '}{' '}{' '}withdraw{' '}
+                </Text>
+                :
+                <Text style={key}>
+                  {' '}function(
+                  <Text style={amount}>
+                    amount
+                  </Text>
+                  ){'{'}{'\n'}
+                  {' '}{' '}{' '}{' '}{' '}{' '}if(
+                  <Text style={balance}>
+                    balance
+                  </Text>
+                  {' '}-
+                  <Text style={amount}>
+                    {' '}amount
+                  </Text>
+                  {' '}>=
+                    <Text style={text}>
+                    {' '}0
+                    </Text>
+                  ){'{'}{'\n'}
+                  <Text style={balance}>
+                    {' '}{' '}{' '}{' '}{' '}{' '}{' '}{' '}balance
+                  </Text>
+                  {' '}=
+                <Text style={balance}>
+                    {' '}balance
+                </Text>
+                  {' '}-
+                <Text style={amount}>
+                    {' '}amount
+                </Text>
+                  ;{'\n'}
+                  {' '}{' '}{' '}{' '}{' '}{' '}{' '}{' '}return ‘
+                  <Text style={text}>
+                    Success to withdraw:{' '}
+                  </Text>
+                  ‘ +
+                  <Text style={amount}>
+                    {' '}amount
+                  </Text>
+                  ;{'\n'}
+                  {' '}{' '}{' '}{' '}{' '}{' '}{'}'}{'\n'}
+                  {' '}{' '}{' '}{' '}{' '}{' '}return ‘
+                  <Text style={text}>
+                    Failed to withdraw:{' '}
+                  </Text>
+                  ‘ +
+                  <Text style={amount}>
+                    {' '}amount
+                </Text>
+                  ;{'\n'}
+                </Text>
+                <Text style={key}>
+                  {' '}{' '}{' '}{' '}{'}'}
+                </Text>
+                ,{'\n'}
+
+                {/* the second key deposit */}
+                <Text style={key}>
+                  {' '}{' '}{' '}{' '}deposit{' '}
+                </Text>
+                :
+                <Text style={key}>
+                  {' '}function(
+                  <Text style={amount}>
+                    amount
+                  </Text>
+                  ){'{'}{'\n'}
+                  <Text style={balance}>
+                    {' '}{' '}{' '}{' '}{' '}{' '}balance
+                  </Text>
+                  {' '}=
+                <Text style={balance}>
+                    {' '}balance
+                </Text>
+                  {' '}+
+                <Text style={amount}>
+                    {' '}amount
+                </Text>
+                  ;{'\n'}
+                  {' '}{' '}{' '}{' '}{' '}{' '}return ‘
+                  <Text style={text}>
+                    Your balance after this deposit is:{' '}
+                  </Text>
+                  ‘ +
+                  <Text style={balance}>
+                    {' '}balance
+                  </Text>
+                  ;{'\n'}
+                </Text>
+                <Text style={key}>
+                  {' '}{' '}{' '}{' '}{'}'}
+                </Text>
+                ,{'\n'}
+                {/* the third key checkBalance */}
+                <Text style={key}>
+                  {' '}{' '}{' '}{' '}checkBalance{' '}
+                </Text>
+                :
+                <Text style={key}>
+                  {' '}function(){'{'}{'\n'}
+                  {' '}{' '}{' '}{' '}{' '}{' '}return ‘
+                  <Text style={text}>
+                    Your balance is:{' '}
+                  </Text>
+                  ‘ +
+                  <Text style={balance}>
+                    {' '}balance
+                  </Text>
+                  ;{'\n'}
+                </Text>
+                <Text style={key}>
+                  {' '}{' '}{' '}{' '}{'}'}{'\n'}
+                </Text>
+                {' '}{' '}{'}'}{'\n'}
+              </Text>
+              {' '}{' '}return
+                <Text style={object}>
+                {' '}object
+                </Text>
+              ;{'\n'}{'}'}
+            </Text>
           </Text>
+
         </Text>
       </CardSection >
     );
