@@ -59,7 +59,7 @@ export default class OOPExampleExplanation extends Component {
           <Text style={key}>
             4 keys{' '}
           </Text>
-          ({' '}
+          (
           <Text style={key}>
             balance{' '}
           </Text>
@@ -77,17 +77,17 @@ export default class OOPExampleExplanation extends Component {
           </Text>
           and{' '}
           <Text style={key}>
-            checkBalance
+            checkBalance{' '}
           </Text>
-          ) and each key has inside it a{' '}
+           each one has inside it a{' '}
           <Text style={variable}>
             global variable
           </Text>
-          (
+          [
           <Text style={variable}>
             function
           </Text>
-          ).{'\n'}{'\n'}
+          ]).{'\n'}{'\n'}
 
 
           {/* extra explanation */}
@@ -100,7 +100,7 @@ export default class OOPExampleExplanation extends Component {
             keys{' '}
           </Text>
           inside it{' '}
-          <Text style={key}>
+          <Text style={variable}>
             functions
           </Text>
           , so to execute a function we need the name of this function and parentheses as we said above.{'\n'}{'\n'}
