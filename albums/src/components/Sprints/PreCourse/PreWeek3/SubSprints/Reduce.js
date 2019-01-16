@@ -52,8 +52,8 @@ export default class Reduce extends Component {
 
         <CardSection  >
           <Text style={boldText}>
-            Now what if we use improve reduce ?{'\n'}
-            What is improve reduce first ?{'\n'}
+            Now what if we use improve reduce?{'\n'}
+            What is improve reduce first?{'\n'}
             it is the same of reduce but without{' '}
             <Text style={iv}>
               iv
