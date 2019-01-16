@@ -60,13 +60,21 @@ export default class Reduce extends Component {
             </Text>
             , the value of{' '}
             <Text style={acc}>
-            acc{' '}
+              acc{' '}
             </Text>
-            will be array[0], the value of{' '}
+            will be{' '}
+            <Text style={acc}>
+              array[0]
+            </Text>
+            , the value of{' '}
             <Text style={i}>
-            i{' '}
+              i{' '}
             </Text>
-            start from 1.{'\n'}
+            start from{' '}
+            <Text style={i}>
+              1
+            </Text>
+            .{'\n'}
             Let's see what happened step by step:
           </Text>
         </CardSection>
