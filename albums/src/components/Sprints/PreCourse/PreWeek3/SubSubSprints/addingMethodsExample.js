@@ -11,7 +11,10 @@ export default class AddingMethodsExample extends Component {
           <Text style={boldText}>
             Now what if we want to return many functions what we can return?{'\n'}
             We can return an object and each key inside it has a fucntion,
-            so now lets improve the clouser and add methods to it.{'\n'}{'\n'}
+            so now lets improve the clouser and add methods to it.{'\n'}
+          </Text>
+          <Text style={boldText}>
+            Let's take an example and break it down:{'\n'}{'\n'}
           </Text>
           <Text style={boldHeader}>
             Example:{'\n'}
