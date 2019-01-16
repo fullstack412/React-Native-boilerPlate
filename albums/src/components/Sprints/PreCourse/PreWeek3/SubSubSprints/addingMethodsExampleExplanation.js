@@ -195,7 +195,7 @@ export default class AddingMethodsExampleExplanation extends Component {
             checkBalance( )
           </Text>
           ?{'\n'}
-          {'"'}Your balance is: {' '}
+          {'"'}Your balance is:{' '}
           <Text style={balance}>
             205
           </Text>

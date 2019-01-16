@@ -200,17 +200,17 @@ export default class OOPExampleExplanation extends Component {
             checkBalance( )
           </Text>
           ?{'\n'}
-          {'"'}Your balance is: {' '}
+          {'"'}Your balance is:{' '}
           <Text style={balance}>
-            205
+            300
           </Text>
           {'"'}.{'\n'}{'\n'}
           <Text style={boldText}>
-            So by this approach, I improve the closure to has multiple functions that I can execute it.{'\n'}{'\n'}
-          </Text>
-          <Text style={func}>
-            But we still have a small problem we will solve it in the next topic.
-          </Text>
+            So by this approach, I improve the closure adding methods to decrease the space that I will use each time I make a copy from the{' '}
+            <Text style={func}>
+              main function
+            </Text>
+            .</Text>
         </Text>
       </CardSection >
     );
