@@ -2,10 +2,9 @@ import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Button, Card, CardSection, Playquiz } from '../../../../common';
 
-export default class AddingMethodsExampleExplanation extends Component {
+export default class OOPExampleExplanation extends Component {
   render() {
-    const { boldHeader, text, bold, func, balance, closure, amount, object, key } = Styles;
-
+    const { boldHeader, text, boldText, func, balance, variable, amount, object, key } = Styles;
     return (
       <CardSection>
         <Text style={text}>
@@ -14,43 +13,43 @@ export default class AddingMethodsExampleExplanation extends Component {
           </Text>
           So lets make some lines and explain it:{'\n'}var{' '}
           <Text style={object}>
-            account3{' '}
+            account5{' '}
           </Text>
           ={' '}
           <Text style={func}>
-            addingMethods(
+            objectOriented(
             <Text style={balance}>
-              300
+              500
             </Text>
             ){'\n'}
           </Text>
           var{' '}
           <Text style={object}>
-            account4{' '}
+            account6{' '}
           </Text>
           ={' '}
           <Text style={func}>
-            addingMethods(
+            objectOriented(
             <Text style={balance}>
-              400
+              600
             </Text>
             ){'\n'}
           </Text>
           These lines make a two copy from the function{' '}
           <Text style={func}>
-            addingMethods{' '}
+            objectOriented{' '}
           </Text>
           but with initial value{' '}
           <Text style={balance}>
-            300{' '}
+            500{' '}
           </Text>
           and{' '}
           <Text style={balance}>
-            400{'\n'}{'\n'}
+            600{'\n'}{'\n'}
           </Text>
           Now if I call{' '}
           <Text style={object}>
-            account3{' '}
+            account5{' '}
           </Text>
           what I will get?{'\n'}
           <Text style={object}>
@@ -58,29 +57,39 @@ export default class AddingMethodsExampleExplanation extends Component {
           </Text>
           has{' '}
           <Text style={key}>
-            3 keys{' '}
+            4 keys{' '}
           </Text>
-          with{' '}
-          <Text style={balance}>
+          ({' '}
+          <Text style={key}>
             balance{' '}
           </Text>
-          variable (global for thiss{' '}
-          <Text style={object}>
-            object{' '}
-          </Text>
-          and local for{' '}
-          <Text style={func}>
-            addingMethods
-          </Text>
-          ) and its value is{' '}
+          has initial value{' '}
           <Text style={balance}>
-            300{' '}
+            500
           </Text>
-          not{' '}
-          <Text style={balance}>
-            400
+          ,{' '}
+          <Text style={key}>
+            withdraw
           </Text>
-          .{'\n'}{'\n'}
+          ,{' '}
+          <Text style={key}>
+            deposit{' '}
+          </Text>
+          and{' '}
+          <Text style={key}>
+            checkBalance
+          </Text>
+          ) and each one has inside it self a{' '}
+          <Text style={variable}>
+            global variable
+          </Text>
+          (
+          <Text style={variable}>
+            function
+          </Text>
+          ).{'\n'}{'\n'}
+
+
           {/* extra explanation */}
           So now we have{' '}
           <Text style={object}>
@@ -95,7 +104,7 @@ export default class AddingMethodsExampleExplanation extends Component {
             functions
           </Text>
           , so to execute a function we need the name of this function and parentheses as we said above.{'\n'}{'\n'}
-          <Text style={bold}>
+          <Text style={boldText}>
             But remember, it is{' '}
             <Text style={object}>
               an object{' '}
@@ -121,33 +130,50 @@ export default class AddingMethodsExampleExplanation extends Component {
           </Text>
           we will write:{'\n'}
           <Text style={object}>
-            account3
+            account5
           </Text>
           .
           <Text style={key}>
             withdraw(
             <Text style={amount}>
-              95
+              200
             </Text>
             )
           </Text>
           ,{' '}now what will happened?{'\n'}
           This line will execute the{' '}
-          <Text style={key}>
+          <Text style={variable}>
             function{' '}
           </Text>
-          inside the key{' '}
-          <Text style={key}>
-            withdraw{' '}
-          </Text>
-          that is inside the{' '}
-          <Text style={object}>
-            object{' '}
+          that is inside the variable{' '}
+          <Text style={variable}>
+            withdrawFunc{' '}
           </Text>
           with the argument{' '}
           <Text style={amount}>
-            95
+            200
           </Text>
+          , and "
+          <Text style={object}>
+            this
+          </Text>
+          " will represent the object{' '}
+          <Text style={object}>
+            account5
+          </Text>
+          , because{' '}
+          <Text style={object}>
+            account5{' '}
+          </Text>
+          is the object who (has/is the parent of) the key{' '}
+          <Text style={key}>
+            withdraw
+          </Text>
+          , or the one in the left of who is called the function{' '}
+          <Text style={variable}>
+            withdrawFunc{' '}
+          </Text>
+          in a way
           .{'\n'}{'\n'}
           What is the output and the value of the{' '}
           <Text style={balance}>
@@ -156,39 +182,39 @@ export default class AddingMethodsExampleExplanation extends Component {
           ?{'\n'}
           {'"'}Success to withdraw{' '}
           <Text style={amount}>
-            95
+            200
           </Text>
           {'"'}, and the balance will be{' '}
           <Text style={balance}>
-            205
+            300
           </Text>
-          {/* account4.withdraw(75) */}
+          {/* account6.withdraw(75) */}
           .{'\n'}{'\n'}What about if I execute{' '}
           <Text style={object}>
-            account4
+            account6
             </Text>
           .
           <Text style={key}>
             withdraw(
             <Text style={amount}>
-              75
+              345
             </Text>
             )
           </Text>
           ?{'\n'}
           {'"'}Success to withdraw{' '}
           <Text style={amount}>
-            75
+            345
           </Text>
           {'"'}, and the balance will be{' '}
           <Text style={balance}>
-            325
+            255
           </Text>
           .{'\n'}{'\n'}
-          {/* account3.checkBalance( ) */}
+          {/* account5.checkBalance( ) */}
           What about if I execute{' '}
           <Text style={object}>
-            account3
+            account5
             </Text>
           .
           <Text style={key}>
@@ -197,17 +223,17 @@ export default class AddingMethodsExampleExplanation extends Component {
           ?{'\n'}
           {'"'}Your balance is:{' '}
           <Text style={balance}>
-            205
+            300
           </Text>
           {'"'}.{'\n'}{'\n'}
-          <Text style={bold}>
-            So by this approach, We improve the closure to has multiple functions that we can execute it.{'\n'}{'\n'}
-          </Text>
-          <Text style={[bold,closure]}>
-            But we still have a small problem, and we will solve it in the next topic.
-          </Text>
+          <Text style={boldText}>
+            So by this approach, I improve the closure adding methods to decrease the space that I will use each time I make a copy from the{' '}
+            <Text style={func}>
+              main function
+            </Text>
+            .</Text>
         </Text>
-      </CardSection>
+      </CardSection >
     );
   }
 }
@@ -221,8 +247,8 @@ const Styles = StyleSheet.create({
   text: {
     color: 'black'
   },
-  bold: {
-    fontWeight: 'bold',
+  boldText: {
+    fontWeight: 'bold'
   },
   func: {
     color: 'green',
@@ -230,7 +256,7 @@ const Styles = StyleSheet.create({
   balance: {
     color: 'blue',
   },
-  closure: {
+  variable: {
     color: 'red',
   },
   amount: {
@@ -242,4 +268,5 @@ const Styles = StyleSheet.create({
   key: {
     color: '#FF8C00',
   },
+
 });

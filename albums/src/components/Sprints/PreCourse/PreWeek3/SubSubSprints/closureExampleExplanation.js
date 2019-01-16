@@ -66,7 +66,7 @@ export default class closureExampleExplanation extends Component {
           </Text>
           and{' '}
           <Text style={balance}>
-            200{' '}
+            200
           </Text>
           .{'\n'}{'\n'}Now if I call{' '}
           <Text style={withdraw}>
@@ -112,7 +112,7 @@ export default class closureExampleExplanation extends Component {
           .{'\n'}{'\n'}
           What is the output and the value of the{' '}
           <Text style={balance}>
-            balance{' '}
+            balance
           </Text>
           ?{'\n'}
           {'"'}Success to withdraw{' '}
@@ -144,7 +144,7 @@ export default class closureExampleExplanation extends Component {
           .{'\n'}{'\n'}
           What is the output and the value of the{' '}
           <Text style={balance}>
-            balance{' '}
+            balance
           </Text>
           ?{'\n'}
           {'"'}Success to withdraw{' '}

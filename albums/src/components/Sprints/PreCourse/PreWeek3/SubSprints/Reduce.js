@@ -10,11 +10,12 @@ export default class Reduce extends Component {
   render() {
     const topic = 'Reduce, Improve Reduce';
     const introduction = 'The reduce( ) method executes a reducer function (that you provide) on each member of the array resulting in single output value.';
+    const { headerConetentStyle, headerTextStyle, thumbnailStyle, thumbnailContainerStyle, boldText, boldHeader, text, array, reduce, cb, acc, elem, i, iv } = Styles;
     return (
       <Card>
         <CardSection>
-          <View style={Styles.headerConetentStyle}>
-            <Text style={Styles.headerTextStyle}>
+          <View style={headerConetentStyle}>
+            <Text style={headerTextStyle}>
               {topic}
             </Text>
           </View>
@@ -26,7 +27,7 @@ export default class Reduce extends Component {
         </CardSection>
 
         <CardSection>
-          <Text style={Styles.text}>
+          <Text style={text}>
             {introduction}
           </Text>
         </CardSection>
@@ -38,7 +39,7 @@ export default class Reduce extends Component {
         <ReduceExample />
 
         <CardSection  >
-          <Text style={Styles.boldText}>
+          <Text style={boldText}>
             Let's see what happened step by step:
           </Text>
         </CardSection>
@@ -50,11 +51,30 @@ export default class Reduce extends Component {
         </CardSection>
 
         <CardSection  >
-          <Text style={Styles.boldText}>
-            Now what if we use improve reduce ?{'\n'}
-            What is improve reduce first ?{'\n'}
-            it is the same of reduce but without iv{'\n'}
-            acc:will be array[0], i:start from 1{'\n'}
+          <Text style={boldText}>
+            Now what if we use improve reduce?{'\n'}
+            What is improve reduce first?{'\n'}
+            it is the same of reduce but without{' '}
+            <Text style={iv}>
+              iv
+            </Text>
+            , the value of{' '}
+            <Text style={acc}>
+              acc{' '}
+            </Text>
+            will be{' '}
+            <Text style={acc}>
+              array[0]
+            </Text>
+            , the value of{' '}
+            <Text style={i}>
+              i{' '}
+            </Text>
+            start from{' '}
+            <Text style={i}>
+              1
+            </Text>
+            .{'\n'}
             Let's see what happened step by step:
           </Text>
         </CardSection>
@@ -66,7 +86,7 @@ export default class Reduce extends Component {
         </CardSection>
 
         <CardSection>
-          <Button onPress = {()=>this.props.navigation.navigate('Higher Order Function: Filter')}>
+          <Button onPress={() => this.props.navigation.navigate('Higher Order Function: Filter')}>
             Previous
           </Button>
         </CardSection>
