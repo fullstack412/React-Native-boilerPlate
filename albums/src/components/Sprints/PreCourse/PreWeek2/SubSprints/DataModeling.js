@@ -102,7 +102,7 @@ For example, heated seat for this car, additional lights for the other car, no c
           </Button>
         </CardSection>
         <CardSection>
-          <Button onPress = {()=>this.props.navigation.navigate('PCList')}>
+          <Button onPress = {()=>this.props.navigation.navigate('Home')}>
             Home
           </Button>
         </CardSection>

@@ -185,7 +185,7 @@ function that works both for array and object. \nIsn\'t it amazing to see the ev
         </Button>
       </CardSection>
       <CardSection>
-        <Button onPress = {()=>this.props.navigation.navigate('PCList')}>
+        <Button onPress = {()=>this.props.navigation.navigate('Home')}>
           Home
         </Button>
       </CardSection>

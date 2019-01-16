@@ -576,7 +576,7 @@ class FinalQuiz extends Component {
       <Card>
         <Playquiz quizData = { this.state.quizData }/>
         <CardSection>
-          <Button onPress = {()=>this.props.navigation.navigate('PCList')}>
+          <Button onPress = {()=>this.props.navigation.navigate('Home')}>
             Home
           </Button>
         </CardSection>

@@ -153,6 +153,7 @@ import { AppRegistry } from 'react-native';
 
 export default class App extends Component{
   render(){
+    // console.disableYellowBox = true;
     return(
       <Navigator/>
     )

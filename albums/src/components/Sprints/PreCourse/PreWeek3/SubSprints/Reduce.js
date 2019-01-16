@@ -76,7 +76,7 @@ export default class Reduce extends Component {
           </Button>
         </CardSection>
         <CardSection>
-          <Button onPress={() => this.props.navigation.navigate('PCList')}>
+          <Button onPress={() => this.props.navigation.navigate('Home')}>
             Home
           </Button>
         </CardSection>
