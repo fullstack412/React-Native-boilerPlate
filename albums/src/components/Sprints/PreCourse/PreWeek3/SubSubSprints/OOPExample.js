@@ -99,7 +99,7 @@ export default class AddingMethodsExample extends Component {
               <Text style={object}>
                 {' '}object
               </Text>
-              ;{'\n'}{'}'}{'\n'}
+              ;{'\n'}{'}'}{'\n'}{'\n'}
             </Text>
             {/* Global variables */}
             {/* the first var withdrawFunc */}
