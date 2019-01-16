@@ -118,7 +118,7 @@ Finally we need to detect the button click and handle it by changing the image s
 button.onclick = function() {\n\
 image.src = "https://i.imgur.com/rClC9md.jpg";\n\
 <img id="myImage" src="https://i.imgur.com/rClC9md.jpg">;\n\
-Now if we have the upper picture, then we click on the button, here is what we get:'
+Now if we have the left picture, then we click on the button, here is what we get:'
     ]
     ];
     // const end = 'And thats it.';
@@ -277,30 +277,17 @@ Now if we have the upper picture, then we click on the button, here is what we g
         </CardSection>
         <CardSection>
           <Text style={boldText}>{body[16][0]}</Text>
-
         </CardSection>
         <CardSection>
           <Text style={black}>{body[16][1]}</Text>
         </CardSection>
-
         <CardSection>
-          <Image
-            source={require('../assets/oldPic.jpg')}
-            style={{ width: 300, height: 300 }}
-          />
-        </CardSection>
-        <CardSection>
-          <Text style={black}>{body[16][2]}</Text>
-        </CardSection>
-        <Button >Click Me!</Button>
-
-        <CardSection>
-          <Text style={black}>{body[16][3]}</Text>
+          <Text style={black}>{body[16][2] + '\n' + body[16][3]}</Text>
         </CardSection>
         <CardSection>
           <Image
-            source={require('../assets/newPic.jpg')}
-            style={{ width: 300, height: 300 }}
+            source={require('../assets/HTMLClickEvent.png')}
+            style={{ width: 300, height: 150 }}
           />
         </CardSection>
         <CardSection>
@@ -312,7 +299,7 @@ Now if we have the upper picture, then we click on the button, here is what we g
           <Button onPress={() => this.props.navigation.navigate('Git')}>
             Next
           </Button>
-        </CardSection>        
+        </CardSection>
         <CardSection>
           <Button onPress={() => this.props.navigation.navigate('Home')}>
             Home

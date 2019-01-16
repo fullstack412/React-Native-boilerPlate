@@ -142,7 +142,7 @@ export default class OOPExample extends Component {
                   </Text>
               ;{'\n'}{'}'}
             </Text>
-            {'\n'}
+            {'\n'}{'\n'}
 
             {/* the second var depositFunc */}
             var
@@ -189,7 +189,7 @@ export default class OOPExample extends Component {
                 balance
               </Text>
               ;{'\n'}
-              {'}'}{'\n'}
+              {'}'}{'\n'}{'\n'}
             </Text>
 
             {/* the third var checkBalanceFunc */}
@@ -251,5 +251,4 @@ const Styles = StyleSheet.create({
   key: {
     color: '#FF8C00',
   },
-
 });

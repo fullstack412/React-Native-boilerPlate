@@ -9,7 +9,7 @@ export default class OOP extends Component {
   render() {
     const topic = 'OOP';
     const introduction = 'OOP (Object-Oriented Programming) is an approach in programming in which data is encapsulated within objects and the object itself is operated on, rather than its component parts.';
-    const { headerConetentStyle, headerTextStyle, thumbnailStyle, thumbnailContainerStyle, boldText, boldHeader, text,func, variable } = Styles
+    const { headerConetentStyle, headerTextStyle, thumbnailStyle, thumbnailContainerStyle, boldText, boldHeader, text, func, variable, object, key } = Styles
     return (
       <Card>
         <CardSection>
@@ -52,24 +52,52 @@ export default class OOP extends Component {
               main function
             </Text>
             .{'\n'}
-            2- Reach this functions by pass thier name inside the key in the object that we returnd.{'\n'}
+            2- Reach these{' '}
+            <Text style={variable}>
+              functions{' '}
+            </Text>
+            by pass thier names in the{' '}
+            <Text style={key}>
+              key{' '}
+            </Text>
+            inside the{' '}
+            <Text style={object}>
+              object{' '}
+            </Text>
+            that we will returnd.{'\n'}
             <Text style={boldText}>
               <Text style={variable}>
                 But we have a problem, can you guess what is it?{'\n'}
               </Text>
-              It is about how we can pass the value from this object to the functions are outside.{'\n'}
+              It is about how we can pass the value from this{' '}
+              <Text style={object}>
+                object{' '}
+              </Text>
+              to the{' '}
+              <Text style={variable}>
+                functions{' '}
+              </Text>
+              are outside.{'\n'}{'\n'}
             </Text>
             So to solve this problem we will use the keyword{' '}
-            <Text style={boldText}>
+            <Text style={[boldText, object]}>
               “this”
             </Text>
             ,what is the keyword{' '}
-            <Text style={boldText}>
-              “this”{' '}
+            <Text style={[boldText, object]}>
+              “this”
             </Text>
             ?{'\n'}
             <Text style={[variable, boldText]}>
-              [90% of the time] It represents the object in the left of the dot (the one who called this function).
+              [90% of the time] It represents the{' '}
+              <Text style={object}>
+                object{' '}
+              </Text>
+              in the left of the dot (the one who called this{' '} 
+              <Text style={variable}>
+                function
+              </Text>
+              ).
             </Text>
           </Text>
         </CardSection  >
@@ -141,5 +169,11 @@ const Styles = StyleSheet.create({
   },
   variable: {
     color: 'red',
+  },
+  object: {
+    color: '#FF00FF',
+  },
+  key: {
+    color: '#FF8C00',
   },
 });
