@@ -40,7 +40,7 @@ export default class AddingMethodsExampleExplanation extends Component {
           <Text style={func}>
             addingMethods{' '}
           </Text>
-          but with initial value {' '}
+          but with initial value{' '}
           <Text style={balance}>
             300{' '}
           </Text>
