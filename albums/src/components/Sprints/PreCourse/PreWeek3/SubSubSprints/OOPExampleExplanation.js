@@ -60,26 +60,36 @@ export default class OOPExampleExplanation extends Component {
             4 keys{' '}
           </Text>
           ({' '}
-          <Text style={balance}>
+          <Text style={key}>
             balance{' '}
           </Text>
-          variable (global for thiss{' '}
-          <Text style={object}>
-            object{' '}
-          </Text>
-          and local for{' '}
-          <Text style={func}>
-            objectOriented
-          </Text>
-          ) and it value is{' '}
+          has initial value{' '}
           <Text style={balance}>
-            500{' '}
+            500
           </Text>
-          not{' '}
-          <Text style={balance}>
-            600
+          ,{' '}
+          <Text style={key}>
+            withdraw
           </Text>
-          .{'\n'}{'\n'}
+          ,{' '}
+          <Text style={key}>
+            deposit{' '}
+          </Text>
+          and{' '}
+          <Text style={key}>
+            checkBalance
+          </Text>
+          ) and each one has inside it self a{' '}
+          <Text style={variable}>
+            global variable
+          </Text>
+          (
+          <Text style={variable}>
+            function
+          </Text>
+          ).{'\n'}{'\n'}
+
+
           {/* extra explanation */}
           So now we have{' '}
           <Text style={object}>
@@ -126,26 +136,22 @@ export default class OOPExampleExplanation extends Component {
           <Text style={key}>
             withdraw(
             <Text style={amount}>
-              95
+              200
             </Text>
             )
           </Text>
           ,{' '}now what will happened?{'\n'}
           This line will execute the{' '}
-          <Text style={key}>
+          <Text style={variable}>
             function{' '}
           </Text>
-          inside the key{' '}
-          <Text style={key}>
-            withdraw{' '}
-          </Text>
-          that is inside the{' '}
-          <Text style={object}>
-            object{' '}
+          that is inside the variable{' '}
+          <Text style={variable}>
+            withdrawFunc{' '}
           </Text>
           with the argument{' '}
           <Text style={amount}>
-            95
+            200
           </Text>
           .{'\n'}{'\n'}
           What is the output and the value of the{' '}
@@ -155,11 +161,11 @@ export default class OOPExampleExplanation extends Component {
           ?{'\n'}
           {'"'}Success to withdraw{' '}
           <Text style={amount}>
-            95
+            200
           </Text>
           {'"'}, and the balance will be{' '}
           <Text style={balance}>
-            205
+            300
           </Text>
           {/* account6.withdraw(75) */}
           .{'\n'}{'\n'}What about if I execute{' '}
@@ -170,18 +176,18 @@ export default class OOPExampleExplanation extends Component {
           <Text style={key}>
             withdraw(
             <Text style={amount}>
-              75
+              345
             </Text>
             )
           </Text>
           ?{'\n'}
           {'"'}Success to withdraw{' '}
-          <Text style={balance}>
-            75
+          <Text style={amount}>
+            345
           </Text>
           {'"'}, and the balance will be{' '}
           <Text style={balance}>
-            325
+            255
           </Text>
           .{'\n'}{'\n'}
           {/* account5.checkBalance( ) */}

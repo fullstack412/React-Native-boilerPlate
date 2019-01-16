@@ -177,7 +177,7 @@ export default class AddingMethodsExampleExplanation extends Component {
           </Text>
           ?{'\n'}
           {'"'}Success to withdraw{' '}
-          <Text style={balance}>
+          <Text style={amount}>
             75
           </Text>
           {'"'}, and the balance will be{' '}
