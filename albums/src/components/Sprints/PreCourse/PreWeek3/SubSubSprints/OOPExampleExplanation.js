@@ -79,7 +79,7 @@ export default class OOPExampleExplanation extends Component {
           <Text style={key}>
             checkBalance
           </Text>
-          ) and each one has inside it self a{' '}
+          ) and each key has inside it a{' '}
           <Text style={variable}>
             global variable
           </Text>
