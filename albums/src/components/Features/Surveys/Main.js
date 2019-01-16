@@ -7,8 +7,11 @@ import moment from 'moment';
 
 class Main extends Component {
   state = {
+    authorized: [],
+    currentlyAuthorized: false,
     name: '',
-    emotion: ''
+    emotion: '',
+    allEmotions: []
   }
 
   const = { apiKey, authDomain, databaseURL, projectId, storageBucket, messagingSenderId, pickerContainerStyle } = api
@@ -25,6 +28,30 @@ class Main extends Component {
         messagingSenderId: messagingSenderId
       });
     }
+
+        // pull from database to check who is the admin user
+    firebase.database().ref(`admin`).once('value', (data) => {
+      data = data.toJSON();
+      let authorized = [];
+      if (data !== null) {
+        Object.keys(data).map((key) => {
+          authorized.push(key)
+        })
+      }
+      this.setState({
+        authorized
+      })
+      this.state.authorized.map((id) => {
+        if (id === firebase.auth().currentUser.uid) {
+          this.setState({
+            currentlyAuthorized: true
+          })
+        }
+      })
+    }).catch((error) => {
+      Alert.alert('Please restart the App, due to error: ', error);
+    })
+    
   }
 
   submitEmotion() {
@@ -42,6 +69,48 @@ class Main extends Component {
     }).catch((error) => {
       Alert.alert('Please restart the App, due to error: ', error);
     })
+  }
+
+  requestEmotions() {
+    let time = moment(new Date()).format("YYYY-MM-DD hh:mm:ss a").split(' ');
+    time.splice(1, 1);
+    time = time.join('');
+    if (firebase.auth().currentUser !== null) {
+      if (this.state.currentlyAuthorized) {
+        firebase.database().ref(`survey/${time}`).once('value', (data) => {
+          data = data.toJSON();
+          if (data !== null) {
+            this.setState({
+              allEmotions: 
+                Object.keys(data).map((key) => (
+                  [key, data[key]['emotion']]
+                ))
+            })
+          } else {
+            this.setState({
+              allEmotions: [[' ', 'No one filled out yet 😞']]
+            })
+          }
+        }).catch((error) => {
+          Alert.alert('Please restart the App, due to error: ', error);
+        })
+        Alert.alert('Hi, the smartest and the most humble Fatema, here is your data')
+      } else {
+        Alert.alert('Sorry, you don\' have access to this information. Apply to be HIR');
+      }
+    } else {
+      Alert.alert('Please log in first')
+    }  
+  }
+
+  mapOutEmotions() {
+    return this.state.allEmotions.map(element => (
+      <CardSection key = {element[1]}>
+        <Text style={{fontWeight:'bold'}}>
+          {element[0]} feels {element[1]}
+        </Text>
+      </CardSection>
+    ))    
   }
   
   render() {
@@ -95,6 +164,14 @@ class Main extends Component {
             Submit
           </Button>
         </CardSection>
+
+        <CardSection>
+          <Button onPress = {() => this.requestEmotions()}>
+            Show Students Emotions
+          </Button>
+        </CardSection>
+        
+        {this.mapOutEmotions()}        
 
         <CardSection>
           <TouchableOpacity onPress={() => Linking.openURL('https://rbkemotinal.herokuapp.com/login')}>
