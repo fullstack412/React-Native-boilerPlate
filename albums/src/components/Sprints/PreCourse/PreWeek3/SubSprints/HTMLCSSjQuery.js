@@ -285,7 +285,7 @@ Now if we have the upper picture, then we click on the button, here is what we g
 
    
         <CardSection>
-          <Text style={black}>{body[16][2]}</Text>
+          <Text style={black}>{body[16][2]+'\n'+body[16][3] }</Text>
         </CardSection>
         {/* <Button >Click Me!</Button> */}
 
