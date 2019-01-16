@@ -10,7 +10,7 @@ class HigherOrderEach extends Component{
   }
   render(){
     const topic='Introduction to Higher Order Functions'
-    const Defintion='Higher order function: a function that takes a callback function as an argument. \nCallback function: a regular function that is being \
+    const Defintion='Higher order function: a function that takes a callback function as an argument.\n   \nWhy Higher order function: They make your code easier to understand and maintain. It also makes it easy to combine functions with each other.\n  \nCallback function: a regular function that is being \
 passed in another function as the argument. \nIf you didn\'t understand a word in the last two sentences, don\'t worry. \
 This is a very advanced topic, and higher order function is quite unique to Javascript. \n Let\'s explain more through an example, shall we?';
     const ExplainForLoop='Let\'s start with a simple program to console.log a given number of times.\nYou can write a for loop like this:';
