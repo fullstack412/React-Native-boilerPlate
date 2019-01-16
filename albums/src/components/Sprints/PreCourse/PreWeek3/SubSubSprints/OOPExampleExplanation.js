@@ -153,6 +153,27 @@ export default class OOPExampleExplanation extends Component {
           <Text style={amount}>
             200
           </Text>
+          , and "
+          <Text style={object}>
+            this
+          </Text>
+          " will represent the object{' '}
+          <Text style={object}>
+            account5
+          </Text>
+          , because{' '}
+          <Text style={object}>
+            account5{' '}
+          </Text>
+          is the object who (has/is the parent of) the key{' '}
+          <Text style={key}>
+            withdraw
+          </Text>
+          , or the one in the left of who is called the function{' '}
+          <Text style={variable}>
+            withdrawFunc{' '}
+          </Text>
+          in a way
           .{'\n'}{'\n'}
           What is the output and the value of the{' '}
           <Text style={balance}>
