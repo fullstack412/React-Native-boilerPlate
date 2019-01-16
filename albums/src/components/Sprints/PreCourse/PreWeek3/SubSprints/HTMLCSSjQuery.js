@@ -283,26 +283,28 @@ Now if we have the upper picture, then we click on the button, here is what we g
           <Text style={black}>{body[16][1]}</Text>
         </CardSection>
 
-        <CardSection>
-          <Image
-            source={require('../assets/oldPic.jpg')}
-            style={{ width: 300, height: 300 }}
-          />
-        </CardSection>
+   
         <CardSection>
           <Text style={black}>{body[16][2]}</Text>
         </CardSection>
-        <Button >Click Me!</Button>
+        {/* <Button >Click Me!</Button> */}
 
         <CardSection>
           <Text style={black}>{body[16][3]}</Text>
         </CardSection>
+
         <CardSection>
+          <Image
+            source={require('../assets/HTMLClickEvent.png')}
+            style={{ width: 300, height: 150 }}
+          />
+        </CardSection>
+        {/* <CardSection>
           <Image
             source={require('../assets/newPic.jpg')}
             style={{ width: 300, height: 300 }}
           />
-        </CardSection>
+        </CardSection> */}
         <CardSection>
           <Button onPress={() => this.props.navigation.navigate('OOP')}>
             Previous
