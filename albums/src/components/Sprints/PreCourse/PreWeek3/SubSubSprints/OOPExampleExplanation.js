@@ -227,7 +227,7 @@ export default class OOPExampleExplanation extends Component {
           </Text>
           {'"'}.{'\n'}{'\n'}
           <Text style={boldText}>
-            So by this approach, I improve the closure adding methods to decrease the space that I will use each time I make a copy from the{' '}
+            So by this approach, we improve the closure adding methods to decrease the space that used each time we make a copy from the{' '}
             <Text style={func}>
               main function
             </Text>
