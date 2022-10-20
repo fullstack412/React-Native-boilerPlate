@@ -15,7 +15,7 @@
   "dependencies": {
     "@expo/vector-icons": "^8.1.0",
     "axios": "^0.18.0",
-    "expo": "^31.0.6",
+    "expo": "^46.0.16",
     "firebase": "^5.0.3",
     "moment": "^2.23.0",
     "native-base": "^2.10.0",
